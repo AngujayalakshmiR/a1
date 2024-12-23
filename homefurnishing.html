@@ -10,6 +10,7 @@
 
     <!-- Favicon -->
     <link href="img/bigmoon_logo_circle.png" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -422,6 +423,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    margin-top: 30px;
 }
 
 .product-grid {
@@ -581,13 +583,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
                     <!-- Home with Icon -->
-                    <a href="index.html" class="nav-item nav-link active">
+                    <a href="index.html" class="nav-item nav-link">
                         <i class="fa fa-home me-2"></i>Home
                     </a>
                     
                     <!-- Home Linens Dropdown -->
                     <div class="nav-item dropdown">
-                        <a href="homefurnishing.html" class="nav-link">
+                        <a href="homefurnishing.html" class="nav-link active">
                             Home Furnishings
                         </a>
                         <!-- <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
@@ -752,7 +754,7 @@
                 </ul>
             </nav>
         
-            <div class="product-container">
+            <div class="product-container" >
                 <div class="product-grid" id="Cotton Towels">
                     <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
                         <a href="/products/product-1" class="product-link">
@@ -847,6 +849,50 @@
                     <!-- Similar structure for Bath Towels products -->
                 </div>
             </div>
+            <div class="product-container" >
+                <div class="product-grid" id="Cushion Covers">
+                    <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="/products/product-1" class="product-link">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" alt="Product 1" class="product-image">
+                        </a>
+                        <div class="product-info">
+                            <h3 class="product-title">Turkish Bath Towels</h3>
+                            <p class="product-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                  
+                            <button class="add-to-cart">
+                                <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="button-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="/products/product-1" class="product-link">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" alt="Product 1" class="product-image">
+                        </a>
+                        <div class="product-info">
+                            <h3 class="product-title">Turkish Bath Towels</h3>
+                            <p class="product-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
+                            <button class="add-to-cart">
+                                <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="button-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+        
+                <div class="product-grid hidden" id="cushion-cover">
+                    <!-- Similar structure for Cushion Cover products -->
+                </div>
+        
+                <div class="product-grid hidden" id="table-runner">
+                    <!-- Similar structure for Table Runner products -->
+                </div>
+        
+                <div class="product-grid hidden" id="bath-towels">
+                    <!-- Similar structure for Bath Towels products -->
+                </div>
+            </div>
         </section>
         
     
@@ -873,10 +919,22 @@
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9600362903</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>bigmoonrknd@gmail.com</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="mailto:bigmoonrknd@gmail.com">
+                                <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                            </a>
+                            <a class="btn btn-outline-light btn-social" href="https://wa.me/+919600362903" target="_blank">
+                                <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
+                            </a>
+                            
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/bigmoon_homify/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.amazon.in/s?me=A22U1QWK6VZ1QN&fbclid=PAZXh0bgNhZW0CMTEAAaaj4vKNNPZNJ494Q7AhNWU3b2j92mFRfiVCF8ildciR1ArwVV1nVbdyF1s_aem_ZmFrZWR1bW15MTZieXRlcw&ref=sf_seller_app_share_new">
+                                <i class="fab fa-amazon"></i>
+                            </a>
+                            <!--<a class="btn btn-outline-light btn-social" href="https://www.flipkart.com">
+                                <i class="fas fa-shopping-cart" style="font-size: 20px;"></i>
+                            </a>-->
+                            
+                            
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">

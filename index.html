@@ -172,16 +172,18 @@
 
 /* Product Card */
 .product-card {
-    min-width: 350px; /* Adjust for responsiveness */
+    position: relative;
+    min-width: 350px;
     max-height: 550px;
     box-sizing: border-box;
     margin: 10px;
-    background-color: white; /* White background */
-    border: 1px solid #ddd; /* Light border to differentiate */
-    border-radius: 10px; /* Rounded corners */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 /* Hover Effects */
 .product-card:hover {
@@ -368,6 +370,24 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #0eb5d6; /* Blue color */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 50%; /* Makes it circular */
+    width: 50px; /* Fixed size for circle */
+    height: 50px; /* Fixed size for circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 2; /* Ensure it appears above other elements */
+}
 
 .responsive-image {
     width: 100%; /* Set width to 100% to make it responsive */
@@ -417,14 +437,14 @@
                     
                     <!-- Home Linens Dropdown -->
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <a href="#" class="nav-link">
                             Home Linens
-                        </a>
+                        </a><!-- Home Linens Dropdown <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
                             <a href="comforters.html" class="dropdown-item">Comforters</a>
                             <a href="pillow-covers.html" class="dropdown-item">Pillow Covers</a>
                             <a href="tablecloth.html" class="dropdown-item">Tablecloth</a>
-                        </div>
+                        </div> -->
                     </div>
         
                     <!-- Baby Products Dropdown -->
@@ -625,22 +645,25 @@
             </div>
         </div>-->
         <!-- Facilities End -->
-        <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
-            <!-- News & Events Section Title -->
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px; height:auto;">
-                <h5 class="fw-bold text-primary text-uppercase">Best &amp; Sellers</h5>    
-                <!-- Blue bar container -->
-                <div class="blue-bar">
-                    <div class="moving-box"></div>  <!-- Small white rectangle -->
-                </div>
-            </div>				
-        </div>
+       
         
         
 
         <section class="product-slider" style="padding-top: 15px;padding-bottom: 15px;">
+            <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+                <!-- News & Events Section Title -->
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px; height:auto;">
+                    <h5 class="fw-bold text-primary text-uppercase">Best Sellers</h5>    
+                    <!-- Blue bar container -->
+                    <div class="blue-bar">
+                        <div class="moving-box"></div>  <!-- Small white rectangle -->
+                    </div>
+                </div>				
+            </div>
             <div class="slider-container">
                 <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
+
                     <a href="/products/product-1" class="product-link">
                         <img src="img/p1.webp" alt="Product 1" class="product-image">
                     </a>
@@ -659,6 +682,8 @@
                     </div>
                 </div>
                 <div class="product-card wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="discount-badge">25% OFF</div>
+
                     <a href="/products/product-1" class="product-link">
                         <img src="img/p1.webp" alt="Product 1" class="product-image">
                     </a>
@@ -674,6 +699,8 @@
                     </div>
                 </div>
                 <div class="product-card wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="discount-badge">25% OFF</div>
+
                     <a href="/products/product-1" class="product-link">
                         <img src="img/p1.webp" alt="Product 1" class="product-image">
                     </a>
@@ -690,6 +717,8 @@
                     </div>
                 </div>
                 <div class="product-card wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="discount-badge">25% OFF</div>
+
                     <a href="/products/product-1" class="product-link">
                         <img src="img/p1.webp" alt="Product 1" class="product-image">
                     </a>
@@ -707,6 +736,8 @@
                 </div>
                 <div class="product-card">
                     <a href="/products/product-1" class="product-link">
+                        <div class="discount-badge">25% OFF</div>
+
                         <img src="img/p1.webp" alt="Product 1" class="product-image">
                     </a>
                     <div class="product-info">
@@ -722,6 +753,8 @@
                 </div>
                 <div class="product-card">
                     <a href="/products/product-1" class="product-link">
+                        <div class="discount-badge">25% OFF</div>
+
                         <img src="img/p1.webp" alt="Product 1" class="product-image">
                     </a>
                     <div class="product-info">
@@ -743,17 +776,6 @@
         </section>
         <img src="img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" data-wow-delay="0.1s">
 
-          <!-- Facilities End -->
-          <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
-            <!-- News & Events Section Title -->
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px; height:auto;">
-                <h5 class="fw-bold text-primary text-uppercase">Bed &amp; Sheets</h5>    
-                <!-- Blue bar container -->
-                <div class="blue-bar">
-                    <div class="moving-box"></div>  <!-- Small white rectangle -->
-                </div>
-            </div>				
-        </div>
         <!-- Small white rectangle 
         
         <section class="product-slider" style="padding-top: 15px;padding-bottom: 15px;">
@@ -906,490 +928,114 @@ window.addEventListener('load', updateSlider); // Ensure the first position is u
         </script>
         
         
+        <section class="product-slider" style="padding: 15px 0;">
+            <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <h5 class="fw-bold text-primary text-uppercase">Home Furnishings</h5>
+                    <div class="blue-bar">
+                        <div class="moving-box"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-container">
+                <!-- Example Product Cards -->
+                <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                    </a>
+                    <div class="product-info">
+                        <h3 class="product-title">Product 1</h3>
+                        <p class="product-description">Description of product 1</p>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                            <span class="button-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                    </a>
+                    <div class="product-info">
+                        <h3 class="product-title">Product 2</h3>
+                        <p class="product-description">Description of product 1</p>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                            <span class="button-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                    </a>
+                    <div class="product-info">
+                        <h3 class="product-title">Product 3</h3>
+                        <p class="product-description">Description of product 1</p>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                            <span class="button-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                    </a>
+                    <div class="product-info">
+                        <h3 class="product-title">Product 4</h3>
+                        <p class="product-description">Description of product 1</p>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                            <span class="button-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                    </a>
+                    <div class="product-info">
+                        <h3 class="product-title">Product 5</h3>
+                        <p class="product-description">Description of product 1</p>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                            <span class="button-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                    </a>
+                    <div class="product-info">
+                        <h3 class="product-title">Product 6</h3>
+                        <p class="product-description">Description of product 1</p>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                            <span class="button-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Repeat product cards as needed -->
+            </div>
+            <button class="slider-nav prev">&lt;</button>
+            <button class="slider-nav next">&gt;</button>
+        </section>
         
 
 
             
           
 
-        <!-- About Start 
-        <div class="container-xxl py-5">
-            <div class="container-xxl">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="mb-4">Learn More About Our Work And Our Cultural Activities</h1>
-                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos, ipsum labore duo duo sit no sea diam. Et dolor et kasd ea. Eirmod diam at dolor est vero nonumy magna.</p>
-                        <div class="row g-4 align-items-center">
-                            <div class="col-sm-6">
-                                <a class="btn btn-primary rounded-pill py-3 px-5" href="">Read More</a>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 45px; height: 45px;">
-                                    <div class="ms-3">
-                                        <h6 class="text-primary mb-1">Jhon Doe</h6>
-                                        <small>CEO & Founder</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="img/about-1.jpg" alt="">
-                            </div>
-                            <div class="col-6 text-start" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/about-2.jpg" alt="">
-                            </div>
-                            <div class="col-6 text-end" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/about-3.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-
-
-        <!-- Call To Action Start
-        <div class="container-xxl py-5">
-            <div class="container-xxl">
-                <div class="bg-light rounded">
-                    <div class="row g-0">
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
-                            <div class="position-relative h-100">
-                                <img class="position-absolute w-100 h-100 rounded" src="img/call-to-action.jpg" style="object-fit: cover;">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                            <div class="h-100 d-flex flex-column justify-content-center p-5">
-                                <h1 class="mb-4">Become A Teacher</h1>
-                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
-                                    Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
-                                </p>
-                                <a class="btn btn-primary py-3 px-5" href="">Get Started Now<i class="fa fa-arrow-right ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-
-
-        <!-- Classes Start 
-        <div class="container-xxl py-5">
-            <div class="container-xxl">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">School Classes</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="img/classes-1.jpg" alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Art & Drawing</a>
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 45px; height: 45px;">
-                                        <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
-                                            <small>Teacher</small>
-                                        </div>
-                                    </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
-                                </div>
-                                <div class="row g-1">
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-primary pt-2">
-                                            <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>3-5 Years</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-success pt-2">
-                                            <h6 class="text-success mb-1">Time:</h6>
-                                            <small>9-10 AM</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-warning pt-2">
-                                            <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>30 Kids</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="img/classes-2.jpg" alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Color Management</a>
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 45px; height: 45px;">
-                                        <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
-                                            <small>Teacher</small>
-                                        </div>
-                                    </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
-                                </div>
-                                <div class="row g-1">
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-primary pt-2">
-                                            <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>3-5 Years</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-success pt-2">
-                                            <h6 class="text-success mb-1">Time:</h6>
-                                            <small>9-10 AM</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-warning pt-2">
-                                            <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>30 Kids</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="img/classes-3.jpg" alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Athletic & Dance</a>
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 45px; height: 45px;">
-                                        <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
-                                            <small>Teacher</small>
-                                        </div>
-                                    </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
-                                </div>
-                                <div class="row g-1">
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-primary pt-2">
-                                            <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>3-5 Years</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-success pt-2">
-                                            <h6 class="text-success mb-1">Time:</h6>
-                                            <small>9-10 AM</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-warning pt-2">
-                                            <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>30 Kids</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="img/classes-4.jpg" alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Language & Speaking</a>
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 45px; height: 45px;">
-                                        <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
-                                            <small>Teacher</small>
-                                        </div>
-                                    </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
-                                </div>
-                                <div class="row g-1">
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-primary pt-2">
-                                            <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>3-5 Years</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-success pt-2">
-                                            <h6 class="text-success mb-1">Time:</h6>
-                                            <small>9-10 AM</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-warning pt-2">
-                                            <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>30 Kids</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="img/classes-5.jpg" alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Religion & History</a>
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 45px; height: 45px;">
-                                        <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
-                                            <small>Teacher</small>
-                                        </div>
-                                    </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
-                                </div>
-                                <div class="row g-1">
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-primary pt-2">
-                                            <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>3-5 Years</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-success pt-2">
-                                            <h6 class="text-success mb-1">Time:</h6>
-                                            <small>9-10 AM</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-warning pt-2">
-                                            <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>30 Kids</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="img/classes-6.jpg" alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">General Knowledge</a>
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 45px; height: 45px;">
-                                        <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
-                                            <small>Teacher</small>
-                                        </div>
-                                    </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
-                                </div>
-                                <div class="row g-1">
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-primary pt-2">
-                                            <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>3-5 Years</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-success pt-2">
-                                            <h6 class="text-success mb-1">Time:</h6>
-                                            <small>9-10 AM</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-warning pt-2">
-                                            <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>30 Kids</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-
-
-        <!-- Appointment Start 
-        <div class="container-xxl py-5">
-            <div class="container-xxl">
-                <div class="bg-light rounded">
-                    <div class="row g-0">
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                            <div class="h-100 d-flex flex-column justify-content-center p-5">
-                                <h1 class="mb-4">Make Appointment</h1>
-                                <form>
-                                    <div class="row g-3">
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="gname" placeholder="Gurdian Name">
-                                                <label for="gname">Gurdian Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control border-0" id="gmail" placeholder="Gurdian Email">
-                                                <label for="gmail">Gurdian Email</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cname" placeholder="Child Name">
-                                                <label for="cname">Child Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cage" placeholder="Child Age">
-                                                <label for="cage">Child Age</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                                <label for="message">Message</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
-                            <div class="position-relative h-100">
-                                <img class="position-absolute w-100 h-100 rounded" src="img/appointment.jpg" style="object-fit: cover;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-        <!-- Team Start 
-        <div class="container-xxl py-5">
-            <div class="container-xxl">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Popular Teachers</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit
-                        eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item position-relative">
-                            <img class="img-fluid rounded-circle w-75" src="img/team-1.jpg" alt="">
-                            <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
-                                <div class="d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item position-relative">
-                            <img class="img-fluid rounded-circle w-75" src="img/team-2.jpg" alt="">
-                            <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
-                                <div class="d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item position-relative">
-                            <img class="img-fluid rounded-circle w-75" src="img/team-3.jpg" alt="">
-                            <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
-                                <div class="d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-        <!-- Testimonial Start 
-        <div class="container-xxl py-5">
-            <div class="container-xxl">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Our Clients Say!</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-                </div>
-                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="testimonial-item bg-light rounded p-5">
-                        <p class="fs-5">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                        <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 90px; height: 90px;">
-                            <div class="ps-3">
-                                <h3 class="mb-1">Client Name</h3>
-                                <span>Profession</span>
-                            </div>
-                            <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded p-5">
-                        <p class="fs-5">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                        <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 90px; height: 90px;">
-                            <div class="ps-3">
-                                <h3 class="mb-1">Client Name</h3>
-                                <span>Profession</span>
-                            </div>
-                            <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded p-5">
-                        <p class="fs-5">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                        <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 90px; height: 90px;">
-                            <div class="ps-3">
-                                <h3 class="mb-1">Client Name</h3>
-                                <span>Profession</span>
-                            </div>
-                            <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!-- Testimonial End -->
+       
 
 
         <!-- Footer Start -->

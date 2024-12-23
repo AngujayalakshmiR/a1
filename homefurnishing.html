@@ -384,44 +384,172 @@
 
 
 
-</style>
-<style>
+/* Basic Styles for the Product Section */
+.product-section {
+    padding: 15px;
+}
+
+.product-navs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-tabss {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-items {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-items.active {
+    background-color: #0eb5d6;
+    color: white;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-color: #0eb5d6;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background-color: #0eb5d6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #5dc1e6;
+}
+
+.add-to-cart .cart-icon {
+    margin-right: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For smaller screens like phones and tablets */
+@media (max-width: 768px) {
     .product-navs {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
     }
-    .nav-tabss {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .nav-items {
-        padding: 10px 20px;
-        cursor: pointer;
-        background: #f0f0f0;
-        margin-right: 10px;
-        border-radius: 5px;
-    }
-    .nav-items.active {
-        background: #0eb5d6;
-        color: #fff;
-    }
+
     .product-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
     }
+
     .product-card {
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        padding: 15px;
-        text-align: center;
+        max-width: 100%;
     }
-    .hidden {
-        display: none;
+
+    .product-title {
+        font-size: 14px;
     }
+
+    .product-description {
+        font-size: 12px;
+    }
+
+    .add-to-cart {
+        font-size: 12px;
+    }
+}
+
+/* For very small screens like mobile phones */
+@media (max-width: 576px) {
+    .product-navs {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+
+    .product-title {
+        font-size: 12px;
+    }
+
+    .product-description {
+        font-size: 10px;
+    }
+
+    .add-to-cart {
+        font-size: 10px;
+    }
+}
+
+/* Optional: Styling for hidden product categories */
+.product-grid.hidden {
+    display: none;
+}
+
+
 </style>
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">

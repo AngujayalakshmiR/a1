@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kider - Preschool Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/bigmoon_logo_circle.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.container-xxl,
+.container-fluid {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+.container, .container-fluid, .container-xxl {
+    width: 100%;
+}
+
+
+.container-xxl {
+    max-width: none !important;
+}
+@media (max-width: 576px) {
+    .top-banner {
+        display: none;
+    }
+}
+.top-banner {
+    background-color: #0eb5d6; /* Bootstrap Primary Blue */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 10px 0; /* Vertical padding */
+    width: 100%; /* Full width */
+    font-size: 16px; /* Adjust text size */
+    font-weight: bold; /* Bold text */
+}
+.shopify-section {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 20px;
+}
+
+.scroll-container {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  overflow-y: hidden; /* Hides vertical scrolling */
+  white-space: nowrap; /* Ensures all blocks are in one line */
+  scrollbar-color: #0eb5d6 transparent; /* Custom scrollbar color */
+  scrollbar-width: thin; /* Thin scrollbar for modern browsers */
+  margin-bottom: 10px; /* Adds some space below the scroll container */
+  padding-bottom: 10px; /* Adds gap between images and the scrollbar */
+}
+
+
+/* Webkit Scrollbar Styling */
+.scroll-container::-webkit-scrollbar {
+  height: 6px; /* Thin scrollbar height */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #0eb5d6; /* Scrollbar thumb color */
+  border-radius: 3px; /* Rounded scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+}
+
+.image-with-text-wrapper {
+  display: flex;
+  gap: 25px; /* Spacing between items */
+}
+
+.block {
+  flex: 0 0 auto; /* Prevent blocks from shrinking or growing */
+  width: 175px; /* Fixed width for images */
+  text-align: center;
+}
+
+.block img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 5px; /* Optional: Rounded corners */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 750px) {
+  .shopify-section {
+    padding: 10px;
+  }
+
+  .block {
+    width: 150px; /* Adjust image width for smaller screens */
+  }
+
+  .block img {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+}
+.dropdown-menu .dropdown-item:hover {
+    background-color: #0eb5d6;
+    color: #fff; /* Optional: Changes the text color for better visibility */
+}
+
+/* Base styles for buttons */
+.btn-light {
+    border: 1px solid #0eb5d6;
+    color: #0eb5d6;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.btn-light:hover {
+    background: linear-gradient(45deg, #0eb5d6, #5dc1e6);
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Icon spacing on hover (optional, for emphasis) */
+.btn-light:hover i {
+    margin-right: 5px; /* Slightly increase icon spacing */
+}
+
+.owl-carousel-item img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover; /* Ensures consistent sizing */
+}
+/* Container for the entire product slider */
+.product-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
+    /* Ensure the slider takes up the full width of the parent container */
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content; 
+    padding-right: 50px; /* Ensure the container stretches to fit the content */
+    padding-left: 80px;
+}
+
+
+
+
+/* Product Card */
+.product-card {
+    min-width: 250px; /* Adjust for responsiveness */
+    max-height: 450px;
+    box-sizing: border-box;
+    margin: 10px;
+    background-color: white; /* White background */
+    border: 1px solid #ddd; /* Light border to differentiate */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover Effects */
+.product-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add shadow */
+    border-color: #0eb5d6; /* Change border color */
+}
+
+/* Product Image */
+.product-image {
+    width: 250px;
+    height: 250px;
+    border-bottom: 2px solid #ddd; /* Separator between image and info */
+}
+
+/* Product Info */
+.product-info {
+    text-align: center;
+    padding: 15px;
+}
+
+/* Product Title */
+.product-title {
+    font-size: 18px;
+    color: #333; /* Dark gray */
+    margin-bottom: 10px;
+}
+
+/* Product Description */
+.product-description {
+    font-size: 14px;
+    color: #777; /* Light gray */
+    margin-bottom: 15px;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    background-color: #0eb5d6; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    display: inline-flex; /* Align icon and text horizontally */
+    align-items: center; /* Vertically center icon and text */
+    justify-content: center; /* Center text */
+    position: relative; /* Allows for absolute positioning of icon */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Ensure text inside the button is centered */
+    padding-right: 35px;
+}
+
+/* Cart Icon */
+.cart-icon {
+    font-size: 18px; /* Icon size */
+    color: white; /* White icon */
+    margin-right: 10px; /* Space between icon and text */
+    opacity: 0; /* Hidden by default */
+    position: absolute; /* Position the icon absolutely inside the button */
+    left: 10px; /* Position to the left of the button */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth reveal */
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+/* Add to Cart Hover */
+.add-to-cart:hover {
+    background-color: #099bbd; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight button scale */
+    padding-right: 15px;
+}
+
+/* Show Cart Icon on Hover */
+.add-to-cart:hover .cart-icon {
+    opacity: 1; /* Show icon */
+    transform: translateX(0); /* Move to original position */
+    padding-right: 10px;
+}
+
+/* Button Text */
+.button-text {
+    display: inline-block; /* Ensures text is treated as a block element within the button */
+    visibility: visible; /* Ensure text stays visible */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-card {
+        min-width: 50%; /* 2 products per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        min-width: 100%; /* 1 product per row on very small screens */
+    }
+}
+
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0eb5d6;  /* Blue background */
+    color: white;
+    border: none;
+    padding: 12px;  /* Adjust padding for better circle size */
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    border-radius: 50%;  /* Makes the button circular */
+    width: 50px;  /* Fixed size */
+    height: 50px;  /* Fixed size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.slider-nav:hover {
+    background-color:#0eb5d6;  /* Darker blue on hover */
+}
+
+.slider-nav:disabled {
+    background-color: #d3d3d3;  /* Light gray when disabled */
+    cursor: not-allowed;
+}
+
+/* Section Title Styles */
+.section-title {
+    position: relative;
+    text-align: center;
+}
+
+/* Blue bar beneath the title */
+.blue-bar {
+    position: relative;
+    width: 220px;  /* Adjust width as needed */
+    height: 5px;
+    background-color: var(--primary);  /* Your blue color */
+    margin-top: 10px;  /* Space between title and bar */
+    overflow: hidden;
+    align-items: center;
+    margin-left: auto;   /* Center horizontally */
+    margin-right: auto;  /* Center horizontally */
+}
+
+/* Small white rectangle (moving box) */
+.moving-box {
+    position: absolute;
+    top: 0;
+    width: 18px;  /* Adjust the width of the moving box */
+    height: 5px;  /* Match the height of the blue bar */
+    background-color: white;  /* White color for the box */
+    animation: move-box 3s ease-in-out infinite;  /* Apply animation */
+}
+
+/* Keyframes for animating the white box */
+@keyframes move-box {
+    0% {
+        left: 0;  /* Start from the left */
+    }
+    50% {
+        left: 100%;  /* Move to the right */
+        transform: translateX(-100%);  /* Adjust for full movement */
+    }
+    100% {
+        left: 0;  /* Move back to the left */
+    }
+}
+
+/* Ensures the box-sizing applies to all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.responsive-image {
+    width: 100%; /* Set width to 100% to make it responsive */
+    height: 600px; /* Fixed height of 600px */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    max-width: 100%; /* Ensures image doesn't stretch beyond its natural size */
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+
+
+</style>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl  bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+        <div class="top-banner text-white text-center py-2">
+            Get FLAT ₹500 OFF on order above 2499 | Code: CHRISTMAS
+        </div>
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+                <h1 class="m-0 text-primary">BigMoon</h1>
+            </a>
+            
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <!-- Home with Icon -->
+                    <a href="index.html" class="nav-item nav-link active">
+                        <i class="fa fa-home me-2"></i>Home
+                    </a>
+                    
+                    <!-- Home Linens Dropdown -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            Home Linens
+                        </a>
+                        <!-- <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="comforters.html" class="dropdown-item">Comforters</a>
+                            <a href="pillow-covers.html" class="dropdown-item">Pillow Covers</a>
+                            <a href="tablecloth.html" class="dropdown-item">Tablecloth</a>
+                        </div> -->
+                    </div>
+        
+                    <!-- Baby Products Dropdown -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link ">
+                            Baby Products
+                        </a>
+                         <!-- Baby Products Dropdown
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="baby-blankets.html" class="dropdown-item">Baby Blankets</a>
+                            <a href="baby-pillows.html" class="dropdown-item">Baby Pillows</a>
+                            <a href="baby-towels.html" class="dropdown-item">Baby Towels</a>
+                        </div> -->
+                    </div>
+        
+                    <a href="about.html" class="nav-item nav-link">Blogs</a>
+                    <a href="classes.html" class="nav-item nav-link">Get in Touch</a>
+                    <!--
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="facility.html" class="dropdown-item">School Facilities</a>
+                            <a href="team.html" class="dropdown-item">Popular Teachers</a>
+                            <a href="call-to-action.html" class="dropdown-item">Become A Teachers</a>
+                            <a href="appointment.html" class="dropdown-item">Make Appointment</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="404.html" class="dropdown-item">404 Error</a>
+                        </div>
+                    </div>-->
+        
+                    
+                </div>
+                <div class="d-flex align-items-center">
+                    <a href="order-history.html" class="btn btn-light rounded-pill me-2">
+                        <i class="fa fa-history me-1"></i> Order History
+                    </a>
+                    <a href="cart.html" class="btn btn-light rounded-pill">
+                        <i class="fa fa-shopping-cart me-1"></i> Cart
+                    </a>
+                </div>    
+            </div>
+        </nav>
+
+        
+        <!-- <div class="shopify-section explore-collection">
+            <div class="scroll-container">
+              <div class="image-with-text-wrapper">
+            
+                <div class="block">
+                  <a href="/collections/comforters">
+                    <img src="img/1.png" alt="Comforters" class="desktop-img">
+                  </a>
+                </div>
+               
+                <div class="block">
+                  <a href="/collections/bedcover-set">
+                    <img src="img/1.png" alt="Bedcover Set" class="desktop-img">
+                  </a>
+                </div>
+               
+                <div class="block">
+                  <a href="/collections/bedcover-set">
+                    <img src="img/1.png" alt="Bedcover Set" class="desktop-img">
+                  </a>
+                </div>
+                <div class="block">
+                    <a href="/collections/bedcover-set">
+                      <img src="img/1.png" alt="Bedcover Set" class="desktop-img">
+                    </a>
+                  </div>
+                  <div class="block">
+                    <a href="/collections/bedcover-set">
+                      <img src="img/1.png" alt="Bedcover Set" class="desktop-img">
+                    </a>
+                  </div>
+                  <div class="block">
+                    <a href="/collections/bedcover-set">
+                      <img src="img/1.png" alt="Bedcover Set" class="desktop-img">
+                    </a>
+                  </div>
+                  <div class="block">
+                    <a href="/collections/bedcover-set">
+                      <img src="img/1.png" alt="Bedcover Set" class="desktop-img">
+                    </a>
+                  </div>
+                  <div class="block">
+                    <a href="/collections/bedcover-set">
+                      <img src="img/1.png" alt="Bedcover Set" class="desktop-img">
+                    </a>
+                  </div><div class="block">
+                    <a href="/collections/bedcover-set">
+                      <img src="img/1.png" alt="Bedcover Set" class="desktop-img">
+                    </a>
+                  </div><div class="block">
+                    <a href="/collections/bedcover-set">
+                      <img src="img/1.png" alt="Bedcover Set" class="desktop-img">
+                    </a>
+                  </div>
+               
+              </div>
+            </div>
+          </div>
+           -->
+          
+        <!-- Carousel Start -->
+<!-- Carousel Start -->
+<!-- Carousel Start -->
+<div class="container-xxl container-fluid p-0 mb-5">
+    <div class="owl-carousel header-carousel position-relative">
+        <!-- First Slide -->
+        <div class="owl-carousel-item">
+            <a href="page1.html">
+                <img class="img-fluid" style="height: 350px;" src="img/c1.webp" alt="Image 1">
+            </a>
+        </div>
+        <!-- Second Slide -->
+        <div class="owl-carousel-item">
+            <a href="page2.html">
+                <img class="img-fluid"  style="height: 350px;" src="img/c2.webp" alt="Image 2">
+            </a>
+        </div>
+        <!-- Third Slide -->
+        <div class="owl-carousel-item">
+            <a href="page3.html">
+                <img class="img-fluid"  style="height: 350px;" src="img/c3.webp" alt="Image 3">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Carousel End -->
+
+
+        <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+            <!-- News & Events Section Title -->
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px; height:auto;">
+                <h5 class="fw-bold text-primary text-uppercase">Products</h5>    
+                <!-- Blue bar container -->
+                <div class="blue-bar">
+                    <div class="moving-box"></div>  <!-- Small white rectangle -->
+                </div>
+            </div>				
+        </div>
+        
+        <section class="product-section" style="padding: 15px;">
+            <nav class="product-navs">
+                <ul class="nav-tabss">
+                    <li class="nav-items active" data-category="bedsheet">Bedsheet</li>
+                    <li class="nav-items" data-category="cushion-cover">Cushion Cover</li>
+                    <li class="nav-items" data-category="table-runner">Table Runner</li>
+                    <li class="nav-items" data-category="bath-towels">Bath Towels</li>
+                </ul>
+            </nav>
+        
+            <div class="product-container">
+                <div class="product-grid" id="bedsheet">
+                    <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="/products/product-1" class="product-link">
+                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        </a>
+                        <div class="product-info">
+                            <h3 class="product-title">Product 1</h3>
+                            <p class="product-description">Description of product 1</p>                  
+                            <button class="add-to-cart">
+                                <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="button-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="/products/product-1" class="product-link">
+                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        </a>
+                        <div class="product-info">
+                            <h3 class="product-title">Product 1</h3>
+                            <p class="product-description">Description of product 1</p>                  
+                            <button class="add-to-cart">
+                                <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="button-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="/products/product-1" class="product-link">
+                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        </a>
+                        <div class="product-info">
+                            <h3 class="product-title">Product 1</h3>
+                            <p class="product-description">Description of product 1</p>                  
+                            <button class="add-to-cart">
+                                <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="button-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="/products/product-1" class="product-link">
+                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        </a>
+                        <div class="product-info">
+                            <h3 class="product-title">Product 1</h3>
+                            <p class="product-description">Description of product 1</p>                  
+                            <button class="add-to-cart">
+                                <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="button-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="/products/product-1" class="product-link">
+                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        </a>
+                        <div class="product-info">
+                            <h3 class="product-title">Product 1</h3>
+                            <p class="product-description">Description of product 1</p>                  
+                            <button class="add-to-cart">
+                                <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="button-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="/products/product-1" class="product-link">
+                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        </a>
+                        <div class="product-info">
+                            <h3 class="product-title">Product 1</h3>
+                            <p class="product-description">Description of product 1</p>                  
+                            <button class="add-to-cart">
+                                <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="button-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="/products/product-1" class="product-link">
+                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        </a>
+                        <div class="product-info">
+                            <h3 class="product-title">Product 1</h3>
+                            <p class="product-description">Description of product 1</p>                  
+                            <button class="add-to-cart">
+                                <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="button-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="/products/product-1" class="product-link">
+                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        </a>
+                        <div class="product-info">
+                            <h3 class="product-title">Product 1</h3>
+                            <p class="product-description">Description of product 1</p>                  
+                            <button class="add-to-cart">
+                                <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="button-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="product-grid hidden" id="cushion-cover">
+                    <!-- Similar structure for Cushion Cover products -->
+                </div>
+        
+                <div class="product-grid hidden" id="table-runner">
+                    <!-- Similar structure for Table Runner products -->
+                </div>
+        
+                <div class="product-grid hidden" id="bath-towels">
+                    <!-- Similar structure for Bath Towels products -->
+                </div>
+            </div>
+        </section>
+        
+        <style>
+            .product-navs {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            .nav-tabss {
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .nav-items {
+                padding: 10px 20px;
+                cursor: pointer;
+                background: #f0f0f0;
+                margin-right: 10px;
+                border-radius: 5px;
+            }
+            .nav-items.active {
+                background: #007bff;
+                color: #fff;
+            }
+            .product-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+            .product-card {
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding: 15px;
+                text-align: center;
+            }
+            .hidden {
+                display: none;
+            }
+        </style>
+        
+        <script>
+            document.querySelectorAll('.nav-items').forEach(item => {
+                item.addEventListener('click', function() {
+                    document.querySelectorAll('.nav-items').forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+        
+                    document.querySelectorAll('.product-grid').forEach(grid => grid.classList.add('hidden'));
+                    document.getElementById(this.dataset.category).classList.remove('hidden');
+                });
+            });
+        </script>
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Get In Touch</h3>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Quick Links</h3>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Photo Gallery</h3>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Newsletter</h3>
+                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

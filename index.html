@@ -173,7 +173,7 @@
 /* Product Card */
 .product-card {
     position: relative;
-    min-width: 290px;
+    min-width: 280px;
     max-height: 550px;
     box-sizing: border-box;
     margin: 10px;
@@ -192,10 +192,11 @@
     border-color: #0eb5d6; /* Change border color */
 }
 
+
 /* Product Image */
 .product-image {
-    width: 290px;
-    height: 290px;
+    width: 280px;
+    height: 280px;
     border-bottom: 1px solid #ddd; /* Separator between image and info */
 }
 
@@ -647,7 +648,68 @@
         <!-- Facilities End -->
        
         
-        
+        <style>
+            @media (max-width: 600px) {
+    .product-card {
+        width: 74px;
+        margin-bottom: 20px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .discount-badge {
+        top: 5px;
+        left: 5px;
+    }
+
+    .product-title {
+        font-size: 16px;
+    }
+
+    .product-description {
+        font-size: 12px;
+    }
+
+    .add-to-cart {
+        padding: 8px 16px;
+    }
+
+    .slider-nav {
+        font-size: 18px;
+    }
+}
+
+/* Medium Devices (Tablet) */
+@media (min-width: 601px) and (max-width: 992px) {
+    .product-card {
+        width: 74px;
+    }
+
+    .slider-nav {
+        font-size: 18px;
+    }
+}
+
+/* Large Devices (Desktop) */
+@media (min-width: 993px) {
+    .product-card {
+        width: 23%;
+    }
+
+    .slider-nav {
+        font-size: 22px;
+    }
+}
+
+/* Extra Large Devices (Large Desktop) */
+@media (min-width: 1200px) {
+    .product-card {
+        width: 20%;
+    }
+}
+        </style>
 
         <section class="product-slider" style="padding-top: 15px;padding-bottom: 15px;">
             <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">

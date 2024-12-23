@@ -328,6 +328,7 @@
 .section-title {
     position: relative;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 /* Blue bar beneath the title */
@@ -383,6 +384,44 @@
 
 
 
+</style>
+<style>
+    .product-navs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .nav-tabss {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-items {
+        padding: 10px 20px;
+        cursor: pointer;
+        background: #f0f0f0;
+        margin-right: 10px;
+        border-radius: 5px;
+    }
+    .nav-items.active {
+        background: #0eb5d6;
+        color: #fff;
+    }
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    .product-card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        text-align: center;
+    }
+    .hidden {
+        display: none;
+    }
 </style>
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -540,19 +579,19 @@
         <!-- First Slide -->
         <div class="owl-carousel-item">
             <a href="page1.html">
-                <img class="img-fluid" style="height: 350px;" src="img/c1.webp" alt="Image 1">
+                <img class="img-fluid" style="height: 450px;" src="img/c1.webp" alt="Image 1">
             </a>
         </div>
         <!-- Second Slide -->
         <div class="owl-carousel-item">
             <a href="page2.html">
-                <img class="img-fluid"  style="height: 350px;" src="img/c2.webp" alt="Image 2">
+                <img class="img-fluid"  style="height: 450px;" src="img/c2.webp" alt="Image 2">
             </a>
         </div>
         <!-- Third Slide -->
         <div class="owl-carousel-item">
             <a href="page3.html">
-                <img class="img-fluid"  style="height: 350px;" src="img/c3.webp" alt="Image 3">
+                <img class="img-fluid"  style="height: 450px;" src="img/c3.webp" alt="Image 3">
             </a>
         </div>
     </div>
@@ -561,9 +600,9 @@
 <!-- Carousel End -->
 
 
-        <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 0px;">
             <!-- News & Events Section Title -->
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px; height:auto;">
+            <div class="section-title text-center position-relative pb-2 mb-3 mx-auto" style="max-width: 600px; height:auto;">
                 <h5 class="fw-bold text-primary text-uppercase">Products</h5>    
                 <!-- Blue bar container -->
                 <div class="blue-bar">
@@ -575,22 +614,25 @@
         <section class="product-section" style="padding: 15px;">
             <nav class="product-navs">
                 <ul class="nav-tabss">
-                    <li class="nav-items active" data-category="bedsheet">Bedsheet</li>
-                    <li class="nav-items" data-category="cushion-cover">Cushion Cover</li>
-                    <li class="nav-items" data-category="table-runner">Table Runner</li>
-                    <li class="nav-items" data-category="bath-towels">Bath Towels</li>
+                    <li class="nav-items active" data-category="Cotton Towels">Cotton Towels</li>
+                    <li class="nav-items" data-category="Cushion Covers">Cushion Covers</li>
+                    <li class="nav-items" data-category="Table Covers">Table Covers</li>
+                    <li class="nav-items" data-category="Cotton Bedsheets">Cotton Bedsheets</li>
+                    <li class="nav-items" data-category="Bed Quilts">Bed Quilts</li>
+                    <li class="nav-items" data-category="Cosmetic Pouch">Cosmetic Pouch</li>
+                    <li class="nav-items" data-category="Travel Pouch">Travel Pouch</li>
                 </ul>
             </nav>
         
             <div class="product-container">
-                <div class="product-grid" id="bedsheet">
+                <div class="product-grid" id="Cotton Towels">
                     <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
                         <a href="/products/product-1" class="product-link">
-                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" alt="Product 1" class="product-image">
                         </a>
                         <div class="product-info">
-                            <h3 class="product-title">Product 1</h3>
-                            <p class="product-description">Description of product 1</p>                  
+                            <h3 class="product-title">Turkish Bath Towels</h3>
+                            <p class="product-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                  
                             <button class="add-to-cart">
                                 <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <span class="button-text">Add to Cart</span>
@@ -599,11 +641,11 @@
                     </div>
                     <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
                         <a href="/products/product-1" class="product-link">
-                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" alt="Product 1" class="product-image">
                         </a>
                         <div class="product-info">
-                            <h3 class="product-title">Product 1</h3>
-                            <p class="product-description">Description of product 1</p>                  
+                            <h3 class="product-title">Turkish Bath Towels</h3>
+                            <p class="product-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
                             <button class="add-to-cart">
                                 <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <span class="button-text">Add to Cart</span>
@@ -612,11 +654,11 @@
                     </div>
                     <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
                         <a href="/products/product-1" class="product-link">
-                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="product-image">
                         </a>
                         <div class="product-info">
-                            <h3 class="product-title">Product 1</h3>
-                            <p class="product-description">Description of product 1</p>                  
+                            <h3 class="product-title">Turkish Bath Towels</h3>
+                            <p class="product-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
                             <button class="add-to-cart">
                                 <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <span class="button-text">Add to Cart</span>
@@ -625,11 +667,11 @@
                     </div>
                     <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
                         <a href="/products/product-1" class="product-link">
-                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458452906/VJ/PK/DS/145876533/grey-minimalist-interior-design-instagram-post-10-500x500.png" alt="Product 1" class="product-image">
                         </a>
                         <div class="product-info">
-                            <h3 class="product-title">Product 1</h3>
-                            <p class="product-description">Description of product 1</p>                  
+                            <h3 class="product-title">Turkish Bath Towels</h3>
+                            <p class="product-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
                             <button class="add-to-cart">
                                 <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <span class="button-text">Add to Cart</span>
@@ -638,11 +680,11 @@
                     </div>
                     <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
                         <a href="/products/product-1" class="product-link">
-                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/6/426469411/JP/IF/ZG/145876533/pure-cotton-bath-towels-500x500.jpg" alt="Product 1" class="product-image">
                         </a>
                         <div class="product-info">
-                            <h3 class="product-title">Product 1</h3>
-                            <p class="product-description">Description of product 1</p>                  
+                            <h3 class="product-title">Red Cotton Bath Towels</h3>
+                            <p class="product-description">Luxuriously Soft Bath Towels (30x60 Inches)<br>₹ 110/ Piece</p>            
                             <button class="add-to-cart">
                                 <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <span class="button-text">Add to Cart</span>
@@ -651,43 +693,18 @@
                     </div>
                     <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
                         <a href="/products/product-1" class="product-link">
-                            <img src="img/p1.webp" alt="Product 1" class="product-image">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/6/426471666/LQ/HE/TG/145876533/grey-cotton-bath-towel-500x500.jpg" alt="Product 1" class="product-image">
                         </a>
                         <div class="product-info">
-                            <h3 class="product-title">Product 1</h3>
-                            <p class="product-description">Description of product 1</p>                  
+                            <h3 class="product-title">Grey Cotton Bath Towels</h3>
+                            <p class="product-description">Luxuriously Soft Bath Towels (30x60 Inches)<br>₹ 110/ Piece</p>                   
                             <button class="add-to-cart">
                                 <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <span class="button-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
-                        <a href="/products/product-1" class="product-link">
-                            <img src="img/p1.webp" alt="Product 1" class="product-image">
-                        </a>
-                        <div class="product-info">
-                            <h3 class="product-title">Product 1</h3>
-                            <p class="product-description">Description of product 1</p>                  
-                            <button class="add-to-cart">
-                                <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="button-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
-                        <a href="/products/product-1" class="product-link">
-                            <img src="img/p1.webp" alt="Product 1" class="product-image">
-                        </a>
-                        <div class="product-info">
-                            <h3 class="product-title">Product 1</h3>
-                            <p class="product-description">Description of product 1</p>                  
-                            <button class="add-to-cart">
-                                <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="button-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
+                   
                 </div>
         
                 <div class="product-grid hidden" id="cushion-cover">
@@ -704,44 +721,7 @@
             </div>
         </section>
         
-        <style>
-            .product-navs {
-                display: flex;
-                justify-content: center;
-                margin-bottom: 20px;
-            }
-            .nav-tabss {
-                display: flex;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-            .nav-items {
-                padding: 10px 20px;
-                cursor: pointer;
-                background: #f0f0f0;
-                margin-right: 10px;
-                border-radius: 5px;
-            }
-            .nav-items.active {
-                background: #007bff;
-                color: #fff;
-            }
-            .product-grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 20px;
-            }
-            .product-card {
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                padding: 15px;
-                text-align: center;
-            }
-            .hidden {
-                display: none;
-            }
-        </style>
+    
         
         <script>
             document.querySelectorAll('.nav-items').forEach(item => {
@@ -760,78 +740,57 @@
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Get In Touch</h3>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <h3 class="text-white mb-4">Our Location</h3>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>66, Mettu Street, Karur, TN, India </p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9600362903</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>bigmoonrknd@gmail.com</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Quick Links</h3>
-                        <a class="btn btn-link text-white-50" href="">About Us</a>
-                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
-                        <a class="btn btn-link text-white-50" href="">Our Services</a>
-                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                        <h3 class="text-white mb-4">Home Furnishings</h3>
+                        <a class="btn btn-link text-white-50" href="#">Cotton Towels</a>
+                        <a class="btn btn-link text-white-50" href="#">Pillow Covers</a>
+                        <a class="btn btn-link text-white-50" href="#">Table Covers</a>
+                        <a class="btn btn-link text-white-50" href="#">Cotton Bedsheets</a>
+                        <a class="btn btn-link text-white-50" href="#">Bed Quilts</a>
+                        <a class="btn btn-link text-white-50" href="#">Cosmetic Pouch</a>
+                        <a class="btn btn-link text-white-50" href="#">Travel Pouch</a>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Photo Gallery</h3>
-                        <div class="row g-2 pt-2">
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-2.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-3.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-4.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-5.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-6.jpg" alt="">
-                            </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h3 class="text-white mb-4">Baby Essentials</h3>
+                            <a class="btn btn-link text-white-50" href="#">Baby Swadles</a>
+                            <a class="btn btn-link text-white-50" href="#">Baby Wipes</a>
+                            <a class="btn btn-link text-white-50" href="#">Baby Napkins</a>
+                            <a class="btn btn-link text-white-50" href="#">Baby Towels</a>
+                            <a class="btn btn-link text-white-50" href="#">Baby Blankets</a>
                         </div>
-                    </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <p>For all latest product updates, let us now your mail!</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Enter</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container text-center">
                 <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 text-center mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">BigMoon Rknd</a>, All Rights Reserved.
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="index.html">Jayalakshmi & Durga</a>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
         <!-- Footer End -->
 

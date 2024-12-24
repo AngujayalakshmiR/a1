@@ -399,51 +399,7 @@
     padding-bottom: 55px;
 }
 
-.footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-}
 
-.footer .container {
-    padding: 0 15px; /* Add padding for responsiveness */
-    max-width: 1200px; /* Limit the maximum width for better layout */
-    margin: 0 auto;
-}
-
-.footer .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the content */
-    gap: 20px; /* Add space between columns */
-}
-
-.footer .col-lg-3, .footer .col-md-6 {
-    flex: 1 1 calc(25% - 20px); /* Ensure even spacing */
-    min-width: 250px; /* Ensure minimum width for smaller screens */
-}
-.footer .col-lg-3, .footer .col-md-6 p .mb-2{
-    justify-content: left; /* Ensure minimum width for smaller screens */
-}
-
-.footer .btn-social {
-    margin: 0 5px; /* Add spacing between social buttons */
-}
-
-.footer .copyright {
-    font-size: 14px;
-    margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .footer .col-lg-3, .footer .col-md-6 {
-        flex: 1 1 100%; /* Stack columns for smaller screens */
-        text-align: center;
-    }
-}
 
 
 </style>
@@ -754,6 +710,8 @@
         width: 20%;
     }
 }
+
+
         </style>
 
         <section class="product-slider" style="padding-top: 15px;padding-bottom: 15px;">
@@ -1088,27 +1046,30 @@
         </section>
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
+            <div class="container py-5" style="padding-left:35px;">
                 <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 abc">
                         <h3 class="text-white mb-4">Our Location</h3>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>66, Mettu Street, Karur, TN, India</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9600362903</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>bigmoonrknd@gmail.com</p>
-                        <div class="d-flex justify-content-center pt-2">
-                            <!-- Social Links -->
+                        <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href="mailto:bigmoonrknd@gmail.com">
-                                <i class="fas fa-envelope"></i>
+                                <i class="fas fa-envelope" style="font-size: 20px;"></i>
                             </a>
                             <a class="btn btn-outline-light btn-social" href="https://wa.me/+919600362903" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
+                                <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
                             </a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/bigmoon_homify">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.amazon.in/s?me=A22U1QWK6VZ1QN">
+                            
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/bigmoon_homify/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.amazon.in/s?me=A22U1QWK6VZ1QN&fbclid=PAZXh0bgNhZW0CMTEAAaaj4vKNNPZNJ494Q7AhNWU3b2j92mFRfiVCF8ildciR1ArwVV1nVbdyF1s_aem_ZmFrZWR1bW15MTZieXRlcw&ref=sf_seller_app_share_new">
                                 <i class="fab fa-amazon"></i>
                             </a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.flipkart.com">
+                                <img src="img/flipkart.png" alt="Flipkart" style="width: 20px; height: 20px;">
+                            </a>
+                            
+                            
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -1139,10 +1100,16 @@
                     </div>
                 </div>
             </div>
+            <!-- Footer bottom section -->
             <div class="container text-center pt-4 pb-4">
                 <div class="copyright">
-                    &copy; <a class="border-bottom" href="#">BigMoon Rknd</a>, All Rights Reserved.
-                    Designed By <a class="border-bottom" href="index.html">Jayalakshmi & Durga</a>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 text-center mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">BigMoon Rknd</a>, All Rights Reserved.
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="index.html">Jayalakshmi & Durga</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

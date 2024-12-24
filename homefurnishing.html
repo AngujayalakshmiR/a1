@@ -550,18 +550,21 @@
 .product-grid.hidden {
     display: none;
 }
-
+.navbar{
+    z-index: 500;
+}
 .cart-modal {
         position: fixed;
-        top: 50px;
-        right: 2px;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
         width: 500px;
         height: 100%;
         background: #fff;
         box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
-        z-index: 999;
+        z-index: 1000;
     }
 
     .cart-modal-header {
@@ -683,7 +686,7 @@
                         <i class="fa fa-history me-1"></i> Order History
                     </a>
                     <a href="#" class="btn btn-light rounded-pill" id="cart-btn">
-                        <i class="fa fa-shopping-cart me-1"></i> Cart
+                        <i class="fa fa-shopping-cart me-1"></i> Cart <span id="cart-count">0</span>
                     </a>
                 </div>    
             </div>
@@ -696,12 +699,12 @@
                 </button>
             </div>
             <div class="cart-modal-body">
-                <!-- Empty cart message -->
                 <div class="cart-empty">
                     <h4>Your cart is empty!</h4>
                     <p>Add your favorite items to your cart.</p>
                     <p><a href="/collections/all">Shop Now</a></p>
                 </div>
+                <div id="cart-items"></div> <!-- Cart items will be appended here -->
             </div>
         </div>
           
@@ -1044,21 +1047,76 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script>
-        const cartBtn = document.getElementById('cart-btn');
-        const cartModal = document.getElementById('cart-modal');
-        const cartClose = document.getElementById('cart-close');
-    
-        // Open the cart modal
-        cartBtn.addEventListener('click', () => {
-            cartModal.style.transform = 'translateX(0)';
+   <script>document.addEventListener('DOMContentLoaded', function() {
+    const cartBtn = document.getElementById('cart-btn');
+    const cartModal = document.getElementById('cart-modal');
+    const cartClose = document.getElementById('cart-close');
+    const cartItemsContainer = cartModal.querySelector('.cart-modal-body');  // Where the cart items will be displayed
+
+    // Array to store the cart items
+    let cartItems = [];
+
+    // Function to update the cart display in the modal
+    function updateCartDisplay() {
+        console.log('Updating cart display...');  // Debugging line
+        if (cartItems.length === 0) {
+            // If the cart is empty, show the empty message
+            cartItemsContainer.innerHTML = `
+                <div class="cart-empty">
+                    <h4>Your cart is empty!</h4>
+                    <p>Add your favorite items to your cart.</p>
+                    <p><a href="/collections/all">Shop Now</a></p>
+                </div>
+            `;
+        } else {
+            // If there are items, display them
+            cartItemsContainer.innerHTML = cartItems.map(item => `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.title}" class="cart-item-image">
+                    <div class="cart-item-info">
+                        <h5 class="cart-item-title">${item.title}</h5>
+                        <p class="cart-item-price">₹ ${item.price}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+    }
+
+    // Open the cart modal
+    cartBtn.addEventListener('click', () => {
+        cartModal.style.transform = 'translateX(0)';
+        updateCartDisplay(); // Update cart display when modal opens
+    });
+
+    // Close the cart modal
+    cartClose.addEventListener('click', () => {
+        cartModal.style.transform = 'translateX(100%)';
+    });
+
+    // Handle "Add to Cart" button click
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function() {
+            // Get the product details
+            const productCard = this.closest('.product-card');
+            const productTitle = productCard.querySelector('.product-title').textContent;
+            const productPrice = productCard.querySelector('.product-description').textContent.split('₹')[1].trim();
+            const productImage = productCard.querySelector('.product-image').src;
+
+            console.log(`Adding product: ${productTitle}, ₹ ${productPrice}, Image: ${productImage}`);  // Debugging line
+
+            // Add the product to the cart array
+            cartItems.push({
+                title: productTitle,
+                price: productPrice,
+                image: productImage
+            });
+
+            // Update the cart display
+            updateCartDisplay();
         });
-    
-        // Close the cart modal
-        cartClose.addEventListener('click', () => {
-            cartModal.style.transform = 'translateX(100%)';
-        });
-    </script>
+    });
+});
+</script>
 </body>
 
 </html>

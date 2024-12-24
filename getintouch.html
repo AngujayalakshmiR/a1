@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="img/bigmoon_logo_circle.png" style="background-color: white;">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Bigmoon</title>
+    <style>
+           html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Prevents both vertical and horizontal scrollbars */
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0eb5d6;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+            width: 100%;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            top: 0px;
+            position: relative;
+            font-family: 'Lobster Two', cursive;
+        }
+
+        .section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            position: absolute;
+    top:50vh;
+        }
+
+        .social-media-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 120px;
+            z-index: 1000;
+        }
+
+        .social-media-list li {
+            height: 150px;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            font-size: 3rem;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        .social-media-list li:hover {
+            transform: scale(1.3);
+        }
+
+        .social-media-list li a {
+            color: #0eb5d6;
+            text-decoration: none;
+        }
+
+        .social-media-list li:hover a {
+            color: #0eb5d6;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #fff;
+            padding: 10px 10px;
+            background-color: #0eb5d6;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .social-media-list {
+                gap: 40px;
+            }
+
+            .social-media-list li {
+                height: 80px;
+                width: 80px;
+                font-size: 2.5rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+        }
+        .context {
+    width: 100%;
+    position: absolute;
+    top:20vh;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 70px;
+}
+
+
+.area{
+    background: #0eb5d6;  
+    background: -webkit-linear-gradient(to left, #78bcff, #0eb5d6);  
+    width: 100%;
+    height:100vh;
+    
+   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.436);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+body{
+    background: #3399ff;
+  }
+  
+  
+  .circle{
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: ripple 15s infinite;
+    box-shadow: 0px 0px 1px 0px #508fb9;
+  }
+  
+  .small{
+    width: 200px;
+    height: 200px;
+    left: -100px;
+    bottom: -100px;
+  }
+  
+  .medium{
+    width: 400px;
+    height: 400px;
+    left: -200px;
+    bottom: -200px;
+  }
+  
+  .large{
+    width: 600px;
+    height: 600px;
+    left: -300px;
+    bottom: -300px;
+  }
+  
+  .xlarge{
+    width: 800px;
+    height: 800px;
+    left: -400px;
+    bottom: -400px;
+  }
+  
+  .xxlarge{
+    width: 1000px;
+    height: 1000px;
+    left: -500px;
+    bottom: -500px;
+  }
+  
+  .shade1{
+    opacity: 0.9;
+  }
+  .shade2{
+    opacity: 0.9;
+  }
+  
+  .shade3{
+    opacity: 0.9;
+  }
+  
+  .shade4{
+    opacity: 0.8;
+  }
+  
+  .shade5{
+    opacity: 0.9;
+  }
+  
+  @keyframes ripple{
+    0%{
+      transform: scale(0.8);
+    }
+    
+    50%{
+      transform: scale(1.2);
+    }
+    
+    100%{
+      transform: scale(0.8);
+    }
+  }
+    </style>
+</head>
+<body>
+    <div class="context">
+    <h1>Bigmoon Contact</h1>
+    
+</div>
+
+<div class="section">
+    <ul class="social-media-list">
+        <li><a href="mailto:bigmoonrknd@gmail.com"><i class="fa fa-envelope"></i></a></li>
+        <li><a href="tel:9600362903"><i class="fa fa-phone"></i></a></li>
+        <li> <a  href="https://wa.me/+919600362903" >
+            <i class="fab fa-whatsapp"></i>
+        </a></li>
+        <li> <a  href="https://www.instagram.com/bigmoon_homify/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li><a href="mailto:bigmoonrknd@gmail.com"><i class="fa fa-envelope"></i></a></li>
+        <li><a href="tel:9600362903"><i class="fa fa-phone"></i></a></li>
+    </ul>
+</div>
+
+<div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+</div >
+    
+<div class="footer">
+    <p>&copy; BigMoon Rknd, All Rights Reserved.</p>
+    <p>Designed By Jayalakshmi & Durga</p>
+</div>
+</body>
+</html>

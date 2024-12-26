@@ -167,7 +167,7 @@
     transition: transform 0.5s ease-in-out;
     width: max-content; 
     padding-right: 50px; /* Ensure the container stretches to fit the content */
-    padding-left: 80px;
+    padding-left: 40px;
 }
 
 /* Product Card */
@@ -274,19 +274,6 @@
 
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .product-card {
-        min-width: 50%; /* 2 products per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .product-card {
-        min-width: 100%; /* 1 product per row on very small screens */
-    }
-}
-
 
 .slider-nav {
     position: absolute;
@@ -295,7 +282,7 @@
     background-color: #0eb5d6;  /* Blue background */
     color: white;
     border: none;
-    padding: 12px;  /* Adjust padding for better circle size */
+    padding: 8px;  /* Adjust padding for better circle size */
     cursor: pointer;
     font-size: 24px;
     z-index: 10;
@@ -308,11 +295,11 @@
 }
 
 .prev {
-    left: 10px;
+    left: 5px;
 }
 
 .next {
-    right: 10px;
+    right: 5px;
 }
 
 .slider-nav:hover {
@@ -695,7 +682,7 @@
 /* Medium Devices (Tablet) */
 @media (min-width: 401px) and (max-width: 500px) {
     .product-card {
-        width: 30px;
+        width: 25px;
     }
 
     .slider-nav {

@@ -18,8 +18,7 @@
     
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -707,7 +706,90 @@
         width: 20%;
     }
 }
+.new-section .image-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
 
+.new-section .image-container {
+    position: relative;
+    width: 50%; /* Each image takes 50% minus gap */
+    height: 400px;
+    overflow: hidden;
+}
+
+.new-section .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.new-section .image-container .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.new-section .image-container:hover .hover-img {
+    opacity: 1;
+}
+
+.new-section .image-container:hover .main-img {
+    opacity: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .new-section .image-container {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+
+.video-gallery .video-container {
+    position: relative;
+    width: 250px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+.video-gallery .video-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-gallery .video-container:hover .video-thumb {
+    transform: scale(1.05);
+}
+
+.video-gallery .video-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .video-gallery .video-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
 
         </style>
 
@@ -943,7 +1025,7 @@
         <section class="product-slider" style="padding: 15px 0;">
             <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
                 <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                    <h5 class="fw-bold text-primary text-uppercase">Home Furnishings</h5>
+                    <h5 class="fw-bold text-primary text-uppercase">Baby Essentials</h5>
                     <div class="blue-bar">
                         <div class="moving-box"></div>
                     </div>
@@ -1040,7 +1122,172 @@
             </div>
             <button class="slider-nav prev">&lt;</button>
             <button class="slider-nav next">&gt;</button>
+        </section><br><br>
+        <section class="video-gallery" style="padding: 15px 0;">
+            <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <h5 class="fw-bold text-primary text-uppercase">Video Gallery</h5>
+                    <div class="blue-bar">
+                        <div class="moving-box"></div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Video Section -->
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-2 justify-content-center">
+                  <!-- Video 1 -->
+                  <div class="col">
+                    <div class="video-container">
+                      <video class="video-thumb w-100" data-bs-toggle="modal" data-bs-target="#videoModal1" autoplay loop muted>
+                        <source src="img/videosample.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <div class="video-title">Video 1</div>
+                    </div>
+                  </div>
+                  <!-- Video 2 -->
+                  <div class="col">
+                    <div class="video-container">
+                      <video class="video-thumb w-100" data-bs-toggle="modal" data-bs-target="#videoModal2" autoplay loop muted>
+                        <source src="img/videosample.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <div class="video-title">Video 2</div>
+                    </div>
+                  </div>
+                  <!-- Video 3 -->
+                  <div class="col">
+                    <div class="video-container">
+                      <video class="video-thumb w-100" data-bs-toggle="modal" data-bs-target="#videoModal3" autoplay loop muted>
+                        <source src="img/videosample.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <div class="video-title">Video 3</div>
+                    </div>
+                  </div>
+                  <!-- Video 4 -->
+                  <div class="col">
+                    <div class="video-container">
+                      <video class="video-thumb w-100" data-bs-toggle="modal" data-bs-target="#videoModal4" autoplay loop muted>
+                        <source src="img/videosample.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <div class="video-title">Video 4</div>
+                    </div>
+                  </div>
+                  <!-- Video 5 -->
+                  <div class="col">
+                    <div class="video-container">
+                      <video class="video-thumb w-100" data-bs-toggle="modal" data-bs-target="#videoModal5" autoplay loop muted>
+                        <source src="img/videosample.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <div class="video-title">Video 5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+        
+            <!-- Modal for Video 1 -->
+            <div class="modal fade" id="videoModal1" tabindex="-1" aria-labelledby="videoModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="videoModalLabel1">Video 1</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <video id="video1" controls autoplay loop muted width="100%" height="auto">
+                                <source src="img/videosample.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Modal for Video 2 -->
+            <div class="modal fade" id="videoModal2" tabindex="-1" aria-labelledby="videoModalLabel2" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="videoModalLabel2">Video 2</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <video id="video2" controls autoplay loop muted width="100%" height="auto">
+                                <source src="img/videosample.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Modal for Video 3 -->
+            <div class="modal fade" id="videoModal3" tabindex="-1" aria-labelledby="videoModalLabel3" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="videoModalLabel3">Video 3</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <video id="video3" controls autoplay loop muted width="100%" height="auto">
+                                <source src="img/videosample.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Modal for Video 4 -->
+            <div class="modal fade" id="videoModal4" tabindex="-1" aria-labelledby="videoModalLabel4" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="videoModalLabel4">Video 4</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <video id="video4" controls autoplay loop muted width="100%" height="auto">
+                                <source src="img/videosample.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Modal for Video 5 -->
+            <div class="modal fade" id="videoModal5" tabindex="-1" aria-labelledby="videoModalLabel5" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="videoModalLabel5">Video 5</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <video id="video5" controls autoplay loop muted width="100%" height="auto">
+                                <source src="img/videosample.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        
+        
+        
+        
+        
+        
+       
+        
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5" style="padding-left:35px;">
@@ -1102,9 +1349,9 @@
                 <div class="copyright">
                     <div class="row justify-content-center">
                         <div class="col-md-6 text-center mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">BigMoon Rknd</a>, All Rights Reserved.
+                            <a class="border-bottom" href="index.html">BigMoon Rknd</a>, Designed &
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a class="border-bottom" href="index.html">Jayalakshmi & Durga</a>
+                            All Rights Reserved by &copy; Jayalakshmi & Durga</a>
                         </div>
                     </div>
                 </div>
@@ -1121,7 +1368,8 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
@@ -1181,6 +1429,7 @@
 });
 
     </script> 
+
 </body>
 
 </html>

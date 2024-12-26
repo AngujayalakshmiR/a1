@@ -31,6 +31,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
+
+        .text-white-50{
+            text-decoration: none;
+        }
         .product-image-preview {
             width: 100%;
             height: 450px;
@@ -78,6 +82,9 @@
     /* Optional: You can also modify the focus state if needed */
     .custom-btn:focus {
         box-shadow: 0 0 0 0.2rem rgba(14, 181, 214, 0.5);
+    }
+    .pp::placeholder{
+        color: #777;
     }
     </style>
 <style>
@@ -335,16 +342,16 @@
     background-color: #0eb5d6;  /* Blue background */
     color: white;
     border: none;
-    padding: 8px;  /* Adjust padding for better circle size */
+    padding: 0;  /* Remove padding to avoid misalignment */
     cursor: pointer;
-    font-size: 24px;
+    font-size: 20px;
     z-index: 10;
     border-radius: 50%;  /* Makes the button circular */
     width: 50px;  /* Fixed size */
     height: 50px;  /* Fixed size */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;  /* Horizontal alignment */
+    align-items: center;  /* Vertical alignment */
 }
 
 .prev {
@@ -356,14 +363,13 @@
 }
 
 .slider-nav:hover {
-    background-color:#0eb5d6;  /* Darker blue on hover */
+    background-color: #007bbd;  /* Slightly darker blue on hover */
 }
 
 .slider-nav:disabled {
     background-color: #d3d3d3;  /* Light gray when disabled */
     cursor: not-allowed;
 }
-
 /* Section Title Styles */
 .section-title {
     position: relative;
@@ -440,6 +446,9 @@
 }
 
 
+.shadow-custom {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
 
 
 </style>
@@ -461,7 +470,7 @@
         </div>
 
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0 shadow-custom">
             <a href="index.html" class="navbar-brand d-flex align-items-center">
                 <img src="img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
                 <h1 class="m-0 " style="color: #0eb5d6;">Bigmoon</h1>
@@ -718,12 +727,12 @@
         <!-- Repeat similar product-card divs for other products -->
     </div>
   
-    <button class="slider-nav prev" style="align-items: center;">&lt;</button>
-    <button class="slider-nav next" style="align-items: center;">&gt;</button>
+    <button class="slider-nav prev">&lt;</button>
+    <button class="slider-nav next">&gt;</button>
 </section>
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
+          <!-- Footer Start -->
+          <div class="container-fluid text-white-50 footer pt-5 mt-5 wow fadeIn" style="background-color: #103741 !important;" data-wow-delay="0.1s">
+            <div class="container py-5" style="padding-left: 35px;">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Our Location</h3>
@@ -742,9 +751,9 @@
                             <a class="btn btn-outline-light btn-social" href="https://www.amazon.in/s?me=A22U1QWK6VZ1QN&fbclid=PAZXh0bgNhZW0CMTEAAaaj4vKNNPZNJ494Q7AhNWU3b2j92mFRfiVCF8ildciR1ArwVV1nVbdyF1s_aem_ZmFrZWR1bW15MTZieXRlcw&ref=sf_seller_app_share_new">
                                 <i class="fab fa-amazon"></i>
                             </a>
-                            <!--<a class="btn btn-outline-light btn-social" href="https://www.flipkart.com">
-                                <i class="fas fa-shopping-cart" style="font-size: 20px;"></i>
-                            </a>-->
+                            <a class="btn btn-outline-light btn-social" href="https://www.flipkart.com">
+                                <img src="img/flipkart.png" alt="Flipkart" style="width: 20px; height: 20px;">
+                            </a>
                             
                             
                         </div>
@@ -769,10 +778,10 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>For all latest product updates, let us know your mail!</p>
+                        <p class="text-white-50" style="color: #777;">For all latest product updates, let us know your mail!</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Enter</button>
+                            <input class="form-control pp bg-transparent w-100 py-3 ps-4 pe-5" style="color: #fcfafa;" type="text" placeholder="Your email">
+                            <button type="button" class="btn py-2 position-absolute top-0 end-0 mt-2 me-2" style="background-color: #0eb5d6;color: white;">Enter</button>
                         </div>
                     </div>
                 </div>
@@ -782,9 +791,9 @@
                 <div class="copyright">
                     <div class="row justify-content-center">
                         <div class="col-md-6 text-center mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">BigMoon Rknd</a>, All Rights Reserved.
+                            <a class="border-bottom" href="index.html" style="text-decoration: none;">BigMoon Rknd</a>, Designed &
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a class="border-bottom" href="index.html">Jayalakshmi & Durga</a>
+                            All Rights Reserved by &copy; Jayalakshmi & Durga</a>
                         </div>
                     </div>
                 </div>

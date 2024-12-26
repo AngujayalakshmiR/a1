@@ -1144,47 +1144,55 @@
     <script src="js/main.js"></script>
 
     <script>
-        document.querySelectorAll('.product-slider').forEach((slider) => {
-            const prevButton = slider.querySelector('.prev');
-            const nextButton = slider.querySelector('.next');
-            const sliderContainer = slider.querySelector('.slider-container');
-            const productCards = slider.querySelectorAll('.product-card');
-        
-            let index = 0;
-            const visibleCards = 4; // Number of cards to show at once
-            const cardWidth = productCards[0].offsetWidth + 10; // Assuming 10px margin
-            const totalCards = productCards.length;
-            const maxIndex = Math.max(0, Math.ceil((totalCards - visibleCards) / 1));
-        
-            // Function to update the slider position
-            function updateSlider() {
-                sliderContainer.style.transition = "transform 0.3s ease"; // Smooth transition
-                const offset = index * cardWidth;
-                sliderContainer.style.transform = `translateX(-${offset}px)`; // Translate to the correct position
-        
-                // Enable/disable buttons based on position
-                prevButton.disabled = index === 0;
-                nextButton.disabled = index === maxIndex;
-            }
-        
-            // Event listeners for the navigation buttons
-            prevButton.addEventListener('click', () => {
-                if (index > 0) {
-                    index--;
-                }
-                updateSlider();
-            });
-        
-            nextButton.addEventListener('click', () => {
-                if (index < maxIndex) {
-                    index++;
-                }
-                updateSlider();
-            });
-        
-            // Initialize the slider for this section
-            window.addEventListener('load', updateSlider);
-        });
+      document.querySelectorAll('.product-slider').forEach((slider) => {
+    const prevButton = slider.querySelector('.prev');
+    const nextButton = slider.querySelector('.next');
+    const sliderContainer = slider.querySelector('.slider-container');
+    const productCards = slider.querySelectorAll('.product-card');
+
+    let index = 0;
+    const visibleCards = Math.floor(slider.offsetWidth / productCards[0].offsetWidth); // Calculate visible cards dynamically
+    const cardWidth = productCards[0].offsetWidth + 10; // Assuming 10px margin
+    const totalCards = productCards.length;
+    const maxIndex = Math.max(0, totalCards - visibleCards); // Adjust maxIndex based on visible cards
+
+    // Function to update the slider position
+    function updateSlider() {
+        sliderContainer.style.transition = "transform 0.3s ease"; // Smooth transition
+        const offset = index * cardWidth;
+        sliderContainer.style.transform = `translateX(-${offset}px)`; // Translate to the correct position
+
+        // Enable/disable buttons based on position
+        prevButton.disabled = index === 0;
+        nextButton.disabled = index >= maxIndex;
+    }
+
+    // Event listeners for the navigation buttons
+    prevButton.addEventListener('click', () => {
+        if (index > 0) {
+            index--;
+        }
+        updateSlider();
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (index < maxIndex) {
+            index++;
+        }
+        updateSlider();
+    });
+
+    // Initialize the slider for this section
+    window.addEventListener('load', updateSlider);
+
+    // Recalculate maxIndex on window resize to handle dynamic widths
+    window.addEventListener('resize', () => {
+        const visibleCards = Math.floor(slider.offsetWidth / productCards[0].offsetWidth);
+        maxIndex = Math.max(0, totalCards - visibleCards);
+        updateSlider();
+    });
+});
+
     </script> 
 </body>
 

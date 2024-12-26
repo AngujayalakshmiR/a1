@@ -50,7 +50,7 @@
             align-items: center;
             margin-bottom: 30px;
             position: absolute;
-    top:50vh;
+    top:35vh;
         }
 
         .social-media-list {
@@ -137,7 +137,7 @@
         .context {
     width: 100%;
     position: absolute;
-    top:20vh;
+    top:15vh;
     
 }
 
@@ -272,7 +272,7 @@
 
 }
 body{
-    background: #3399ff;
+    background: #0eb5d6;
   }
   
   
@@ -351,6 +351,71 @@ body{
       transform: scale(0.8);
     }
   }
+  .social-media-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; /* Adjust spacing between items */
+    z-index: 1000;
+    justify-items: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+}
+
+@media screen and (max-width: 500px) {
+    .social-media-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Adjust heading and icons spacing */
+.heading {
+    margin-bottom: 10px; /* Reduce the spacing between the heading and icons */
+}
+
+.icons {
+    margin-top: 5px; /* Adjust spacing from the heading */
+}
+
+/* Add padding between footer and icons */
+.footer {
+    padding-bottom: 20px; /* Add space between footer and last content */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .heading {
+        margin-bottom: 8px; /* Adjust for smaller screens */
+    }
+
+    .icons {
+        margin-top: 4px;
+    }
+
+    .footer {
+        padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        margin-bottom: 6px;
+    }
+    .section{
+        top:260px;
+    }
+    .context h1{
+    font-size: 50px;
+}
+    .icons {
+        margin-top: 3px;
+    }
+
+    .footer {
+        padding-bottom: 10px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -368,8 +433,8 @@ body{
         </a></li>
         <li> <a  href="https://www.instagram.com/bigmoon_homify/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"><i class="fab fa-instagram"></i></a>
         </li>
-        <li><a href="mailto:bigmoonrknd@gmail.com"><i class="fa fa-envelope"></i></a></li>
-        <li><a href="tel:9600362903"><i class="fa fa-phone"></i></a></li>
+        <li><a href="https://www.amazon.in/s?me=A22U1QWK6VZ1QN&fbclid=PAZXh0bgNhZW0CMTEAAaaj4vKNNPZNJ494Q7AhNWU3b2j92mFRfiVCF8ildciR1ArwVV1nVbdyF1s_aem_ZmFrZWR1bW15MTZieXRlcw&ref=sf_seller_app_share_new"><i class="fab fa-amazon"></i></a></li>
+        <li><a href="https://www.flipkart.com"><i class="fa fa-shopping-cart"></i></a></li>
     </ul>
 </div>
 
@@ -389,8 +454,8 @@ body{
 </div >
     
 <div class="footer">
-    <p>&copy; BigMoon Rknd, All Rights Reserved.</p>
-    <p>Designed By Jayalakshmi & Durga</p>
+    <p> BigMoon Rknd, All Rights Reserved &</p>
+    <p>Designed By &copy; Jayalakshmi & Durga</p>
 </div>
 </body>
 </html>

@@ -28,6 +28,58 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .product-image-preview {
+            width: 100%;
+            height: 450px;
+            border: 3px solid #0eb5d6;
+            border-radius: 20px;
+        }
+        .product-thumbnails img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border: 3px solid transparent;
+            border-radius: 10px;
+        }
+        .product-thumbnails img:hover,
+        .product-thumbnails img.active {
+            border-color: #0eb5d6;
+        }
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-cart,
+        .btn-buy {
+            background-color: #0eb5d6;
+            color: white;
+            font-weight: bold;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .btn-cart:hover,
+        .btn-buy:hover {
+            background-color: #5dc1e6;
+        }
+
+        .custom-btn {
+        border-color: #5dc1e6;
+    }
+
+    .custom-btn:hover {
+        background-color: #0eb5d6;
+        border-color: #0eb5d6;
+    }
+
+    /* Optional: You can also modify the focus state if needed */
+    .custom-btn:focus {
+        box-shadow: 0 0 0 0.2rem rgba(14, 181, 214, 0.5);
+    }
+    </style>
 <style>
     .row {
     margin-left: 0 !important;
@@ -168,24 +220,23 @@
     transition: transform 0.5s ease-in-out;
     width: max-content; 
     padding-right: 50px; /* Ensure the container stretches to fit the content */
-    padding-left: 80px;
+    padding-left: 25px;
 }
-
-
-
 
 /* Product Card */
 .product-card {
-    min-width: 250px; /* Adjust for responsiveness */
-    max-height: 450px;
+    position: relative;
+    min-width: 305px;
+    max-height: 550px;
     box-sizing: border-box;
     margin: 10px;
-    background-color: white; /* White background */
-    border: 1px solid #ddd; /* Light border to differentiate */
-    border-radius: 10px; /* Rounded corners */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 /* Hover Effects */
 .product-card:hover {
@@ -194,11 +245,12 @@
     border-color: #0eb5d6; /* Change border color */
 }
 
+
 /* Product Image */
 .product-image {
-    width: 250px;
-    height: 250px;
-    border-bottom: 2px solid #ddd; /* Separator between image and info */
+    width: 305px;
+    height: 280px;
+    border-bottom: 1px solid #ddd; /* Separator between image and info */
 }
 
 /* Product Info */
@@ -275,19 +327,6 @@
 
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .product-card {
-        min-width: 50%; /* 2 products per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .product-card {
-        min-width: 100%; /* 1 product per row on very small screens */
-    }
-}
-
 
 .slider-nav {
     position: absolute;
@@ -296,7 +335,7 @@
     background-color: #0eb5d6;  /* Blue background */
     color: white;
     border: none;
-    padding: 12px;  /* Adjust padding for better circle size */
+    padding: 8px;  /* Adjust padding for better circle size */
     cursor: pointer;
     font-size: 24px;
     z-index: 10;
@@ -309,11 +348,11 @@
 }
 
 .prev {
-    left: 10px;
+    left: 5px;
 }
 
 .next {
-    right: 10px;
+    right: 5px;
 }
 
 .slider-nav:hover {
@@ -329,7 +368,6 @@
 .section-title {
     position: relative;
     text-align: center;
-    margin-bottom: 0px;
 }
 
 /* Blue bar beneath the title */
@@ -373,6 +411,24 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #0eb5d6; /* Blue color */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 50%; /* Makes it circular */
+    width: 50px; /* Fixed size for circle */
+    height: 50px; /* Fixed size for circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 2; /* Ensure it appears above other elements */
+}
 
 .responsive-image {
     width: 100%; /* Set width to 100% to make it responsive */
@@ -384,172 +440,6 @@
 }
 
 
-
-/* Basic Styles for the Product Section */
-.product-section {
-    padding: 15px;
-}
-
-.product-navs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.nav-tabss {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.nav-items {
-    cursor: pointer;
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.nav-items.active {
-    background-color: #0eb5d6;
-    color: white;
-}
-
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    width: 100%;
-}
-
-.product-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 15px;
-    text-align: center;
-}
-
-.product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    border-color: #0eb5d6;
-}
-
-.product-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 2px solid #ddd;
-}
-
-.product-info {
-    padding: 15px;
-}
-
-.product-title {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.product-description {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.add-to-cart {
-    background-color: #0eb5d6;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.add-to-cart:hover {
-    background-color: #5dc1e6;
-}
-
-.add-to-cart .cart-icon {
-    margin-right: 10px;
-}
-
-/* Media Queries for Responsiveness */
-
-/* For smaller screens like phones and tablets */
-@media (max-width: 768px) {
-    .product-navs {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 10px;
-    }
-
-    .product-card {
-        max-width: 100%;
-    }
-
-    .product-title {
-        font-size: 14px;
-    }
-
-    .product-description {
-        font-size: 12px;
-    }
-
-    .add-to-cart {
-        font-size: 12px;
-    }
-}
-
-/* For very small screens like mobile phones */
-@media (max-width: 576px) {
-    .product-navs {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .product-card {
-        max-width: 100%;
-    }
-
-    .product-title {
-        font-size: 12px;
-    }
-
-    .product-description {
-        font-size: 10px;
-    }
-
-    .add-to-cart {
-        font-size: 10px;
-    }
-}
-
-/* Optional: Styling for hidden product categories */
-.product-grid.hidden {
-    display: none;
-}
 
 
 </style>
@@ -574,7 +464,7 @@
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="index.html" class="navbar-brand d-flex align-items-center">
                 <img src="img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
-                <h1 class="m-0 text-primary">Bigmoon</h1>
+                <h1 class="m-0 " style="color: #0eb5d6;">Bigmoon</h1>
             </a>
             
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -640,7 +530,197 @@
             </div>
         </nav>
 <!-- Carousel Start -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Left Side: Images -->
+        <div class="col-md-6">
+            <div>
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" alt="Product Preview" id="bigImage" class="product-image-preview">
+            </div>
+            <div class="mt-3 product-thumbnails d-flex gap-2">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" alt="Thumbnail" onclick="changeImage(this)" class="active" style="width: 70px;height: 70px;">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
+            </div>
+        </div>
+        <!-- Right Side: Details -->
+        <div class="col-md-6">
+            <h2>Turkish Bath Towels</h2>
+            <p class="text-muted">Category: Cotton Towels</p>
+            <h4 class="text-danger">₹125 <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹150</del></span></h4>
+            <p class="mt-3">Luxuriously soft Turkish bath towels, perfect for every home. Dimensions: 70 x 40 inches.</p>
+            <p><strong>Size:</strong> Large</p>
+            <p><strong>Color:</strong> <span style="color:#0eb5d6;">Sky Blue</span></p>
+            <!-- Quantity Selector -->
+            <div class="quantity-selector mt-3">
+                <button class="btn btn-outline-primary custom-btn" onclick="updateQuantity(-1)">-</button>
+                <input type="number" id="quantity" value="1" class="form-control text-center" style="width: 60px;">
+                <button class="btn btn-outline-primary custom-btn" onclick="updateQuantity(1)">+</button>
+            </div>
+            
+            <!-- Buttons -->
+            <div class="mt-4">
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-2">
+                        <button class="btn btn-cart w-100"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <button class="btn btn-buy w-100"><i class="fas fa-credit-card"></i> Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    // Change big image on thumbnail click
+    function changeImage(img) {
+        const bigImage = document.getElementById('bigImage');
+        bigImage.src = img.src;
+        document.querySelectorAll('.product-thumbnails img').forEach(thumbnail => {
+            thumbnail.classList.remove('active');
+        });
+        img.classList.add('active');
+    }
+
+    // Update quantity
+    function updateQuantity(change) {
+        const quantityInput = document.getElementById('quantity');
+        const newValue = parseInt(quantityInput.value) + change;
+        if (newValue > 0) quantityInput.value = newValue;
+    }
+</script>
 <!-- Carousel End -->
+<img src="img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" data-wow-delay="0.1s">
+
+<section class="product-slider" style="padding-top: 15px;padding-bottom: 15px;">
+    <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <!-- News & Events Section Title -->
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px; height:auto;">
+            <h5 class="fw-bold  text-uppercase" style="color: #0eb5d6;">Best Sellers</h5>    
+            <!-- Blue bar container -->
+            <div class="blue-bar">
+                <div class="moving-box"></div>  <!-- Small white rectangle -->
+            </div>
+        </div>				
+    </div>
+    <div class="slider-container">
+        <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+            <div class="discount-badge">25% OFF</div>
+
+            <a href="/products/product-1" class="product-link">
+                <img src="img/p1.webp" alt="Product 1" class="product-image">
+            </a>
+            <div class="product-info">
+                <h3 class="product-title">Product 1</h3>
+                <p class="product-description">Description of product 1</p>
+                                     
+                <button class="add-to-cart">
+                    <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="button-text">Add to Cart</span>
+                </button>
+                
+                
+                
+                
+            </div>
+        </div>
+        <div class="product-card wow fadeInUp" data-wow-delay="0.5s">
+            <div class="discount-badge">25% OFF</div>
+
+            <a href="/products/product-1" class="product-link">
+                <img src="img/p1.webp" alt="Product 1" class="product-image">
+            </a>
+            <div class="product-info">
+                <h3 class="product-title">Product 2</h3>
+                <p class="product-description">Description of product 1</p>
+                <button class="add-to-cart">
+                    <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="button-text">Add to Cart</span>
+                </button>
+                
+                
+            </div>
+        </div>
+        <div class="product-card wow fadeInUp" data-wow-delay="0.7s">
+            <div class="discount-badge">25% OFF</div>
+
+            <a href="/products/product-1" class="product-link">
+                <img src="img/p1.webp" alt="Product 1" class="product-image">
+            </a>
+            <div class="product-info">
+                <h3 class="product-title">Product 3</h3>
+                <p class="product-description">Description of product 1</p>
+                <button class="add-to-cart">
+                    <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="button-text">Add to Cart</span>
+                </button>
+                
+                
+                
+            </div>
+        </div>
+        <div class="product-card wow fadeInUp" data-wow-delay="0.9s">
+            <div class="discount-badge">25% OFF</div>
+
+            <a href="/products/product-1" class="product-link">
+                <img src="img/p1.webp" alt="Product 1" class="product-image">
+            </a>
+            <div class="product-info">
+                <h3 class="product-title">Product 4</h3>
+                <p class="product-description">Description of product 1</p>
+                <button class="add-to-cart">
+                    <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="button-text">Add to Cart</span>
+                </button>
+                
+                
+                
+            </div>
+        </div>
+        <div class="product-card wow fadeInUp" data-wow-delay="1.1s">
+            <a href="/products/product-1" class="product-link">
+                <div class="discount-badge">25% OFF</div>
+
+                <img src="img/p1.webp" alt="Product 1" class="product-image">
+            </a>
+            <div class="product-info">
+                <h3 class="product-title">Product 5</h3>
+                <p class="product-description">Description of product 1</p>
+                <button class="add-to-cart">
+                    <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="button-text">Add to Cart</span>
+                </button>
+                
+                
+            </div>
+        </div>
+        <div class="product-card">
+            <a href="/products/product-1" class="product-link">
+                <div class="discount-badge">25% OFF</div>
+
+                <img src="img/p1.webp" alt="Product 1" class="product-image">
+            </a>
+            <div class="product-info">
+                <h3 class="product-title">Product 6</h3>
+                <p class="product-description">Description of product 1</p>
+                <button class="add-to-cart">
+                    <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="button-text">Add to Cart</span>
+                </button>
+                
+                
+            </div>
+        </div>
+        <!-- Repeat similar product-card divs for other products -->
+    </div>
+  
+    <button class="slider-nav prev" style="align-items: center;">&lt;</button>
+    <button class="slider-nav next" style="align-items: center;">&gt;</button>
+</section>
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
@@ -715,7 +795,7 @@
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="background-color: #0eb5d6;border-color: #0eb5d6;"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -728,6 +808,57 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        document.querySelectorAll('.product-slider').forEach((slider) => {
+      const prevButton = slider.querySelector('.prev');
+      const nextButton = slider.querySelector('.next');
+      const sliderContainer = slider.querySelector('.slider-container');
+      const productCards = slider.querySelectorAll('.product-card');
+  
+      let index = 0;
+      const visibleCards = Math.floor(slider.offsetWidth / productCards[0].offsetWidth); // Calculate visible cards dynamically
+      const cardWidth = productCards[0].offsetWidth + 30; // Assuming 10px margin
+      const totalCards = productCards.length;
+      const maxIndex = Math.max(0, totalCards - visibleCards); // Adjust maxIndex based on visible cards
+  
+      // Function to update the slider position
+      function updateSlider() {
+          sliderContainer.style.transition = "transform 0.3s ease"; // Smooth transition
+          const offset = index * cardWidth;
+          sliderContainer.style.transform = `translateX(-${offset}px)`; // Translate to the correct position
+  
+          // Enable/disable buttons based on position
+          prevButton.disabled = index === 0;
+          nextButton.disabled = index >= maxIndex;
+      }
+  
+      // Event listeners for the navigation buttons
+      prevButton.addEventListener('click', () => {
+          if (index > 0) {
+              index--;
+          }
+          updateSlider();
+      });
+  
+      nextButton.addEventListener('click', () => {
+          if (index < maxIndex) {
+              index++;
+          }
+          updateSlider();
+      });
+  
+      // Initialize the slider for this section
+      window.addEventListener('load', updateSlider);
+  
+      // Recalculate maxIndex on window resize to handle dynamic widths
+      window.addEventListener('resize', () => {
+          const visibleCards = Math.floor(slider.offsetWidth / productCards[0].offsetWidth);
+          maxIndex = Math.max(0, totalCards - visibleCards);
+          updateSlider();
+      });
+  });
+  
+      </script> 
 </body>
 
 </html>

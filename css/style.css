@@ -187,13 +187,13 @@ h6,
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
         position: relative;
-        min-height: 350px;
+        min-height: 250px;
     }
     
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
-        height: 350px;
+        height: 250px;
         object-fit: fill;
     }
 

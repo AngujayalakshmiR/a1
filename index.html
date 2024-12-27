@@ -151,8 +151,9 @@
 .owl-carousel-item img {
     width: 100%;
     height: 550px;
-    object-fit: cover; /* Ensures consistent sizing */
+    object-fit: fill; /* Ensures consistent sizing */
 }
+
 /* Container for the entire product slider */
 .product-slider {
     position: relative;
@@ -384,13 +385,18 @@
     padding-top: 55px;
     padding-bottom: 55px;
 }
-
+@media (max-width: 576px) {
+    .responsive-image {
+        width: 100%;
+        height: 400px;
+    }
+}
 
 /* Border radius and increased video height */
 video {
     border-radius: 20px;
     height: 600px; /* Increase the video height */
-    object-fit: cover;
+    object-fit: fill;
   }
 
   /* Scroll-down animation for video */
@@ -426,6 +432,20 @@ video {
   align-items: center;
 }
 
+/* vedio mobile view */
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  /* Hide all videos except the first 2 */
+  .video-container:nth-child(n+3) {
+    display: none;
+  }
+
+  /* Reduce the height of videos on mobile */
+  .video-anim {
+    height: 350px; /* Adjust as needed */
+    object-fit: cover; /* Ensure the videos maintain aspect ratio */
+  }
+}
 
 </style>
     <!-- Template Stylesheet -->
@@ -581,23 +601,23 @@ video {
 <!-- Carousel Start -->
 <!-- Carousel Start -->
 <div class="container-xxl container-fluid p-0 mb-5">
-    <div class="owl-carousel header-carousel position-relative">
+    <div class="owl-carousel header-carousel position-relative" >
         <!-- First Slide -->
         <div class="owl-carousel-item">
             <a href="#">
-                <img class="img-fluid" src="img/c1.webp" alt="Image 1">
+                <img class="img-fluid" style="object-fit: fill;" src="img/c1.webp" alt="Image 1">
             </a>
         </div>
         <!-- Second Slide -->
         <div class="owl-carousel-item">
             <a href="#">
-                <img class="img-fluid" src="img/c2.webp" alt="Image 2">
+                <img class="img-fluid" style="object-fit: fill;" src="img/c2.webp" alt="Image 2">
             </a>
         </div>
         <!-- Third Slide -->
         <div class="owl-carousel-item">
             <a href="#">
-                <img class="img-fluid" src="img/c3.webp" alt="Image 3">
+                <img class="img-fluid" style="object-fit: fill;" src="img/c3.webp" alt="Image 3">
             </a>
         </div>
     </div>
@@ -762,7 +782,7 @@ video {
 .new-section .image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -784,8 +804,27 @@ video {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .new-section .image-container {
-        width: 100%; /* Full width for smaller screens */
+    .new-section .image-container{
+        width: 100%;
+        height: 250px;
+        padding: 20px;
+        border-radius: 15px; /* Add border radius on mobile */
+         /* Ensure padding is included in the total width/height */
+    }
+
+    /* Disable hover effect on mobile */
+    .new-section .image-container .hover-img {
+        opacity: 1;
+        padding: 15px;
+        border-radius: 30px; /* Always visible, no hover effect */
+    }
+
+    .new-section .image-container:hover .hover-img {
+        opacity: 1; /* Ensure no hover opacity change */
+    }
+
+    .new-section .image-container:hover .main-img {
+        opacity: 1; /* Ensure the main image is always visible */
     }
 }
 
@@ -917,7 +956,7 @@ video {
             <button class="slider-nav prev">&lt;</button>
             <button class="slider-nav next">&gt;</button>
         </section>
-        <img src="img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" data-wow-delay="0.1s">
+        <img src="img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" style="object-fit: fill;" data-wow-delay="0.1s">
         <section class="product-slider" style="padding: 15px 0;">
             <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
                 <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
@@ -1020,7 +1059,7 @@ video {
             <button class="slider-nav next">&gt;</button>
         </section>
 
-        <img src="img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" data-wow-delay="0.1s">
+        <img src="img/headimg1.webp"  alt="Responsive Image" class="responsive-image wow fadeInUp" style="object-fit: fill;" data-wow-delay="0.1s">
         <section class="product-slider" style="padding: 15px 0;">
             <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
                 <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
@@ -1159,42 +1198,42 @@ video {
             <div class="container-fluid">
                 <div class="row g-4">
                   <!-- Video 1 -->
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                  <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal1" autoplay loop muted>
                       <source src="img/videosample.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 2 -->
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                  <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal2" autoplay loop muted>
                       <source src="img/videosample.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 3 -->
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                  <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal3" autoplay loop muted>
                       <source src="img/videosample.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 4 -->
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                  <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal4" autoplay loop muted>
                       <source src="img/videosample.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 5 -->
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                  <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal5" autoplay loop muted>
                       <source src="img/videosample.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 6 -->
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                  <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal6" autoplay loop muted>
                       <source src="img/videosample.mp4" type="video/mp4">
                       Your browser does not support the video tag.
@@ -1202,6 +1241,8 @@ video {
                   </div>
                 </div>
               </div>
+              
+              
              
                         
           

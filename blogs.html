@@ -49,12 +49,13 @@
       font-weight: bold;
     }
     .btn-read-more {
-      background-color: #007bff;
+      background-color:#5dc1e6;
       color: #fff;
       transition: background-color 0.3s ease-in-out;
     }
     .btn-read-more:hover {
-      background-color: #0056b3;
+      background-color:#0eb5d6;
+      color: white;
     }
     /* Scroll Animation */
     @keyframes scrollDown {
@@ -214,159 +215,13 @@
     padding-left: 80px;
 }
 
+.pp::placeholder{
+    color:#777;
 
-
-
-/* Product Card */
-.product-card {
-    min-width: 250px; /* Adjust for responsiveness */
-    max-height: 450px;
-    box-sizing: border-box;
-    margin: 10px;
-    background-color: white; /* White background */
-    border: 1px solid #ddd; /* Light border to differentiate */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    padding: 0px;
 }
 
-/* Hover Effects */
-.product-card:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add shadow */
-    border-color: #0eb5d6; /* Change border color */
-}
-
-/* Product Image */
-.product-image {
-    width: 250px;
-    height: 250px;
-    border-bottom: 2px solid #ddd; /* Separator between image and info */
-}
-
-/* Product Info */
-.product-info {
-    text-align: center;
-    padding: 15px;
-}
-
-/* Product Title */
-.product-title {
-    font-size: 18px;
-    color: #333; /* Dark gray */
-    margin-bottom: 10px;
-}
-
-/* Product Description */
-.product-description {
-    font-size: 14px;
-    color: #777; /* Light gray */
-    margin-bottom: 15px;
-}
-
-/* Add to Cart Button */
-.add-to-cart {
-    background-color: #0eb5d6; /* Blue background */
-    color: white; /* White text */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
-    display: inline-flex; /* Align icon and text horizontally */
-    align-items: center; /* Vertically center icon and text */
-    justify-content: center; /* Center text */
-    position: relative; /* Allows for absolute positioning of icon */
-    font-weight: bold; /* Make the text bold */
-    text-align: center; /* Ensure text inside the button is centered */
-    padding-right: 35px;
-}
-
-/* Cart Icon */
-.cart-icon {
-    font-size: 18px; /* Icon size */
-    color: white; /* White icon */
-    margin-right: 10px; /* Space between icon and text */
-    opacity: 0; /* Hidden by default */
-    position: absolute; /* Position the icon absolutely inside the button */
-    left: 10px; /* Position to the left of the button */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth reveal */
-    padding-left: 5px;
-    padding-right: 10px;
-}
-
-/* Add to Cart Hover */
-.add-to-cart:hover {
-    background-color: #099bbd; /* Darker blue on hover */
-    transform: scale(1.1); /* Slight button scale */
-    padding-right: 15px;
-}
-
-/* Show Cart Icon on Hover */
-.add-to-cart:hover .cart-icon {
-    opacity: 1; /* Show icon */
-    transform: translateX(0); /* Move to original position */
-    padding-right: 10px;
-}
-
-/* Button Text */
-.button-text {
-    display: inline-block; /* Ensures text is treated as a block element within the button */
-    visibility: visible; /* Ensure text stays visible */
-}
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .product-card {
-        min-width: 50%; /* 2 products per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .product-card {
-        min-width: 100%; /* 1 product per row on very small screens */
-    }
-}
-
-
-.slider-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #0eb5d6;  /* Blue background */
-    color: white;
-    border: none;
-    padding: 12px;  /* Adjust padding for better circle size */
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 10;
-    border-radius: 50%;  /* Makes the button circular */
-    width: 50px;  /* Fixed size */
-    height: 50px;  /* Fixed size */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.slider-nav:hover {
-    background-color:#0eb5d6;  /* Darker blue on hover */
-}
-
-.slider-nav:disabled {
-    background-color: #d3d3d3;  /* Light gray when disabled */
-    cursor: not-allowed;
+.text-white-50{
+    text-decoration: none;
 }
 
 /* Section Title Styles */
@@ -669,7 +524,7 @@
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="index.html" class="navbar-brand d-flex align-items-center">
                 <img src="img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
-                <h1 class="m-0 text-primary">Bigmoon</h1>
+                <h1 class="m-0 " style="color: #0eb5d6;">Bigmoon</h1>
             </a>
             
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -770,7 +625,7 @@
         <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 0px;">
             <!-- News & Events Section Title -->
             <div class="section-title text-center position-relative pb-2 mb-3 mx-auto" style="max-width: 600px; height:auto;">
-                <h5 class="fw-bold text-primary text-uppercase">Blogs</h5>    
+                <h5 class="fw-bold  text-uppercase" style="color: #0eb5d6;">Blogs</h5>    
                 <!-- Blue bar container -->
                 <div class="blue-bar">
                     <div class="moving-box"></div>  <!-- Small white rectangle -->
@@ -779,37 +634,37 @@
         </div>
         
         <div class="container py-5">
-            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
               <!-- Card 1 -->
-              <div class="col">
+              <div class="col wow fadeInUp">
                 <div class="card h-100 d-flex flex-row">
-                  <img src="img/sample1.jpg" class="img-fluid w-50" alt="Card Image">
+                  <img src="https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/28283586/2024/3/15/7534f38b-f241-470d-adb7-5fec216b4a651710444439326BlanketsQuiltsandDohars1.jpg" class="img-fluid w-50" alt="Card Image">
                   <div class="card-body">
-                    <h5 class="card-title">Topic 1</h5>
+                    <h5 class="card-title">Asthetic looks of Bigmoon Bed Quilts</h5>
                     <p class="card-text">This is a brief description for topic 1. Learn more about this interesting topic.</p>
-                    <a href="page1.html" class="btn btn-read-more">Read More</a>
+                    <a href="blogs/bedquilts_blog.html" class="btn btn-read-more ">Read More</a>
                   </div>
                 </div>
               </div>
               <!-- Card 2 -->
-              <div class="col">
+              <div class="col wow fadeInUp">
                 <div class="card h-100 d-flex flex-row">
-                  <img src="img/sample2.jpg" class="img-fluid w-50" alt="Card Image">
+                  <img src="https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/649350s.jpg?im=Resize,width=750" class="img-fluid w-50" alt="Card Image">
                   <div class="card-body">
-                    <h5 class="card-title">Topic 2</h5>
+                    <h5 class="card-title">Day to Day benefits of using Bigmoon's Cotton Towels</h5>
                     <p class="card-text">This is a brief description for topic 2. Explore more details by clicking below.</p>
-                    <a href="page2.html" class="btn btn-read-more">Read More</a>
+                    <a href="blogs/cottontowles_blog.html" class="btn btn-read-more">Read More</a>
                   </div>
                 </div>
               </div>
               <!-- Card 3 -->
-              <div class="col">
+              <div class="col wow fadeInUp">
                 <div class="card h-100 d-flex flex-row">
-                  <img src="img/sample3.jpg" class="img-fluid w-50" alt="Card Image">
+                  <img src="https://m.media-amazon.com/images/I/619hxkVJWgL._AC_SX148_SY213_QL70_.jpg" class="img-fluid w-50" alt="Card Image">
                   <div class="card-body">
-                    <h5 class="card-title">Topic 3</h5>
+                    <h5 class="card-title">Importance of Bigmoon products for Baby Essentials</h5>
                     <p class="card-text">This is a brief description for topic 3. Dive deeper by clicking below.</p>
-                    <a href="page3.html" class="btn btn-read-more">Read More</a>
+                    <a href="blogs/babyessentials_blog.html" class="btn btn-read-more">Read More</a>
                   </div>
                 </div>
               </div>
@@ -817,7 +672,7 @@
           </div>
    
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid text-white-50 footer pt-5 mt-5 wow fadeIn" style="background-color: #103741 !important;" data-wow-delay="0.1s">
             <div class="container py-5" style="padding-left: 35px;">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
@@ -864,10 +719,10 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>For all latest product updates, let us know your mail!</p>
+                        <p class="text-white-50" style="color: #777;">For all latest product updates, let us know your mail!</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Enter</button>
+                            <input class="form-control pp bg-transparent w-100 py-3 ps-4 pe-5" style="color: #fcfafa;" type="text" placeholder="Your email">
+                            <button type="button" class="btn py-2 position-absolute top-0 end-0 mt-2 me-2" style="background-color: #0eb5d6;color: white;">Enter</button>
                         </div>
                     </div>
                 </div>
@@ -877,7 +732,7 @@
                 <div class="copyright">
                     <div class="row justify-content-center">
                         <div class="col-md-6 text-center mb-3 mb-md-0">
-                            <a class="border-bottom" href="index.html">BigMoon Rknd</a>, Designed &
+                            <a class="border-bottom" href="index.html" style="text-decoration: none;">BigMoon Rknd</a>, Designed &
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             All Rights Reserved by &copy; Jayalakshmi & Durga</a>
                         </div>

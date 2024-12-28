@@ -34,7 +34,8 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
   <style>
     /* Hover effect for table rows */
-    table tbody tr:hover {
+   
+    table thead tr th{
         background-color: #0eb5d6;
         color: white;
     }
@@ -42,7 +43,7 @@
     /* Scroll down animation for the table */
     .table-container {
         overflow-y: auto;
-        height: 400px;
+        
     }
 
     /* Custom button styles */
@@ -53,7 +54,13 @@
 
     .btn-reorder:hover, .btn-download:hover {
         background-color: #0a99a4;
+        color: white;
     }
+     /* Add spacing below the search bar */
+     .dataTables_filter {
+            margin-bottom: 20px; /* Adjust the value as needed */
+        }
+
 </style>
   <style>
     /* Card Styles */
@@ -643,44 +650,43 @@
 
 <!-- Carousel End -->
 
-
-        <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 0px;">
-            <!-- News & Events Section Title -->
-            <div class="section-title text-center position-relative pb-2 mb-3 mx-auto" style="max-width: 600px; height:auto;">
-                <h5 class="fw-bold  text-uppercase" style="color: #0eb5d6;">Order History</h5>    
-                <!-- Blue bar container -->
-                <div class="blue-bar">
-                    <div class="moving-box"></div>  <!-- Small white rectangle -->
-                </div>
-            </div>				
-        </div>
         
         <div class="container mt-5">
-            <h3 class="text-center mb-4">Order History</h3>
+            <h3 class="text-center mb-4" style="color: #0eb5d6;">Order History</h3>
             <div class="table-container">
                 <table id="orderTable" class="table table-bordered table-striped table-hover">
                     <thead>
-                        <tr>
-                            <th>S.No</th>
-                            <th>Product Pic</th>
-                            <th>Product Name</th>
-                            <th>Ordered Date</th>
-                            <th>Quantity</th>
-                            <th>Rate</th>
-                            <th>Action</th>
+                        <tr >
+                            <th style="background-color:#0eb5d6; color: white;">S.No</th>
+                            <th style="background-color:#0eb5d6; color: white;">Product Pic</th>
+                            <th style="background-color:#0eb5d6; color: white;">Product Name</th>
+                            <th style="background-color:#0eb5d6; color: white;">Ordered Date</th>
+                            <th style="background-color:#0eb5d6; color: white;">Quantity</th>
+                            <th style="background-color:#0eb5d6; color: white;">Rate</th>
+                            <th style="background-color:#0eb5d6; color: white;">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td><img src="https://via.placeholder.com/50" alt="Product" class="img-fluid"></td>
+                            <td><img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" style="width: 50px; height: 50px;" alt="Product" class="img-fluid"></td>
                             <td>Product 1</td>
                             <td>2024-12-25</td>
                             <td>2</td>
                             <td>$20</td>
                             <td>
-                                <button class="btn btn-reorder btn-sm">Reorder</button>
-                                <button class="btn btn-download btn-sm">Download</button>
+                                <button class="btn btn-download btn-sm" style="justify-items: center;">Download Receipt</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" style="width: 50px; height: 50px;" alt="Product" class="img-fluid"></td>
+                            <td>Product 2</td>
+                            <td>2024-12-27</td>
+                            <td>3</td>
+                            <td>$30</td>
+                            <td>
+                                <button class="btn btn-download btn-sm" style="justify-items: center;">Download Receipt</button>
                             </td>
                         </tr>
                         <!-- Add more rows as needed -->

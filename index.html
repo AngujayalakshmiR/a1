@@ -446,7 +446,24 @@ video {
     object-fit: cover; /* Ensure the videos maintain aspect ratio */
   }
 }
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
 
+.whatsapp-icon a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon a img:hover {
+  transform: scale(1.1);
+}
 </style>
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -464,7 +481,11 @@ video {
         <div class="top-banner text-white text-center py-2">
             Get FLAT ₹500 OFF on order above 2499 | Code: CHRISTMAS
         </div>
-
+        <div class="whatsapp-icon">
+            <a href="https://wa.me/+919600362903"  title="Chat on WhatsApp">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+            </a>
+          </div>
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="index.html" class="navbar-brand d-flex align-items-center">

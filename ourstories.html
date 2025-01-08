@@ -29,7 +29,6 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
       <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     /* Card Styles */
     .card {
@@ -498,7 +497,38 @@
     .cart-empty p {
         margin-bottom: 10px;
     }
+    .abtn-light {
+    border: 1px solid #0eb5d6;
+    color: white;
+    background: linear-gradient(45deg, #8dd1de, #5dc1e6);
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
 
+/* Hover effect */
+.abtn-light:hover {
+    background: linear-gradient(45deg, #a0d2dc, #5dc1e6);
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Active state during click */
+.abtn-light:active {
+    border: 1px solid #0eb5d6;
+    color: white;
+    background: #0a8bbb;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Permanent active state */
+.abtn-light.active {
+    background: #0a8bbb; /* Darker shaded background */
+    border: 1px solid #0eb5d6;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow */
+}
 </style>
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -508,7 +538,7 @@
     <div class="container-xxl  bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <div class="spinner-border " style="width: 3rem; height: 3rem;color: #5195a5 !important;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
@@ -521,7 +551,7 @@
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="index.html" class="navbar-brand d-flex align-items-center">
                 <img src="img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
-                <h1 class="m-0 " style="color: #5195a5 ;">Bigmoon</h1>
+                <h1 class="m-0 " style="color: #5195a5 !important;">Bigmoon</h1>
             </a>
             
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -529,37 +559,41 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <!-- Home with Icon -->
-                    <a href="index.html" class="nav-item nav-link ">
-                        <i class="fa fa-home me-2"></i>Home
-                    </a>
+                  
                     
-                    <!-- Home Linens Dropdown -->
-                    <div class="nav-item dropdown">
-                        <a href="homefurnishing.html" class="nav-link ">
-                            Home Furnishings
-                        </a><!-- Home Linens Dropdown <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="comforters.html" class="dropdown-item">Comforters</a>
-                            <a href="pillow-covers.html" class="dropdown-item">Pillow Covers</a>
-                            <a href="tablecloth.html" class="dropdown-item">Tablecloth</a>
-                        </div> -->
-                    </div>
-        
-                    <!-- Baby Products Dropdown -->
+                  
+        <div class="nav-item d-flex align-items-center ">
+                    <a href="index.html" class="btn abtn-light  me-2 ">
+                        Home Furnishings
+                    </a>
+                </div>
+                <div class="nav-item d-flex align-items-center">
+                    <a href="babyessentials.html" class="btn abtn-light  me-2 ">
+                        Baby Essentials
+                    </a>
+                </div>
+                    <!-- Baby Products Dropdown 
                     <div class="nav-item dropdown">
                         <a href="babyessentials.html" class="nav-link ">
                             Baby Essentials
                         </a>
-                         <!-- Baby Products Dropdown
+                         
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
                             <a href="baby-blankets.html" class="dropdown-item">Baby Blankets</a>
                             <a href="baby-pillows.html" class="dropdown-item">Baby Pillows</a>
                             <a href="baby-towels.html" class="dropdown-item">Baby Towels</a>
                         </div> -->
-                    </div>
-        
-                    <a href="blogs.html" class="nav-item nav-link active">Blogs</a>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="ourstories.html" class="nav-link active">
+                            Our Story
+                        </a></div>
+                        
+                    <a href="blogs.html" class="nav-item nav-link">Blogs</a>
+                    <div class="nav-item dropdown">
+                        <a href="bigmoontestimonial.html" class="nav-link ">
+                            Testimonial
+                        </a></div>
                     <a href="getintouch.html" class="nav-item nav-link">Get in Touch</a>
                     <!--
                     <div class="nav-item dropdown">
@@ -630,7 +664,7 @@
             }
         </style>
         <!-- Footer Start -->
-        <div class="container-fluid text-white-50 footer pt-5 mt-5 wow fadeIn" style="background-color: #103741 !important;" data-wow-delay="0.1s">
+        <div class="container-fluid text-white-50 footer pt-5  wow fadeIn" style="background-color: #103741 !important;" data-wow-delay="0.1s">
             <div class="container py-5" style="padding-left: 35px;">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
@@ -708,7 +742,7 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>

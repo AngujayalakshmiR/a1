@@ -1407,58 +1407,86 @@ video {
     <script src="js/main.js"></script>
 
     <script>
-      document.querySelectorAll('.product-slider').forEach((slider) => {
-    const prevButton = slider.querySelector('.prev');
-    const nextButton = slider.querySelector('.next');
-    const sliderContainer = slider.querySelector('.slider-container');
-    const productCards = slider.querySelectorAll('.product-card');
-
-    let index = 0;
-    const visibleCards = Math.floor(slider.offsetWidth / productCards[0].offsetWidth); // Calculate visible cards dynamically
-    const cardWidth = productCards[0].offsetWidth + 20; // Assuming 10px margin
-    const totalCards = productCards.length;
-    const maxIndex = Math.max(0, totalCards - visibleCards); // Adjust maxIndex based on visible cards
-
-    // Function to update the slider position
-    function updateSlider() {
-        sliderContainer.style.transition = "transform 0.3s ease"; // Smooth transition
-        const offset = index * cardWidth;
-        sliderContainer.style.transform = `translateX(-${offset}px)`; // Translate to the correct position
-
-        // Enable/disable buttons based on position
-        prevButton.disabled = index === 0;
-        nextButton.disabled = index >= maxIndex;
-    }
-
-    // Event listeners for the navigation buttons
-    prevButton.addEventListener('click', () => {
-        if (index > 0) {
-            index--;
+    document.querySelectorAll('.product-slider').forEach((slider) => {
+        const prevButton = slider.querySelector('.prev');
+        const nextButton = slider.querySelector('.next');
+        const sliderContainer = slider.querySelector('.slider-container');
+        const productCards = slider.querySelectorAll('.product-card');
+    
+        let index = 0;
+        const cardWidth = productCards[0].offsetWidth + 20; // Card width + margin
+        const totalCards = productCards.length;
+    
+        function getVisibleCards() {
+            return Math.floor(slider.offsetWidth / productCards[0].offsetWidth);
         }
-        updateSlider();
-    });
-
-    nextButton.addEventListener('click', () => {
-        if (index < maxIndex) {
-            index++;
+    
+        let visibleCards = getVisibleCards();
+        let maxIndex = Math.max(0, totalCards - visibleCards);
+    
+        // Update slider position
+        function updateSlider() {
+            const offset = index * cardWidth;
+            sliderContainer.style.transition = "transform 0.3s ease";
+            sliderContainer.style.transform = `translateX(-${offset}px)`;
+    
+            prevButton.disabled = index === 0;
+            nextButton.disabled = index >= maxIndex;
         }
-        updateSlider();
+    
+        // Button click handlers
+        prevButton.addEventListener('click', () => {
+            if (index > 0) index--;
+            updateSlider();
+        });
+    
+        nextButton.addEventListener('click', () => {
+            if (index < maxIndex) index++;
+            updateSlider();
+        });
+    
+        // Touch swipe handlers
+        let startX = 0;
+        let currentX = 0;
+    
+        function handleTouchStart(e) {
+            startX = e.touches[0].clientX;
+            sliderContainer.style.transition = "none"; // Disable transition during touch
+        }
+    
+        function handleTouchMove(e) {
+            currentX = e.touches[0].clientX;
+            const deltaX = startX - currentX;
+            const offset = index * cardWidth + deltaX;
+            sliderContainer.style.transform = `translateX(-${offset}px)`;
+        }
+    
+        function handleTouchEnd() {
+            const deltaX = startX - currentX;
+    
+            if (deltaX > 50 && index < maxIndex) {
+                index++;
+            } else if (deltaX < -50 && index > 0) {
+                index--;
+            }
+            updateSlider();
+        }
+    
+        sliderContainer.addEventListener('touchstart', handleTouchStart);
+        sliderContainer.addEventListener('touchmove', handleTouchMove);
+        sliderContainer.addEventListener('touchend', handleTouchEnd);
+    
+        // Resize handler to adjust visible cards and max index
+        window.addEventListener('resize', () => {
+            visibleCards = getVisibleCards();
+            maxIndex = Math.max(0, totalCards - visibleCards);
+            updateSlider();
+        });
+    
+        // Initialize the slider
+        window.addEventListener('load', updateSlider);
     });
-
-    // Initialize the slider for this section
-    window.addEventListener('load', updateSlider);
-
-    // Recalculate maxIndex on window resize to handle dynamic widths
-    window.addEventListener('resize', () => {
-        const visibleCards = Math.floor(slider.offsetWidth / productCards[0].offsetWidth);
-        maxIndex = Math.max(0, totalCards - visibleCards);
-        updateSlider();
-    });
-});
-
-  
-      </script>
-
+</script>    
 </body>
 
 </html>

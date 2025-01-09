@@ -10,7 +10,11 @@
 
 @import url('overwrite.css');
 /* ====================================== */
-
+:root {
+  --primary: #1dcce0  ;
+  --light: #FFF5F3;
+  --dark: #103741;
+}
 .clear {
   clear: both;
 }

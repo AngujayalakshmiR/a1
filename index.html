@@ -692,11 +692,10 @@
 }
 
 .cart-item-info {
-    flex-grow: 1;
     display: flex;
-    justify-content: space-between; /* Ensure title and price are on opposite sides */
-    align-items: center; /* Vertically center align */
-    width: 100%; /* Make sure it takes up the full width */
+    flex-direction: column; /* Align items in a column layout */
+    gap: 4px; /* Add some space between elements */
+    width: 100%; /* Take up the full width */
 }
 
 .cart-item-title {
@@ -704,8 +703,15 @@
     margin: 0;
     font-weight: bold;
     padding: 0 5px;
-    flex-grow: 1; /* Allow title to take up space */
 }
+
+.cart-item-description {
+    font-size: 14px; /* Slightly smaller font for the description */
+    margin: 0;
+    padding: 0 5px; /* Match the padding with the title */
+    color: #555; /* Optional: lighter color for distinction */
+}
+
 
 .cart-item-price {
     font-size: 14px;
@@ -2390,15 +2396,17 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             emptyCartMessage.style.display = 'none'; // Hide empty cart message
             cartItemsContainer.innerHTML = cartItems.map((item, index) => `
-                <div class="cart-item">
-                    <img src="${item.image}" alt="${item.title}" class="cart-item-image">
-                    <div class="cart-item-info">
-                        <h5 class="cart-item-title">${item.title}</h5>
-                        <i class="fa fa-trash cart-item-remove" onclick="removeItem(${index})"></i>
-                    </div>
-                    <span class="cart-item-price">₹ ${item.price}</span>
-                </div>
-            `).join('');
+    <div class="cart-item">
+        <img src="${item.image}" alt="${item.title}" class="cart-item-image">
+        <div class="cart-item-info">
+            <h5 class="cart-item-title">${item.title}</h5>
+            <p class="cart-item-description">${item.description}</p>
+            <i class="fa fa-trash cart-item-remove" onclick="removeItem(${index})"></i>
+        </div>
+        <span class="cart-item-price">₹ ${item.price}</span>
+    </div>
+`).join('');
+
         }
     }
 
@@ -2416,14 +2424,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle "Add to Cart" button click
     document.querySelectorAll('.aadd-to-cart').forEach(button => {
         button.addEventListener('click', function() {
-            const productCard = this.closest('.aproduct-card');
+            const productCard  = this.closest('.aproduct-card');
             const productTitle = productCard.querySelector('.aproduct-title').textContent;
+            const productDescription = productCard.querySelector('.aproduct-description').textContent.split('₹')[0].trim();
             const productPrice = productCard.querySelector('.aproduct-description').textContent.split('₹')[1].trim();
             const productImage = productCard.querySelector('.aproduct-image').src;
 
             // Add the product to the cart array
             cartItems.push({
                 title: productTitle,
+                description: productDescription,
                 price: productPrice,
                 image: productImage
             });

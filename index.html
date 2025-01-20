@@ -672,61 +672,6 @@
     }
 }
 
-.cart-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Space between items */
-    width: 100%; /* Ensure cart item fills the width of the modal */
-    box-sizing: border-box; /* Ensure padding/margin doesn't affect width */
-    height: 110px; /* Increased height for the cart item */
-    padding: 10px 0; /* Minimal padding */
-    position: relative; /* For positioning the bin icon and price */
-}
-
-.cart-item-image {
-    width: 110px; /* Image width to fit the height of the cart item */
-    height: 110px; /* Set image height to 110px */
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 15px; /* Adjusted margin for spacing */
-}
-
-.cart-item-info {
-    display: flex;
-    flex-direction: column; /* Align items in a column layout */
-    gap: 4px; /* Add some space between elements */
-    width: 100%; /* Take up the full width */
-}
-
-.cart-item-title {
-    font-size: 16px;
-    margin: 0;
-    font-weight: bold;
-    padding: 0 5px;
-}
-
-.cart-item-description {
-    font-size: 14px; /* Slightly smaller font for the description */
-    margin: 0;
-    padding: 0 5px; /* Match the padding with the title */
-    color: #555; /* Optional: lighter color for distinction */
-}
-
-
-.cart-item-price {
-    font-size: 14px;
-    color: #888;
-    margin-left: 10px;
-}
-
-.cart-item-remove {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    color: #f44336; /* Red color for the bin icon */
-}
 
 /* Additional style for the close button and header */
 .cart-modal-header {
@@ -745,17 +690,7 @@
     cursor: pointer;
 }
 
-.cart-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribute space between image, title, and price */
-    margin-bottom: 10px; /* Space between items */
-    width: 100%; /* Ensure cart item fills the width of the modal */
-    box-sizing: border-box; /* Ensure padding/margin doesn't affect width */
-    height: 110px; /* Height for the cart item */
-    padding: 10px; /* Padding to give space around elements */
-    position: relative; /* For positioning the remove button */
-}
+
 
 .cart-item-image {
     width: 110px; /* Image width */
@@ -765,37 +700,104 @@
     margin-right: 15px; /* Adjusted margin for spacing */
 }
 
-.cart-item-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; /* Space between title and price */
-    flex-grow: 1; /* Take up all available space */
-    width: calc(100% - 130px); /* Subtract the image width + margin */
+.cart-modal-body {
+    padding: 0; /* Remove extra padding from the modal body */
 }
+
+
+
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 8px;
+}
+
 
 .cart-item-title {
     font-size: 16px;
     font-weight: bold;
-    padding: 0 5px;
-    flex-grow: 1; /* Allow title to take up remaining space */
+}
+
+.cart-item-description {
+    font-size: 14px;
+    color: #555;
 }
 
 .cart-item-price {
-    font-size: 14px;
-    color: #888;
-    text-align: right; /* Align price to the right */
-    margin-left: 10px; /* Space between the title and price */
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 4px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex-grow: 1;
+    width: calc(100% - 150px); /* Leave space for image and delete button */
 }
 
 .cart-item-remove {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
+    top: 10px; /* Align to the top */
+    right: 10px; /* Align to the right */
+    font-size: 16px;
+    color: #ff4d4d;
     cursor: pointer;
-    color: #f44336; /* Red color for the bin icon */
 }
+
+.cart-item-remove:hover {
+    color: #ff0000;
+}
+
+.quantity-controls {
+    position: absolute; /* Fix it at the bottom right */
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-controls button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.quantity-controls button:hover {
+    background-color: #ddd;
+}
+
+.item-quantity {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+
+
+
 
 /* Additional style for the close button and header */
 .cart-modal-header {
@@ -814,18 +816,6 @@
     cursor: pointer;
 }
 
-/* Cart Modal Styling */
-.cart-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    width: 100%; /* Ensures the cart item takes the full width of the modal */
-    height: 110px; /* Set height for the cart item */
-    padding: 10px;
-    position: relative;
-    box-sizing: border-box;
-}
 
 .cart-item-image {
     width: 110px;
@@ -833,38 +823,6 @@
     object-fit: cover;
     border-radius: 8px;
     margin-right: 15px;
-}
-
-.cart-item-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-grow: 1;
-    width: calc(100% - 130px); /* Ensure it takes up the remaining space */
-}
-
-.cart-item-title {
-    font-size: 16px;
-    font-weight: bold;
-    padding: 0 5px;
-    flex-grow: 1; /* Allow the title to take up space */
-}
-
-.cart-item-price {
-    font-size: 14px;
-    color: #888;
-    text-align: right; /* Align the price to the right */
-    margin-left: 10px; /* Space between the title and price */
-}
-
-.cart-item-remove {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    color: #f44336;
 }
 
 /* Empty Cart Message Styling */
@@ -1366,7 +1324,7 @@ video {
                     
                   
         <div class="nav-item d-flex align-items-center ">
-                    <a href="index.html" class="btn abtn-light active me-2 ">
+                    <a href="index.html" class="btn abtn-light active  me-2 ">
                         Home Furnishings
                     </a>
                 </div>
@@ -1392,7 +1350,7 @@ video {
                             Our Story
                         </a></div>
                         
-                    <a href="blogs.html" class="nav-item nav-link">Blogs</a>
+                    <a href="blogs.html" class="nav-item nav-link ">Blogs</a>
                     <div class="nav-item dropdown">
                         <a href="bigmoontestimonial.html" class="nav-link ">
                             Testimonial
@@ -1578,7 +1536,7 @@ video {
                         </a>
                         <div class="aproduct-info">
                             <h3 class="aproduct-title">Turkish Bath Towels</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                  
+                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches) <br>₹ 125/ Piece</p>                  
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                                 <span class="abutton-text">Add to Cart</span>
@@ -2272,8 +2230,7 @@ video {
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
         <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+       
 
     
         <script>
@@ -2389,26 +2346,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to update the cart display in the modal
     function updateCartDisplay() {
-        // Show or hide empty cart message based on items in the cart
-        if (cartItems.length === 0) {
-            cartItemsContainer.innerHTML = ''; // Clear any cart items displayed
-            emptyCartMessage.style.display = 'block'; // Show empty cart message
-        } else {
-            emptyCartMessage.style.display = 'none'; // Hide empty cart message
-            cartItemsContainer.innerHTML = cartItems.map((item, index) => `
+    if (cartItems.length === 0) {
+        cartItemsContainer.innerHTML = ''; // Clear any cart items displayed
+        emptyCartMessage.style.display = 'block'; // Show empty cart message
+    } else {
+        emptyCartMessage.style.display = 'none'; // Hide empty cart message
+        cartItemsContainer.innerHTML = cartItems.map((item, index) => `
     <div class="cart-item">
         <img src="${item.image}" alt="${item.title}" class="cart-item-image">
         <div class="cart-item-info">
             <h5 class="cart-item-title">${item.title}</h5>
-            <p class="cart-item-description">${item.description}</p>
-            <i class="fa fa-trash cart-item-remove" onclick="removeItem(${index})"></i>
+            <p class="cart-item-description">${item.description}</p> 
+            <span class="cart-item-price">₹ ${item.price}</span>
+            <div class="quantity-controls">
+                <button onclick="decrementQuantity(${index})">-</button>
+                <span class="item-quantity">${item.quantity ?? 1}</span>
+                <button onclick="incrementQuantity(${index})">+</button>
+            </div>
         </div>
-        <span class="cart-item-price">₹ ${item.price}</span>
+        <i class="fa fa-trash cart-item-remove" onclick="removeItem(${index})"></i>
     </div>
 `).join('');
-
-        }
     }
+}
+
+function incrementQuantity(index) {
+    if (cartItems[index].quantity < 100) {
+        cartItems[index].quantity = (cartItems[index].quantity || 1) + 1; // Increment quantity
+        updateCartDisplay();
+    }
+}
+
+function decrementQuantity(index) {
+    if (cartItems[index].quantity > 1) {
+        cartItems[index].quantity = (cartItems[index].quantity || 1) - 1; // Decrement quantity
+        updateCartDisplay();
+    }
+}
+
 
     // Open the cart modal
     cartBtn.addEventListener('click', () => {
@@ -2449,6 +2424,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCartDisplay(); // Update cart display after removal
     };
 });
+
 
 
 

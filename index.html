@@ -2332,189 +2332,129 @@ video {
             window.addEventListener('load', updateSlider);
         });
     </script> 
-   <script>
-   document.addEventListener('DOMContentLoaded', function() {
-    const cartBtn = document.getElementById('cart-btn');
-    const cartModal = document.getElementById('cart-modal');
-    const cartClose = document.getElementById('cart-close');
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const cartBtn = document.getElementById('cart-btn');
+        const cartModal = document.getElementById('cart-modal');
+        const cartClose = document.getElementById('cart-close');
+        const cartItemsContainer = document.getElementById('cart-items-container');
+        const emptyCartMessage = document.getElementById('empty-cart-message');
 
-    // Open the cart modal
-    cartBtn.addEventListener('click', () => {
-        cartModal.classList.remove('close');
-        cartModal.classList.add('open');
-    });
+        // Array to store cart items
+        let cartItems = [];
 
-    // Close the cart modal
-    cartClose.addEventListener('click', () => {
-        cartModal.classList.remove('open');
-        cartModal.classList.add('close');
-    });
-});
+        // Function to update the cart display in the modal
+        function updateCartDisplay() {
+            if (cartItems.length === 0) {
+                cartItemsContainer.innerHTML = ''; // Clear the cart items
+                emptyCartMessage.style.display = 'block'; // Show empty cart message
+            } else {
+                emptyCartMessage.style.display = 'none'; // Hide empty cart message
+                cartItemsContainer.innerHTML = cartItems.map((item, index) => `
+                    <div class="cart-item row position-relative">
+                        <!-- Image -->
+                        <div class="col-3">
+                            <img src="${item.image}" alt="${item.title}" class="cart-item-image img-fluid">
+                        </div>
 
-// JavaScript for managing cart functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const cartBtn = document.getElementById('cart-btn');
-    const cartModal = document.getElementById('cart-modal');
-    const cartClose = document.getElementById('cart-close');
-    const cartItemsContainer = document.getElementById('cart-items'); // Cart items container
-    const emptyCartMessage = document.getElementById('empty-cart-message'); // Empty cart message element
+                        <!-- Title, Description, Price -->
+                        <div class="col-8">
+                            <div class="cart-item-info">
+                                <h5 class="cart-item-title">${item.title}</h5>
+                                <p class="cart-item-description">${item.description}</p>
+                                <span class="cart-item-price">₹ ${item.price}</span>
+                            </div>
+                        </div>
 
-    // Array to store the cart items
-    let cartItems = [];
+                        <!-- Remove Button and Quantity Controls -->
+                        <div class="col-1">
+                            <!-- Remove Button -->
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <button class="btn btn-danger" onclick="removeItem(${index})">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
 
-// Function to update the cart display in the modal
-function updateCartDisplay() {
-    const cartItemsContainer = document.getElementById('cart-items-container');
-    const emptyCartMessage = document.getElementById('empty-cart-message');
+                            <!-- Quantity Controls -->
+                            <div class="position-absolute bottom-0 end-0 p-2">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-secondary btn-decrement" onclick="decrementQuantity(${index})">-</button>
+                                    <input id="quantity-${index}" style="width:45px;padding:4px 8px;" value="${item.quantity}" min="1" class="form-control quantity-input" readonly />
+                                    <button class="btn btn-outline-secondary btn-increment" onclick="incrementQuantity(${index})">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
 
-    if (cartItems.length === 0) {
-        cartItemsContainer.innerHTML = ''; // Clear any cart items displayed
-        emptyCartMessage.style.display = 'block'; // Show empty cart message
-    } else {
-        emptyCartMessage.style.display = 'none'; // Hide empty cart message
-        cartItemsContainer.innerHTML = cartItems.map((item, index) => `
-           <div class="cart-item row position-relative">
-    <!-- Column 1: Image -->
-    <div class="col-3">
-        <img src="${item.image}" alt="${item.title}" class="cart-item-image img-fluid">
-    </div>
+            // Update cart count in the cart button
+            document.getElementById('cart-count').textContent = cartItems.length;
+        }
 
-    <!-- Column 2: Title, Description, and Price -->
-    <div class="col-8">
-        <div class="cart-item-info">
-            <h5 class="cart-item-title">${item.title}</h5>
-            <p class="cart-item-description">${item.description}</p>
-            <span class="cart-item-price">₹ ${item.price}</span> 
-        </div>
-    </div>
+        // Function to add an item to the cart
+        function addItemToCart(item) {
+            item.quantity = item.quantity || 1; // Set default quantity to 1
+            cartItems.push(item);
+            updateCartDisplay(); // Update cart display and cart count
+        }
 
-    <!-- Column 3: Remove Button (Top Right) and Increment/Decrement Controls (Bottom Right) -->
-    <div class="col-1">
-        <!-- Remove Button (Top Right) -->
-        <div class="position-absolute top-0 end-0 p-2">
-            <button class="btn btn-danger" onclick="removeItem(${index})"><i class="fa fa-trash"></i> </button>
-        </div>
+        // Function to remove an item from the cart
+        window.removeItem = function (index) {
+            cartItems.splice(index, 1);
+            updateCartDisplay();
+        };
 
-        <!-- Increment/Decrement Controls (Bottom Right) -->
-        <div class="position-absolute bottom-0 end-0 p-2">
-            <div class="input-group">
-                <button class="btn btn-outline-secondary" onclick="updateQuantity(${index}, -1)">-</button>
-                <input id="quantity-${index}" style="width:35px;padding: 4px 8px;" value="${item.quantity || 1}" min="1" max="100" class="form-control" onchange="validateQuantity(${index})">
-                <button class="btn btn-outline-secondary" onclick="updateQuantity(${index}, 1)">+</button>
-            </div>
-        </div>
-    </div>
-</div>
+        // Function to increment quantity
+        window.incrementQuantity = function (index) {
+            if (cartItems[index].quantity < 100) { // Check if quantity is less than 100
+                cartItems[index].quantity++;
+                updateCartDisplay();
+            }
+        };
 
-        `).join('');
-    }
-}
+        // Function to decrement quantity
+        window.decrementQuantity = function (index) {
+            if (cartItems[index].quantity > 1) { // Ensure quantity does not go below 1
+                cartItems[index].quantity--;
+                updateCartDisplay();
+            }
+        };
 
-// Function to update quantity based on button clicks
-function updateQuantity(index, change) {
-    const quantityInput = document.getElementById(`quantity-${index}`);
-    let currentQuantity = parseInt(quantityInput.value, 10);
-
-    // Ensure currentQuantity is valid
-    if (isNaN(currentQuantity) || currentQuantity < 1) {
-        currentQuantity = 1; // Default to 1 if invalid
-    }
-
-    // Update the quantity and enforce limits
-    currentQuantity += change;
-    if (currentQuantity < 1) {
-        currentQuantity = 1;
-    } else if (currentQuantity > 100) {
-        currentQuantity = 100;
-    }
-
-    // Update the cartItems array and the input field
-    cartItems[index].quantity = currentQuantity;
-    quantityInput.value = currentQuantity;
-}
-
-// Function to validate quantity when the user manually edits the input field
-function validateQuantity(index) {
-    const quantityInput = document.getElementById(`quantity-${index}`);
-    let currentQuantity = parseInt(quantityInput.value, 10);
-
-    // Ensure currentQuantity is valid
-    if (isNaN(currentQuantity) || currentQuantity < 1) {
-        currentQuantity = 1;
-    } else if (currentQuantity > 100) {
-        currentQuantity = 100;
-    }
-
-    // Update the cartItems array and the input field
-    cartItems[index].quantity = currentQuantity;
-    quantityInput.value = currentQuantity;
-}
-
-// Example: Adding an item to the cart with default quantity
-function addItemToCart(item) {
-    // Ensure the item has a quantity of at least 1 when added
-    item.quantity = item.quantity || 1;
-    cartItems.push(item);
-    updateCartDisplay();
-}
-
-// Function to remove an item from the cart
-function removeItem(index) {
-    cartItems.splice(index, 1); // Remove the item at the given index
-    updateCartDisplay();
-}
-
-
-
-
-
-    // Open the cart modal
-    cartBtn.addEventListener('click', () => {
-        cartModal.style.transform = 'translateX(0)';
-        updateCartDisplay(); // Update cart display when modal opens
-    });
-
-    // Close the cart modal
-    cartClose.addEventListener('click', () => {
-        cartModal.style.transform = 'translateX(100%)';
-    });
-
-    // Handle "Add to Cart" button click
-    document.querySelectorAll('.aadd-to-cart').forEach(button => {
-        button.addEventListener('click', function() {
-            const productCard  = this.closest('.aproduct-card');
-            const productTitle = productCard.querySelector('.aproduct-title').textContent;
-            const productDescription = productCard.querySelector('.aproduct-description').textContent.split('₹')[0].trim();
-            const productPrice = productCard.querySelector('.aproduct-description').textContent.split('₹')[1].trim();
-            const productImage = productCard.querySelector('.aproduct-image').src;
-
-            // Add the product to the cart array
-            cartItems.push({
-                title: productTitle,
-                description: productDescription,
-                price: productPrice,
-                image: productImage
-            });
-
-            // Update the cart display
+        // Open the cart modal
+        cartBtn.addEventListener('click', () => {
+            cartModal.classList.remove('close');
+            cartModal.classList.add('open');
             updateCartDisplay();
         });
+
+        // Close the cart modal
+        cartClose.addEventListener('click', () => {
+            cartModal.classList.remove('open');
+            cartModal.classList.add('close');
+        });
+
+        // Handle "Add to Cart" button click
+        document.querySelectorAll('.aadd-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+                const productCard = this.closest('.aproduct-card');
+                const productTitle = productCard.querySelector('.aproduct-title').textContent;
+                const productDescription = productCard.querySelector('.aproduct-description').textContent.split('₹')[0].trim();
+                const productPrice = productCard.querySelector('.aproduct-description').textContent.split('₹')[1].trim();
+                const productImage = productCard.querySelector('.aproduct-image').src;
+
+                addItemToCart({
+                    title: productTitle,
+                    description: productDescription,
+                    price: productPrice,
+                    image: productImage
+                });
+            });
+        });
     });
-
-    // Function to remove item from cart
-    window.removeItem = function(index) {
-        cartItems.splice(index, 1); // Remove the item at the specified index
-        updateCartDisplay(); // Update cart display after removal
-    };
-});
-
-
-
-
-   
-
-
 </script>
+
 </body>
 
 </html>

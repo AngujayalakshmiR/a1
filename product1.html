@@ -569,9 +569,41 @@
             <!-- Quantity Selector -->
             <div class="quantity-selector mt-3">
                 <button class="btn btn-outline-primary custom-btn" onclick="updateQuantity(-1)">-</button>
-                <input type="number" id="quantity" value="1" class="form-control text-center" style="width: 60px;">
+                <input  id="quantity" value="1" class="form-control text-center" style="width: 60px;" min="1" max="100" onchange="validateQuantity()">
                 <button class="btn btn-outline-primary custom-btn" onclick="updateQuantity(1)">+</button>
             </div>
+            
+            <script>
+                function updateQuantity(change) {
+                    const quantityInput = document.getElementById('quantity');
+                    let currentQuantity = parseInt(quantityInput.value, 10) || 1;
+            
+                    // Update quantity based on change, ensuring it stays within bounds
+                    currentQuantity += change;
+                    if (currentQuantity < 1) {
+                        currentQuantity = 1;
+                    } else if (currentQuantity > 100) {
+                        currentQuantity = 100;
+                    }
+            
+                    quantityInput.value = currentQuantity;
+                }
+            
+                function validateQuantity() {
+                    const quantityInput = document.getElementById('quantity');
+                    let currentQuantity = parseInt(quantityInput.value, 10) || 1;
+            
+                    // Ensure value is within bounds if user manually changes it
+                    if (currentQuantity < 1) {
+                        currentQuantity = 1;
+                    } else if (currentQuantity > 100) {
+                        currentQuantity = 100;
+                    }
+            
+                    quantityInput.value = currentQuantity;
+                }
+            </script>
+            
             
             <!-- Buttons -->
             <div class="mt-4">

@@ -630,7 +630,10 @@
     padding-left: 0px;
     padding-right: 0px;
     text-align: center; /* Center align text */
-    min-height: 300px; /* Ensure a minimum height for the modal body */
+    min-height: 300px;
+    flex: 1; /* Take remaining space */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+     /* Ensure a minimum height for the modal body */
 }
 
 /* Empty Cart Message Styling */
@@ -1332,15 +1335,12 @@ video {
                 <img src="img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
                 <h1 class="m-0 text-primary">Bigmoon</h1>
             </a>
-            
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                  
-                    
-                  
+                      
         <div class="nav-item d-flex align-items-center ">
                     <a href="index.html" class="btn abtn-light active  me-2 ">
                         Home Furnishings
@@ -1400,23 +1400,379 @@ video {
             </div>
         </nav>
 
-        <!-- HTML Structure for Cart Modal -->
-<div class="cart-modal" id="cart-modal">
-    <div class="cart-modal-header">
-        <h2>Your Shopping Cart</h2>
-        <button id="cart-close" type="button" aria-label="Close Cart" class="cart-modal-close">
-            <i class="fa fa-times"></i>
-        </button>
-    </div>
-    <div class="cart-modal-body">
-        <div class="cart-empty" id="empty-cart-message">
-            <h4>Your cart is empty!</h4>
-            <p>Add your favorite items to your cart.</p>
-            <p><a href="index.html">Shop Now</a></p>
+     <!-- Cart Modal -->
+     <div class="cart-modal" id="cart-modal">
+        <div class="cart-modal-header">
+            <h2>Your Shopping Cart</h2>
+            <button id="cart-close" type="button" aria-label="Close Cart" class="cart-modal-close">
+                <i class="fa fa-times"></i>
+            </button>
         </div>
-        <div id="cart-items-container"></div><!-- Cart items will be appended here -->
+        <div class="cart-modal-body">
+            <div class="cart-empty" id="empty-cart-message">
+                <h4>Your cart is empty!</h4>
+                <p>Add your favorite items to your cart.</p>
+                <p><a href="index.html">Shop Now</a></p>
+            </div>
+            <div id="cart-items-container"></div><!-- Cart items will be appended here -->
+        </div>
+        <div class="cart-modal-footer">
+            <center><button id="proceed-to-checkout" class="btn btn-primary checkout-btn" style="display: none;">
+                Proceed to Checkout
+            </button></center>
+        </div>
+        
+    </div>
+
+
+<style>
+
+
+.cart-modal-footer {
+    position: sticky; /* Keep the footer fixed at the bottom of the modal */
+    bottom: 10px;
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+.checkout-btn {
+    display: none; /* Initially hidden */
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(0, 123, 255, 0.7);
+    color: #fff;
+    cursor: pointer;
+    animation: glow 1.5s infinite ease-in-out; /* Infinite glowing animation */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.9), 0 0 10px rgba(0, 123, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+    }
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.checkout-btn.show {
+    display: inline-block; /* Show when items are in the cart */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+<!-- Modal for Checkout -->
+<div class="modal1" id="checkout-modal">
+    <div class="modal-dialog1">
+        <div class="modal-content1">
+            <!-- Modal Header -->
+            <div class="modal-header1">
+                <h4 class="modal-title1" id="modal-title">Step 1: Customer Details</h4>
+                <button type="button" class="btn-close1" id="modal-close"></button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body1">
+                <div class="row">
+                    <!-- Left half: Steps for checkout -->
+                    <div class="col-md-7">
+                        <div id="step-1">
+                            <form id="customer-details-form">
+                                <div class="mb-3 d-flex justify-content-between">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between">
+                                    <label for="address" class="form-label">Address</label>
+                                    <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between">
+                                    <label for="district" class="form-label">District</label>
+                                    <input type="text" class="form-control" id="district" placeholder="Enter your district" required>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between">
+                                    <label for="state" class="form-label">State</label>
+                                    <input type="text" class="form-control" id="state" placeholder="Enter your state" required>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between">
+                                    <label for="pincode" class="form-label">Pincode</label>
+                                    <input type="number" class="form-control" id="pincode" placeholder="Enter your pincode" required>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Step 2: Payment -->
+                        <div id="step-2" class="d-none">
+                            <h5>Scan the QR Code to Complete Payment</h5>
+                            <img src="https://via.placeholder.com/250" alt="QR Code" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <!-- Right half: Order Summary -->
+                    <div class="col-md-5">
+                        <div id="order-summary">
+                            <h5>Order Summary</h5>
+                            <div id="order-summary-container" class="order-summary">
+                                <!-- Cart items will be dynamically added here -->
+                            </div>
+                            <div id="empty-cart-message" style="display: none;">
+                                <p>Your cart is empty.</p>
+                            </div>
+                            <div id="total-amount" class="total-section">
+                                <h6>Total: ₹<span id="total-amount-value">0</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer1">
+                <button type="button" class="btn btn-secondary" id="back-button" class="d-none">Back</button>
+                <button type="button" class="btn btn-primary" id="next-button">Next</button>
+            </div>
+        </div>
     </div>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const checkoutModal = document.getElementById("checkout-modal");
+        const nextButton = document.getElementById("next-button");
+        const backButton = document.getElementById("back-button");
+        const modalTitle = document.getElementById("modal-title");
+        const step1 = document.getElementById("step-1");
+        const step2 = document.getElementById("step-2");
+        const modalClose = document.getElementById("modal-close");
+        const orderSummaryContainer = document.getElementById("order-summary-container");
+        const totalAmountValue = document.getElementById("total-amount-value");
+
+        // Open modal on clicking "Proceed to Checkout"
+        document.getElementById("proceed-to-checkout").addEventListener("click", function () {
+            checkoutModal.style.display = "block";
+            step1.classList.remove("d-none");
+            step2.classList.add("d-none");
+            modalTitle.textContent = "Step 1: Customer Details";
+            backButton.style.display = "none";
+
+            // Populate order summary with cart items
+            populateOrderSummary();
+        });
+
+        // Close modal
+        modalClose.addEventListener("click", function () {
+            checkoutModal.style.display = "none";
+        });
+
+        // Handle Next button
+        nextButton.addEventListener("click", function () {
+            if (step1.classList.contains("d-none")) {
+                checkoutModal.style.display = "none";
+            } else {
+                const form = document.getElementById("customer-details-form");
+                if (form.checkValidity()) {
+                    step1.classList.add("d-none");
+                    step2.classList.remove("d-none");
+                    modalTitle.textContent = "Step 2: Payment";
+                    backButton.style.display = "inline-block";
+                    nextButton.textContent = "Finish";
+                } else {
+                    form.reportValidity();
+                }
+            }
+        });
+
+        // Handle Back button
+        backButton.addEventListener("click", function () {
+            step2.classList.add("d-none");
+            step1.classList.remove("d-none");
+            modalTitle.textContent = "Step 1: Customer Details";
+            backButton.style.display = "none";
+            nextButton.textContent = "Next";
+        });
+
+        // Populate order summary with cart items
+        function populateOrderSummary() {
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            let totalAmount = 0;
+
+            if (cartItems.length === 0) {
+                orderSummaryContainer.innerHTML = "<p>Your cart is empty.</p>";
+                totalAmountValue.textContent = "0";
+            } else {
+                orderSummaryContainer.innerHTML = cartItems.map(item => {
+                    const quantity = parseInt(item.quantity, 10);
+                    const price = parseFloat(item.price);
+
+                    // Validate quantity and price
+                    if (isNaN(quantity) || isNaN(price)) {
+                        console.error("Invalid cart item:", item);
+                        return `<p style="color: red;">Invalid item data</p>`;
+                    }
+
+                    const itemTotal = quantity * price;
+                    totalAmount += itemTotal;
+
+                    return `
+                        <div class="order-item">
+                            <div class="item-details">
+                                <span>${item.title}</span>
+                                <span>${quantity} x ₹${price.toFixed(2)}</span>
+                            </div>
+                            <div class="item-total">
+                                ₹${itemTotal.toFixed(2)}
+                            </div>
+                        </div>
+                    `;
+                }).join("");
+
+                totalAmountValue.textContent = totalAmount.toFixed(2);
+            }
+        }
+    });
+</script>
+
+<style>
+    /* Modal Styling */
+    .modal1 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1050;
+        overflow-y: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-dialog1 {
+        max-width: 60%;
+        margin: 1.75rem auto;
+    }
+
+    .modal-content1 {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .btn-close1 {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #1dcce0;
+    }
+
+    .modal-header1,
+    .modal-footer1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+      /* Order Summary Styling */
+      #order-summary {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        height: 400px;
+        overflow-y: auto;
+    }
+
+    #order-summary h5 {
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .order-summary .order-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .order-summary .order-item:last-child {
+        border-bottom: none;
+    }
+
+    .order-summary .item-details span {
+        display: block;
+    }
+
+    .total-section {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    #total-amount-value {
+        color: #e91e63;
+    }
+
+    /* Styling for empty cart message */
+    #empty-cart-message p {
+        font-size: 1rem;
+        text-align: center;
+        color: #777;
+    }
+
+    /* Inline styling for form */
+    .d-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mb-3 {
+        margin-bottom: 1rem;
+    }
+
+    .form-label {
+        font-weight: 600;
+        flex: 1;
+    }
+
+    .form-control {
+        flex: 2;
+    }
+</style>
+
 
 <div class="shopify-section explore-collection">
     <div class="scroll-container">
@@ -1553,7 +1909,7 @@ video {
                             <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels</h3>
+                            <h3 class="aproduct-title">Turkish Bath Towels1</h3>
                             <p class="aproduct-description">Turkish Towels (70 x 40 Inches) <br>₹ 125/ Piece</p>                  
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
@@ -1566,7 +1922,7 @@ video {
                             <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels</h3>
+                            <h3 class="aproduct-title">Turkish Bath Towels2</h3>
                             <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
@@ -1579,7 +1935,7 @@ video {
                             <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels</h3>
+                            <h3 class="aproduct-title">Turkish Bath Towels3</h3>
                             <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
@@ -1592,7 +1948,7 @@ video {
                             <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels</h3>
+                            <h3 class="aproduct-title">Turkish Bath Towels4</h3>
                             <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
@@ -1605,7 +1961,7 @@ video {
                             <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels</h3>
+                            <h3 class="aproduct-title">Turkish Bath Towels5</h3>
                             <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
@@ -1618,7 +1974,7 @@ video {
                             <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels</h3>
+                            <h3 class="aproduct-title">Turkish Bath Towels6</h3>
                             <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
@@ -2332,128 +2688,186 @@ video {
             window.addEventListener('load', updateSlider);
         });
     </script> 
-  
-  <script>
+
+<script>
     document.addEventListener('DOMContentLoaded', function () {
-        const cartBtn = document.getElementById('cart-btn');
-        const cartModal = document.getElementById('cart-modal');
-        const cartClose = document.getElementById('cart-close');
-        const cartItemsContainer = document.getElementById('cart-items-container');
-        const emptyCartMessage = document.getElementById('empty-cart-message');
+    const cartBtn = document.getElementById('cart-btn');
+    const cartModal = document.getElementById('cart-modal');
+    const cartClose = document.getElementById('cart-close');
+    const cartItemsContainer = document.getElementById('cart-items-container');
+    const emptyCartMessage = document.getElementById('empty-cart-message');
+    const checkoutButton = document.getElementById('proceed-to-checkout');
+    const cartNotification = document.createElement('div');
+    
+    // Add the notification div to the document
+    cartNotification.classList.add('cart-notification');
+    document.body.appendChild(cartNotification);
 
-        // Array to store cart items
-        let cartItems = [];
+    // Array to store cart items
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-        // Function to update the cart display in the modal
-        function updateCartDisplay() {
-            if (cartItems.length === 0) {
-                cartItemsContainer.innerHTML = ''; // Clear the cart items
-                emptyCartMessage.style.display = 'block'; // Show empty cart message
-            } else {
-                emptyCartMessage.style.display = 'none'; // Hide empty cart message
-                cartItemsContainer.innerHTML = cartItems.map((item, index) => `
-                    <div class="cart-item row position-relative">
-                        <!-- Image -->
-                        <div class="col-3">
-                            <img src="${item.image}" alt="${item.title}" class="cart-item-image img-fluid">
+    // Function to show a notification message
+    function showNotification(message) {
+        cartNotification.textContent = message;
+        cartNotification.classList.add('show');
+        setTimeout(() => {
+            cartNotification.classList.remove('show');
+        }, 2000);
+    }
+
+    // Function to update the cart display in the modal
+    function updateCartDisplay() {
+        if (cartItems.length === 0) {
+            cartItemsContainer.innerHTML = ''; // Clear the cart items
+            emptyCartMessage.style.display = 'block';
+            checkoutButton.style.display = 'none'; // Hide checkout button
+        } else {
+            emptyCartMessage.style.display = 'none'; // Hide empty cart message
+            cartItemsContainer.innerHTML = cartItems.map((item, index) => `
+                <div class="cart-item row position-relative">
+                    <!-- Image -->
+                    <div class="col-3">
+                        <img src="${item.image}" alt="${item.title}" class="cart-item-image img-fluid">
+                    </div>
+
+                    <!-- Title, Description, Price -->
+                    <div class="col-8">
+                        <div class="cart-item-info">
+                            <h5 class="cart-item-title">${item.title}</h5>
+                            <p class="cart-item-description">${item.description}</p>
+                            <span class="cart-item-price">₹ ${item.price}</span>
+                        </div>
+                    </div>
+
+                    <!-- Remove Button and Quantity Controls -->
+                    <div class="col-1">
+                        <!-- Remove Button -->
+                        <div class="position-absolute top-0 end-0 p-2">
+                            <button class="btn btn-danger" onclick="removeItem(${index})">
+                                <i class="fa fa-trash"></i>
+                            </button>
                         </div>
 
-                        <!-- Title, Description, Price -->
-                        <div class="col-8">
-                            <div class="cart-item-info">
-                                <h5 class="cart-item-title">${item.title}</h5>
-                                <p class="cart-item-description">${item.description}</p>
-                                <span class="cart-item-price">₹ ${item.price}</span>
-                            </div>
-                        </div>
-
-                        <!-- Remove Button and Quantity Controls -->
-                        <div class="col-1">
-                            <!-- Remove Button -->
-                            <div class="position-absolute top-0 end-0 p-2">
-                                <button class="btn btn-danger" onclick="removeItem(${index})">
-                                    <i class="fa fa-trash"></i>
-                                </button>
-                            </div>
-
-                            <!-- Quantity Controls -->
-                            <div class="position-absolute bottom-0 end-0 p-2">
-                                <div class="input-group">
-                                    <button class="btn btn-outline-secondary btn-decrement" onclick="decrementQuantity(${index})">-</button>
-                                    <input id="quantity-${index}" style="width:45px;padding:4px 8px;" value="${item.quantity}" min="1" class="form-control quantity-input" readonly />
-                                    <button class="btn btn-outline-secondary btn-increment" onclick="incrementQuantity(${index})">+</button>
-                                </div>
+                        <!-- Quantity Controls -->
+                        <div class="position-absolute bottom-0 end-0 p-2">
+                            <div class="input-group">
+                                <button class="btn btn-outline-secondary btn-decrement" onclick="decrementQuantity(${index})">-</button>
+                                <input id="quantity-${index}" style="width:45px;padding:4px 8px;" value="${item.quantity}" min="1" class="form-control quantity-input" readonly />
+                                <button class="btn btn-outline-secondary btn-increment" onclick="incrementQuantity(${index})">+</button>
                             </div>
                         </div>
                     </div>
-                `).join('');
-            }
-
-            // Update cart count in the cart button
-            document.getElementById('cart-count').textContent = cartItems.length;
+                </div>
+            `).join('');
+            checkoutButton.style.display = 'block'; // Show checkout button
         }
 
-        // Function to add an item to the cart
-        function addItemToCart(item) {
-            item.quantity = item.quantity || 1; // Set default quantity to 1
-            cartItems.push(item);
-            updateCartDisplay(); // Update cart display and cart count
+        // Save the updated cart to localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        // Update cart count in the cart button
+        document.getElementById('cart-count').textContent = cartItems.length;
+    }
+
+    // Function to add an item to the cart
+    function addItemToCart(item) {
+        // Check if the product already exists in the cart
+        const existingItem = cartItems.find(cartItem => cartItem.title === item.title);
+        if (existingItem) {
+            showNotification('The product you are trying to add is already in the cart. Please check it out.');
+            return;
         }
 
-        // Function to remove an item from the cart
-        window.removeItem = function (index) {
-            cartItems.splice(index, 1);
+        // If the item doesn't exist, add it to the cart
+        item.quantity = item.quantity || 1; // Set default quantity to 1
+        cartItems.push(item);
+        updateCartDisplay(); // Update cart display and cart count
+        showNotification('Product added to the cart successfully!');
+    }
+
+    // Function to remove an item from the cart
+    window.removeItem = function (index) {
+        cartItems.splice(index, 1);
+        updateCartDisplay();
+    };
+
+    // Function to increment quantity
+    window.incrementQuantity = function (index) {
+        if (cartItems[index].quantity < 100) { // Check if quantity is less than 100
+            cartItems[index].quantity++;
             updateCartDisplay();
-        };
+        }
+    };
 
-        // Function to increment quantity
-        window.incrementQuantity = function (index) {
-            if (cartItems[index].quantity < 100) { // Check if quantity is less than 100
-                cartItems[index].quantity++;
-                updateCartDisplay();
-            }
-        };
-
-        // Function to decrement quantity
-        window.decrementQuantity = function (index) {
-            if (cartItems[index].quantity > 1) { // Ensure quantity does not go below 1
-                cartItems[index].quantity--;
-                updateCartDisplay();
-            }
-        };
-
-        // Open the cart modal
-        cartBtn.addEventListener('click', () => {
-            cartModal.classList.remove('close');
-            cartModal.classList.add('open');
+    // Function to decrement quantity
+    window.decrementQuantity = function (index) {
+        if (cartItems[index].quantity > 1) { // Ensure quantity does not go below 1
+            cartItems[index].quantity--;
             updateCartDisplay();
-        });
+        }
+    };
 
-        // Close the cart modal
-        cartClose.addEventListener('click', () => {
-            cartModal.classList.remove('open');
-            cartModal.classList.add('close');
-        });
+    // Open the cart modal
+    cartBtn.addEventListener('click', () => {
+        cartModal.classList.remove('close');
+        cartModal.classList.add('open');
+        updateCartDisplay();
+    });
 
-        // Handle "Add to Cart" button click
-        document.querySelectorAll('.aadd-to-cart').forEach(button => {
-            button.addEventListener('click', function () {
-                const productCard = this.closest('.aproduct-card');
-                const productTitle = productCard.querySelector('.aproduct-title').textContent;
-                const productDescription = productCard.querySelector('.aproduct-description').textContent.split('₹')[0].trim();
-                const productPrice = productCard.querySelector('.aproduct-description').textContent.split('₹')[1].trim();
-                const productImage = productCard.querySelector('.aproduct-image').src;
+    // Close the cart modal
+    cartClose.addEventListener('click', () => {
+        cartModal.classList.remove('open');
+        cartModal.classList.add('close');
+    });
 
-                addItemToCart({
-                    title: productTitle,
-                    description: productDescription,
-                    price: productPrice,
-                    image: productImage
-                });
+    // Handle "Add to Cart" button click
+    document.querySelectorAll('.aadd-to-cart').forEach(button => {
+        button.addEventListener('click', function () {
+            const productCard = this.closest('.aproduct-card');
+            const productTitle = productCard.querySelector('.aproduct-title').textContent;
+            const productDescription = productCard.querySelector('.aproduct-description').textContent.split('₹')[0].trim();
+            const productPrice = productCard.querySelector('.aproduct-description').textContent.split('₹')[1].trim();
+            const productImage = productCard.querySelector('.aproduct-image').src;
+
+            addItemToCart({
+                title: productTitle,
+                description: productDescription,
+                price: productPrice,
+                image: productImage
             });
         });
     });
+
+    // Load the cart from localStorage on page load
+    updateCartDisplay();
+});
+
 </script>
+
+
+<style>
+    /* Style for notification message */
+    .cart-notification {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #f44336;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+        z-index: 1000;
+    }
+
+    .cart-notification.show {
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+
 
 </body>
 

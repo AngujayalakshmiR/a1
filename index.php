@@ -1628,8 +1628,8 @@ video {
     .then(data => {
         if (data.status === "success") {
             Swal.fire({
-                title: 'Order Confirmed!',
-                text: `Your Order ID is: ${data.orderId}`,
+                title: 'Let`s proceed to pay!',
+                text: `Happy shopping with us`,
                 icon: 'success',
             });
         } else {

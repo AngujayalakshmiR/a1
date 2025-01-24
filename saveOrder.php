@@ -20,7 +20,7 @@ if ($result && $result->num_rows > 0) {
 }
 
 // Insert new order ID into the table
-$sqlInsert = "INSERT INTO customer (orderid, orderdate) VALUES ('$newOrderId', NOW())";
+$sqlInsert = "INSERT INTO customer (orderid) VALUES ('$newOrderId')";
 if ($conn->query($sqlInsert) === TRUE) {
     echo json_encode(["status" => "success", "orderId" => $newOrderId]);
 } else {

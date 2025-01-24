@@ -1,3 +1,22 @@
+<?php
+// Include the Razorpay PHP library
+require('razorpay-php/Razorpay.php');
+use Razorpay\Api\Api;
+// Initialize Razorpay with your key and secret
+$api_key = 'rzp_test_Y2wy8t1wD1AFaA';
+$api_secret = 'zSqRMpIa2ljBBpkieFYGmfLa';
+$api= new Api($api_key, $api_secret);
+// Create an order
+$order = $api->order->create([
+'amount' => 9900, // amount in paise (100 paise = 1 rupee)
+'currency' => 'INR',
+'receipt' => 'order_receipt_12asa3'
+]);
+$order_id = $order->id;
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +31,7 @@
     <link href="img/bigmoon_logo_circle.png" rel="icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Google Web Fonts -->
+    <!-- Google Web Fonts -->  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">

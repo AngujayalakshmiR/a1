@@ -1483,13 +1483,14 @@ video {
 }
 </style>
 <!-- Modal for Checkout -->
+<!-- Modal for Checkout -->
 <div class="modal1" id="checkout-modal">
     <div class="modal-dialog1">
         <div class="modal-content1">
             <!-- Modal Header -->
             <div class="modal-header1">
-                <h4 class="modal-title1" id="modal-title">Step 1: Customer Details</h4>
-                <button type="button" class="btn-close1" id="modal-close"></button>
+                <h4 class="modal-title1" id="modal-title">Customer Details</h4>
+                <button type="button" class="btn-close1" id="modal-close">&times;</button>
             </div>
 
             <!-- Modal Body -->
@@ -1497,44 +1498,49 @@ video {
                 <div class="row">
                     <!-- Left half: Steps for checkout -->
                     <div class="col-md-7">
-                        <div id="step-1">
-                            <form id="customer-details-form">
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="phone" class="form-label">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="address" class="form-label">Address</label>
-                                    <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="district" class="form-label">District</label>
-                                    <input type="text" class="form-control" id="district" placeholder="Enter your district" required>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="state" class="form-label">State</label>
-                                    <input type="text" class="form-control" id="state" placeholder="Enter your state" required>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="pincode" class="form-label">Pincode</label>
-                                    <input type="number" class="form-control" id="pincode" placeholder="Enter your pincode" required>
-                                </div>
-                            </form>
-                        </div>
-
-                        <!-- Step 2: Payment -->
-                        <div id="step-2" class="d-none">
-                            <h5>Scan the QR Code to Complete Payment</h5>
-                            <img src="https://via.placeholder.com/250" alt="QR Code" class="img-fluid">
-                        </div>
+                        <form id="customer-details-form" novalidate>
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                            </div>
+                            
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                            </div>
+                            
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                            
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="address" class="form-label">Address</label>
+                                <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+                            </div>
+                            
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="state" class="form-label">State</label>
+                                <select class="form-control" id="state" required>
+                                    <option value="" disabled selected>Select a State</option>
+                                    <option value="State1">State 1</option>
+                                    <option value="State2">State 2</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="district" class="form-label">District</label>
+                                <select class="form-control" id="district" required>
+                                    <option value="" disabled selected>Select a District</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="pincode" class="form-label">Pincode</label>
+                                <input type="text" class="form-control" id="pincode" placeholder="Enter your pincode" pattern="^\d{6}$" required>
+                            </div>
+                        </form>
+                        <div id="form-errors" class="text-danger mt-3"></div> <!-- Container for error messages -->
                     </div>
 
                     <!-- Right half: Order Summary -->
@@ -1557,66 +1563,100 @@ video {
 
             <!-- Modal Footer -->
             <div class="modal-footer1">
-                <button type="button" class="btn btn-secondary" id="back-button" class="d-none">Back</button>
-                <button type="button" class="btn btn-primary" id="next-button">Next</button>
+                <button type="button" class="btn btn-secondary" id="cancel-button">Cancel</button>
+                <button type="button" class="btn btn-primary" id="proceed-to-pay">Proceed to Pay</button>
             </div>
         </div>
     </div>
 </div>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const checkoutModal = document.getElementById("checkout-modal");
-        const nextButton = document.getElementById("next-button");
-        const backButton = document.getElementById("back-button");
-        const modalTitle = document.getElementById("modal-title");
-        const step1 = document.getElementById("step-1");
-        const step2 = document.getElementById("step-2");
+        const proceedToPayButton = document.getElementById("proceed-to-pay");
+        const cancelButton = document.getElementById("cancel-button");
         const modalClose = document.getElementById("modal-close");
         const orderSummaryContainer = document.getElementById("order-summary-container");
         const totalAmountValue = document.getElementById("total-amount-value");
 
-        // Open modal on clicking "Proceed to Checkout"
-        document.getElementById("proceed-to-checkout").addEventListener("click", function () {
-            checkoutModal.style.display = "block";
-            step1.classList.remove("d-none");
-            step2.classList.add("d-none");
-            modalTitle.textContent = "Step 1: Customer Details";
-            backButton.style.display = "none";
-
-            // Populate order summary with cart items
-            populateOrderSummary();
-        });
-
-        // Close modal
         modalClose.addEventListener("click", function () {
             checkoutModal.style.display = "none";
         });
 
-        // Handle Next button
-        nextButton.addEventListener("click", function () {
-            if (step1.classList.contains("d-none")) {
+        window.addEventListener("click", function (event) {
+            if (event.target === checkoutModal) {
                 checkoutModal.style.display = "none";
-            } else {
-                const form = document.getElementById("customer-details-form");
-                if (form.checkValidity()) {
-                    step1.classList.add("d-none");
-                    step2.classList.remove("d-none");
-                    modalTitle.textContent = "Step 2: Payment";
-                    backButton.style.display = "inline-block";
-                    nextButton.textContent = "Finish";
-                } else {
-                    form.reportValidity();
-                }
             }
         });
 
-        // Handle Back button
-        backButton.addEventListener("click", function () {
-            step2.classList.add("d-none");
-            step1.classList.remove("d-none");
-            modalTitle.textContent = "Step 1: Customer Details";
-            backButton.style.display = "none";
-            nextButton.textContent = "Next";
+        // Open modal on clicking "Proceed to Checkout"
+        document.getElementById("proceed-to-checkout").addEventListener("click", function () {
+            checkoutModal.style.display = "block";
+            populateOrderSummary();
+        });
+
+        // Cancel button to close the modal
+        cancelButton.addEventListener("click", function () {
+            checkoutModal.style.display = "none";
+        });
+
+        // Proceed to Pay button logic
+        proceedToPayButton.addEventListener("click", function () {
+            const form = document.getElementById("customer-details-form");
+
+            if (form.checkValidity()) {
+                // Trigger SweetAlert confirmation
+                Swal.fire({
+                    title: 'Are you sure all details are correct?',
+                    text: "Click Yes to proceed with payment, or No to edit the details.",
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes',
+                    cancelButtonText: 'No',
+                    confirmButtonColor: '#28a745', // Green color for Yes
+                    cancelButtonColor: '#dc3545', // Red color for No
+                }).then((result) => {
+                    if (result.isConfirmed) {
+    // Call the PHP script to generate and save the order ID
+    fetch('saveOrder.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            Swal.fire({
+                title: 'Order Confirmed!',
+                text: `Your Order ID is: ${data.orderId}`,
+                icon: 'success',
+            });
+        } else {
+            Swal.fire({
+                title: 'Error!',
+                text: data.message || 'Something went wrong!',
+                icon: 'error',
+            });
+        }
+    })
+    .catch(error => {
+        Swal.fire({
+            title: 'Error!',
+            text: 'Failed to process your request. Please try again later.',
+            icon: 'error',
+        });
+        console.error('Error:', error);
+    });
+}
+ else {
+                        // Return to the customer details to edit
+                        checkoutModal.style.display = "block";
+                    }
+                });
+            } else {
+                form.reportValidity();
+            }
         });
 
         // Populate order summary with cart items
@@ -1632,7 +1672,6 @@ video {
                     const quantity = parseInt(item.quantity, 10);
                     const price = parseFloat(item.price);
 
-                    // Validate quantity and price
                     if (isNaN(quantity) || isNaN(price)) {
                         console.error("Invalid cart item:", item);
                         return `<p style="color: red;">Invalid item data</p>`;
@@ -1659,6 +1698,55 @@ video {
         }
     });
 </script>
+
+<!-- Add SweetAlert CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    // State-District Dynamic Dropdown (for demonstration)
+    const stateDistrictMap = {
+        "State1": ["District1", "District2"],
+        "State2": ["District3", "District4"]
+    };
+
+    document.getElementById('state').addEventListener('change', function () {
+        const state = this.value;
+        const districtSelect = document.getElementById('district');
+        districtSelect.innerHTML = '<option value="" disabled selected>Select a District</option>'; // Clear previous options
+
+        if (state && stateDistrictMap[state]) {
+            stateDistrictMap[state].forEach(function(district) {
+                const option = document.createElement("option");
+                option.value = district;
+                option.textContent = district;
+                districtSelect.appendChild(option);
+            });
+        }
+    });
+
+    // Event listener for "!" button to show validation error message for the email input
+    document.getElementById("show-email-error").addEventListener("click", function () {
+        var emailInput = document.getElementById("email");
+        var emailFeedback = emailInput.nextElementSibling;
+
+        if (!emailInput.checkValidity()) {
+            emailFeedback.style.display = "block"; // Show error message
+        } else {
+            emailFeedback.style.display = "none"; // Hide error message if valid
+        }
+    });
+
+    // Form validation on submit
+    document.getElementById("next-button").addEventListener("click", function(event) {
+        var form = document.getElementById("customer-details-form");
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+    });
+</script>
+
 
 <style>
     /* Modal Styling */
@@ -1692,7 +1780,7 @@ video {
         border: none;
         font-size: 1.5rem;
         cursor: pointer;
-        color: #1dcce0;
+        color: #000000;
     }
 
     .modal-header1,

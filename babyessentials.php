@@ -1,22 +1,3 @@
-<?php
-// Include the Razorpay PHP library
-require('razorpay-php/Razorpay.php');
-use Razorpay\Api\Api;
-// Initialize Razorpay with your key and secret
-$api_key = 'rzp_test_Y2wy8t1wD1AFaA';
-$api_secret = 'zSqRMpIa2ljBBpkieFYGmfLa';
-$api= new Api($api_key, $api_secret);
-// Create an order
-$order = $api->order->create([
-'amount' => 9900, // amount in paise (100 paise = 1 rupee)
-'currency' => 'INR',
-'receipt' => 'order_receipt_12asa3'
-]);
-$order_id = $order->id;
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +12,7 @@ $order_id = $order->id;
     <link href="img/bigmoon_logo_circle.png" rel="icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Google Web Fonts -->  
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
@@ -1361,12 +1342,12 @@ video {
                 <div class="navbar-nav mx-auto">
                       
         <div class="nav-item d-flex align-items-center ">
-                    <a href="index.php" class="btn abtn-light me-2 ">
+                    <a href="index.html" class="btn abtn-light active  me-2 ">
                         Home Furnishings
                     </a>
                 </div>
                 <div class="nav-item d-flex align-items-center">
-                    <a href="babyessentials.php" class="btn abtn-light active me-2 ">
+                    <a href="babyessentials.html" class="btn abtn-light  me-2 ">
                         Baby Essentials
                     </a>
                 </div>
@@ -1383,13 +1364,13 @@ video {
                         </div> -->
                     
                     <div class="nav-item dropdown">
-                        <a href="ourstories.html" class="nav-link ">
+                        <a href="ourstories.php" class="nav-link ">
                             Our Story
                         </a></div>
                         
                     <a href="blogs.html" class="nav-item nav-link ">Blogs</a>
                     <div class="nav-item dropdown">
-                        <a href="bigmoontestimonial.html" class="nav-link ">
+                        <a href="bigmoontestimonial.php" class="nav-link ">
                             Testimonial
                         </a></div>
                     <a href="getintouch.html" class="nav-item nav-link">Get in Touch</a>

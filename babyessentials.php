@@ -1342,12 +1342,12 @@ video {
                 <div class="navbar-nav mx-auto">
                       
         <div class="nav-item d-flex align-items-center ">
-                    <a href="index.html" class="btn abtn-light  me-2 ">
+                    <a href="index.php" class="btn abtn-light  me-2 ">
                         Home Furnishings
                     </a>
                 </div>
                 <div class="nav-item d-flex align-items-center">
-                    <a href="babyessentials.html" class="btn abtn-light active me-2 ">
+                    <a href="babyessentials.php" class="btn abtn-light active me-2 ">
                         Baby Essentials
                     </a>
                 </div>
@@ -1364,13 +1364,13 @@ video {
                         </div> -->
                     
                     <div class="nav-item dropdown">
-                        <a href="ourstories.php" class="nav-link ">
+                        <a href="ourstories.html" class="nav-link ">
                             Our Story
                         </a></div>
                         
                     <a href="blogs.html" class="nav-item nav-link ">Blogs</a>
                     <div class="nav-item dropdown">
-                        <a href="bigmoontestimonial.php" class="nav-link ">
+                        <a href="bigmoontestimonial.html" class="nav-link ">
                             Testimonial
                         </a></div>
                     <a href="getintouch.html" class="nav-item nav-link">Get in Touch</a>

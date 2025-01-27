@@ -1308,6 +1308,164 @@ video {
             font-size: 16px;
         }
 </style>
+<style>
+    nav {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.abutton {
+  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.abutton:hover {
+  background-color: #777;
+}
+
+/* Modal styles */
+.amodal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.amodal-content {
+  background-color: white;
+  margin: 10% auto;
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.amodal-header {
+  height: 30%;
+  overflow: hidden;
+  padding: 0px 0px;
+}
+
+.amodal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.amodal-body {
+  height: 70%;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.alabel {
+  margin-top: 10px;
+}
+
+.ainput {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.abutton[type="submit"] {
+  background-color: #3e23c8;
+  color: white;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  float: center;
+}
+
+.abutton[type="submit"]:hover {
+  background-color: #5740cdc7;
+  color: white;
+}
+
+.aclose {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}
+
+.aclose:hover,
+.aclose:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .amodal-content {
+    width: 70%;
+  }
+
+  .amodal-body {
+    padding: 15px;
+  }
+
+  .abutton {
+    padding: 8px 16px;
+  }
+
+  .abutton[type="submit"] {
+    padding: 10px;
+  }
+
+  .aclose {
+    font-size: 25px;
+    right: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .amodal-content {
+    width: 90%;
+  }
+
+  .amodal-body {
+    padding: 10px;
+  }
+
+  .abutton {
+    padding: 6px 12px;
+  }
+
+  .abutton[type="submit"] {
+    padding: 8px;
+  }
+
+  .aclose {
+    font-size: 20px;
+    right: 10px;
+  }
+}
+</style>
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -1390,7 +1548,7 @@ video {
                     
                 </div>
                 <div class="d-flex align-items-center">
-                    <a href="orderhistory.php" class="btn btn-light rounded-pill me-2">
+                    <a  class="btn btn-light rounded-pill me-2" id="openModalBtn">
                         <i class="fa fa-history me-1"></i> Order History
                     </a>
                     <a href="#" class="btn btn-light rounded-pill" id="cart-btn">
@@ -3561,6 +3719,74 @@ stateDistrictMap = {
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
+    <div id="modal" class="amodal">
+        <div class="amodal-content">
+            <span id="closeModalBtn" class="aclose">&times;</span>
+            <div class="amodal-header">
+                <img src="img/orderhistory_banner.png" alt="Modal Header Image" class="amodal-image">
+            </div>
+            <div class="amodal-body" >
+                <form id="userDetailsForm">
+                    <label class="alabel" for="email">Email:</label>
+                    <input class="ainput" type="email" id="email" name="email" required>
+                    <label class="alabel" for="mobile">Mobile Number:</label>
+                    <input class="ainput" type="tel" id="mobile" name="mobile" required>
+                    <center>
+                        <button type="submit" class="abutton" style="align-items: center; justify-content: center;">Submit</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Get modal elements
+        const modal = document.getElementById('modal');
+        const openModalBtn = document.getElementById('openModalBtn'); // Correctly reference the button
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        
+        // Show the modal
+        openModalBtn.onclick = function () {
+            modal.style.display = 'block';
+        };
+        
+        // Close the modal
+        closeModalBtn.onclick = function () {
+            modal.style.display = 'none';
+        };
+        
+        // Close the modal if user clicks outside of it
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+        
+        // Handle form submission
+        document.getElementById('userDetailsForm').onsubmit = function (event) {
+            event.preventDefault();
+        
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+        
+            // Send data via AJAX
+            fetch('validate_user.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, mobile }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.success) {
+                        // Redirect to order history page with fetched data
+                        window.location.href = 'orderhistory.php?email=' + encodeURIComponent(email) + '&mobile=' + encodeURIComponent(mobile);
+           
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch((error) => console.error('Error:', error));
+        };
+        </script>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -19,7 +19,7 @@ if (!empty($email) && !empty($mobile)) {
     // Debugging: Print the input values
     // echo "Email: $email, Mobile: $mobile"; // Uncomment for debugging
 
-    $stmt = $conn->prepare("SELECT orderid, orderdate, price, receipt FROM customer WHERE email = ? AND mobilenumber = ? AND paymentstatus = '1'");
+    $stmt = $conn->prepare("SELECT orderid, orderdate, price, receipt FROM customer WHERE email = ? AND mobilenumber = ? AND paymentstatus = 'success'");
     $stmt->bind_param("ss", $email, $mobile);
     $stmt->execute();
     $result = $stmt->get_result();

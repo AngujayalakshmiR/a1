@@ -1361,12 +1361,12 @@ video {
                 <div class="navbar-nav mx-auto">
                       
         <div class="nav-item d-flex align-items-center ">
-                    <a href="index.html" class="btn abtn-light active  me-2 ">
+                    <a href="index.php" class="btn abtn-light me-2 ">
                         Home Furnishings
                     </a>
                 </div>
                 <div class="nav-item d-flex align-items-center">
-                    <a href="babyessentials.html" class="btn abtn-light  me-2 ">
+                    <a href="babyessentials.php" class="btn abtn-light active me-2 ">
                         Baby Essentials
                     </a>
                 </div>
@@ -1409,7 +1409,7 @@ video {
                     
                 </div>
                 <div class="d-flex align-items-center">
-                    <a href="orderhistory.html" class="btn btn-light rounded-pill me-2">
+                    <a href="orderhistory.php" class="btn btn-light rounded-pill me-2">
                         <i class="fa fa-history me-1"></i> Order History
                     </a>
                     <a href="#" class="btn btn-light rounded-pill" id="cart-btn">

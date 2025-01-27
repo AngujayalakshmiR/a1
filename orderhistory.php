@@ -668,16 +668,15 @@ $conn->close();
                             <a href="baby-towels.html" class="dropdown-item">Baby Towels</a>
                         </div> -->
                     
-                    <div class="nav-item dropdown">
+                    
                         <a href="ourstories.html" class="nav-link ">
                             Our Story
-                        </a></div>
-                        
+                        </a>
                     <a href="blogs.html" class="nav-item nav-link">Blogs</a>
-                    <div class="nav-item dropdown">
+                   
                         <a href="bigmoontestimonial.html" class="nav-link ">
                             Testimonial
-                        </a></div>
+                        </a>
                     <a href="getintouch.html" class="nav-item nav-link">Get in Touch</a>
                     <!--
                     <div class="nav-item dropdown">

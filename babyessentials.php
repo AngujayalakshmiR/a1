@@ -1347,7 +1347,7 @@ video {
                     </a>
                 </div>
                 <div class="nav-item d-flex align-items-center">
-                    <a href="babyessentials.html" class="btn abtn-light  me-2 ">
+                    <a href="babyessentials.html" class="btn abtn-light active me-2 ">
                         Baby Essentials
                     </a>
                 </div>

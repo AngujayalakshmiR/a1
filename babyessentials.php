@@ -1342,7 +1342,7 @@ video {
                 <div class="navbar-nav mx-auto">
                       
         <div class="nav-item d-flex align-items-center ">
-                    <a href="index.html" class="btn abtn-light active  me-2 ">
+                    <a href="index.html" class="btn abtn-light  me-2 ">
                         Home Furnishings
                     </a>
                 </div>

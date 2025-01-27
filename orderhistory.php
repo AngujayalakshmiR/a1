@@ -633,7 +633,7 @@ $conn->close();
 
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-            <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <a href="index.php" class="navbar-brand d-flex align-items-center">
                 <img src="img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
                 <h1 class="m-0 " style="color: #5195a5 !important;">Bigmoon</h1>
             </a>
@@ -647,12 +647,12 @@ $conn->close();
                     
                   
         <div class="nav-item d-flex align-items-center ">
-                    <a href="index.html" class="btn abtn-light  me-2 ">
+                    <a href="index.php" class="btn abtn-light  me-2 ">
                         Home Furnishings
                     </a>
                 </div>
                 <div class="nav-item d-flex align-items-center">
-                    <a href="babyessentials.html" class="btn abtn-light  me-2 ">
+                    <a href="babyessentials.php" class="btn abtn-light  me-2 ">
                         Baby Essentials
                     </a>
                 </div>

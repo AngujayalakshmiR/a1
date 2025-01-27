@@ -1331,7 +1331,7 @@ video {
           </div>
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-            <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <a href="index.php" class="navbar-brand d-flex align-items-center">
                 <img src="img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
                 <h1 class="m-0 text-primary">Bigmoon</h1>
             </a>
@@ -1342,12 +1342,12 @@ video {
                 <div class="navbar-nav mx-auto">
                       
         <div class="nav-item d-flex align-items-center ">
-                    <a href="index.php" class="btn abtn-light  me-2 ">
+                    <a href="index.php" class="btn abtn-light   me-2 ">
                         Home Furnishings
                     </a>
                 </div>
                 <div class="nav-item d-flex align-items-center">
-                    <a href="babyessentials.php" class="btn abtn-light active me-2 ">
+                    <a href="babyessentials.php" class="btn abtn-light active  me-2 ">
                         Baby Essentials
                     </a>
                 </div>
@@ -1483,13 +1483,14 @@ video {
 }
 </style>
 <!-- Modal for Checkout -->
+<!-- Modal for Checkout -->
 <div class="modal1" id="checkout-modal">
     <div class="modal-dialog1">
         <div class="modal-content1">
             <!-- Modal Header -->
             <div class="modal-header1">
-                <h4 class="modal-title1" id="modal-title">Step 1: Customer Details</h4>
-                <button type="button" class="btn-close1" id="modal-close"></button>
+                <h4 class="modal-title1" id="modal-title">Customer Details</h4>
+                <button type="button" class="btn-close1" id="modal-close">&times;</button>
             </div>
 
             <!-- Modal Body -->
@@ -1497,44 +1498,79 @@ video {
                 <div class="row">
                     <!-- Left half: Steps for checkout -->
                     <div class="col-md-7">
-                        <div id="step-1">
-                            <form id="customer-details-form" action="pay.php">
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="phone" class="form-label">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="address" class="form-label">Address</label>
-                                    <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="district" class="form-label">District</label>
-                                    <input type="text" class="form-control" id="district" placeholder="Enter your district" required>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="state" class="form-label">State</label>
-                                    <input type="text" class="form-control" id="state" placeholder="Enter your state" required>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between">
-                                    <label for="pincode" class="form-label">Pincode</label>
-                                    <input type="number" class="form-control" id="pincode" placeholder="Enter your pincode" required>
-                                </div>
-                            </form>
-                        </div>
-
-                        <!-- Step 2: Payment -->
-                        <div id="step-2" class="d-none">
-                            <h5>Scan the QR Code to Complete Payment</h5>
-                            <img src="https://via.placeholder.com/250" alt="QR Code" class="img-fluid">
-                        </div>
+                        <form id="customer-details-form" novalidate>
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                            </div>
+                            
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" pattern="^\d{10}$" required>
+                            </div>
+                            
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                            
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="address" class="form-label">Address</label>
+                                <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+                            </div>
+                            
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="state" class="form-label">State</label>
+                                <select class="form-control dropdown" id="state" required>
+                                    <option value="" disabled selected>Select a State</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Lakshadweep (UT)">Lakshadweep (UT)</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Puducherry (UT)">Puducherry (UT)</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="district" class="form-label">District</label>
+                                <select class="form-control dropdown" id="district" required>
+                                    <option value="" disabled selected>Select a District</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label for="pincode" class="form-label">Pincode</label>
+                                <input type="text" class="form-control" id="pincode" placeholder="Enter your pincode" pattern="^\d{6}$" required>
+                            </div>
+                        </form>
+                        <div id="form-errors" class="text-danger mt-3"></div> <!-- Container for error messages -->
                     </div>
 
                     <!-- Right half: Order Summary -->
@@ -1557,66 +1593,101 @@ video {
 
             <!-- Modal Footer -->
             <div class="modal-footer1">
-                <button type="button" class="btn btn-secondary" id="back-button" class="d-none">Back</button>
-                <button type="button" class="btn btn-primary" id="next-button">Next</button>
+                <button type="button" class="btn btn-secondary" id="cancel-button">Cancel</button>
+                <button type="button" class="btn btn-primary" id="proceed-to-pay">Proceed to Pay</button>
             </div>
         </div>
     </div>
 </div>
+
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const checkoutModal = document.getElementById("checkout-modal");
-        const nextButton = document.getElementById("next-button");
-        const backButton = document.getElementById("back-button");
-        const modalTitle = document.getElementById("modal-title");
-        const step1 = document.getElementById("step-1");
-        const step2 = document.getElementById("step-2");
+        const proceedToPayButton = document.getElementById("proceed-to-pay");
+        const cancelButton = document.getElementById("cancel-button");
         const modalClose = document.getElementById("modal-close");
         const orderSummaryContainer = document.getElementById("order-summary-container");
         const totalAmountValue = document.getElementById("total-amount-value");
 
-        // Open modal on clicking "Proceed to Checkout"
-        document.getElementById("proceed-to-checkout").addEventListener("click", function () {
-            checkoutModal.style.display = "block";
-            step1.classList.remove("d-none");
-            step2.classList.add("d-none");
-            modalTitle.textContent = "Step 1: Customer Details";
-            backButton.style.display = "none";
-
-            // Populate order summary with cart items
-            populateOrderSummary();
-        });
-
-        // Close modal
         modalClose.addEventListener("click", function () {
             checkoutModal.style.display = "none";
         });
 
-        // Handle Next button
-        nextButton.addEventListener("click", function () {
-            if (step1.classList.contains("d-none")) {
+        window.addEventListener("click", function (event) {
+            if (event.target === checkoutModal) {
                 checkoutModal.style.display = "none";
-            } else {
-                const form = document.getElementById("customer-details-form");
-                if (form.checkValidity()) {
-                    step1.classList.add("d-none");
-                    step2.classList.remove("d-none");
-                    modalTitle.textContent = "Step 2: Payment";
-                    backButton.style.display = "inline-block";
-                    nextButton.textContent = "Finish";
-                } else {
-                    form.reportValidity();
-                }
             }
         });
 
-        // Handle Back button
-        backButton.addEventListener("click", function () {
-            step2.classList.add("d-none");
-            step1.classList.remove("d-none");
-            modalTitle.textContent = "Step 1: Customer Details";
-            backButton.style.display = "none";
-            nextButton.textContent = "Next";
+        // Open modal on clicking "Proceed to Checkout"
+        document.getElementById("proceed-to-checkout").addEventListener("click", function () {
+            checkoutModal.style.display = "block";
+            populateOrderSummary();
+        });
+
+        // Cancel button to close the modal
+        cancelButton.addEventListener("click", function () {
+            checkoutModal.style.display = "none";
+        });
+
+        // Proceed to Pay button logic
+        proceedToPayButton.addEventListener("click", function () {
+            const form = document.getElementById("customer-details-form");
+
+            if (form.checkValidity()) {
+                // Trigger SweetAlert confirmation
+                Swal.fire({
+                    title: 'Are you sure all details are correct?',
+                    text: "Click Yes to proceed with payment, or No to edit the details.",
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes',
+                    cancelButtonText: 'No',
+                    confirmButtonColor: '#28a745', // Green color for Yes
+                    cancelButtonColor: '#dc3545', // Red color for No
+                }).then((result) => {
+                    if (result.isConfirmed) {
+    // Call the PHP script to generate and save the order ID
+    fetch('saveOrder.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            Swal.fire({
+                title: 'Let`s proceed to pay!',
+                text: `Happy shopping with us`,
+                icon: 'success',
+            });
+        } else {
+            Swal.fire({
+                title: 'Error!',
+                text: data.message || 'Something went wrong!',
+                icon: 'error',
+            });
+        }
+    })
+    .catch(error => {
+        Swal.fire({
+            title: 'Error!',
+            text: 'Failed to process your request. Please try again later.',
+            icon: 'error',
+        });
+        console.error('Error:', error);
+    });
+}
+ else {
+                        // Return to the customer details to edit
+                        checkoutModal.style.display = "block";
+                    }
+                });
+            } else {
+                form.reportValidity();
+            }
         });
 
         // Populate order summary with cart items
@@ -1632,7 +1703,6 @@ video {
                     const quantity = parseInt(item.quantity, 10);
                     const price = parseFloat(item.price);
 
-                    // Validate quantity and price
                     if (isNaN(quantity) || isNaN(price)) {
                         console.error("Invalid cart item:", item);
                         return `<p style="color: red;">Invalid item data</p>`;
@@ -1660,7 +1730,879 @@ video {
     });
 </script>
 
+<!-- Add SweetAlert CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+stateDistrictMap = {
+        "Andhra Pradesh": [  
+            "Anantapur",
+            "Chittoor",
+            "East Godavari",
+            "Guntur",
+            "Krishna",
+            "Kurnool",
+            "Nellore",
+            "Prakasam",
+            "Srikakulam",
+            "Visakhapatnam",
+            "Vizianagaram",
+            "West Godavari",
+            "YSR Kadapa"
+         ],
+        "Arunachal Pradesh":[  
+            "Tawang",
+            "West Kameng",
+            "East Kameng",
+            "Papum Pare",
+            "Kurung Kumey",
+            "Kra Daadi",
+            "Lower Subansiri",
+            "Upper Subansiri",
+            "West Siang",
+            "East Siang",
+            "Siang",
+            "Upper Siang",
+            "Lower Siang",
+            "Lower Dibang Valley",
+            "Dibang Valley",
+            "Anjaw",
+            "Lohit",
+            "Namsai",
+            "Changlang",
+            "Tirap",
+            "Longding"
+         ],
+        "Assam": [  
+            "Baksa",
+            "Barpeta",
+            "Biswanath",
+            "Bongaigaon",
+            "Cachar",
+            "Charaideo",
+            "Chirang",
+            "Darrang",
+            "Dhemaji",
+            "Dhubri",
+            "Dibrugarh",
+            "Goalpara",
+            "Golaghat",
+            "Hailakandi",
+            "Hojai",
+            "Jorhat",
+            "Kamrup Metropolitan",
+            "Kamrup",
+            "Karbi Anglong",
+            "Karimganj",
+            "Kokrajhar",
+            "Lakhimpur",
+            "Majuli",
+            "Morigaon",
+            "Nagaon",
+            "Nalbari",
+            "Dima Hasao",
+            "Sivasagar",
+            "Sonitpur",
+            "South Salmara-Mankachar",
+            "Tinsukia",
+            "Udalguri",
+            "West Karbi Anglong"
+         ],
+        "Bihar": [  
+            "Araria",
+            "Arwal",
+            "Aurangabad",
+            "Banka",
+            "Begusarai",
+            "Bhagalpur",
+            "Bhojpur",
+            "Buxar",
+            "Darbhanga",
+            "East Champaran (Motihari)",
+            "Gaya",
+            "Gopalganj",
+            "Jamui",
+            "Jehanabad",
+            "Kaimur (Bhabua)",
+            "Katihar",
+            "Khagaria",
+            "Kishanganj",
+            "Lakhisarai",
+            "Madhepura",
+            "Madhubani",
+            "Munger (Monghyr)",
+            "Muzaffarpur",
+            "Nalanda",
+            "Nawada",
+            "Patna",
+            "Purnia (Purnea)",
+            "Rohtas",
+            "Saharsa",
+            "Samastipur",
+            "Saran",
+            "Sheikhpura",
+            "Sheohar",
+            "Sitamarhi",
+            "Siwan",
+            "Supaul",
+            "Vaishali",
+            "West Champaran"
+         ],
+        "Chhattisgarh": [  
+            "Balod",
+            "Baloda Bazar",
+            "Balrampur",
+            "Bastar",
+            "Bemetara",
+            "Bijapur",
+            "Bilaspur",
+            "Dantewada (South Bastar)",
+            "Dhamtari",
+            "Durg",
+            "Gariyaband",
+            "Janjgir-Champa",
+            "Jashpur",
+            "Kabirdham (Kawardha)",
+            "Kanker (North Bastar)",
+            "Kondagaon",
+            "Korba",
+            "Korea (Koriya)",
+            "Mahasamund",
+            "Mungeli",
+            "Narayanpur",
+            "Raigarh",
+            "Raipur",
+            "Rajnandgaon",
+            "Sukma",
+            "Surajpur  ",
+            "Surguja"
+         ],
+         "Delhi":[  
+            "Central Delhi",
+            "East Delhi",
+            "New Delhi",
+            "North Delhi",
+            "North East  Delhi",
+            "North West  Delhi",
+            "Shahdara",
+            "South Delhi",
+            "South East Delhi",
+            "South West  Delhi",
+            "West Delhi"
+         ],
+        "Goa": ["North Goa", "South Goa"],
+        
+        "Gujarat": [  
+            "Ahmedabad",
+            "Amreli",
+            "Anand",
+            "Aravalli",
+            "Banaskantha (Palanpur)",
+            "Bharuch",
+            "Bhavnagar",
+            "Botad",
+            "Chhota Udepur",
+            "Dahod",
+            "Dangs (Ahwa)",
+            "Devbhoomi Dwarka",
+            "Gandhinagar",
+            "Gir Somnath",
+            "Jamnagar",
+            "Junagadh",
+            "Kachchh",
+            "Kheda (Nadiad)",
+            "Mahisagar",
+            "Mehsana",
+            "Morbi",
+            "Narmada (Rajpipla)",
+            "Navsari",
+            "Panchmahal (Godhra)",
+            "Patan",
+            "Porbandar",
+            "Rajkot",
+            "Sabarkantha (Himmatnagar)",
+            "Surat",
+            "Surendranagar",
+            "Tapi (Vyara)",
+            "Vadodara",
+            "Valsad"
+         ],
+        "Haryana":[  
+            "Ambala",
+            "Bhiwani",
+            "Charkhi Dadri",
+            "Faridabad",
+            "Fatehabad",
+            "Gurgaon",
+            "Hisar",
+            "Jhajjar",
+            "Jind",
+            "Kaithal",
+            "Karnal",
+            "Kurukshetra",
+            "Mahendragarh",
+            "Mewat",
+            "Palwal",
+            "Panchkula",
+            "Panipat",
+            "Rewari",
+            "Rohtak",
+            "Sirsa",
+            "Sonipat",
+            "Yamunanagar"
+         ],
+        "Himachal Pradesh":[  
+            "Bilaspur",
+            "Chamba",
+            "Hamirpur",
+            "Kangra",
+            "Kinnaur",
+            "Kullu",
+            "Lahaul &amp; Spiti",
+            "Mandi",
+            "Shimla",
+            "Sirmaur (Sirmour)",
+            "Solan",
+            "Una"
+         ],
+         "Jammu and Kashmir":[  
+            "Anantnag",
+            "Bandipore",
+            "Baramulla",
+            "Budgam",
+            "Doda",
+            "Ganderbal",
+            "Jammu",
+            "Kargil",
+            "Kathua",
+            "Kishtwar",
+            "Kulgam",
+            "Kupwara",
+            "Leh",
+            "Poonch",
+            "Pulwama",
+            "Rajouri",
+            "Ramban",
+            "Reasi",
+            "Samba",
+            "Shopian",
+            "Srinagar",
+            "Udhampur"
+         ],
+        "Jharkhand":[  
+            "Bokaro",
+            "Chatra",
+            "Deoghar",
+            "Dhanbad",
+            "Dumka",
+            "East Singhbhum",
+            "Garhwa",
+            "Giridih",
+            "Godda",
+            "Gumla",
+            "Hazaribag",
+            "Jamtara",
+            "Khunti",
+            "Koderma",
+            "Latehar",
+            "Lohardaga",
+            "Pakur",
+            "Palamu",
+            "Ramgarh",
+            "Ranchi",
+            "Sahibganj",
+            "Seraikela-Kharsawan",
+            "Simdega",
+            "West Singhbhum"
+         ],
+        "Karnataka": [  
+            "Bagalkot",
+            "Ballari (Bellary)",
+            "Belagavi (Belgaum)",
+            "Bengaluru (Bangalore) Rural",
+            "Bengaluru (Bangalore) Urban",
+            "Bidar",
+            "Chamarajanagar",
+            "Chikballapur",
+            "Chikkamagaluru (Chikmagalur)",
+            "Chitradurga",
+            "Dakshina Kannada",
+            "Davangere",
+            "Dharwad",
+            "Gadag",
+            "Hassan",
+            "Haveri",
+            "Kalaburagi (Gulbarga)",
+            "Kodagu",
+            "Kolar",
+            "Koppal",
+            "Mandya",
+            "Mysuru (Mysore)",
+            "Raichur",
+            "Ramanagara",
+            "Shivamogga (Shimoga)",
+            "Tumakuru (Tumkur)",
+            "Udupi",
+            "Uttara Kannada (Karwar)",
+            "Vijayapura (Bijapur)",
+            "Yadgir"
+         ],
+
+        "Kerala": [  
+            "Alappuzha",
+            "Ernakulam",
+            "Idukki",
+            "Kannur",
+            "Kasaragod",
+            "Kollam",
+            "Kottayam",
+            "Kozhikode",
+            "Malappuram",
+            "Palakkad",
+            "Pathanamthitta",
+            "Thiruvananthapuram",
+            "Thrissur",
+            "Wayanad"
+         ],
+         "Lakshadweep (UT)":[  
+            "Agatti",
+            "Amini",
+            "Androth",
+            "Bithra",
+            "Chethlath",
+            "Kavaratti",
+            "Kadmath",
+            "Kalpeni",
+            "Kilthan",
+            "Minicoy"
+         ],
+        "Madhya Pradesh": [  
+            "Agar Malwa",
+            "Alirajpur",
+            "Anuppur",
+            "Ashoknagar",
+            "Balaghat",
+            "Barwani",
+            "Betul",
+            "Bhind",
+            "Bhopal",
+            "Burhanpur",
+            "Chhatarpur",
+            "Chhindwara",
+            "Damoh",
+            "Datia",
+            "Dewas",
+            "Dhar",
+            "Dindori",
+            "Guna",
+            "Gwalior",
+            "Harda",
+            "Hoshangabad",
+            "Indore",
+            "Jabalpur",
+            "Jhabua",
+            "Katni",
+            "Khandwa",
+            "Khargone",
+            "Mandla",
+            "Mandsaur",
+            "Morena",
+            "Narsinghpur",
+            "Neemuch",
+            "Panna",
+            "Raisen",
+            "Rajgarh",
+            "Ratlam",
+            "Rewa",
+            "Sagar",
+            "Satna",
+            "Sehore",
+            "Seoni",
+            "Shahdol",
+            "Shajapur",
+            "Sheopur",
+            "Shivpuri",
+            "Sidhi",
+            "Singrauli",
+            "Tikamgarh",
+            "Ujjain",
+            "Umaria",
+            "Vidisha"
+         ],
+        "Maharashtra": [  
+            "Ahmednagar",
+            "Akola",
+            "Amravati",
+            "Aurangabad",
+            "Beed",
+            "Bhandara",
+            "Buldhana",
+            "Chandrapur",
+            "Dhule",
+            "Gadchiroli",
+            "Gondia",
+            "Hingoli",
+            "Jalgaon",
+            "Jalna",
+            "Kolhapur",
+            "Latur",
+            "Mumbai City",
+            "Mumbai Suburban",
+            "Nagpur",
+            "Nanded",
+            "Nandurbar",
+            "Nashik",
+            "Osmanabad",
+            "Palghar",
+            "Parbhani",
+            "Pune",
+            "Raigad",
+            "Ratnagiri",
+            "Sangli",
+            "Satara",
+            "Sindhudurg",
+            "Solapur",
+            "Thane",
+            "Wardha",
+            "Washim",
+            "Yavatmal"
+         ],
+        "Manipur": [  
+            "Bishnupur",
+            "Chandel",
+            "Churachandpur",
+            "Imphal East",
+            "Imphal West",
+            "Jiribam",
+            "Kakching",
+            "Kamjong",
+            "Kangpokpi",
+            "Noney",
+            "Pherzawl",
+            "Senapati",
+            "Tamenglong",
+            "Tengnoupal",
+            "Thoubal",
+            "Ukhrul"
+         ],
+        "Meghalaya": [  
+            "East Garo Hills",
+            "East Jaintia Hills",
+            "East Khasi Hills",
+            "North Garo Hills",
+            "Ri Bhoi",
+            "South Garo Hills",
+            "South West Garo Hills ",
+            "South West Khasi Hills",
+            "West Garo Hills",
+            "West Jaintia Hills",
+            "West Khasi Hills"
+         ],
+        "Mizoram": [  
+            "Aizawl",
+            "Champhai",
+            "Kolasib",
+            "Lawngtlai",
+            "Lunglei",
+            "Mamit",
+            "Saiha",
+            "Serchhip"
+         ],
+    
+        "Nagaland": [  
+            "Dimapur",
+            "Kiphire",
+            "Kohima",
+            "Longleng",
+            "Mokokchung",
+            "Mon",
+            "Peren",
+            "Phek",
+            "Tuensang",
+            "Wokha",
+            "Zunheboto"
+         ],
+        "Odisha": [  
+            "Angul",
+            "Balangir",
+            "Balasore",
+            "Bargarh",
+            "Bhadrak",
+            "Boudh",
+            "Cuttack",
+            "Deogarh",
+            "Dhenkanal",
+            "Gajapati",
+            "Ganjam",
+            "Jagatsinghapur",
+            "Jajpur",
+            "Jharsuguda",
+            "Kalahandi",
+            "Kandhamal",
+            "Kendrapara",
+            "Kendujhar (Keonjhar)",
+            "Khordha",
+            "Koraput",
+            "Malkangiri",
+            "Mayurbhanj",
+            "Nabarangpur",
+            "Nayagarh",
+            "Nuapada",
+            "Puri",
+            "Rayagada",
+            "Sambalpur",
+            "Sonepur",
+            "Sundargarh"
+         ],
+         "Puducherry (UT)":[  
+            "Karaikal",
+            "Mahe",
+            "Pondicherry",
+            "Yanam"
+         ],
+        "Punjab": [  
+            "Amritsar",
+            "Barnala",
+            "Bathinda",
+            "Faridkot",
+            "Fatehgarh Sahib",
+            "Fazilka",
+            "Ferozepur",
+            "Gurdaspur",
+            "Hoshiarpur",
+            "Jalandhar",
+            "Kapurthala",
+            "Ludhiana",
+            "Mansa",
+            "Moga",
+            "Muktsar",
+            "Nawanshahr (Shahid Bhagat Singh Nagar)",
+            "Pathankot",
+            "Patiala",
+            "Rupnagar",
+            "Sahibzada Ajit Singh Nagar (Mohali)",
+            "Sangrur",
+            "Tarn Taran"
+         ],
+        "Rajasthan":[  
+            "Ajmer",
+            "Alwar",
+            "Banswara",
+            "Baran",
+            "Barmer",
+            "Bharatpur",
+            "Bhilwara",
+            "Bikaner",
+            "Bundi",
+            "Chittorgarh",
+            "Churu",
+            "Dausa",
+            "Dholpur",
+            "Dungarpur",
+            "Hanumangarh",
+            "Jaipur",
+            "Jaisalmer",
+            "Jalore",
+            "Jhalawar",
+            "Jhunjhunu",
+            "Jodhpur",
+            "Karauli",
+            "Kota",
+            "Nagaur",
+            "Pali",
+            "Pratapgarh",
+            "Rajsamand",
+            "Sawai Madhopur",
+            "Sikar",
+            "Sirohi",
+            "Sri Ganganagar",
+            "Tonk",
+            "Udaipur"
+         ],
+        "Sikkim": ["Gangtok", "Namchi", "Jorethang", "Mangan", "Rangpo", "Soreng"],
+    
+        "Tamil Nadu": [  
+            "Ariyalur",
+            "Chennai",
+            "Coimbatore",
+            "Cuddalore",
+            "Dharmapuri",
+            "Dindigul",
+            "Erode",
+            "Kanchipuram",
+            "Kanyakumari",
+            "Karur",
+            "Krishnagiri",
+            "Madurai",
+            "Nagapattinam",
+            "Namakkal",
+            "Nilgiris",
+            "Perambalur",
+            "Pudukkottai",
+            "Ramanathapuram",
+            "Salem",
+            "Sivaganga",
+            "Thanjavur",
+            "Theni",
+            "Thoothukudi (Tuticorin)",
+            "Tiruchirappalli",
+            "Tirunelveli",
+            "Tiruppur",
+            "Tiruvallur",
+            "Tiruvannamalai",
+            "Tiruvarur",
+            "Vellore",
+            "Viluppuram",
+            "Virudhunagar"
+         ],
+        "Telangana": [  
+            "Adilabad",
+            "Bhadradri Kothagudem",
+            "Hyderabad",
+            "Jagtial",
+            "Jangaon",
+            "Jayashankar Bhoopalpally",
+            "Jogulamba Gadwal",
+            "Kamareddy",
+            "Karimnagar",
+            "Khammam",
+            "Komaram Bheem Asifabad",
+            "Mahabubabad",
+            "Mahabubnagar",
+            "Mancherial",
+            "Medak",
+            "Medchal",
+            "Nagarkurnool",
+            "Nalgonda",
+            "Nirmal",
+            "Nizamabad",
+            "Peddapalli",
+            "Rajanna Sircilla",
+            "Rangareddy",
+            "Sangareddy",
+            "Siddipet",
+            "Suryapet",
+            "Vikarabad",
+            "Wanaparthy",
+            "Warangal (Rural)",
+            "Warangal (Urban)",
+            "Yadadri Bhuvanagiri"
+         ],
+        "Tripura": [  
+            "Dhalai",
+            "Gomati",
+            "Khowai",
+            "North Tripura",
+            "Sepahijala",
+            "South Tripura",
+            "Unakoti",
+            "West Tripura"
+         ],
+         "Uttarakhand":[  
+            "Almora",
+            "Bageshwar",
+            "Chamoli",
+            "Champawat",
+            "Dehradun",
+            "Haridwar",
+            "Nainital",
+            "Pauri Garhwal",
+            "Pithoragarh",
+            "Rudraprayag",
+            "Tehri Garhwal",
+            "Udham Singh Nagar",
+            "Uttarkashi"
+         ],
+        "Uttar Pradesh": [  
+            "Agra",
+            "Aligarh",
+            "Allahabad",
+            "Ambedkar Nagar",
+            "Amethi (Chatrapati Sahuji Mahraj Nagar)",
+            "Amroha (J.P. Nagar)",
+            "Auraiya",
+            "Azamgarh",
+            "Baghpat",
+            "Bahraich",
+            "Ballia",
+            "Balrampur",
+            "Banda",
+            "Barabanki",
+            "Bareilly",
+            "Basti",
+            "Bhadohi",
+            "Bijnor",
+            "Budaun",
+            "Bulandshahr",
+            "Chandauli",
+            "Chitrakoot",
+            "Deoria",
+            "Etah",
+            "Etawah",
+            "Faizabad",
+            "Farrukhabad",
+            "Fatehpur",
+            "Firozabad",
+            "Gautam Buddha Nagar",
+            "Ghaziabad",
+            "Ghazipur",
+            "Gonda",
+            "Gorakhpur",
+            "Hamirpur",
+            "Hapur (Panchsheel Nagar)",
+            "Hardoi",
+            "Hathras",
+            "Jalaun",
+            "Jaunpur",
+            "Jhansi",
+            "Kannauj",
+            "Kanpur Dehat",
+            "Kanpur Nagar",
+            "Kanshiram Nagar (Kasganj)",
+            "Kaushambi",
+            "Kushinagar (Padrauna)",
+            "Lakhimpur - Kheri",
+            "Lalitpur",
+            "Lucknow",
+            "Maharajganj",
+            "Mahoba",
+            "Mainpuri",
+            "Mathura",
+            "Mau",
+            "Meerut",
+            "Mirzapur",
+            "Moradabad",
+            "Muzaffarnagar",
+            "Pilibhit",
+            "Pratapgarh",
+            "RaeBareli",
+            "Rampur",
+            "Saharanpur",
+            "Sambhal (Bhim Nagar)",
+            "Sant Kabir Nagar",
+            "Shahjahanpur",
+            "Shamali (Prabuddh Nagar)",
+            "Shravasti",
+            "Siddharth Nagar",
+            "Sitapur",
+            "Sonbhadra",
+            "Sultanpur",
+            "Unnao",
+            "Varanasi"
+         ],
+    
+        "West Bengal": [  
+            "Alipurduar",
+            "Bankura",
+            "Birbhum",
+            "Burdwan (Bardhaman)",
+            "Cooch Behar",
+            "Dakshin Dinajpur (South Dinajpur)",
+            "Darjeeling",
+            "Hooghly",
+            "Howrah",
+            "Jalpaiguri",
+            "Kalimpong",
+            "Kolkata",
+            "Malda",
+            "Murshidabad",
+            "Nadia",
+            "North 24 Parganas",
+            "Paschim Medinipur (West Medinipur)",
+            "Purba Medinipur (East Medinipur)",
+            "Purulia",
+            "South 24 Parganas",
+            "Uttar Dinajpur (North Dinajpur)"
+         ]
+    }; 
+
+    document.getElementById('state').addEventListener('change', function () {
+        const state = this.value;
+        const districtSelect = document.getElementById('district');
+        districtSelect.innerHTML = '<option value="" disabled selected>Select a District</option>'; // Clear previous options
+
+        if (state && stateDistrictMap[state]) {
+            stateDistrictMap[state].forEach(function(district) {
+                const option = document.createElement("option");
+                option.value = district;
+                option.textContent = district;
+                districtSelect.appendChild(option);
+            });
+        }
+    });
+
+    // Event listener for "!" button to show validation error message for the email input
+    document.getElementById("show-email-error").addEventListener("click", function () {
+        var emailInput = document.getElementById("email");
+        var emailFeedback = emailInput.nextElementSibling;
+
+        if (!emailInput.checkValidity()) {
+            emailFeedback.style.display = "block"; // Show error message
+        } else {
+            emailFeedback.style.display = "none"; // Hide error message if valid
+        }
+    });
+
+    // Form validation on submit
+    document.getElementById("proceed-to-pay").addEventListener("click", function(event) {
+        var form = document.getElementById("customer-details-form");
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+    });
+</script>
+
+
 <style>
+/* Reduce font size for tab view (medium screens) */
+@media (max-width: 768px) {
+    .modal-dialog1 {
+        max-width: 90%; 
+        margin: 10px; /* Adjust modal width for medium screens */
+    }
+}
+
+/* Reduce font size for mobile view (small screens) */
+@media (max-width: 576px) {
+    .modal-dialog1 {
+        max-width: 95%; /* Increase modal width for small screens */
+        margin: 10px; /* Add some margin for proper spacing */
+    }
+
+    .modal-content1 {
+        font-size: 0.8rem; /* Further reduce font size for small screens */
+    }
+
+    .modal-title1 {
+        font-size: 1rem; /* Adjust modal title size */
+    }
+
+    .form-label {
+        font-size: 0.75rem; /* Adjust label size */
+    }
+
+    .form-control {
+        font-size: 0.8rem; /* Adjust input field text size */
+    }
+
+    #order-summary h5 {
+        font-size: 1rem; /* Adjust order summary heading size */
+    }
+
+    #total-amount h6 {
+        font-size: 0.9rem; /* Adjust total section size */
+    }
+}
+
+@media (max-width: 1500px) {
+    .modal-dialog1 {
+        max-width: 80%;
+        margin: 1.75rem auto;
+      
+    
+    }}
     /* Modal Styling */
     .modal1 {
         display: none;
@@ -1675,16 +2617,16 @@ video {
         justify-content: center;
         align-items: center;
     }
-
-    .modal-dialog1 {
-        max-width: 60%;
-        margin: 1.75rem auto;
-    }
+    /* Ensure the dropdowns are aligned within the modal */
+#state, #district {
+    width: 100%;  /* Ensure it fits within the available space */
+}
 
     .modal-content1 {
         background: white;
         padding: 20px;
         border-radius: 10px;
+        overflow: hidden;
     }
 
     .btn-close1 {
@@ -1692,7 +2634,7 @@ video {
         border: none;
         font-size: 1.5rem;
         cursor: pointer;
-        color: #1dcce0;
+        color: #000000;
     }
 
     .modal-header1,
@@ -1770,7 +2712,36 @@ video {
 
     .form-control {
         flex: 2;
+        width: 100%; 
+    
     }
+
+    /* Adjust the width and height of the dropdowns */
+#state, #district {
+    width: 50px;  /* Adjust the width of the dropdown */
+    height: 35px;  /* Adjust the height of the dropdown */
+    padding: 5px;  /* Adjust the padding inside the dropdown */
+}
+
+/* Ensure the labels and dropdowns align properly */
+.mb-3 .form-label {
+    flex: 1;
+    font-size: 1rem;  /* Adjust font size of the label */
+    margin-right: 10px;  /* Space between label and dropdown */
+}
+
+.dropdown {
+    font-size: 0.9rem;  /* Adjust font size inside the dropdown */
+    padding: 5px;  /* Adjust padding inside the dropdown for better fit */
+}
+
+/* Ensures that the dropdown and label are properly aligned */
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 </style>
 
 
@@ -2056,6 +3027,7 @@ video {
                 </div>				
             </div>
             <div class="slider-container">
+
                 <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
                     <div class="discount-badge">25% OFF</div>
 
@@ -2070,10 +3042,6 @@ video {
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
                 <div class="product-card wow fadeInUp" data-wow-delay="0.5s">
@@ -2312,7 +3280,7 @@ video {
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal1" autoplay loop muted>
                       <source src="img/videosample.mp4" type="video/mp4">
                       Your browser does not support the video tag.
-                    </video>
+                    </video>    
                   </div>
                   <!-- Video 2 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
@@ -2397,7 +3365,7 @@ video {
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel2">Video 2</h5>
+                      <h5 class="modal-title" id="videoModalLabel3">Video 3</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -2413,7 +3381,7 @@ video {
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel2">Video 2</h5>
+                      <h5 class="modal-title" id="videoModalLabel4">Video 4</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -2429,7 +3397,7 @@ video {
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel2">Video 2</h5>
+                      <h5 class="modal-title" id="videoModalLabel5">Video 5</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -2445,7 +3413,7 @@ video {
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel2">Video 2</h5>
+                      <h5 class="modal-title" id="videoModalLabel6">Video 6</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">

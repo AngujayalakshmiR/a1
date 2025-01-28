@@ -1803,36 +1803,7 @@ video {
                 }).then((result) => {
                     if (result.isConfirmed) {
     // Call the PHP script to generate and save the order ID
-    fetch('saveOrder.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.status === "success") {
-            Swal.fire({
-                title: 'Let`s proceed to pay!',
-                text: `Happy shopping with us`,
-                icon: 'success',
-            });
-        } else {
-            Swal.fire({
-                title: 'Error!',
-                text: data.message || 'Something went wrong!',
-                icon: 'error',
-            });
-        }
-    })
-    .catch(error => {
-        Swal.fire({
-            title: 'Error!',
-            text: 'Failed to process your request. Please try again later.',
-            icon: 'error',
-        });
-        console.error('Error:', error);
-    });
+    
 }
  else {
                         // Return to the customer details to edit
@@ -3764,6 +3735,18 @@ stateDistrictMap = {
             </div>
         </div>
     </div>
+   
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+        <!-- JavaScript Libraries -->
     <script>
         // Get modal elements
         const modal = document.getElementById('modal');
@@ -3812,19 +3795,7 @@ stateDistrictMap = {
                 })
                 .catch((error) => console.error('Error:', error));
         };
-        </script>
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-        <!-- JavaScript Libraries -->
-       
+    </script>
 
   <script>document.querySelectorAll('.product-slider').forEach((slider) => {
     const prevButton = slider.querySelector('.prev');

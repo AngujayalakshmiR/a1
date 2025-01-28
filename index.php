@@ -1665,7 +1665,7 @@ video {
                             
                             <div class="mb-3 d-flex justify-content-between">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email1" required>
                             </div>
                             
                             <div class="mb-3 d-flex justify-content-between">
@@ -2687,7 +2687,7 @@ stateDistrictMap = {
 
     // Event listener for "!" button to show validation error message for the email input
     document.getElementById("show-email-error").addEventListener("click", function () {
-        var emailInput = document.getElementById("email");
+        var emailInput = document.getElementById("email1");
         var emailFeedback = emailInput.nextElementSibling;
 
         if (!emailInput.checkValidity()) {

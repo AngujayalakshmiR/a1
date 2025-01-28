@@ -1665,7 +1665,7 @@ video {
                             
                             <div class="mb-3 d-flex justify-content-between">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                <input type="email" class="form-control" id="email1" placeholder="Enter your email" required>
                             </div>
                             
                             <div class="mb-3 d-flex justify-content-between">
@@ -2687,7 +2687,7 @@ stateDistrictMap = {
 
     // Event listener for "!" button to show validation error message for the email input
     document.getElementById("show-email-error").addEventListener("click", function () {
-        var emailInput = document.getElementById("email");
+        var emailInput = document.getElementById("email1");
         var emailFeedback = emailInput.nextElementSibling;
 
         if (!emailInput.checkValidity()) {
@@ -3754,9 +3754,9 @@ stateDistrictMap = {
             <div class="amodal-body" >
                 <form id="userDetailsForm">
                     <label class="alabel" for="email">Email:</label>
-                    <input class="ainput" type="email" id="email1" name="email" required>
+                    <input class="ainput" type="email" id="email" name="email" required>
                     <label class="alabel" for="mobile">Mobile Number:</label>
-                    <input class="ainput" type="tel" id="mobile1" name="mobile" required>
+                    <input class="ainput" type="tel" id="mobile" name="mobile" required>
                     <center>
                         <button type="submit" class="abutton" style="align-items: center; justify-content: center;">Submit</button>
                     </center>
@@ -3791,20 +3791,20 @@ stateDistrictMap = {
         document.getElementById('userDetailsForm').onsubmit = function (event) {
             event.preventDefault();
         
-            const email = document.getElementById('email1').value;
-            const mobile = document.getElementById('mobile1').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
         
             // Send data via AJAX
             fetch('validate_user.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email1, mobile1 }),
+                body: JSON.stringify({ email, mobile }),
             })
                 .then((response) => response.json())
                 .then((data) => {
                     if (data.success) {
                         // Redirect to order history page with fetched data
-                        window.location.href = 'orderhistory.php?email1=' + encodeURIComponent(email1) + '&mobile1=' + encodeURIComponent(mobile1);
+                        window.location.href = 'orderhistory.php?email=' + encodeURIComponent(email) + '&mobile=' + encodeURIComponent(mobile);
            
                     } else {
                         alert(data.message);

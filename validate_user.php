@@ -19,18 +19,18 @@ if ($conn->connect_error) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get input data from request
     $input = json_decode(file_get_contents('php://input'), true);
-    $email1 = $input['email1'] ?? '';
-    $mobile1 = $input['mobile1'] ?? '';
+    $email = $input['email'] ?? '';
+    $mobile = $input['mobile'] ?? '';
 
     // Validate input
-    if (empty($email1) || empty($mobile1)) {
+    if (empty($email) || empty($mobile)) {
         echo json_encode(['success' => false, 'message' => 'Email or mobile number is required.']);
         exit;
     }
 
     // Prepare query to check if email and mobile number exist in the database
     $stmt = $conn->prepare("SELECT customerid FROM customer WHERE email = ? AND mobilenumber = ?");
-    $stmt->bind_param("ss", $email1, $mobile1);
+    $stmt->bind_param("ss", $email, $mobile);
     $stmt->execute();
     $result = $stmt->get_result();
 

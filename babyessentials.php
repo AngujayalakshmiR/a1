@@ -3754,9 +3754,9 @@ stateDistrictMap = {
             <div class="amodal-body" >
                 <form id="userDetailsForm">
                     <label class="alabel" for="email">Email:</label>
-                    <input class="ainput" type="email" id="email" name="email" required>
+                    <input class="ainput" type="email" id="email1" name="email" required>
                     <label class="alabel" for="mobile">Mobile Number:</label>
-                    <input class="ainput" type="tel" id="mobile" name="mobile" required>
+                    <input class="ainput" type="tel" id="mobile1" name="mobile" required>
                     <center>
                         <button type="submit" class="abutton" style="align-items: center; justify-content: center;">Submit</button>
                     </center>
@@ -3791,20 +3791,20 @@ stateDistrictMap = {
         document.getElementById('userDetailsForm').onsubmit = function (event) {
             event.preventDefault();
         
-            const email = document.getElementById('email').value;
-            const mobile = document.getElementById('mobile').value;
+            const email = document.getElementById('email1').value;
+            const mobile = document.getElementById('mobile1').value;
         
             // Send data via AJAX
             fetch('validate_user.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, mobile }),
+                body: JSON.stringify({ email1, mobile1 }),
             })
                 .then((response) => response.json())
                 .then((data) => {
                     if (data.success) {
                         // Redirect to order history page with fetched data
-                        window.location.href = 'orderhistory.php?email=' + encodeURIComponent(email) + '&mobile=' + encodeURIComponent(mobile);
+                        window.location.href = 'orderhistory.php?email1=' + encodeURIComponent(email1) + '&mobile1=' + encodeURIComponent(mobile1);
            
                     } else {
                         alert(data.message);

@@ -1787,33 +1787,33 @@ video {
 
         // Proceed to Pay button logic
         proceedToPayButton.addEventListener("click", function () {
-            const form = document.getElementById("customer-details-form");
+    const form = document.getElementById("customer-details-form");
 
-            if (form.checkValidity()) {
-                // Trigger SweetAlert confirmation
-                Swal.fire({
-                    title: 'Are you sure all details are correct?',
-                    text: "Click Yes to proceed with payment, or No to edit the details.",
-                    icon: 'question',
-                    showCancelButton: true,
-                    confirmButtonText: 'Yes',
-                    cancelButtonText: 'No',
-                    confirmButtonColor: '#28a745', // Green color for Yes
-                    cancelButtonColor: '#dc3545', // Red color for No
-                }).then((result) => {
-                    if (result.isConfirmed) {
-    // Call the PHP script to generate and save the order ID
-    
-}
- else {
-                        // Return to the customer details to edit
-                        checkoutModal.style.display = "block";
-                    }
-                });
+    if (form.checkValidity()) {
+        // Trigger SweetAlert confirmation
+        Swal.fire({
+            title: 'Are you sure all details are correct?',
+            text: "Click Yes to proceed with payment, or No to edit the details.",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+            confirmButtonColor: '#28a745', // Green color for Yes
+            cancelButtonColor: '#dc3545', // Red color for No
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect to transaction.php after confirmation
+                window.location.href = "transaction.php";
             } else {
-                form.reportValidity();
+                // Return to the customer details to edit
+                checkoutModal.style.display = "block";
             }
         });
+    } else {
+        form.reportValidity();
+    }
+});
+
 
         // Populate order summary with cart items
         function populateOrderSummary() {

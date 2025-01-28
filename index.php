@@ -1785,64 +1785,47 @@ video {
             checkoutModal.style.display = "none";
         });
 
-        // Proceed to Pay button logic
-        proceedToPayButton.addEventListener("click", function () {
-            const form = document.getElementById("customer-details-form");
+proceedToPayButton.addEventListener("click", function () {
+    const form = document.getElementById("customer-details-form");
 
-            if (form.checkValidity()) {
-                // Trigger SweetAlert confirmation
-                Swal.fire({
-                    title: 'Are you sure all details are correct?',
-                    text: "Click Yes to proceed with payment, or No to edit the details.",
-                    icon: 'question',
-                    showCancelButton: true,
-                    confirmButtonText: 'Yes',
-                    cancelButtonText: 'No',
-                    confirmButtonColor: '#28a745', // Green color for Yes
-                    cancelButtonColor: '#dc3545', // Red color for No
-                }).then((result) => {
-                    if (result.isConfirmed) {
-    // Call the PHP script to generate and save the order ID
-    fetch('saveOrder.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.status === "success") {
-            Swal.fire({
-                title: 'Let`s proceed to pay!',
-                text: `Happy shopping with us`,
-                icon: 'success',
-            });
-        } else {
-            Swal.fire({
-                title: 'Error!',
-                text: data.message || 'Something went wrong!',
-                icon: 'error',
-            });
-        }
-    })
-    .catch(error => {
+    if (form.checkValidity()) {
         Swal.fire({
-            title: 'Error!',
-            text: 'Failed to process your request. Please try again later.',
-            icon: 'error',
-        });
-        console.error('Error:', error);
-    });
-}
- else {
-                        // Return to the customer details to edit
-                        checkoutModal.style.display = "block";
-                    }
-                });
+            title: 'Are you sure all details are correct?',
+            text: "Click Yes to proceed with payment, or No to edit the details.",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+            confirmButtonColor: '#28a745', // Green color for Yes
+            cancelButtonColor: '#dc3545', // Red color for No
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const amount = document.getElementById("total-amount-value").textContent.trim();
+                
+                // Create a hidden form to POST data
+                const hiddenForm = document.createElement("form");
+                hiddenForm.method = "POST";
+                hiddenForm.action = "transaction.php";
+
+                // Add the amount as a hidden input
+                const hiddenInput = document.createElement("input");
+                hiddenInput.type = "hidden";
+                hiddenInput.name = "amount";
+                hiddenInput.value = amount;
+                hiddenForm.appendChild(hiddenInput);
+
+                document.body.appendChild(hiddenForm);
+                hiddenForm.submit();
             } else {
-                form.reportValidity();
+                checkoutModal.style.display = "block";
             }
         });
+    } else {
+        form.reportValidity();
+    }
+});
+
+
 
         // Populate order summary with cart items
         function populateOrderSummary() {

@@ -1309,11 +1309,7 @@ video {
         }
 </style>
 <style>
-    nav {
-  padding: 10px;
-  background-color: #333;
-  color: white;
-}
+
 
 .abutton {
   padding: 10px 20px;
@@ -1330,7 +1326,7 @@ video {
 /* Modal styles */
 .amodal {
   display: none; /* Hidden by default */
-  position: fixed;
+  position: absolute;
   z-index: 100000;
   left: 0;
   top: 0;
@@ -3185,106 +3181,122 @@ stateDistrictMap = {
                 </div>				
             </div>
             <div class="slider-container">
-
-                <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
                     </a>
-                    <div class="product-info">
-                        <h3 class="product-title">Product 1</h3>
-                        <p class="product-description">Description of product 1</p>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 1</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
                                              
-                        <button class="add-to-cart">
+                        <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text">Add to Cart</span>
+                            <span class="button-text abutton-text">Add to Cart</span>
                         </button>
+                        
+                        
+                        
+                        
                     </div>
                 </div>
-                <div class="product-card wow fadeInUp" data-wow-delay="0.5s">
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.5s">
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
                     </a>
-                    <div class="product-info">
-                        <h3 class="product-title">Product 2</h3>
-                        <p class="product-description">Description of product 1</p>
-                        <button class="add-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text">Add to Cart</span>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 2</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
                         </button>
+                        
+                        
                         
                         
                     </div>
                 </div>
-                <div class="product-card wow fadeInUp" data-wow-delay="0.7s">
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.7s">
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
                     </a>
-                    <div class="product-info">
-                        <h3 class="product-title">Product 3</h3>
-                        <p class="product-description">Description of product 1</p>
-                        <button class="add-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text">Add to Cart</span>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 3</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
                         </button>
+                        
                         
                         
                         
                     </div>
                 </div>
-                <div class="product-card wow fadeInUp" data-wow-delay="0.9s">
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.9s">
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
                     </a>
-                    <div class="product-info">
-                        <h3 class="product-title">Product 4</h3>
-                        <p class="product-description">Description of product 1</p>
-                        <button class="add-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text">Add to Cart</span>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 4</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
                         </button>
+                        
                         
                         
                         
                     </div>
                 </div>
-                <div class="product-card wow fadeInUp" data-wow-delay="1.1s">
-                    <a href="/products/product-1" class="product-link">
-                        <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
 
-                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
                     </a>
-                    <div class="product-info">
-                        <h3 class="product-title">Product 5</h3>
-                        <p class="product-description">Description of product 1</p>
-                        <button class="add-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text">Add to Cart</span>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 5</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
                         </button>
+                        
+                        
                         
                         
                     </div>
                 </div>
-                <div class="product-card">
-                    <a href="/products/product-1" class="product-link">
-                        <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
 
-                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
                     </a>
-                    <div class="product-info">
-                        <h3 class="product-title">Product 6</h3>
-                        <p class="product-description">Description of product 1</p>
-                        <button class="add-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text">Add to Cart</span>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 6</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
                         </button>
+                        
+                        
                         
                         
                     </div>
@@ -3309,19 +3321,19 @@ stateDistrictMap = {
                 </div>				
             </div>
             <div class="slider-container">
-                <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
                     </a>
-                    <div class="product-info">
-                        <h3 class="product-title">Product 1</h3>
-                        <p class="product-description">Description of product 1</p>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 1</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
                                              
-                        <button class="add-to-cart">
+                        <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text">Add to Cart</span>
+                            <span class="button-text abutton-text">Add to Cart</span>
                         </button>
                         
                         
@@ -3329,89 +3341,102 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card wow fadeInUp" data-wow-delay="0.5s">
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.5s">
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
                     </a>
-                    <div class="product-info">
-                        <h3 class="product-title">Product 2</h3>
-                        <p class="product-description">Description of product 1</p>
-                        <button class="add-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text">Add to Cart</span>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 2</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
                         </button>
+                        
+                        
                         
                         
                     </div>
                 </div>
-                <div class="product-card wow fadeInUp" data-wow-delay="0.7s">
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.7s">
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
                     </a>
-                    <div class="product-info">
-                        <h3 class="product-title">Product 3</h3>
-                        <p class="product-description">Description of product 1</p>
-                        <button class="add-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text">Add to Cart</span>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 3</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
                         </button>
+                        
                         
                         
                         
                     </div>
                 </div>
-                <div class="product-card wow fadeInUp" data-wow-delay="0.9s">
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.9s">
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
                     </a>
-                    <div class="product-info">
-                        <h3 class="product-title">Product 4</h3>
-                        <p class="product-description">Description of product 1</p>
-                        <button class="add-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text">Add to Cart</span>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 4</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
                         </button>
+                        
                         
                         
                         
                     </div>
                 </div>
-                <div class="product-card wow fadeInUp" data-wow-delay="1.1s">
-                    <a href="/products/product-1" class="product-link">
-                        <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
 
-                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
                     </a>
-                    <div class="product-info">
-                        <h3 class="product-title">Product 5</h3>
-                        <p class="product-description">Description of product 1</p>
-                        <button class="add-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text">Add to Cart</span>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 5</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
                         </button>
+                        
+                        
                         
                         
                     </div>
                 </div>
-                <div class="product-card">
-                    <a href="/products/product-1" class="product-link">
-                        <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
 
-                        <img src="img/p1.webp" alt="Product 1" class="product-image">
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
                     </a>
-                    <div class="product-info">
-                        <h3 class="product-title">Product 6</h3>
-                        <p class="product-description">Description of product 1</p>
-                        <button class="add-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text">Add to Cart</span>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 6</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
                         </button>
+                        
+                        
                         
                         
                     </div>
@@ -3422,6 +3447,7 @@ stateDistrictMap = {
             <button class="slider-nav prev">&lt;</button>
             <button class="slider-nav next">&gt;</button>
         </section>
+        
         <section class="video-gallery py-5">
             <div class=" wow fadeInUp" data-wow-delay="0.1s">
                 <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
@@ -3800,88 +3826,100 @@ stateDistrictMap = {
         <!-- JavaScript Libraries -->
        
 
-    
-        <script>
-        document.querySelectorAll('.product-slider').forEach((slider) => {
-            const prevButton = slider.querySelector('.prev');
-            const nextButton = slider.querySelector('.next');
-            const sliderContainer = slider.querySelector('.slider-container');
-            const productCards = slider.querySelectorAll('.product-card');
-        
-            let index = 0;
-            const cardWidth = productCards[0].offsetWidth + 20; // Card width + margin
-            const totalCards = productCards.length;
-        
-            function getVisibleCards() {
-                return Math.floor(slider.offsetWidth / productCards[0].offsetWidth);
-            }
-        
-            let visibleCards = getVisibleCards();
-            let maxIndex = Math.max(0, totalCards - visibleCards);
-        
-            // Update slider position
-            function updateSlider() {
-                const offset = index * cardWidth;
-                sliderContainer.style.transition = "transform 0.3s ease";
-                sliderContainer.style.transform = `translateX(-${offset}px)`;
-        
-                prevButton.disabled = index === 0;
-                nextButton.disabled = index >= maxIndex;
-            }
-        
-            // Button click handlers
-            prevButton.addEventListener('click', () => {
-                if (index > 0) index--;
-                updateSlider();
-            });
-        
-            nextButton.addEventListener('click', () => {
-                if (index < maxIndex) index++;
-                updateSlider();
-            });
-        
-            // Touch swipe handlers
-            let startX = 0;
-            let currentX = 0;
-        
-            function handleTouchStart(e) {
-                startX = e.touches[0].clientX;
-                sliderContainer.style.transition = "none"; // Disable transition during touch
-            }
-        
-            function handleTouchMove(e) {
-                currentX = e.touches[0].clientX;
-                const deltaX = startX - currentX;
-                const offset = index * cardWidth + deltaX;
-                sliderContainer.style.transform = `translateX(-${offset}px)`;
-            }
-        
-            function handleTouchEnd() {
-                const deltaX = startX - currentX;
-        
-                if (deltaX > 50 && index < maxIndex) {
-                    index++;
-                } else if (deltaX < -50 && index > 0) {
-                    index--;
-                }
-                updateSlider();
-            }
-        
-            sliderContainer.addEventListener('touchstart', handleTouchStart);
-            sliderContainer.addEventListener('touchmove', handleTouchMove);
-            sliderContainer.addEventListener('touchend', handleTouchEnd);
-        
-            // Resize handler to adjust visible cards and max index
-            window.addEventListener('resize', () => {
-                visibleCards = getVisibleCards();
-                maxIndex = Math.max(0, totalCards - visibleCards);
-                updateSlider();
-            });
-        
-            // Initialize the slider
-            window.addEventListener('load', updateSlider);
-        });
-    </script> 
+  <script>document.querySelectorAll('.product-slider').forEach((slider) => {
+    const prevButton = slider.querySelector('.prev');
+    const nextButton = slider.querySelector('.next');
+    const sliderContainer = slider.querySelector('.slider-container');
+    const productCards = slider.querySelectorAll('.product-card');
+
+    let index = 0;
+    let cardWidth = productCards[0].offsetWidth + 20; // Card width + margin
+    const totalCards = productCards.length;
+
+    function getVisibleCards() {
+        return Math.floor(slider.offsetWidth / productCards[0].offsetWidth);
+    }
+
+    function recalculateMaxIndex() {
+        cardWidth = productCards[0].offsetWidth + 20; // Update in case of resizing
+        const visibleCards = getVisibleCards();
+        return Math.max(0, totalCards - visibleCards);
+    }
+
+    let maxIndex = recalculateMaxIndex();
+
+    // Update slider position
+    function updateSlider() {
+        const offset = Math.min(index, maxIndex) * cardWidth; // Prevent overflow
+        sliderContainer.style.transition = "transform 0.3s ease";
+        sliderContainer.style.transform = `translateX(-${offset}px)`;
+
+        // Disable/enable buttons
+        prevButton.disabled = index === 0;
+        nextButton.disabled = index >= maxIndex;
+    }
+
+    // Button click handlers
+    prevButton.addEventListener('click', () => {
+        if (index > 0) index--;
+        updateSlider();
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (index < maxIndex) index++;
+        updateSlider();
+    });
+
+    // Touch swipe handlers
+    let startX = 0;
+    let currentX = 0;
+
+    function handleTouchStart(e) {
+        startX = e.touches[0].clientX;
+        sliderContainer.style.transition = "none"; // Disable transition during touch
+    }
+
+    function handleTouchMove(e) {
+        currentX = e.touches[0].clientX;
+        const deltaX = startX - currentX;
+        const offset = index * cardWidth + deltaX;
+
+        // Prevent scrolling beyond bounds
+        const maxOffset = maxIndex * cardWidth;
+        const constrainedOffset = Math.min(Math.max(offset, 0), maxOffset);
+
+        sliderContainer.style.transform = `translateX(-${constrainedOffset}px)`;
+    }
+
+    function handleTouchEnd() {
+        const deltaX = startX - currentX;
+
+        // Check swipe threshold
+        if (deltaX > 50 && index < maxIndex) {
+            index++;
+        } else if (deltaX < -50 && index > 0) {
+            index--;
+        }
+        updateSlider();
+    }
+
+    sliderContainer.addEventListener('touchstart', handleTouchStart);
+    sliderContainer.addEventListener('touchmove', handleTouchMove);
+    sliderContainer.addEventListener('touchend', handleTouchEnd);
+
+    // Resize handler to adjust visible cards and max index
+    window.addEventListener('resize', () => {
+        maxIndex = recalculateMaxIndex();
+        updateSlider();
+    });
+
+    // Initialize the slider
+    window.addEventListener('load', () => {
+        maxIndex = recalculateMaxIndex();
+        updateSlider();
+    });
+});
+</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {

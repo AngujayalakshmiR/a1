@@ -1308,162 +1308,7 @@ video {
             font-size: 16px;
         }
 </style>
-<style>
-    nav {
-  padding: 10px;
-  background-color: #333;
-  color: white;
-}
 
-button {
-  padding: 10px 20px;
-  background-color: #555;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #777;
-}
-
-/* Modal styles */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 100000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: white;
-  margin: 10% auto;
-  width: 40%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.modal-header {
-  height: 30%;
-  overflow: hidden;
-  padding: 0px 0px;
-}
-
-.modal-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.modal-body {
-  height: 70%;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-top: 10px;
-}
-
-input {
-  padding: 8px;
-  margin-bottom: 10px;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button[type="submit"] {
-  background-color: #3e23c8;
-  color: white;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  float: center;
-}
-
-button[type="submit"]:hover {
-  background-color: #5740cdc7;
-  color: white;
-}
-
-.close {
-  position: absolute;
-  top: 0px;
-  right: 20px;
-  font-size: 35px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #fffefe;
-}
-
-.close:hover,
-.close:focus {
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-}
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-  .modal-content {
-    width: 70%;
-  }
-
-  .modal-body {
-    padding: 15px;
-  }
-
-  button {
-    padding: 8px 16px;
-  }
-
-  button[type="submit"] {
-    padding: 10px;
-  }
-
-  .close {
-    font-size: 25px;
-    right: 15px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .modal-content {
-    width: 90%;
-  }
-
-  .modal-body {
-    padding: 10px;
-  }
-
-  button {
-    padding: 6px 12px;
-  }
-
-  button[type="submit"] {
-    padding: 8px;
-  }
-
-  .close {
-    font-size: 20px;
-    right: 10px;
-  }
-}
-</style>
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -3716,25 +3561,177 @@ stateDistrictMap = {
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span id="closeModalBtn" class="close">&times;</span>
-            <div class="modal-header">
-                <img src="img/orderhistory_banner.png" alt="Modal Header Image" class="modal-image">
-            </div>
-            <div class="modal-body">
-                <form id="userDetailsForm">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="mobile">Mobile Number:</label>
-                    <input type="tel" id="mobile" name="mobile" required>
-                    <center>
-                        <button type="submit" style="align-items: center; justify-content: center;">Submit</button>
-                    </center>
-                </form>
-            </div>
+    <div id="updatedModal" class="updated-modal">
+        <div class="updated-modal-content">
+          <span id="closeUpdatedModalBtn" class="updated-close">&times;</span>
+          <div class="updated-modal-header">
+            <img src="img/orderhistory_banner.png" alt="Modal Header Image" class="updated-modal-image">
+          </div>
+          <div class="updated-modal-body">
+            <form id="userDetailsUpdatedForm">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="mobile">Mobile Number:</label>
+              <input type="tel" id="mobile" name="mobile" required>
+              <center>
+                <button type="submit" style="align-items: center; justify-content: center;">Submit</button>
+              </center>
+            </form>
+          </div>
         </div>
-    </div>
+      </div>
+      <style>
+        button {
+          padding: 10px 20px;
+          background-color: #555;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+        
+        button:hover {
+          background-color: #777;
+        }
+        
+        /* Updated Modal styles */
+        .updated-modal {
+          display: none; /* Hidden by default */
+          position: fixed;
+          z-index: 100000;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .updated-modal-content {
+          background-color: white;
+          margin: 10% auto;
+          width: 40%;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .updated-modal-header {
+          height: 30%;
+          overflow: hidden;
+          padding: 0px 0px;
+        }
+        
+        .updated-modal-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        
+        .updated-modal-body {
+          height: 70%;
+          padding-left: 60px;
+          padding-right: 60px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          display: flex;
+          flex-direction: column;
+        }
+        
+        label {
+          margin-top: 10px;
+        }
+        
+        input {
+          padding: 8px;
+          margin-bottom: 10px;
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+        
+        button[type="submit"] {
+          background-color: #3e23c8;
+          color: white;
+          padding: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+          border-radius: 5px;
+          border: none;
+          cursor: pointer;
+          align-items: center;
+          justify-content: center;
+          float: center;
+        }
+        
+        button[type="submit"]:hover {
+          background-color: #5740cdc7;
+          color: white;
+        }
+        
+        .updated-close {
+          position: absolute;
+          top: 0px;
+          right: 20px;
+          font-size: 35px;
+          font-weight: bold;
+          cursor: pointer;
+          color: #fffefe;
+        }
+        
+        .updated-close:hover,
+        .updated-close:focus {
+          color: #ffffff;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+          .updated-modal-content {
+            width: 70%;
+          }
+        
+          .updated-modal-body {
+            padding: 15px;
+          }
+        
+          button {
+            padding: 8px 16px;
+          }
+        
+          button[type="submit"] {
+            padding: 10px;
+          }
+        
+          .updated-close {
+            font-size: 25px;
+            right: 15px;
+          }
+        }
+        
+        @media screen and (max-width: 480px) {
+          .updated-modal-content {
+            width: 90%;
+          }
+        
+          .updated-modal-body {
+            padding: 10px;
+          }
+        
+          button {
+            padding: 6px 12px;
+          }
+        
+          button[type="submit"] {
+            padding: 8px;
+          }
+        
+          .updated-close {
+            font-size: 20px;
+            right: 10px;
+          }
+        }
+        </style>
+        
     <script>
         // Get modal elements
         const modal = document.getElementById('modal');

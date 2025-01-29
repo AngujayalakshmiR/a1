@@ -1400,8 +1400,8 @@ video {
 
 .aclose {
   position: absolute;
-  top: 0px;
-  right: 20px;
+  top: 130px;
+  right: 400px;
   font-size: 35px;
   font-weight: bold;
   cursor: pointer;
@@ -1415,8 +1415,139 @@ video {
   text-decoration: none;
   cursor: pointer;
 }
+@media (min-width:1400px) and (max-width: 1500px){
+    .aclose {
+  position: absolute;
+  top: 150px;
+  right: 470px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:1300px) and (max-width: 1400px) {
+.aclose {
+  position: absolute;
+  top: 130px;
+  right: 430px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:1200px) and (max-width: 1300px) {
+.aclose {
+  position: absolute;
+  top: 125px;
+  right: 395px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:1100px) and (max-width: 1200px){
+    .aclose {
+  position: absolute;
+  top: 115px;
+  right: 365px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:1000px) and (max-width: 1100px){
+    .aclose {
+  position: absolute;
+  top: 110px;
+  right: 340px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:900px) and (max-width: 1000px){
+    .aclose {
+  position: absolute;
+  top: 95px;
+  right: 310px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}@media (min-width:800px) and (max-width: 900px){
+    .aclose {
+  position: absolute;
+  top:80px;
+  right: 270px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:700px) and (max-width: 800px){
+    .aclose {
+  position: absolute;
+  top:70px;
+  right: 245px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:600px) and (max-width: 700px){
+    .aclose {
+  position: absolute;
+  top:60px;
+  right: 108px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:500px) and (max-width: 600px){
+    .aclose {
+  position: absolute;
+  top:50px;
+  right: 100px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:400px) and (max-width: 500px){
+    .aclose {
+  position: absolute;
+  top:40px;
+  right: 30px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:300px) and (max-width: 400px){
+    .aclose {
+  position: absolute;
+  top:30px;
+  right: 30px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
 /* Responsive Styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
   .amodal-content {
     width: 70%;
   }
@@ -1433,13 +1564,10 @@ video {
     padding: 10px;
   }
 
-  .aclose {
-    font-size: 25px;
-    right: 15px;
-  }
+  
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .amodal-content {
     width: 90%;
   }
@@ -1456,10 +1584,7 @@ video {
     padding: 8px;
   }
 
-  .aclose {
-    font-size: 20px;
-    right: 10px;
-  }
+  
 }
 </style>
     <!-- Template Stylesheet -->

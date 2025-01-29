@@ -1808,33 +1808,48 @@ document.addEventListener("DOMContentLoaded", function () {
                         "currency": "INR",
                         "name": "BIGMOON",
                         "description": "Order Payment",
-                        "handler": function (response) {
-                            $.ajax({
-                                url: 'ajax-payment.php',
-                                type: 'POST',
-                                dataType: 'json',
-                                data: {
-                                    razorpay_payment_id: response.razorpay_payment_id,
-                                    totalAmount: amount,
-                                },
-                                success: function (data) {
-                                    if (data.status) {
-                                        Swal.fire(
-                                            'Success!',
-                                            'Payment successfully processed!',
-                                            'success'
-                                        ).then(() => {
-                                            window.location.href = `success.php/?payId=${data.paymentID}`;
-                                        });
-                                    } else {
-                                        Swal.fire('Error', 'Payment failed. Please try again.', 'error');
-                                    }
-                                },
-                                error: function () {
-                                    Swal.fire('Error', 'Payment failed due to a network issue.', 'error');
-                                }
-                            });
-                        },
+                        
+handler: function (response) {
+    $.ajax({
+        url: 'ajax-payment.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            razorpay_payment_id: response.razorpay_payment_id,
+            totalAmount: amount,
+            customername: document.getElementById('customername').value, // Collect from form
+            mobilenumber: document.getElementById('mobilenumber').value, 
+            email: document.getElementById('email').value, 
+            address: document.getElementById('address').value, 
+            district: document.getElementById('district').value,
+            state: document.getElementById('state').value,
+            pincode: document.getElementById('pincode').value,
+            productname: localStorage.getItem("productname"), // Example, adapt as needed
+            qty: localStorage.getItem("qty"),
+            size: localStorage.getItem("size"),
+            price: localStorage.getItem("price"),
+            receipt: '001.jpg', // Or dynamically generated receipt
+            courier: 'XYZ Courier', // You can modify this as well
+        },
+        success: function (data) {
+            if (data.status) {
+                Swal.fire(
+                    'Success!',
+                    'Payment successfully processed!',
+                    'success'
+                ).then(() => {
+                    window.location.href = `success.php/?payId=${data.paymentID}`;
+                });
+            } else {
+                Swal.fire('Error', 'Payment failed. Please try again.', 'error');
+            }
+        },
+        error: function () {
+            Swal.fire('Error', 'Payment failed due to a network issue.', 'error');
+        }
+    });
+},
+
                         "theme": {
                             "color": "#528FF0"
                         }

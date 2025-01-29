@@ -8,6 +8,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Favicon -->
     <link href="img/bigmoon_logo_circle.png" rel="icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -1400,8 +1401,8 @@ video {
 
 .aclose {
   position: absolute;
-  top: 0px;
-  right: 20px;
+  top: 140px;
+  right: 40px;
   font-size: 35px;
   font-weight: bold;
   cursor: pointer;
@@ -1754,76 +1755,140 @@ video {
     </div>
 </div>
 
-
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const checkoutModal = document.getElementById("checkout-modal");
-        const proceedToPayButton = document.getElementById("proceed-to-pay");
-        const cancelButton = document.getElementById("cancel-button");
-        const modalClose = document.getElementById("modal-close");
-        const orderSummaryContainer = document.getElementById("order-summary-container");
-        const totalAmountValue = document.getElementById("total-amount-value");
+document.addEventListener("DOMContentLoaded", function () {
+    const checkoutModal = document.getElementById("checkout-modal");
+    const proceedToPayButton = document.getElementById("proceed-to-pay");
+    const cancelButton = document.getElementById("cancel-button");
+    const modalClose = document.getElementById("modal-close");
+    const orderSummaryContainer = document.getElementById("order-summary-container");
+    const totalAmountValue = document.getElementById("total-amount-value");
+    const proceedToCheckout = document.getElementById("proceed-to-checkout");
 
-        modalClose.addEventListener("click", function () {
+    // Event listener for closing the modal
+    modalClose.addEventListener("click", function () {
+        checkoutModal.style.display = "none";
+    });
+
+    // Close modal if user clicks outside it
+    window.addEventListener("click", function (event) {
+        if (event.target === checkoutModal) {
             checkoutModal.style.display = "none";
-        });
+        }
+    });
 
-        window.addEventListener("click", function (event) {
-            if (event.target === checkoutModal) {
-                checkoutModal.style.display = "none";
-            }
-        });
+    // Show checkout modal and populate order summary
+    proceedToCheckout.addEventListener("click", function () {
+        checkoutModal.style.display = "block";
+        populateOrderSummary();
+    });
 
-        // Open modal on clicking "Proceed to Checkout"
-        document.getElementById("proceed-to-checkout").addEventListener("click", function () {
-            checkoutModal.style.display = "block";
-            populateOrderSummary();
-        });
+    // Handle proceed to pay button click
+    proceedToPayButton.addEventListener("click", function () {
+        const form = document.getElementById("customer-details-form");
 
-        // Cancel button to close the modal
-        cancelButton.addEventListener("click", function () {
-            checkoutModal.style.display = "none";
-        });
+        if (form.checkValidity()) {
+            Swal.fire({
+                title: 'Are you sure all details are correct?',
+                text: "Click Yes to proceed with payment, or No to edit the details.",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Yes',
+                cancelButtonText: 'No',
+                confirmButtonColor: '#28a745', // Green color for Yes
+                cancelButtonColor: '#dc3545', // Red color for No
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const amount = parseFloat(totalAmountValue.textContent.trim()) * 100; // Razorpay uses paise
 
-proceedToPayButton.addEventListener("click", function () {
-    const form = document.getElementById("customer-details-form");
+                    const options = {
+                        "key": "rzp_live_8FEUrTWd4qCbuf", // Your Razorpay Key Id
+                        "amount": amount,
+                        "currency": "INR",
+                        "name": "BIGMOON",
+                        "description": "Order Payment",
+                        "handler": function (response) {
+                            $.ajax({
+                                url: 'ajax-payment.php',
+                                type: 'POST',
+                                dataType: 'json',
+                                data: {
+                                    razorpay_payment_id: response.razorpay_payment_id,
+                                    totalAmount: amount,
+                                },
+                                success: function (data) {
+                                    if (data.status) {
+                                        Swal.fire(
+                                            'Success!',
+                                            'Payment successfully processed!',
+                                            'success'
+                                        ).then(() => {
+                                            window.location.href = `success.php/?payId=${data.paymentID}`;
+                                        });
+                                    } else {
+                                        Swal.fire('Error', 'Payment failed. Please try again.', 'error');
+                                    }
+                                },
+                                error: function () {
+                                    Swal.fire('Error', 'Payment failed due to a network issue.', 'error');
+                                }
+                            });
+                        },
+                        "theme": {
+                            "color": "#528FF0"
+                        }
+                    };
 
-    if (form.checkValidity()) {
-        Swal.fire({
-            title: 'Are you sure all details are correct?',
-            text: "Click Yes to proceed with payment, or No to edit the details.",
-            icon: 'question',
-            showCancelButton: true,
-            confirmButtonText: 'Yes',
-            cancelButtonText: 'No',
-            confirmButtonColor: '#28a745', // Green color for Yes
-            cancelButtonColor: '#dc3545', // Red color for No
-        }).then((result) => {
-            if (result.isConfirmed) {
-                const amount = document.getElementById("total-amount-value").textContent.trim();
-                
-                // Create a hidden form to POST data
-                const hiddenForm = document.createElement("form");
-                hiddenForm.method = "POST";
-                hiddenForm.action = "transaction.php";
+                    const rzp = new Razorpay(options);
+                    rzp.open();
+                } else {
+                    checkoutModal.style.display = "block";
+                }
+            });
+        } else {
+            form.reportValidity();
+        }
+    });
 
-                // Add the amount as a hidden input
-                const hiddenInput = document.createElement("input");
-                hiddenInput.type = "hidden";
-                hiddenInput.name = "amount";
-                hiddenInput.value = amount;
-                hiddenForm.appendChild(hiddenInput);
+    // Populate order summary with cart items
+    function populateOrderSummary() {
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        let totalAmount = 0;
 
-                document.body.appendChild(hiddenForm);
-                hiddenForm.submit();
-            } else {
-                checkoutModal.style.display = "block";
-            }
-        });
-    } else {
-        form.reportValidity();
+        if (cartItems.length === 0) {
+            orderSummaryContainer.innerHTML = "<p>Your cart is empty.</p>";
+            totalAmountValue.textContent = "0";
+        } else {
+            orderSummaryContainer.innerHTML = cartItems.map(item => {
+                const quantity = parseInt(item.quantity, 10);
+                const price = parseFloat(item.price);
+
+                if (isNaN(quantity) || isNaN(price)) {
+                    console.error("Invalid cart item:", item);
+                    return `<p style="color: red;">Invalid item data</p>`;
+                }
+
+                const itemTotal = quantity * price;
+                totalAmount += itemTotal;
+
+                return `
+                    <div class="order-item">
+                        <div class="item-details">
+                            <span>${item.title}</span>
+                            <span>${quantity} x ₹${price.toFixed(2)}</span>
+                        </div>
+                        <div class="item-total">
+                            ₹${itemTotal.toFixed(2)}
+                        </div>
+                    </div>
+                `;
+            }).join("");
+
+            totalAmountValue.textContent = totalAmount.toFixed(2);
+        }
     }
-});
+
 
 
 
@@ -3018,7 +3083,7 @@ stateDistrictMap = {
                         </a>
                         <div class="aproduct-info">
                             <h3 class="aproduct-title">Turkish Bath Towels1</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches) <br>₹ 125/ Piece</p>                  
+                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches) <br>₹ 1/ Piece</p>                  
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                                 <span class="abutton-text">Add to Cart</span>

@@ -755,7 +755,13 @@ $conn->close();
                     <td><?= $index + 1 ?></td>
                     <td><?= htmlspecialchars($order['orderid']) ?></td>
                     <td><?= htmlspecialchars($order['orderdate']) ?></td>
-                    <td><a href="<?= htmlspecialchars($order['receipt']) ?>" download>Download</a></td>
+                    <!-- <td><a href="<?= htmlspecialchars($order['receipt']) ?>" download>Download</a></td> -->
+                    <td>
+    <a href="generate_receipt.php?orderid=<?= htmlspecialchars($order['orderid']) ?>" 
+       class="btn btn-primary" target="_blank">
+        Download Receipt
+    </a>
+</td>
                 </tr>
                 <?php endforeach; ?>
             <?php endif; ?>

@@ -2955,7 +2955,7 @@ stateDistrictMap = {
     }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1800px) {
     .modal-dialog1 {
         max-width: 80%;
         margin: 1.75rem auto;

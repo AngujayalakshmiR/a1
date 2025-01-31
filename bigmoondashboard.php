@@ -153,7 +153,11 @@ $result = $conn->query($sql);
             width: 150px; /* Adjust Order Date width */
         }
         th:nth-child(15), td:nth-child(15) {
-            width: 50px; /* Adjust Receipt width */
+            width: 60px; /* Adjust Receipt width */
+           
+        }
+        th:nth-child(16), td:nth-child(16) {
+            width: 60px; /* Adjust Receipt width */
             border-radius: 0px 10px 0 0;
         }
     .dataTables_filter {
@@ -236,6 +240,7 @@ $result = $conn->query($sql);
                     <th>Payment<br>Status</th>
                     <th>Order Date</th>
                     <th>Receipt</th>
+                    <th>Courier</th>
                 </tr>
             </thead>
             <tbody>
@@ -282,14 +287,18 @@ $result = $conn->query($sql);
         // Remaining columns
         echo "<td>" . htmlspecialchars($row["price"]) . "</td>
               <td>" . htmlspecialchars($row["paymentstatus"]) . "</td>
-              <td>" . htmlspecialchars($row["orderdate"]) . "</td>
-              <td>
-                  <button class='btn btn-link p-0' data-bs-toggle='modal' data-bs-target='#receiptModal' 
-                      data-receipt='" . htmlspecialchars($row["receipt"]) . "'>
-                      <img src='img/img-icon.png' alt='View Receipt' width='24' height='24'>
-                  </button>
-              </td>
-            </tr>";
+              <td>" . htmlspecialchars($row["orderdate"]) . "</td>";
+        echo "<td>
+              <a href='generate_receipt.php?orderid=" . htmlspecialchars($row['orderid']) . "' class='btn btn-primary' target='_blank'>
+                Receipt
+              </a>
+            </td>";
+        echo "<td>
+            <a href='generate_courier.php?orderid=" . htmlspecialchars($row['orderid']) . "' class='btn btn-primary' target='_blank'>
+                Courier
+            </a>
+          </td>";
+             
     }
     ?>
 </tbody>

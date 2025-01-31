@@ -7,7 +7,6 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Favicon -->
     <link href="img/bigmoon_logo_circle.png" rel="icon">
@@ -1622,12 +1621,12 @@ video {
                 <div class="navbar-nav mx-auto">
                       
         <div class="nav-item d-flex align-items-center ">
-                    <a href="index.php" class="btn abtn-light active  me-2 ">
+                    <a href="index.php" class="btn abtn-light  active me-2 ">
                         Home Furnishings
                     </a>
                 </div>
                 <div class="nav-item d-flex align-items-center">
-                    <a href="babyessentials.php" class="btn abtn-light  me-2 ">
+                    <a href="babyessentials.php" class="btn abtn-light   me-2 ">
                         Baby Essentials
                     </a>
                 </div>
@@ -1791,7 +1790,7 @@ video {
                             
                             <div class="mb-3 d-flex justify-content-between">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email1" required>
+                                <input type="email" class="form-control" id="email1" placeholder="Enter your email" required>
                             </div>
                             
                             <div class="mb-3 d-flex justify-content-between">
@@ -1933,8 +1932,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         "currency": "INR",
                         "name": "BIGMOON",
                         "description": "Order Payment",
-                        
-handler: function (response) {
+                        "handler": function (response) {
     $.ajax({
         url: 'ajax-payment.php',
         type: 'POST',
@@ -1942,33 +1940,50 @@ handler: function (response) {
         data: {
             razorpay_payment_id: response.razorpay_payment_id,
             totalAmount: amount,
-            customername: document.getElementById('customername').value, // Collect from form
-            mobilenumber: document.getElementById('mobilenumber').value, 
-            email: document.getElementById('email').value, 
-            address: document.getElementById('address').value, 
-            district: document.getElementById('district').value,
-            state: document.getElementById('state').value,
-            pincode: document.getElementById('pincode').value,
-            productname: localStorage.getItem("productname"), // Example, adapt as needed
-            qty: localStorage.getItem("qty"),
-            size: localStorage.getItem("size"),
-            price: localStorage.getItem("price"),
-            receipt: '001.jpg', // Or dynamically generated receipt
-            courier: 'XYZ Courier', // You can modify this as well
         },
         success: function (data) {
-            if (data.status) {
+    if (data.status) {
+        // Get customer details from the form
+        var customerData = {
+            customername: $('#name').val(),
+            mobilenumber: $('#phone').val(),
+            email: $('#email1').val(),
+            address: $('#address').val(),
+            district: $('#district').val(),
+            state: $('#state').val(),
+            pincode: $('#pincode').val(),
+            productname: cartItems.map(item => item.title).join(', '),  // Concatenate product names
+            qty: cartItems.map(item => item.quantity).join(', '),  // Concatenate quantities
+            size: cartItems.map(item => item.size).join(', '),  // Concatenate sizes
+            price: cartItems.map(item => (parseFloat(item.price) * parseInt(item.quantity))).join(', ') + ',' + cartItems.reduce((total, item) => total + (parseFloat(item.price) * parseInt(item.quantity)), 0),
+            paymentstatus: 'success',
+            orderdate: new Date().toISOString().slice(0, 19).replace('T', ' '),  // Current date and time
+            // Replace with receipt file if needed
+            
+        };
+
+        // Send customer details to the server to save in the database
+        $.ajax({
+            url: 'save-customer.php',  // PHP script to handle saving data
+            type: 'POST',
+            data: customerData,
+            success: function (response) {
                 Swal.fire(
                     'Success!',
-                    'Payment successfully processed!',
+                    'Payment successfully paid!',
                     'success'
                 ).then(() => {
-                    window.location.href = `success.php/?payId=${data.paymentID}`;
+                    window.location.href = `index.php`;  // Redirect after success
                 });
-            } else {
-                Swal.fire('Error', 'Payment failed. Please try again.', 'error');
+            },
+            error: function () {
+                Swal.fire('Error', 'Payment and customer details could not be saved. Please try again.', 'error');
             }
-        },
+        });
+    } else {
+        Swal.fire('Error', 'Payment failed. Please try again.', 'error');
+    }
+},
         error: function () {
             Swal.fire('Error', 'Payment failed due to a network issue.', 'error');
         }
@@ -2071,6 +2086,8 @@ handler: function (response) {
         }
     });
 </script>
+
+
 
 <!-- Add SweetAlert CDN -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -3236,7 +3253,7 @@ stateDistrictMap = {
                         </a>
                         <div class="aproduct-info">
                             <h3 class="aproduct-title">Turkish Bath Towels2</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
+                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 1/ Piece</p>                    
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                                 <span class="abutton-text">Add to Cart</span>
@@ -3952,6 +3969,18 @@ stateDistrictMap = {
             </div>
         </div>
     </div>
+   
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+        <!-- JavaScript Libraries -->
     <script>
         // Get modal elements
         const modal = document.getElementById('modal');
@@ -4000,19 +4029,7 @@ stateDistrictMap = {
                 })
                 .catch((error) => console.error('Error:', error));
         };
-        </script>
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-        <!-- JavaScript Libraries -->
-       
+    </script>
 
   <script>document.querySelectorAll('.product-slider').forEach((slider) => {
     const prevButton = slider.querySelector('.prev');
@@ -4110,6 +4127,9 @@ stateDistrictMap = {
 </script>
 
 <script>
+
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
     document.addEventListener('DOMContentLoaded', function () {
     const cartBtn = document.getElementById('cart-btn');
     const cartModal = document.getElementById('cart-modal');
@@ -4124,7 +4144,7 @@ stateDistrictMap = {
     document.body.appendChild(cartNotification);
 
     // Array to store cart items
-    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+   
 
     // Function to show a notification message
     function showNotification(message) {

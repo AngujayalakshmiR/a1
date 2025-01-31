@@ -1933,32 +1933,63 @@ document.addEventListener("DOMContentLoaded", function () {
                         "name": "BIGMOON",
                         "description": "Order Payment",
                         "handler": function (response) {
-                            $.ajax({
-                                url: 'ajax-payment.php',
-                                type: 'POST',
-                                dataType: 'json',
-                                data: {
-                                    razorpay_payment_id: response.razorpay_payment_id,
-                                    totalAmount: amount,
-                                },
-                                success: function (data) {
-                                    if (data.status) {
-                                        Swal.fire(
-                                            'Success!',
-                                            'Payment successfully processed!',
-                                            'success'
-                                        ).then(() => {
-                                            window.location.href = `success.php/?payId=${data.paymentID}`;
-                                        });
-                                    } else {
-                                        Swal.fire('Error', 'Payment failed. Please try again.', 'error');
-                                    }
-                                },
-                                error: function () {
-                                    Swal.fire('Error', 'Payment failed due to a network issue.', 'error');
-                                }
-                            });
-                        },
+    $.ajax({
+        url: 'ajax-payment.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            razorpay_payment_id: response.razorpay_payment_id,
+            totalAmount: amount,
+        },
+        success: function (data) {
+    if (data.status) {
+        // Get customer details from the form
+        var customerData = {
+            customername: $('#name').val(),
+            mobilenumber: $('#phone').val(),
+            email: $('#email1').val(),
+            address: $('#address').val(),
+            district: $('#district').val(),
+            state: $('#state').val(),
+            pincode: $('#pincode').val(),
+            productname: cartItems.map(item => item.title).join(', '),  // Concatenate product names
+            qty: cartItems.map(item => item.quantity).join(', '),  // Concatenate quantities
+            size: cartItems.map(item => item.size).join(', '),  // Concatenate sizes
+            price: cartItems.map(item => (parseFloat(item.price) * parseInt(item.quantity))).join(', ') + ',' + cartItems.reduce((total, item) => total + (parseFloat(item.price) * parseInt(item.quantity)), 0),
+            paymentstatus: 'success',
+            orderdate: new Date().toISOString().slice(0, 19).replace('T', ' '),  // Current date and time
+            // Replace with receipt file if needed
+            
+        };
+
+        // Send customer details to the server to save in the database
+        $.ajax({
+            url: 'save-customer.php',  // PHP script to handle saving data
+            type: 'POST',
+            data: customerData,
+            success: function (response) {
+                Swal.fire(
+                    'Success!',
+                    'Payment successfully paid!',
+                    'success'
+                ).then(() => {
+                    window.location.href = `index.php`;  // Redirect after success
+                });
+            },
+            error: function () {
+                Swal.fire('Error', 'Payment and customer details could not be saved. Please try again.', 'error');
+            }
+        });
+    } else {
+        Swal.fire('Error', 'Payment failed. Please try again.', 'error');
+    }
+},
+        error: function () {
+            Swal.fire('Error', 'Payment failed due to a network issue.', 'error');
+        }
+    });
+},
+
                         "theme": {
                             "color": "#528FF0"
                         }
@@ -2055,6 +2086,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 </script>
+
 
 
 <!-- Add SweetAlert CDN -->
@@ -3208,7 +3240,7 @@ stateDistrictMap = {
                         </a>
                         <div class="aproduct-info">
                             <h3 class="aproduct-title">Turkish Bath Towels1</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches) <br>₹ 125/ Piece</p>                  
+                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches) <br>₹ 1/ Piece</p>                  
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                                 <span class="abutton-text">Add to Cart</span>
@@ -3221,7 +3253,7 @@ stateDistrictMap = {
                         </a>
                         <div class="aproduct-info">
                             <h3 class="aproduct-title">Turkish Bath Towels2</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
+                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 1/ Piece</p>                    
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                                 <span class="abutton-text">Add to Cart</span>
@@ -4095,6 +4127,9 @@ stateDistrictMap = {
 </script>
 
 <script>
+
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
     document.addEventListener('DOMContentLoaded', function () {
     const cartBtn = document.getElementById('cart-btn');
     const cartModal = document.getElementById('cart-modal');
@@ -4109,7 +4144,7 @@ stateDistrictMap = {
     document.body.appendChild(cartNotification);
 
     // Array to store cart items
-    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+   
 
     // Function to show a notification message
     function showNotification(message) {

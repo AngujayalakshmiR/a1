@@ -1612,7 +1612,7 @@ video {
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="index.php" class="navbar-brand d-flex align-items-center">
                 <img src="img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
-                <h1 class="m-0 text-primary">Bigmoon</h1>
+                <h1 class="m-0 text-primary" style="font-family: 'Brush Script MT', cursive;">Bigmoon</h1>
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -3878,7 +3878,7 @@ stateDistrictMap = {
             <div class="container py-5" style="padding-left: 35px;">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Our Location</h3>
+                        <h3 class="text-white mb-4" style="font-family: 'Brush Script MT', cursive;">Our Location</h3>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>66, Mettu Street, Karur, TN, India</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9600362903</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>bigmoonrknd@gmail.com</p>
@@ -3902,7 +3902,7 @@ stateDistrictMap = {
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Home Furnishings</h3>
+                        <h3 class="text-white mb-4" style="font-family: 'Brush Script MT', cursive;">Home Furnishings</h3>
                         <a class="btn btn-link text-white-50" href="#">Cotton Towels</a>
                         <a class="btn btn-link text-white-50" href="#">Pillow Covers</a>
                         <a class="btn btn-link text-white-50" href="#">Table Covers</a>
@@ -3912,15 +3912,15 @@ stateDistrictMap = {
                         <a class="btn btn-link text-white-50" href="#">Travel Pouch</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Baby Essentials</h3>
+                        <h3 class="text-white mb-4" style="font-family: 'Brush Script MT', cursive;">Baby Essentials</h3>
                         <a class="btn btn-link text-white-50" href="#">Baby Swadles</a>
                         <a class="btn btn-link text-white-50" href="#">Baby Wipes</a>
                         <a class="btn btn-link text-white-50" href="#">Baby Napkins</a>
                         <a class="btn btn-link text-white-50" href="#">Baby Towels</a>
                         <a class="btn btn-link text-white-50" href="#">Baby Blankets</a>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Newsletter</h3>
+                    <div class="col-lg-3 col-md-6" >
+                        <h3 class="text-white mb-4" style="font-family: 'Brush Script MT', cursive;">Newsletter</h3>
                         <p>For all latest product updates, let us know your mail!</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">

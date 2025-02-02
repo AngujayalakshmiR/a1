@@ -2073,6 +2073,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <div class="item-details">
                                 <span>${item.title}</span>
                                 <span>${quantity} x ₹${price.toFixed(2)}</span>
+                                <p>Size: ${item.size}</p>
                             </div>
                             <div class="item-total">
                                 ₹${itemTotal.toFixed(2)}
@@ -3240,7 +3241,8 @@ stateDistrictMap = {
                         </a>
                         <div class="aproduct-info">
                             <h3 class="aproduct-title">Turkish Bath Towels1</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches) <br>₹ 1/ Piece</p>                  
+                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches) <br>₹ 1/ Piece <br><span>3-6 months</span> </p>
+                                             
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                                 <span class="abutton-text">Add to Cart</span>
@@ -4175,6 +4177,7 @@ stateDistrictMap = {
                         <div class="cart-item-info">
                             <h5 class="cart-item-title">${item.title}</h5>
                             <p class="cart-item-description">${item.description}</p>
+                            <span class="cart-item-size"><strong>Size:</strong> ${item.size}</span>
                             <span class="cart-item-price">₹ ${item.price}</span>
                         </div>
                     </div>
@@ -4265,16 +4268,25 @@ stateDistrictMap = {
         button.addEventListener('click', function () {
             const productCard = this.closest('.aproduct-card');
             const productTitle = productCard.querySelector('.aproduct-title').textContent;
-            const productDescription = productCard.querySelector('.aproduct-description').textContent.split('₹')[0].trim();
-            const productPrice = productCard.querySelector('.aproduct-description').textContent.split('₹')[1].trim();
+            const descriptionText = productCard.querySelector('.aproduct-description').innerHTML;
+            const productSizeMatch = descriptionText.match(/<span>(.*?)<\/span>/);
+            const productSize = productSizeMatch ? productSizeMatch[1] : "N/A";
+            const productDescription = descriptionText.split('<br>')[0].trim();
+            const descriptionHTML = productCard.querySelector('.aproduct-description').innerHTML;
+
+// Extract price without size
+            const cleanedDescription = descriptionHTML.replace(/<span>.*?<\/span>/, '').trim();
+            const productPrice = cleanedDescription.split('₹')[1].trim();
             const productImage = productCard.querySelector('.aproduct-image').src;
 
             addItemToCart({
                 title: productTitle,
                 description: productDescription,
                 price: productPrice,
-                image: productImage
-            });
+                image: productImage,
+                size: productSize
+});
+
         });
     });
 
@@ -4306,6 +4318,13 @@ stateDistrictMap = {
         opacity: 1;
         visibility: visible;
     }
+    .cart-item-size {
+    display: block; /* Ensures size appears below description */
+    font-size: 14px; /* Adjust size */
+    color: skyblue; /* Make it subtle */
+    margin-top: 0px; /* Adds spacing */
+`   }
+
 </style>
 
 

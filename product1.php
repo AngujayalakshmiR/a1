@@ -205,124 +205,6 @@
 }
 
 
-
-
-/* Product Card */
-.aproduct-card {
-    min-width: 250px; /* Adjust for responsiveness */
-    max-height: 450px;
-    box-sizing: border-box;
-    margin: 10px;
-    background-color: white; /* White background */
-    border: 1px solid #ddd; /* Light border to differentiate */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    padding: 0px;
-}
-
-/* Hover Effects */
-.aproduct-card:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add shadow */
-    border-color: #1dcce0 ; /* Change border color */
-}
-
-/* Product Image */
-.aproduct-image {
-    width: 250px;
-    height: 250px;
-    border-bottom: 2px solid #ddd; /* Separator between image and info */
-}
-
-/* Product Info */
-.aproduct-info {
-    text-align: center;
-    padding: 15px;
-}
-
-/* Product Title */
-.aproduct-title {
-    font-size: 18px;
-    color: #333; /* Dark gray */
-    margin-bottom: 10px;
-}
-
-/* Product Description */
-.aproduct-description {
-    font-size: 14px;
-    color: #777; /* Light gray */
-    margin-bottom: 15px;
-}
-
-/* Add to Cart Button */
-.aadd-to-cart {
-    background-color: #1dcce0 ; /* Blue background */
-    color: white; /* White text */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
-    display: inline-flex; /* Align icon and text horizontally */
-    align-items: center; /* Vertically center icon and text */
-    justify-content: center; /* Center text */
-    position: relative; /* Allows for absolute positioning of icon */
-    font-weight: bold; /* Make the text bold */
-    text-align: center; /* Ensure text inside the button is centered */
-    padding-right: 35px;
-}
-
-/* Cart Icon */
-.acart-icon {
-    font-size: 18px; /* Icon size */
-    color: white; /* White icon */
-    margin-right: 10px; /* Space between icon and text */
-    opacity: 0; /* Hidden by default */
-    position: absolute; /* Position the icon absolutely inside the button */
-    left: 10px; /* Position to the left of the button */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth reveal */
-    padding-left: 5px;
-    padding-right: 10px;
-}
-
-/* Add to Cart Hover */
-.aadd-to-cart:hover {
-    background-color: #1dcce0 ; /* Darker blue on hover */
-    transform: scale(1.1); /* Slight button scale */
-    padding-right: 15px;
-}
-
-/* Show Cart Icon on Hover */
-.aadd-to-cart:hover .cart-icon {
-    opacity: 1; /* Show icon */
-    transform: translateX(0); /* Move to original position */
-    padding-right: 10px;
-}
-
-/* Button Text */
-.abutton-text {
-    display: inline-block; /* Ensures text is treated as a block element within the button */
-    visibility: visible; /* Ensure text stays visible */
-}
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .aproduct-card {
-        min-width: 50%; /* 2 products per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .aproduct-card {
-        min-width: 100%; /* 1 product per row on very small screens */
-    }
-}
-
-
 .slider-nav {
     position: absolute;
     top: 50%;
@@ -419,16 +301,7 @@
 
 
 
-/* Basic Styles for the Product Section */
-.aproduct-section {
-    padding: 15px;
-}
 
-.aproduct-navs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
 .nav-tabss {
     list-style: none;
@@ -453,112 +326,6 @@
 }
 
 
-.aproduct-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.aproduct-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    width: 100%;
-}
-
-.aproduct-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.aproduct-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    border-color: #1dcce0 ;
-}
-
-.aproduct-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 2px solid #ddd;
-}
-
-.aproduct-info {
-    padding: 15px;
-}
-
-.aproduct-title {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.aproduct-description {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.aadd-to-cart {
-    background-color: #1dcce0 ;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.aadd-to-cart:hover {
-    background-color: #1dcce0 ;
-}
-
-.aadd-to-cart .cart-icon {
-    margin-right: 10px;
-}
-
-/* Media Queries for Responsiveness */
-
-/* For smaller screens like phones and tablets */
-@media (max-width: 768px) {
-    .aproduct-navs {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .aproduct-grid {
-        grid-template-columns: repeat(auto-fill, minmax(130px, 2fr));
-        gap: 10px;
-    }
-
-    .aproduct-card {
-        max-width: 100%;
-    }
-
-    .aproduct-title {
-        font-size: 14px;
-    }
-
-    .aproduct-description {
-        font-size: 12px;
-    }
-
-    .aadd-to-cart {
-        font-size: 12px;
-    }
-}
-
-
-.aproduct-grid.hidden {
-    display: none;
-}
 .navbar{
     z-index: 500;
 }
@@ -1244,12 +1011,7 @@ video {
     justify-content: center;
     align-items: center;
 }
-.aproduct-container{
-    margin-left: 0px;
-}
-.aproduct-card{
-    margin-left: 0px;
-}
+
 .responsive-image{
     padding-top: 0px;
     padding-bottom: 20px;
@@ -1703,19 +1465,18 @@ video {
         
     </div>
 
-
 <style>
 
 
-.cart-modal-footer {
+    .cart-modal-footer {
     position: sticky; /* Keep the footer fixed at the bottom of the modal */
     bottom: 10px;
     background-color: transparent;
     padding: 10px;
     text-align: center;
     z-index: 1000;
-}
-.checkout-btn {
+    }
+    .checkout-btn {
     display: none; /* Initially hidden */
     padding: 0.8rem 2rem;
     font-size: 1rem;
@@ -1771,7 +1532,7 @@ video {
             border-radius: 20px;
         }
         .product-thumbnails img {
-            width: 100%;
+            width: -50%;
             height: auto;
             cursor: pointer;
             border: 3px solid transparent;
@@ -1817,78 +1578,49 @@ video {
     }
 </style>
 <div class="container my-5">
-    <div class="row">
+    <div class="row aproduct-card">
         <!-- Left Side: Images -->
         <div class="col-md-6">
             <div>
-                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" alt="Product Preview" id="bigImage" class="product-image-preview">
+                 <a href="/products/product-1" class="product-link">
+                 <img src="img/p1.webp"alt="Product Preview" id="bigImage" class="aproduct-image product-image-preview">
+                 </a>
             </div>
-            <div class="mt-3 product-thumbnails d-flex gap-2">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" alt="Thumbnail" onclick="changeImage(this)" class="active" style="width: 70px;height: 70px;">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
+            <div class="mt-3 product-thumbnails  gap-2">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" 
+                     alt="Thumbnail" onclick="changeImage(this)" class="active" style="width: 70px;height: 70px;">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" 
+                     alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" 
+                     alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" 
+                     alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
+                     
             </div>
         </div>
+        
         <!-- Right Side: Details -->
-        <div class="col-md-6">
-            <h2>Turkish Bath Towels</h2>
+        <div class="col-md-6 ">
+            <h2 class="aproduct-title">Turkish Bath Towels</h2>
             <p class="text-muted">Category: Cotton Towels</p>
             <h4 class="text-danger">₹125 <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹150</del></span></h4>
-            <p class="mt-3">Luxuriously soft Turkish bath towels, perfect for every home. Dimensions: 70 x 40 inches.</p>
+            <p class="mt-3 aproduct-description">Luxuriously soft Turkish bath towels, perfect for every home. Dimensions: 70 x 40 inches. ₹1</p>
             <p><strong>Size:</strong> Large</p>
             <p><strong>Color:</strong> <span style="color:#0eb5d6;">Sky Blue</span></p>
+            
             <!-- Quantity Selector -->
             <div class="quantity-selector mt-3">
                 <button class="btn btn-outline-primary custom-btn" onclick="updateQuantity(-1)">-</button>
-                <input  id="quantity" value="1" class=" text-center" style="width: 60px;border:3px solid #5dc1e6;border-radius:5px" min="1" max="100" onchange="validateQuantity()">
+                <input id="quantity" value="1" class="text-center" style="width: 60px; border: 3px solid #5dc1e6; border-radius:5px" min="1" max="100" onchange="validateQuantity()">
                 <button class="btn btn-outline-primary custom-btn" onclick="updateQuantity(1)">+</button>
             </div>
-            
-            <script>
-                function updateQuantity(change) {
-                    const quantityInput = document.getElementById('quantity');
-                    let currentQuantity = parseInt(quantityInput.value, 10) || 1;
-            
-                    // Update quantity based on change, ensuring it stays within bounds
-                    currentQuantity += change;
-                    if (currentQuantity < 1) {
-                        currentQuantity = 1;
-                    } else if (currentQuantity > 100) {
-                        currentQuantity = 100;
-                    }
-            
-                    quantityInput.value = currentQuantity;
-                }
-            
-                function validateQuantity() {
-                    const quantityInput = document.getElementById('quantity');
-                    let currentQuantity = parseInt(quantityInput.value, 10) || 1;
-            
-                    // Ensure value is within bounds if user manually changes it
-                    if (currentQuantity < 1) {
-                        currentQuantity = 1;
-                    } else if (currentQuantity > 100) {
-                        currentQuantity = 100;
-                    }
-            
-                    quantityInput.value = currentQuantity;
-                }
-            </script>
-            
-            
-            <!-- Buttons -->
-            <div class="mt-4">
-                <div class="row">
-                    <div class="col-12 col-md-6 mb-2">
-                        <button class="btn btn-cart w-100"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
+
+            <!-- Add to Cart Button -->
+            <button class="btn btn-primary mt-3 aadd-to-cart">Add to Cart</button>
         </div>
     </div>
 </div>
+
 
 <script>
     // Change big image on thumbnail click
@@ -1909,133 +1641,145 @@ video {
     }
 </script>
 <!-- Carousel End -->
-<img src="img/headimg1.webp" alt="Responsive Image" style="object-fit: fill;" class="responsive-image wow fadeInUp" data-wow-delay="0.1s">
-
-<section class="product-slider" style="padding-top: 15px;padding-bottom: 15px;">
-    <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
-        <!-- News & Events Section Title -->
-        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px; height:auto;">
-            <h5 class="fw-bold  text-uppercase" style="color: #0eb5d6;">Best Sellers</h5>    
-            <!-- Blue bar container -->
-            <div class="blue-bar">
-                <div class="moving-box"></div>  <!-- Small white rectangle -->
+<img src="img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" style="object-fit: fill;" data-wow-delay="0.1s">
+        <section class="product-slider" style="padding-top: 15px;padding-bottom: 15px;">
+            <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+                <!-- News & Events Section Title -->
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px; height:auto;">
+                    <h5 class="fw-bold text-primary text-uppercase">Best Seller</h5>    
+                    <!-- Blue bar container -->
+                    <div class="blue-bar">
+                        <div class="moving-box"></div>  <!-- Small white rectangle -->
+                    </div>
+                </div>				
             </div>
-        </div>				
-    </div>
-    <div class="slider-container">
-        <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
-            <div class="discount-badge">25% OFF</div>
+            <div class="slider-container">
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
 
-            <a href="/products/product-1" class="product-link">
-                <img src="img/p1.webp" alt="Product 1" class="product-image">
-            </a>
-            <div class="product-info">
-                <h3 class="product-title">Product 1</h3>
-                <p class="product-description">Description of product 1</p>
-                                     
-                <button class="add-to-cart">
-                    <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="button-text">Add to Cart</span>
-                </button>
-                
-                
-                
-                
-            </div>
-        </div>
-        <div class="product-card wow fadeInUp" data-wow-delay="0.5s">
-            <div class="discount-badge">25% OFF</div>
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    </a>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 1</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="discount-badge">25% OFF</div>
 
-            <a href="/products/product-1" class="product-link">
-                <img src="img/p1.webp" alt="Product 1" class="product-image">
-            </a>
-            <div class="product-info">
-                <h3 class="product-title">Product 2</h3>
-                <p class="product-description">Description of product 1</p>
-                <button class="add-to-cart">
-                    <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="button-text">Add to Cart</span>
-                </button>
-                
-                
-            </div>
-        </div>
-        <div class="product-card wow fadeInUp" data-wow-delay="0.7s">
-            <div class="discount-badge">25% OFF</div>
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    </a>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 2</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="discount-badge">25% OFF</div>
 
-            <a href="/products/product-1" class="product-link">
-                <img src="img/p1.webp" alt="Product 1" class="product-image">
-            </a>
-            <div class="product-info">
-                <h3 class="product-title">Product 3</h3>
-                <p class="product-description">Description of product 1</p>
-                <button class="add-to-cart">
-                    <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="button-text">Add to Cart</span>
-                </button>
-                
-                
-                
-            </div>
-        </div>
-        <div class="product-card wow fadeInUp" data-wow-delay="0.9s">
-            <div class="discount-badge">25% OFF</div>
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    </a>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 3</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="discount-badge">25% OFF</div>
 
-            <a href="/products/product-1" class="product-link">
-                <img src="img/p1.webp" alt="Product 1" class="product-image">
-            </a>
-            <div class="product-info">
-                <h3 class="product-title">Product 4</h3>
-                <p class="product-description">Description of product 1</p>
-                <button class="add-to-cart">
-                    <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="button-text">Add to Cart</span>
-                </button>
-                
-                
-                
-            </div>
-        </div>
-        <div class="product-card wow fadeInUp" data-wow-delay="1.1s">
-            <a href="/products/product-1" class="product-link">
-                <div class="discount-badge">25% OFF</div>
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    </a>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 4</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
 
-                <img src="img/p1.webp" alt="Product 1" class="product-image">
-            </a>
-            <div class="product-info">
-                <h3 class="product-title">Product 5</h3>
-                <p class="product-description">Description of product 1</p>
-                <button class="add-to-cart">
-                    <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="button-text">Add to Cart</span>
-                </button>
-                
-                
-            </div>
-        </div>
-        <div class="product-card">
-            <a href="/products/product-1" class="product-link">
-                <div class="discount-badge">25% OFF</div>
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    </a>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 5</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="discount-badge">25% OFF</div>
 
-                <img src="img/p1.webp" alt="Product 1" class="product-image">
-            </a>
-            <div class="product-info">
-                <h3 class="product-title">Product 6</h3>
-                <p class="product-description">Description of product 1</p>
-                <button class="add-to-cart">
-                    <i class="fa-solid fa-cart-shopping cart-icon"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="button-text">Add to Cart</span>
-                </button>
-                
-                
+                    <a href="/products/product-1" class="product-link">
+                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    </a>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Product 6</h3>
+                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                                             
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                <!-- Repeat similar product-card divs for other products -->
             </div>
-        </div>
-        <!-- Repeat similar product-card divs for other products -->
-    </div>
-  
-    <button class="slider-nav prev">&lt;</button>
-    <button class="slider-nav next">&gt;</button>
-</section>
+          
+            <button class="slider-nav prev">&lt;</button>
+            <button class="slider-nav next">&gt;</button>
+        </section>
           <!-- Footer Start -->
           <div class="container-fluid text-white-50 footer pt-5 mt-5 wow fadeIn" style="background-color: #103741 !important;" data-wow-delay="0.1s">
             <div class="container py-5" style="padding-left: 35px;">
@@ -2207,7 +1951,7 @@ video {
                             
                             <div class="mb-3 d-flex justify-content-between">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email1" required>
+                                <input type="email" class="form-control" id="email1" placeholder="Enter your email" required>
                             </div>
                             
                             <div class="mb-3 d-flex justify-content-between">
@@ -2349,8 +2093,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         "currency": "INR",
                         "name": "BIGMOON",
                         "description": "Order Payment",
-                        
-handler: function (response) {
+                        "handler": function (response) {
     $.ajax({
         url: 'ajax-payment.php',
         type: 'POST',
@@ -2358,33 +2101,50 @@ handler: function (response) {
         data: {
             razorpay_payment_id: response.razorpay_payment_id,
             totalAmount: amount,
-            customername: document.getElementById('customername').value, // Collect from form
-            mobilenumber: document.getElementById('mobilenumber').value, 
-            email: document.getElementById('email').value, 
-            address: document.getElementById('address').value, 
-            district: document.getElementById('district').value,
-            state: document.getElementById('state').value,
-            pincode: document.getElementById('pincode').value,
-            productname: localStorage.getItem("productname"), // Example, adapt as needed
-            qty: localStorage.getItem("qty"),
-            size: localStorage.getItem("size"),
-            price: localStorage.getItem("price"),
-            receipt: '001.jpg', // Or dynamically generated receipt
-            courier: 'XYZ Courier', // You can modify this as well
         },
         success: function (data) {
-            if (data.status) {
+    if (data.status) {
+        // Get customer details from the form
+        var customerData = {
+            customername: $('#name').val(),
+            mobilenumber: $('#phone').val(),
+            email: $('#email1').val(),
+            address: $('#address').val(),
+            district: $('#district').val(),
+            state: $('#state').val(),
+            pincode: $('#pincode').val(),
+            productname: cartItems.map(item => item.title).join(', '),  // Concatenate product names
+            qty: cartItems.map(item => item.quantity).join(', '),  // Concatenate quantities
+            size: cartItems.map(item => item.size).join(', '),  // Concatenate sizes
+            price: cartItems.map(item => (parseFloat(item.price) * parseInt(item.quantity))).join(', ') + ',' + cartItems.reduce((total, item) => total + (parseFloat(item.price) * parseInt(item.quantity)), 0),
+            paymentstatus: 'success',
+            orderdate: new Date().toISOString().slice(0, 19).replace('T', ' '),  // Current date and time
+            // Replace with receipt file if needed
+            
+        };
+
+        // Send customer details to the server to save in the database
+        $.ajax({
+            url: 'save-customer.php',  // PHP script to handle saving data
+            type: 'POST',
+            data: customerData,
+            success: function (response) {
                 Swal.fire(
                     'Success!',
-                    'Payment successfully processed!',
+                    'Payment successfully paid!',
                     'success'
                 ).then(() => {
-                    window.location.href = `success.php/?payId=${data.paymentID}`;
+                    window.location.href = `index.php`;  // Redirect after success
                 });
-            } else {
-                Swal.fire('Error', 'Payment failed. Please try again.', 'error');
+            },
+            error: function () {
+                Swal.fire('Error', 'Payment and customer details could not be saved. Please try again.', 'error');
             }
-        },
+        });
+    } else {
+        Swal.fire('Error', 'Payment failed. Please try again.', 'error');
+    }
+},
         error: function () {
             Swal.fire('Error', 'Payment failed due to a network issue.', 'error');
         }
@@ -2474,6 +2234,7 @@ handler: function (response) {
                             <div class="item-details">
                                 <span>${item.title}</span>
                                 <span>${quantity} x ₹${price.toFixed(2)}</span>
+                                <p>Size: ${item.size}</p>
                             </div>
                             <div class="item-total">
                                 ₹${itemTotal.toFixed(2)}
@@ -2487,6 +2248,7 @@ handler: function (response) {
         }
     });
 </script>
+
 
 <!-- Add SweetAlert CDN -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -3454,7 +3216,8 @@ stateDistrictMap = {
     }
 
     /* Inline styling for form */
-    .d-flex {
+    .d-flex
+     {
         display: flex;
         justify-content: space-between;
     }
@@ -3813,6 +3576,9 @@ stateDistrictMap = {
 </script>
 
 <script>
+
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
     document.addEventListener('DOMContentLoaded', function () {
     const cartBtn = document.getElementById('cart-btn');
     const cartModal = document.getElementById('cart-modal');
@@ -3827,7 +3593,7 @@ stateDistrictMap = {
     document.body.appendChild(cartNotification);
 
     // Array to store cart items
-    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+   
 
     // Function to show a notification message
     function showNotification(message) {
@@ -3857,8 +3623,9 @@ stateDistrictMap = {
                     <div class="col-8">
                         <div class="cart-item-info">
                             <h5 class="cart-item-title">${item.title}</h5>
-                            <p class="cart-item-description">${item.description}</p>
-                            <span class="cart-item-price">₹ ${item.price}</span>
+                             <p class="cart-item-description">${item.description}</p>
+                        ${item.size !== "N/A" ? `<span class="cart-item-size"><strong>Size:</strong> ${item.size}</span>` : ""}
+                        <span class="cart-item-price">₹ ${item.price}</span>
                         </div>
                     </div>
 
@@ -3906,8 +3673,9 @@ stateDistrictMap = {
         cartItems.push(item);
         updateCartDisplay(); // Update cart display and cart count
         showNotification('Product added to the cart successfully!');
+        cartModal.classList.add('open');
     }
-
+   
     // Function to remove an item from the cart
     window.removeItem = function (index) {
         cartItems.splice(index, 1);
@@ -3948,16 +3716,25 @@ stateDistrictMap = {
         button.addEventListener('click', function () {
             const productCard = this.closest('.aproduct-card');
             const productTitle = productCard.querySelector('.aproduct-title').textContent;
-            const productDescription = productCard.querySelector('.aproduct-description').textContent.split('₹')[0].trim();
-            const productPrice = productCard.querySelector('.aproduct-description').textContent.split('₹')[1].trim();
+            const descriptionText = productCard.querySelector('.aproduct-description').innerHTML;
+            const productSizeMatch = descriptionText.match(/<span>(.*?)<\/span>/);
+            const productSize = productSizeMatch ? productSizeMatch[1] : "N/A";
+            const productDescription = descriptionText.split('<br>')[0].trim();
+            const descriptionHTML = productCard.querySelector('.aproduct-description').innerHTML;
+
+// Extract price without size
+            const cleanedDescription = descriptionHTML.replace(/<span>.*?<\/span>/, '').trim();
+            const productPrice = cleanedDescription.split('₹')[1].trim();
             const productImage = productCard.querySelector('.aproduct-image').src;
 
             addItemToCart({
                 title: productTitle,
                 description: productDescription,
                 price: productPrice,
-                image: productImage
-            });
+                image: productImage,
+                size: productSize
+});
+
         });
     });
 

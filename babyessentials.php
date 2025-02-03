@@ -4226,8 +4226,9 @@ stateDistrictMap = {
         cartItems.push(item);
         updateCartDisplay(); // Update cart display and cart count
         showNotification('Product added to the cart successfully!');
+        cartModal.classList.add('open');
     }
-
+   
     // Function to remove an item from the cart
     window.removeItem = function (index) {
         cartItems.splice(index, 1);

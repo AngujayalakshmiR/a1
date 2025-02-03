@@ -7,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- Favicon -->
     <link href="img/bigmoon_logo_circle.png" rel="icon">
@@ -30,6 +31,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
     <style>
 
         .text-white-50{
@@ -456,7 +460,848 @@
         height: 300px;
     }
 }
+.product-thumbnails img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.product-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Adjust spacing between images */
+}
+
+.product-thumbnails img.active {
+    border-color: #000; /* Highlight active thumbnail */
+}
+
 </style>
+<style>.cart-modal {
+    position: fixed;
+    top: 0; /* Align to the top of the viewport */
+    right: -100%; /* Fully hidden by default */
+    bottom: 0; /* Extend to the bottom of the viewport */
+    width: 500px; /* Default width */
+    max-height: 100vh; /* Fit within the viewport height */
+    background: #fff;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out; /* Smooth slide effect */
+    z-index: 1000;
+    overflow-y: auto;
+    border-radius: 25px;
+}
+
+/* Open state */
+.cart-modal.open {
+    right: 0; /* Fully visible */
+}
+
+/* Close state */
+.cart-modal.close {
+    right: -100%; /* Fully hidden */
+}
+/* Cart Modal Header */
+.cart-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #37afca; /* Blue background */
+    padding: 15px; /* Padding for header */
+    border-radius: 25px 25px 0 0; /* Rounded corners for the top */
+    color: #fff; /* White text color */
+}
+
+.cart-modal-header h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+    color: #fff;
+}
+
+.cart-modal-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute; /* Position in the corner */
+    top: 10px; /* Adjust positioning */
+    right: 15px; /* Adjust positioning */
+}
+
+.cart-modal-close:hover {
+    color: #37afca; /* Red color on hover */
+    background-color: white;
+}
+
+/* Cart Modal Body */
+.cart-modal-body {
+    display: flex;
+    align-items: center;  /* Center content horizontally */
+    flex-direction: column; /* Ensure content stacks in a column */
+    padding-top: 20px; /* Add padding around content */
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center; /* Center align text */
+    min-height: 300px;
+    flex: 1; /* Take remaining space */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+     /* Ensure a minimum height for the modal body */
+}
+
+/* Empty Cart Message Styling */
+.cart-empty h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cart-empty p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+/* Medium screens */
+@media (max-width: 768px) {
+    .cart-modal {
+        width: 90%; /* Smaller width for medium screens */
+        border-radius: 15px;
+    }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+    .cart-modal {
+        width: 100%; /* Fullscreen width */
+        top: 0; /* Fullscreen top alignment */
+        bottom: 0; /* Fullscreen bottom alignment */
+        border-radius: 0; /* No border radius */
+    }
+
+    .cart-modal-header {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .cart-modal-body {
+        padding: 10px;
+    }
+}
+
+
+/* Additional style for the close button and header */
+.cart-modal-header {
+    padding: 20px;
+    background-color: #2cb8d7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-modal-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+.cart-item-image {
+    width: 110px; /* Image width */
+    height: 110px; /* Set image height to 110px */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px; /* Adjusted margin for spacing */
+}
+
+.cart-modal-body {
+    padding: 0; /* Remove extra padding from the modal body */
+}
+
+
+
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+
+.cart-item-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart-item-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.cart-item-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 4px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex-grow: 1;
+    width: calc(100% - 20px); /* Leave space for image and delete button */
+}
+
+.cart-item-remove {
+    position: absolute;
+    top: 10px; /* Align to the top */
+    right: 10px; /* Align to the right */
+    font-size: 16px;
+    color: #ff4d4d;
+    cursor: pointer;
+}
+
+.cart-item-remove:hover {
+    color: #ff0000;
+}
+
+.quantity-controls {
+    position: absolute; /* Fix it at the bottom right */
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-controls button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.quantity-controls button:hover {
+    background-color: #ddd;
+}
+
+.item-quantity {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/* Additional style for the close button and header */
+.cart-modal-header {
+    padding: 20px;
+    background-color: #2cb8d7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-modal-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.cart-item-image {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+/* Empty Cart Message Styling */
+.cart-empty {
+    display: none; /* Hide initially */
+    text-align: center;
+}
+
+.cart-empty h4 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart-empty p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+  /* Adjust modal width and height */
+  .modal-dialog {
+  max-width: 300px; /* Reduces the width of the modal */
+  width: 100%;
+  align-items: center; /* You can use percentage for responsiveness */
+}
+
+.modal-content {
+  height: 100%; /* Increases the height of the modal */
+}
+
+.modal-body {
+  height: 100%; /* Makes sure the video fills the modal body */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-icon a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon a img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Modal styles */
+.amodal {
+  display: none; /* Hidden by default */
+  position: absolute;
+  z-index: 100000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.amodal-content {
+  background-color: white;
+  margin: 10% auto;
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.amodal-header {
+  height: 30%;
+  overflow: hidden;
+  padding: 0px 0px;
+}
+
+.amodal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.amodal-body {
+  height: 70%;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.alabel {
+  margin-top: 10px;
+}
+
+.ainput {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.abutton[type="submit"] {
+  background-color: #3e23c8;
+  color: white;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  float: center;
+}
+
+.abutton[type="submit"]:hover {
+  background-color: #5740cdc7;
+  color: white;
+}
+
+.aclose {
+  position: absolute;
+  top: 130px;
+  right: 400px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}
+
+.aclose:hover,
+.aclose:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (min-width:1400px) and (max-width: 1500px){
+    .aclose {
+  position: absolute;
+  top: 150px;
+  right: 470px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:1300px) and (max-width: 1400px) {
+.aclose {
+  position: absolute;
+  top: 130px;
+  right: 430px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:1200px) and (max-width: 1300px) {
+.aclose {
+  position: absolute;
+  top: 125px;
+  right: 395px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:1100px) and (max-width: 1200px){
+    .aclose {
+  position: absolute;
+  top: 115px;
+  right: 365px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:1000px) and (max-width: 1100px){
+    .aclose {
+  position: absolute;
+  top: 110px;
+  right: 340px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:900px) and (max-width: 1000px){
+    .aclose {
+  position: absolute;
+  top: 95px;
+  right: 310px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}@media (min-width:800px) and (max-width: 900px){
+    .aclose {
+  position: absolute;
+  top:80px;
+  right: 270px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:700px) and (max-width: 800px){
+    .aclose {
+  position: absolute;
+  top:70px;
+  right: 245px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:600px) and (max-width: 700px){
+    .aclose {
+  position: absolute;
+  top:60px;
+  right: 108px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:500px) and (max-width: 600px){
+    .aclose {
+  position: absolute;
+  top:50px;
+  right: 100px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:400px) and (max-width: 500px){
+    .aclose {
+  position: absolute;
+  top:40px;
+  right: 30px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+@media (min-width:300px) and (max-width: 400px){
+    .aclose {
+  position: absolute;
+  top:30px;
+  right: 30px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fffefe;
+  z-index: 100;
+}}
+/* Responsive Styles */
+@media screen and (max-width: 700px) {
+  .amodal-content {
+    width: 70%;
+  }
+
+  .amodal-body {
+    padding: 15px;
+  }
+
+  .abutton {
+    padding: 8px 16px;
+  }
+
+  .abutton[type="submit"] {
+    padding: 10px;
+  }
+
+  
+}
+
+@media screen and (max-width: 500px) {
+  .amodal-content {
+    width: 90%;
+  }
+
+  .amodal-body {
+    padding: 10px;
+  }
+
+  .abutton {
+    padding: 6px 12px;
+  }
+
+  .abutton[type="submit"] {
+    padding: 8px;
+  }
+
+  
+}
+
+
+.cart-modal-footer {
+    position: sticky; /* Keep the footer fixed at the bottom of the modal */
+    bottom: 10px;
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+.checkout-btn {
+    display: none; /* Initially hidden */
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(0, 123, 255, 0.7);
+    color: #fff;
+    cursor: pointer;
+    animation: glow 1.5s infinite ease-in-out; /* Infinite glowing animation */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.9), 0 0 10px rgba(0, 123, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+    }
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.checkout-btn.show {
+    display: inline-block; /* Show when items are in the cart */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+</style>
+
+<style>
+    /* Reduce font size for tab view (medium screens) */
+    @media (max-width: 768px) {
+        .modal-dialog1 {
+            max-width: 90%; 
+            margin: 10px; /* Adjust modal width for medium screens */
+        }
+    }
+    
+    /* Reduce font size for mobile view (small screens) */
+    @media (max-width: 576px) {
+        .modal-dialog1 {
+            max-width: 95%; /* Increase modal width for small screens */
+            margin: 10px; /* Add some margin for proper spacing */
+        }
+    
+        .modal-content1 {
+            font-size: 0.8rem; /* Further reduce font size for small screens */
+        }
+    
+        .modal-title1 {
+            font-size: 1rem; /* Adjust modal title size */
+        }
+    
+        .form-label {
+            font-size: 0.75rem; /* Adjust label size */
+        }
+    
+        .form-control {
+            font-size: 0.8rem; /* Adjust input field text size */
+        }
+    
+        #order-summary h5 {
+            font-size: 1rem; /* Adjust order summary heading size */
+        }
+    
+        #total-amount h6 {
+            font-size: 0.9rem; /* Adjust total section size */
+        }
+    }
+    
+    @media (max-width: 1800px) {
+        .modal-dialog1 {
+            max-width: 80%;
+            margin: 1.75rem auto;
+          
+        
+        }}
+        /* Modal Styling */
+        .modal1 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1050;
+            overflow-y: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Ensure the dropdowns are aligned within the modal */
+    #state, #district {
+        width: 100%;  /* Ensure it fits within the available space */
+    }
+    
+        .modal-content1 {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    
+        .btn-close1 {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #000000;
+        }
+    
+        .modal-header1,
+        .modal-footer1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+          /* Order Summary Styling */
+          #order-summary {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            height: 400px;
+            overflow-y: auto;
+        }
+    
+        #order-summary h5 {
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+    
+        .order-summary .order-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+    
+        .order-summary .order-item:last-child {
+            border-bottom: none;
+        }
+    
+        .order-summary .item-details span {
+            display: block;
+        }
+    
+        .total-section {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: right;
+        }
+    
+        #total-amount-value {
+            color: #e91e63;
+        }
+    
+        /* Styling for empty cart message */
+        #empty-cart-message p {
+            font-size: 1rem;
+            text-align: center;
+            color: #777;
+        }
+    
+       
+    
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
+    
+        .form-label {
+            font-weight: 600;
+            flex: 1;
+        }
+    
+        .form-control {
+            flex: 2;
+            width: 100%; 
+        
+        }
+    
+        /* Adjust the width and height of the dropdowns */
+    #state, #district {
+        width: 50px;  /* Adjust the width of the dropdown */
+        height: 35px;  /* Adjust the height of the dropdown */
+        padding: 5px;  /* Adjust the padding inside the dropdown */
+    }
+    
+    /* Ensure the labels and dropdowns align properly */
+    .mb-3 .form-label {
+        flex: 1;
+        font-size: 1rem;  /* Adjust font size of the label */
+        margin-right: 10px;  /* Space between label and dropdown */
+    }
+    
+    .dropdown {
+        font-size: 0.9rem;  /* Adjust font size inside the dropdown */
+        padding: 5px;  /* Adjust padding inside the dropdown for better fit */
+    }
+    
+    
+    
+    </style>
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -559,11 +1404,11 @@
             </div>
         </div>
         <!-- Right Side: Details -->
-        <div class="col-md-6">
-            <h2>Turkish Bath Towels</h2>
+        <div class="col-md-6 aproduct-card">
+            <h2 class="aproduct-title">Turkish Bath Towels</h2>
             <p class="text-muted">Category: Cotton Towels</p>
             <h4 class="text-danger">₹125 <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹150</del></span></h4>
-            <p class="mt-3">Luxuriously soft Turkish bath towels, perfect for every home. Dimensions: 70 x 40 inches.</p>
+            <p class="mt-3 aproduct-description">Luxuriously soft Turkish bath towels, perfect for every home. Dimensions: 70 x 40 inches.</p>
             <p><strong>Size:</strong> Large</p>
             <p><strong>Color:</strong> <span style="color:#0eb5d6;">Sky Blue</span></p>
             <!-- Quantity Selector -->
@@ -572,7 +1417,7 @@
                 <input  id="quantity" value="1" class="form-control text-center" style="width: 60px;" min="1" max="100" onchange="validateQuantity()">
                 <button class="btn btn-outline-primary custom-btn" onclick="updateQuantity(1)">+</button>
             </div>
-            
+        
             <script>
                 function updateQuantity(change) {
                     const quantityInput = document.getElementById('quantity');
@@ -609,8 +1454,10 @@
             <div class="mt-4">
                 <div class="row">
                     <div class="col-12 col-md-6 mb-2">
-                        <button class="btn btn-cart w-100"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                    </div>
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>                    </div>
                     <div class="col-12 col-md-6">
                         <button class="btn btn-buy w-100"><i class="fas fa-credit-card"></i> Buy Now</button>
                     </div>
@@ -907,6 +1754,176 @@
   
     
         </script> 
+
+<script>
+
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const cartBtn = document.getElementById('cart-btn');
+    const cartModal = document.getElementById('cart-modal');
+    const cartClose = document.getElementById('cart-close');
+    const cartItemsContainer = document.getElementById('cart-items-container');
+    const emptyCartMessage = document.getElementById('empty-cart-message');
+    const checkoutButton = document.getElementById('proceed-to-checkout');
+    const cartNotification = document.createElement('div');
+    
+    // Add the notification div to the document
+    cartNotification.classList.add('cart-notification');
+    document.body.appendChild(cartNotification);
+
+    // Array to store cart items
+   
+
+    // Function to show a notification message
+    function showNotification(message) {
+        cartNotification.textContent = message;
+        cartNotification.classList.add('show');
+        setTimeout(() => {
+            cartNotification.classList.remove('show');
+        }, 2000);
+    }
+
+    // Function to update the cart display in the modal
+    function updateCartDisplay() {
+        if (cartItems.length === 0) {
+            cartItemsContainer.innerHTML = ''; // Clear the cart items
+            emptyCartMessage.style.display = 'block';
+            checkoutButton.style.display = 'none'; // Hide checkout button
+        } else {
+            emptyCartMessage.style.display = 'none'; // Hide empty cart message
+            cartItemsContainer.innerHTML = cartItems.map((item, index) => `
+                <div class="cart-item row position-relative">
+                    <!-- Image -->
+                    <div class="col-3">
+                        <img src="${item.image}" alt="${item.title}" class="cart-item-image img-fluid">
+                    </div>
+
+                    <!-- Title, Description, Price -->
+                    <div class="col-8">
+                        <div class="cart-item-info">
+                            <h5 class="cart-item-title">${item.title}</h5>
+                             <p class="cart-item-description">${item.description}</p>
+                        ${item.size !== "N/A" ? `<span class="cart-item-size"><strong>Size:</strong> ${item.size}</span>` : ""}
+                        <span class="cart-item-price">₹ ${item.price}</span>
+                        </div>
+                    </div>
+
+                    <!-- Remove Button and Quantity Controls -->
+                    <div class="col-1">
+                        <!-- Remove Button -->
+                        <div class="position-absolute top-0 end-0 p-2">
+                            <button class="btn btn-danger" onclick="removeItem(${index})">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div>
+
+                        <!-- Quantity Controls -->
+                        <div class="position-absolute bottom-0 end-0 p-2">
+                            <div class="input-group">
+                                <button class="btn btn-outline-secondary btn-decrement" onclick="decrementQuantity(${index})">-</button>
+                                <input id="quantity-${index}" style="width:45px;padding:4px 8px;" value="${item.quantity}" min="1" class="form-control quantity-input" readonly />
+                                <button class="btn btn-outline-secondary btn-increment" onclick="incrementQuantity(${index})">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            checkoutButton.style.display = 'block'; // Show checkout button
+        }
+
+        // Save the updated cart to localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        // Update cart count in the cart button
+        document.getElementById('cart-count').textContent = cartItems.length;
+    }
+
+    // Function to add an item to the cart
+    function addItemToCart(item) {
+        // Check if the product already exists in the cart
+        const existingItem = cartItems.find(cartItem => cartItem.title === item.title);
+        if (existingItem) {
+            showNotification('The product you are trying to add is already in the cart. Please check it out.');
+            return;
+        }
+
+        // If the item doesn't exist, add it to the cart
+        item.quantity = item.quantity || 1; // Set default quantity to 1
+        cartItems.push(item);
+        updateCartDisplay(); // Update cart display and cart count
+        showNotification('Product added to the cart successfully!');
+        cartModal.classList.add('open');
+    }
+   
+    // Function to remove an item from the cart
+    window.removeItem = function (index) {
+        cartItems.splice(index, 1);
+        updateCartDisplay();
+    };
+
+    // Function to increment quantity
+    window.incrementQuantity = function (index) {
+        if (cartItems[index].quantity < 100) { // Check if quantity is less than 100
+            cartItems[index].quantity++;
+            updateCartDisplay();
+        }
+    };
+
+    // Function to decrement quantity
+    window.decrementQuantity = function (index) {
+        if (cartItems[index].quantity > 1) { // Ensure quantity does not go below 1
+            cartItems[index].quantity--;
+            updateCartDisplay();
+        }
+    };
+
+    // Open the cart modal
+    cartBtn.addEventListener('click', () => {
+        cartModal.classList.remove('close');
+        cartModal.classList.add('open');
+        updateCartDisplay();
+    });
+
+    // Close the cart modal
+    cartClose.addEventListener('click', () => {
+        cartModal.classList.remove('open');
+        cartModal.classList.add('close');
+    });
+
+    // Handle "Add to Cart" button click
+    document.querySelectorAll('.aadd-to-cart').forEach(button => {
+        button.addEventListener('click', function () {
+            const productCard = this.closest('.aproduct-card');
+            const productTitle = productCard.querySelector('.aproduct-title').textContent;
+            const descriptionText = productCard.querySelector('.aproduct-description').innerHTML;
+            const productSizeMatch = descriptionText.match(/<span>(.*?)<\/span>/);
+            const productSize = productSizeMatch ? productSizeMatch[1] : "N/A";
+            const productDescription = descriptionText.split('<br>')[0].trim();
+            const descriptionHTML = productCard.querySelector('.aproduct-description').innerHTML;
+
+// Extract price without size
+            const cleanedDescription = descriptionHTML.replace(/<span>.*?<\/span>/, '').trim();
+            const productPrice = cleanedDescription.split('₹')[1].trim();
+            const productImage = productCard.querySelector('.aproduct-image').src;
+
+            addItemToCart({
+                title: productTitle,
+                description: productDescription,
+                price: productPrice,
+                image: productImage,
+                size: productSize
+});
+
+        });
+    });
+
+    // Load the cart from localStorage on page load
+    updateCartDisplay();
+});
+
+</script>
+    
 </body>
 
 </html>

@@ -2006,84 +2006,54 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Populate order summary with cart items
-    function populateOrderSummary() {
-        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-        let totalAmount = 0;
+ // Populate order summary with cart items
+function populateOrderSummary() {
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    let totalAmount = 0;
 
-        if (cartItems.length === 0) {
-            orderSummaryContainer.innerHTML = "<p>Your cart is empty.</p>";
-            totalAmountValue.textContent = "0";
-        } else {
-            orderSummaryContainer.innerHTML = cartItems.map(item => {
-                const quantity = parseInt(item.quantity, 10);
-                const price = parseFloat(item.price);
+    if (cartItems.length === 0) {
+        orderSummaryContainer.innerHTML = "<p>Your cart is empty.</p>";
+        totalAmountValue.textContent = "0";
+    } else {
+        orderSummaryContainer.innerHTML = cartItems.map(item => {
+            const quantity = parseInt(item.quantity, 10);
+            const price = parseFloat(item.price);
 
-                if (isNaN(quantity) || isNaN(price)) {
-                    console.error("Invalid cart item:", item);
-                    return `<p style="color: red;">Invalid item data</p>`;
-                }
-
-                const itemTotal = quantity * price;
-                totalAmount += itemTotal;
-
-                return `
-                    <div class="order-item">
-                        <div class="item-details">
-                            <span>${item.title}</span>
-                            <span>${quantity} x ₹${price.toFixed(2)}</span>
-                        </div>
-                        <div class="item-total">
-                            ₹${itemTotal.toFixed(2)}
-                        </div>
-                    </div>
-                `;
-            }).join("");
-
-            totalAmountValue.textContent = totalAmount.toFixed(2);
-        }
-    }
-
-
-
-
-        // Populate order summary with cart items
-        function populateOrderSummary() {
-            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-            let totalAmount = 0;
-
-            if (cartItems.length === 0) {
-                orderSummaryContainer.innerHTML = "<p>Your cart is empty.</p>";
-                totalAmountValue.textContent = "0";
-            } else {
-                orderSummaryContainer.innerHTML = cartItems.map(item => {
-                    const quantity = parseInt(item.quantity, 10);
-                    const price = parseFloat(item.price);
-
-                    if (isNaN(quantity) || isNaN(price)) {
-                        console.error("Invalid cart item:", item);
-                        return `<p style="color: red;">Invalid item data</p>`;
-                    }
-
-                    const itemTotal = quantity * price;
-                    totalAmount += itemTotal;
-
-                    return `
-                        <div class="order-item">
-                            <div class="item-details">
-                                <span>${item.title}</span>
-                                <span>${quantity} x ₹${price.toFixed(2)}</span>
-                            </div>
-                            <div class="item-total">
-                                ₹${itemTotal.toFixed(2)}
-                            </div>
-                        </div>
-                    `;
-                }).join("");
-
-                totalAmountValue.textContent = totalAmount.toFixed(2);
+            if (isNaN(quantity) || isNaN(price)) {
+                console.error("Invalid cart item:", item);
+                return `<p style="color: red;">Invalid item data</p>`;
             }
-        }
+
+            const itemTotal = quantity * price;
+            totalAmount += itemTotal;
+
+            // Ensure size is valid and NOT "N/A" (case insensitive, trimmed)
+            let sizeDisplay = "";
+            if (item.size && item.size.trim().toLowerCase() !== "n/a") {
+                sizeDisplay = `<p>Size: ${item.size}</p>`;
+            }
+
+            return `
+                <div class="order-item">
+                    <div class="item-details">
+                        <span>${item.title}</span>
+                        <span>${quantity} x ₹${price.toFixed(2)}</span>
+                        ${sizeDisplay} <!-- Only shows if size is valid -->
+                    </div>
+                    <div class="item-total">
+                        ₹${itemTotal.toFixed(2)}
+                    </div>
+                </div>
+            `;
+        }).join("");
+
+        totalAmountValue.textContent = totalAmount.toFixed(2);
+    }
+}
+
+
+
+
     });
 </script>
 
@@ -4174,8 +4144,9 @@ stateDistrictMap = {
                     <div class="col-8">
                         <div class="cart-item-info">
                             <h5 class="cart-item-title">${item.title}</h5>
-                            <p class="cart-item-description">${item.description}</p>
-                            <span class="cart-item-price">₹ ${item.price}</span>
+                             <p class="cart-item-description" style="text-align:left">${item.description}</p>
+                        ${item.size && item.size !== "N/A" ? `<span class="cart-item-size"><strong>Size:</strong> ${item.size}</span>` : ""}
+                        <span class="cart-item-price">₹ ${item.price}</span>
                         </div>
                     </div>
 
@@ -4223,8 +4194,9 @@ stateDistrictMap = {
         cartItems.push(item);
         updateCartDisplay(); // Update cart display and cart count
         showNotification('Product added to the cart successfully!');
+        cartModal.classList.add('open');
     }
-
+   
     // Function to remove an item from the cart
     window.removeItem = function (index) {
         cartItems.splice(index, 1);
@@ -4265,16 +4237,25 @@ stateDistrictMap = {
         button.addEventListener('click', function () {
             const productCard = this.closest('.aproduct-card');
             const productTitle = productCard.querySelector('.aproduct-title').textContent;
-            const productDescription = productCard.querySelector('.aproduct-description').textContent.split('₹')[0].trim();
-            const productPrice = productCard.querySelector('.aproduct-description').textContent.split('₹')[1].trim();
+            const descriptionText = productCard.querySelector('.aproduct-description').innerHTML;
+            const productSizeMatch = descriptionText.match(/<span>(.*?)<\/span>/);
+            const productSize = productSizeMatch ? productSizeMatch[1] : "N/A";
+            const productDescription = descriptionText.split('<br>')[0].trim();
+            const descriptionHTML = productCard.querySelector('.aproduct-description').innerHTML;
+
+// Extract price without size
+            const cleanedDescription = descriptionHTML.replace(/<span>.*?<\/span>/, '').trim();
+            const productPrice = cleanedDescription.split('₹')[1].trim();
             const productImage = productCard.querySelector('.aproduct-image').src;
 
             addItemToCart({
                 title: productTitle,
                 description: productDescription,
                 price: productPrice,
-                image: productImage
-            });
+                image: productImage,
+                size: productSize
+});
+
         });
     });
 
@@ -4306,6 +4287,12 @@ stateDistrictMap = {
         opacity: 1;
         visibility: visible;
     }
+    .cart-item-size {
+    display: block; /* Ensures size appears below description */
+    font-size: 14px; /* Adjust size */
+    color: skyblue; /* Make it subtle */
+    margin-top: 0px; /* Adds spacing */
+   }
 </style>
 
 

@@ -1603,8 +1603,9 @@ video {
         <div class="col-md-6 ">
             <h2 class="aproduct-title">Turkish Bath Towels</h2>
             <p class="text-muted">Category: Cotton Towels</p>
-            <h4 class="text-danger">₹125 <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹150</del></span></h4>
-            <p class="mt-3 aproduct-description">Luxuriously soft Turkish bath towels, perfect for every home. Dimensions: 70 x 40 inches. ₹1</p>
+            <p class="mt-3 aproduct-description">Luxuriously soft Turkish bath towels, perfect for every home. <br>           
+                <span class="text-danger" style="font-size: 24px;"><b>₹125</b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹150</del></span></span>
+            </p>
             <p><strong>Size:</strong> Large</p>
             <p><strong>Color:</strong> <span style="color:#0eb5d6;">Sky Blue</span></p>
             
@@ -2166,88 +2167,56 @@ document.addEventListener("DOMContentLoaded", function () {
             form.reportValidity();
         }
     });
+// Populate order summary with cart items
+function populateOrderSummary() {
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    let totalAmount = 0;
 
-    // Populate order summary with cart items
-    function populateOrderSummary() {
-        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-        let totalAmount = 0;
+    if (cartItems.length === 0) {
+        orderSummaryContainer.innerHTML = "<p>Your cart is empty.</p>";
+        totalAmountValue.textContent = "0";
+    } else {
+        orderSummaryContainer.innerHTML = cartItems.map(item => {
+            const quantity = parseInt(item.quantity, 10);
+            const price = parseFloat(item.price);
 
-        if (cartItems.length === 0) {
-            orderSummaryContainer.innerHTML = "<p>Your cart is empty.</p>";
-            totalAmountValue.textContent = "0";
-        } else {
-            orderSummaryContainer.innerHTML = cartItems.map(item => {
-                const quantity = parseInt(item.quantity, 10);
-                const price = parseFloat(item.price);
-
-                if (isNaN(quantity) || isNaN(price)) {
-                    console.error("Invalid cart item:", item);
-                    return `<p style="color: red;">Invalid item data</p>`;
-                }
-
-                const itemTotal = quantity * price;
-                totalAmount += itemTotal;
-
-                return `
-                    <div class="order-item">
-                        <div class="item-details">
-                            <span>${item.title}</span>
-                            <span>${quantity} x ₹${price.toFixed(2)}</span>
-                        </div>
-                        <div class="item-total">
-                            ₹${itemTotal.toFixed(2)}
-                        </div>
-                    </div>
-                `;
-            }).join("");
-
-            totalAmountValue.textContent = totalAmount.toFixed(2);
-        }
-    }
-
-
-
-
-        // Populate order summary with cart items
-        function populateOrderSummary() {
-            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-            let totalAmount = 0;
-
-            if (cartItems.length === 0) {
-                orderSummaryContainer.innerHTML = "<p>Your cart is empty.</p>";
-                totalAmountValue.textContent = "0";
-            } else {
-                orderSummaryContainer.innerHTML = cartItems.map(item => {
-                    const quantity = parseInt(item.quantity, 10);
-                    const price = parseFloat(item.price);
-
-                    if (isNaN(quantity) || isNaN(price)) {
-                        console.error("Invalid cart item:", item);
-                        return `<p style="color: red;">Invalid item data</p>`;
-                    }
-
-                    const itemTotal = quantity * price;
-                    totalAmount += itemTotal;
-
-                    return `
-                        <div class="order-item">
-                            <div class="item-details">
-                                <span>${item.title}</span>
-                                <span>${quantity} x ₹${price.toFixed(2)}</span>
-                                <p>Size: ${item.size}</p>
-                            </div>
-                            <div class="item-total">
-                                ₹${itemTotal.toFixed(2)}
-                            </div>
-                        </div>
-                    `;
-                }).join("");
-
-                totalAmountValue.textContent = totalAmount.toFixed(2);
+            if (isNaN(quantity) || isNaN(price)) {
+                console.error("Invalid cart item:", item);
+                return `<p style="color: red;">Invalid item data</p>`;
             }
-        }
+
+            const itemTotal = quantity * price;
+            totalAmount += itemTotal;
+
+            // Ensure size is valid and NOT "N/A" (case insensitive, trimmed)
+            let sizeDisplay = "";
+            if (item.size && item.size.trim().toLowerCase() !== "n/a") {
+                sizeDisplay = `<p>Size: ${item.size}</p>`;
+            }
+
+            return `
+                <div class="order-item">
+                    <div class="item-details">
+                        <span>${item.title}</span>
+                        <span>${quantity} x ₹${price.toFixed(2)}</span>
+                        ${sizeDisplay} <!-- Only shows if size is valid -->
+                    </div>
+                    <div class="item-total">
+                        ₹${itemTotal.toFixed(2)}
+                    </div>
+                </div>
+            `;
+        }).join("");
+
+        totalAmountValue.textContent = totalAmount.toFixed(2);
+    }
+}
+
+
+
     });
 </script>
+
 
 
 <!-- Add SweetAlert CDN -->
@@ -3322,78 +3291,7 @@ stateDistrictMap = {
 
     </script>        
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5" style="padding-left: 35px;">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Our Location</h3>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>66, Mettu Street, Karur, TN, India</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9600362903</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>bigmoonrknd@gmail.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="mailto:bigmoonrknd@gmail.com">
-                                <i class="fas fa-envelope" style="font-size: 20px;"></i>
-                            </a>
-                            <a class="btn btn-outline-light btn-social" href="https://wa.me/+919600362903" target="_blank">
-                                <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
-                            </a>
-                            
-                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/bigmoon_homify/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.amazon.in/s?me=A22U1QWK6VZ1QN&fbclid=PAZXh0bgNhZW0CMTEAAaaj4vKNNPZNJ494Q7AhNWU3b2j92mFRfiVCF8ildciR1ArwVV1nVbdyF1s_aem_ZmFrZWR1bW15MTZieXRlcw&ref=sf_seller_app_share_new">
-                                <i class="fab fa-amazon"></i>
-                            </a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.flipkart.com">
-                                <img src="img/flipkart.png" alt="Flipkart" style="width: 20px; height: 20px;">
-                            </a>
-                            
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Home Furnishings</h3>
-                        <a class="btn btn-link text-white-50" href="#">Cotton Towels</a>
-                        <a class="btn btn-link text-white-50" href="#">Pillow Covers</a>
-                        <a class="btn btn-link text-white-50" href="#">Table Covers</a>
-                        <a class="btn btn-link text-white-50" href="#">Cotton Bedsheets</a>
-                        <a class="btn btn-link text-white-50" href="#">Bed Quilts</a>
-                        <a class="btn btn-link text-white-50" href="#">Cosmetic Pouch</a>
-                        <a class="btn btn-link text-white-50" href="#">Travel Pouch</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Baby Essentials</h3>
-                        <a class="btn btn-link text-white-50" href="#">Baby Swadles</a>
-                        <a class="btn btn-link text-white-50" href="#">Baby Wipes</a>
-                        <a class="btn btn-link text-white-50" href="#">Baby Napkins</a>
-                        <a class="btn btn-link text-white-50" href="#">Baby Towels</a>
-                        <a class="btn btn-link text-white-50" href="#">Baby Blankets</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>For all latest product updates, let us know your mail!</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Enter</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer bottom section -->
-            <div class="container text-center pt-4 pb-4">
-                <div class="copyright">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 text-center mb-3 mb-md-0">
-                            <a class="border-bottom" href="index.html">BigMoon Rknd</a>, Designed &
-                            <!--/* This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. */-->
-                            All Rights Reserved by &copy; Jayalakshmi & Durga</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Footer End -->
-
+      
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -3623,8 +3521,8 @@ stateDistrictMap = {
                     <div class="col-8">
                         <div class="cart-item-info">
                             <h5 class="cart-item-title">${item.title}</h5>
-                             <p class="cart-item-description">${item.description}</p>
-                        ${item.size !== "N/A" ? `<span class="cart-item-size"><strong>Size:</strong> ${item.size}</span>` : ""}
+                             <p class="cart-item-description style="text-align:left">${item.description}</p>
+                        ${item.size && item.size !== "N/A" ? `<span class="cart-item-size"><strong>Size:</strong> ${item.size}</span>` : ""}
                         <span class="cart-item-price">₹ ${item.price}</span>
                         </div>
                     </div>
@@ -3766,6 +3664,12 @@ stateDistrictMap = {
         opacity: 1;
         visibility: visible;
     }
+    .cart-item-size {
+    display: block; /* Ensures size appears below description */
+    font-size: 14px; /* Adjust size */
+    color: skyblue; /* Make it subtle */
+    margin-top: 0px; /* Adds spacing */
+   }
 </style>
 
 

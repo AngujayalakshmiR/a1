@@ -30,14 +30,15 @@ $pincode = $_POST['pincode'];
 $productname = $_POST['productname'];
 $qty = $_POST['qty'];
 $size = $_POST['size'];
+$weight = $_POST['weight']; // Add weight field
 $price = $_POST['price'];
 $paymentstatus = $_POST['paymentstatus'];
 $orderdate = $_POST['orderdate'];
 
 
 // SQL query to insert customer data into the database
-$sql = "INSERT INTO customer (orderid, customername, mobilenumber, email, address, district, state, pincode, productname, qty, size, price, paymentstatus, orderdate) 
-        VALUES ('$newOrderId', '$customername', '$mobilenumber', '$email', '$address', '$district', '$state', '$pincode', '$productname', '$qty', '$size', '$price', '$paymentstatus', '$orderdate')";
+$sql = "INSERT INTO customer (orderid, customername, mobilenumber, email, address, district, state, pincode, productname, qty, size,weight, price, paymentstatus, orderdate) 
+        VALUES ('$newOrderId', '$customername', '$mobilenumber', '$email', '$address', '$district', '$state', '$pincode', '$productname', '$qty', '$size','$weight', '$price', '$paymentstatus', '$orderdate')";
 
 if ($conn->query($sql) === TRUE) {
     echo json_encode(['status' => true, 'orderid' => $newOrderId]);

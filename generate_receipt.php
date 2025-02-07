@@ -13,7 +13,7 @@ if (isset($_GET['orderid'])) {
     $orderId = intval($_GET['orderid']);
 
     // Fetch order details
-    $query = "SELECT productname, qty, price FROM customer WHERE orderid = ?";
+    $query = "SELECT productname, qty, price, weight FROM customer WHERE orderid = ?";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("i", $orderId);
     $stmt->execute();
@@ -23,11 +23,25 @@ if (isset($_GET['orderid'])) {
         $order = $result->fetch_assoc();
         $productNames = explode(',', $order['productname']);
         $quantities = explode(',', $order['qty']);
-        $prices = explode(',', $order['price']); // Split prices into an array
-        $totalCost = end($prices); // Last price is the total cost
+        $prices = explode(',', $order['price']);
+        $weights = explode(',', $order['weight']);
+
+        $totalCost = end($prices);  // Last price is the total cost
+        $totalWeight = end($weights); // Last value in weight column is the total weight
     } else {
         die("No order found for the given Order ID.");
     }
+
+    // Calculate subtotal sum
+    $subtotalSum = 0;
+    foreach ($prices as $index => $price) {
+        if ($index < count($prices) - 1) { // Exclude last price as it's the total cost
+            $subtotalSum += floatval($price);
+        }
+    }
+
+    // Calculate Shipping Charge
+    $shippingCharge = $totalCost - $subtotalSum;
 
     // Create new PDF document
     $pdf = new TCPDF();
@@ -49,9 +63,8 @@ if (isset($_GET['orderid'])) {
     $logoPath = 'img/bigmoon_logo_circle.png';
     $pdf->Image($logoPath, 8, 8, 15, 0, 'PNG');
 
-    // Add company name with font and color change
+    // Add company name
     $pdf->SetFont('times', 'B', 26);
-    // $pdf->SetTextColor(0, 102, 204); // Set text color to blue (RGB)
     $pdf->SetXY(30, 10);
     $pdf->Cell(0, 10, 'BIGMOON', 0, 1, 'L');
 
@@ -73,19 +86,41 @@ if (isset($_GET['orderid'])) {
     // Table data
     $pdf->SetFont('helvetica', '', 12);
     foreach ($productNames as $index => $productName) {
+        if ($index == count($prices) - 1) continue; // Skip the last value which is the total cost
+
         $quantity = isset($quantities[$index]) ? intval($quantities[$index]) : 0;
         $subtotal = isset($prices[$index]) ? floatval($prices[$index]) : 0.0;
         $pricePerItem = ($quantity > 0) ? round($subtotal / $quantity, 2) : 0.0;
 
+        // Get the starting Y position before writing cells
+        $startY = $pdf->GetY();
+
+        // Serial number column
         $pdf->Cell(20, 10, $index + 1, 1, 0, 'C');
-        $pdf->Cell(70, 10, htmlspecialchars($productName), 1, 0, 'C');
+
+        // Product Name Column using MultiCell
+        $pdf->MultiCell(70, 10, htmlspecialchars($productName), 1, 'C');
+
+        // Align the next cells to the correct row height
+        $currentY = $pdf->GetY();
+        $pdf->SetXY(105, $startY); // Move back in line with the first row
+
+        // Other columns
         $pdf->Cell(30, 10, $quantity, 1, 0, 'C');
         $pdf->Cell(30, 10, $pricePerItem, 1, 0, 'C');
-        $pdf->Cell(30, 10, $subtotal, 1, 1, 'C');
+        $pdf->Cell(30, 10, $subtotal, 1, 1, 'C'); // Move to the next row
     }
 
-    // Total cost
+    // Add total weight row
     $pdf->SetFont('helvetica', 'B', 12);
+    $pdf->Cell(150, 10, 'Total Weight', 1, 0, 'R');
+    $pdf->Cell(30, 10, $totalWeight . ' g', 1, 1, 'C');
+
+    // Add shipping charge row
+    $pdf->Cell(150, 10, 'Shipping Charge', 1, 0, 'R');
+    $pdf->Cell(30, 10, number_format($shippingCharge, 2), 1, 1, 'C');
+
+    // Total cost row
     $pdf->Cell(150, 10, 'Total Cost', 1, 0, 'R');
     $pdf->Cell(30, 10, $totalCost, 1, 1, 'C');
 
@@ -108,6 +143,7 @@ if (isset($_GET['orderid'])) {
     $stmt->bind_param("si", $receiptFileName, $orderId);
     $stmt->execute();
 
+    // Output the receipt to the browser
     $pdf->Output($receiptPath, 'I');
 
 } else {

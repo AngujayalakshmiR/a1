@@ -1602,8 +1602,10 @@ video {
         <!-- Right Side: Details -->
         <div class="col-md-6 ">
             <h2 class="aproduct-title">Dobby Cotton Table Runner with Tassels</h2>
-            <p class="mt-3 aproduct-description">Washable 72x16" Multicolor Table Runner – Elegant & Durable. <br>           
-                <span class="text-danger" style="font-size: 24px;"><b>₹199</b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹499</del></span></span>
+            <p class="mt-3 aproduct-description">Washable 72x16" Multicolor Table Runner – Elegant & Durable. <br> 
+                <span class="text-danger" style="font-size: 24px;"><b>₹1</b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹499</del></span></span>  <br>
+                <span><b>Weight:</b> 250g/peice</span>
+                <span><b>Size:</b>3 to 6 months</span>
             </p>
          
             
@@ -2002,7 +2004,7 @@ video {
                                     <option value="Mizoram">Mizoram</option>
                                     <option value="Nagaland">Nagaland</option>
                                     <option value="Odisha">Odisha</option>
-                                    <option value="Puducherry (UT)">Puducherry (UT)</option>
+                                    <option value="Pondicherry">Pondicherry</option>
                                     <option value="Punjab">Punjab</option>
                                     <option value="Rajasthan">Rajasthan</option>
                                     <option value="Sikkim">Sikkim</option>
@@ -2040,10 +2042,10 @@ video {
                             <div id="empty-cart-message" style="display: none;">
                                 <p>Your cart is empty.</p>
                             </div>
-                            <div id="total-amount" class="total-section">
-                                <h6>Total: ₹<span id="total-amount-value">0</span></h6>
+                            <div id="total-amount" class="total-section"><hr>
+                            <h6 style="color:grey;font-size:14px"><span style="float:left;">Shipping Charge</span> <span id="shipping-charge-value">0</span></h6><hr>
+                            <h6>Total: ₹<span id="total-amount-value">0</span></h6>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -2059,6 +2061,7 @@ video {
 
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
+
 document.addEventListener("DOMContentLoaded", function () {
     const checkoutModal = document.getElementById("checkout-modal");
     const proceedToPayButton = document.getElementById("proceed-to-pay");
@@ -2066,27 +2069,94 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalClose = document.getElementById("modal-close");
     const orderSummaryContainer = document.getElementById("order-summary-container");
     const totalAmountValue = document.getElementById("total-amount-value");
+    const shippingChargeValue = document.getElementById("shipping-charge-value");
     const proceedToCheckout = document.getElementById("proceed-to-checkout");
+    const stateSelect = document.getElementById("state");
 
-    // Event listener for closing the modal
     modalClose.addEventListener("click", function () {
         checkoutModal.style.display = "none";
     });
 
-    // Close modal if user clicks outside it
     window.addEventListener("click", function (event) {
         if (event.target === checkoutModal) {
             checkoutModal.style.display = "none";
         }
     });
 
-    // Show checkout modal and populate order summary
     proceedToCheckout.addEventListener("click", function () {
         checkoutModal.style.display = "block";
         populateOrderSummary();
     });
 
-    // Handle proceed to pay button click
+    function getShippingRate(state) {
+        if (state === "Tamil Nadu") return 1;
+        if (["Kerala", "Karnataka", "Andhra Pradesh", "Telangana"].includes(state)) return 60;
+        if (state === "Pondicherry") return 90;
+        return 70;
+    }
+
+    function roundUpWeight(weight) {
+        return Math.ceil(weight / 1000) * 1000;
+    }
+
+    function populateOrderSummary() {
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        let totalAmount = 0;
+        let totalWeight = 0;
+        let selectedState = stateSelect.value;
+        stateSelect.addEventListener("change", function () {
+    populateOrderSummary();
+});
+
+
+        if (cartItems.length === 0) {
+            orderSummaryContainer.innerHTML = "<p>Your cart is empty.</p>";
+            totalAmountValue.textContent = "0";
+            shippingChargeValue.textContent = "0";
+        } else {
+            orderSummaryContainer.innerHTML = cartItems.map(item => {
+                const quantity = parseInt(item.quantity, 10);
+                const price = parseFloat(item.price);
+                const weight = parseFloat(item.weight);
+
+                if (isNaN(quantity) || isNaN(price) || isNaN(weight)) {
+                    console.error("Invalid cart item:", item);
+                    return `<p style="color: red;">Invalid item data</p>`;
+                }
+
+                const itemTotal = quantity * price;
+                const itemWeight = quantity * weight;
+                totalAmount += itemTotal;
+                totalWeight += itemWeight;
+
+                let sizeDisplay = "";
+                if (item.size && item.size.trim().toLowerCase() !== "n/a") {
+                    sizeDisplay = `<p>Size: ${item.size}</p>`;
+                }
+
+                return `
+                    <div class="order-item">
+                        <div class="item-details">
+                            <span>${item.title}</span>
+                            <span>${quantity} x ₹${price.toFixed(2)}</span>
+                            <p>Weight: ${itemWeight.toFixed(2)} kg</p>
+                            ${sizeDisplay}
+                        </div>
+                        <div class="item-total">
+                            ₹${itemTotal.toFixed(2)}
+                        </div>
+                    </div>
+                `;
+            }).join("");
+
+            let shippingCharge = getShippingRate(selectedState) * Math.ceil(totalWeight / 1000);
+            totalAmount += shippingCharge;
+
+            shippingChargeValue.textContent = shippingCharge.toFixed(2);
+            totalAmountValue.textContent = totalAmount.toFixed(2);
+        }
+    }
+
     proceedToPayButton.addEventListener("click", function () {
         const form = document.getElementById("customer-details-form");
 
@@ -2098,79 +2168,69 @@ document.addEventListener("DOMContentLoaded", function () {
                 showCancelButton: true,
                 confirmButtonText: 'Yes',
                 cancelButtonText: 'No',
-                confirmButtonColor: '#28a745', // Green color for Yes
-                cancelButtonColor: '#dc3545', // Red color for No
+                confirmButtonColor: '#28a745',
+                cancelButtonColor: '#dc3545',
             }).then((result) => {
                 if (result.isConfirmed) {
-                    const amount = parseFloat(totalAmountValue.textContent.trim()) * 100; // Razorpay uses paise
-
+                    const amount = parseFloat(totalAmountValue.textContent.trim()) * 100;
+                    
                     const options = {
-                        "key": "rzp_live_8FEUrTWd4qCbuf", // Your Razorpay Key Id
+                        "key": "rzp_live_8FEUrTWd4qCbuf",
                         "amount": amount,
                         "currency": "INR",
                         "name": "BIGMOON",
                         "description": "Order Payment",
                         "handler": function (response) {
-    $.ajax({
-        url: 'ajax-payment.php',
-        type: 'POST',
-        dataType: 'json',
-        data: {
-            razorpay_payment_id: response.razorpay_payment_id,
-            totalAmount: amount,
-        },
-        success: function (data) {
-    if (data.status) {
-        // Get customer details from the form
-        var customerData = {
-            customername: $('#name').val(),
-            mobilenumber: $('#phone').val(),
-            email: $('#email1').val(),
-            address: $('#address').val(),
-            district: $('#district').val(),
-            state: $('#state').val(),
-            pincode: $('#pincode').val(),
-            productname: cartItems.map(item => item.title).join(', '),  // Concatenate product names
-            qty: cartItems.map(item => item.quantity).join(', '),  // Concatenate quantities
-            size: cartItems.map(item => item.size).join(', '),  // Concatenate sizes
-            price: cartItems.map(item => (parseFloat(item.price) * parseInt(item.quantity))).join(', ') + ',' + cartItems.reduce((total, item) => total + (parseFloat(item.price) * parseInt(item.quantity)), 0),
-            paymentstatus: 'success',
-            orderdate: new Date().toISOString().slice(0, 19).replace('T', ' '),  // Current date and time
-            // Replace with receipt file if needed
-            
-        };
+                            $.ajax({
+                                url: 'ajax-payment.php',
+                                type: 'POST',
+                                dataType: 'json',
+                                data: {
+                                    razorpay_payment_id: response.razorpay_payment_id,
+                                    totalAmount: amount,
+                                },
+                                success: function (data) {
+                                    if (data.status) {
+                                        var customerData = {
+                                            customername: $('#name').val(),
+                                            mobilenumber: $('#phone').val(),
+                                            email: $('#email1').val(),
+                                            address: $('#address').val(),
+                                            district: $('#district').val(),
+                                            state: $('#state').val(),
+                                            pincode: $('#pincode').val(),
+                                            productname: cartItems.map(item => item.title).join(', '),
+                                            qty: cartItems.map(item => item.quantity).join(', '),
+                                            size: cartItems.map(item => item.size).join(', '),
+                                            weight: cartItems.map(item => (parseFloat(item.weight) * parseInt(item.quantity))).join(', ') + ',' + cartItems.reduce((total, item) => total + (parseFloat(item.weight) * parseInt(item.quantity)), 0),
+                                            price: cartItems.map(item => (parseFloat(item.price) * parseInt(item.quantity))).join(', ') + ',' + cartItems.reduce((total, item) => total + (parseFloat(item.price) * parseInt(item.quantity)), 0),
+                                            paymentstatus: 'success',
+                                            orderdate: new Date().toISOString().slice(0, 19).replace('T', ' '),
+                                        };
 
-        // Send customer details to the server to save in the database
-        $.ajax({
-            url: 'save-customer.php',  // PHP script to handle saving data
-            type: 'POST',
-            data: customerData,
-            success: function (response) {
-                Swal.fire(
-                    'Success!',
-                    'Payment successfully paid!',
-                    'success'
-                ).then(() => {
-                    window.location.href = `index.php`;  // Redirect after success
-                });
-            },
-            error: function () {
-                Swal.fire('Error', 'Payment and customer details could not be saved. Please try again.', 'error');
-            }
-        });
-    } else {
-        Swal.fire('Error', 'Payment failed. Please try again.', 'error');
-    }
-},
-        error: function () {
-            Swal.fire('Error', 'Payment failed due to a network issue.', 'error');
-        }
-    });
-},
-
-                        "theme": {
-                            "color": "#528FF0"
-                        }
+                                        $.ajax({
+                                            url: 'save-customer.php',
+                                            type: 'POST',
+                                            data: customerData,
+                                            success: function () {
+                                                Swal.fire('Success!', 'Payment successfully paid!', 'success').then(() => {
+                                                    window.location.href = 'index.php';
+                                                });
+                                            },
+                                            error: function () {
+                                                Swal.fire('Error', 'Payment and customer details could not be saved. Please try again.', 'error');
+                                            }
+                                        });
+                                    } else {
+                                        Swal.fire('Error', 'Payment failed. Please try again.', 'error');
+                                    }
+                                },
+                                error: function () {
+                                    Swal.fire('Error', 'Payment failed due to a network issue.', 'error');
+                                }
+                            });
+                        },
+                        "theme": { "color": "#528FF0" }
                     };
 
                     const rzp = new Razorpay(options);
@@ -2183,55 +2243,10 @@ document.addEventListener("DOMContentLoaded", function () {
             form.reportValidity();
         }
     });
-// Populate order summary with cart items
-function populateOrderSummary() {
-    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    let totalAmount = 0;
+});
 
-    if (cartItems.length === 0) {
-        orderSummaryContainer.innerHTML = "<p>Your cart is empty.</p>";
-        totalAmountValue.textContent = "0";
-    } else {
-        orderSummaryContainer.innerHTML = cartItems.map(item => {
-            const quantity = parseInt(item.quantity, 10);
-            const price = parseFloat(item.price);
-
-            if (isNaN(quantity) || isNaN(price)) {
-                console.error("Invalid cart item:", item);
-                return `<p style="color: red;">Invalid item data</p>`;
-            }
-
-            const itemTotal = quantity * price;
-            totalAmount += itemTotal;
-
-            // Ensure size is valid and NOT "N/A" (case insensitive, trimmed)
-            let sizeDisplay = "";
-            if (item.size && item.size.trim().toLowerCase() !== "n/a") {
-                sizeDisplay = `<p>Size: ${item.size}</p>`;
-            }
-
-            return `
-                <div class="order-item">
-                    <div class="item-details">
-                        <span>${item.title}</span>
-                        <span>${quantity} x ₹${price.toFixed(2)}</span>
-                        ${sizeDisplay} <!-- Only shows if size is valid -->
-                    </div>
-                    <div class="item-total">
-                        ₹${itemTotal.toFixed(2)}
-                    </div>
-                </div>
-            `;
-        }).join("");
-
-        totalAmountValue.textContent = totalAmount.toFixed(2);
-    }
-}
-
-
-
-    });
 </script>
+
 
 
 
@@ -3394,7 +3409,8 @@ stateDistrictMap = {
         <!-- JavaScript Libraries -->
        
 
-  <script>document.querySelectorAll('.product-slider').forEach((slider) => {
+  <script>
+  document.querySelectorAll('.product-slider').forEach((slider) => {
     const prevButton = slider.querySelector('.prev');
     const nextButton = slider.querySelector('.next');
     const sliderContainer = slider.querySelector('.slider-container');
@@ -3490,170 +3506,168 @@ stateDistrictMap = {
 </script>
 
 <script>
-
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
     document.addEventListener('DOMContentLoaded', function () {
-    const cartBtn = document.getElementById('cart-btn');
-    const cartModal = document.getElementById('cart-modal');
-    const cartClose = document.getElementById('cart-close');
-    const cartItemsContainer = document.getElementById('cart-items-container');
-    const emptyCartMessage = document.getElementById('empty-cart-message');
-    const checkoutButton = document.getElementById('proceed-to-checkout');
-    const cartNotification = document.createElement('div');
-    
-    // Add the notification div to the document
-    cartNotification.classList.add('cart-notification');
-    document.body.appendChild(cartNotification);
+        const cartBtn = document.getElementById('cart-btn');
+        const cartModal = document.getElementById('cart-modal');
+        const cartClose = document.getElementById('cart-close');
+        const cartItemsContainer = document.getElementById('cart-items-container');
+        const emptyCartMessage = document.getElementById('empty-cart-message');
+        const checkoutButton = document.getElementById('proceed-to-checkout');
+        const cartNotification = document.createElement('div');
+        
+        // Add notification div
+        cartNotification.classList.add('cart-notification');
+        document.body.appendChild(cartNotification);
 
-    // Array to store cart items
-    // Function to show a notification message
-    function showNotification(message) {
-        cartNotification.textContent = message;
-        cartNotification.classList.add('show');
-        setTimeout(() => {
-            cartNotification.classList.remove('show');
-        }, 2000);
-    }
+        // Function to show a notification message
+        function showNotification(message) {
+            cartNotification.textContent = message;
+            cartNotification.classList.add('show');
+            setTimeout(() => {
+                cartNotification.classList.remove('show');
+            }, 2000);
+        }
 
-    // Function to update the cart display in the modal
-    function updateCartDisplay() {
-        if (cartItems.length === 0) {
-            cartItemsContainer.innerHTML = ''; // Clear the cart items
-            emptyCartMessage.style.display = 'block';
-            checkoutButton.style.display = 'none'; // Hide checkout button
-        } else {
-            emptyCartMessage.style.display = 'none'; // Hide empty cart message
-            cartItemsContainer.innerHTML = cartItems.map((item, index) => `
-                <div class="cart-item row position-relative">
-                    <!-- Image -->
-                    <div class="col-3">
-                        <img src="${item.image}" alt="${item.title}" class="cart-item-image img-fluid">
-                    </div>
-
-                    <!-- Title, Description, Price -->
-                    <div class="col-8">
-                        <div class="cart-item-info">
-                            <h5 class="cart-item-title" style="text-align:left">${item.title}</h5>
-                             <p class="cart-item-description" style="text-align:left">${item.description}</p>
-                        ${item.size && item.size !== "N/A" ? `<span class="cart-item-size"><strong>Size:</strong> ${item.size}</span>` : ""}
-                        <span class="cart-item-price">₹ ${item.price}</span>
-                        </div>
-                    </div>
-                    <!-- Remove Button and Quantity Controls -->
-                    <div class="col-1">
-                        <!-- Remove Button -->
-                        <div class="position-absolute top-0 end-0 p-2">
-                            <button class="btn btn-danger" onclick="removeItem(${index})">
-                                <i class="fa fa-trash"></i>
-                            </button>
+        // Function to update the cart display in the modal
+        function updateCartDisplay() {
+            if (cartItems.length === 0) {
+                cartItemsContainer.innerHTML = ''; 
+                emptyCartMessage.style.display = 'block';
+                checkoutButton.style.display = 'none'; 
+            } else {
+                emptyCartMessage.style.display = 'none'; 
+                cartItemsContainer.innerHTML = cartItems.map((item, index) => `
+                    <div class="cart-item row position-relative">
+                        <div class="col-3">
+                            <img src="${item.image}" alt="${item.title}" class="cart-item-image img-fluid">
                         </div>
 
-                        <!-- Quantity Controls -->
-                        <div class="position-absolute bottom-0 end-0 p-2">
-                            <div class="input-group">
-                                <button class="btn btn-outline-secondary btn-decrement" onclick="decrementQuantity(${index})">-</button>
-                                <input id="quantity-${index}" style="width:45px;padding:4px 8px;" value="${item.quantity}" min="1" class="form-control quantity-input" readonly />
-                                <button class="btn btn-outline-secondary btn-increment" onclick="incrementQuantity(${index})">+</button>
+                        <div class="col-8">
+                            <div class="cart-item-info">
+                                <h5 class="cart-item-title" style="text-align:left">${item.title}</h5>
+                                <p class="cart-item-description" style="text-align:left">${item.description}</p>
+                                ${item.size && item.size !== "N/A" ? `<span class="cart-item-size"><strong>Size:</strong> ${item.size}</span>` : ""}
+                                <p><span class="cart-item-price" style="text-align:left">₹ ${item.price}</span><strong>Weight:</strong> ${item.weight * item.quantity}g
+                                </p>
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-1">
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <button class="btn btn-danger" onclick="removeItem(${index})">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+
+                            <div class="position-absolute bottom-0 end-0 p-2">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-secondary btn-decrement" onclick="decrementQuantity(${index})">-</button>
+                                    <input id="quantity-${index}" style="width:45px;padding:4px 8px;" value="${item.quantity}" min="1" class="form-control quantity-input" readonly />
+                                    <button class="btn btn-outline-secondary btn-increment" onclick="incrementQuantity(${index})">+</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            `).join('');
-            checkoutButton.style.display = 'block'; // Show checkout button
+                `).join('');
+                checkoutButton.style.display = 'block'; 
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            document.getElementById('cart-count').textContent = cartItems.length;
         }
 
-        // Save the updated cart to localStorage
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        // Function to add an item to the cart
+        function addItemToCart(item) {
+            const existingItem = cartItems.find(cartItem => cartItem.title === item.title);
+            if (existingItem) {
+                showNotification('The product is already in the cart.');
+                return;
+            }
 
-        // Update cart count in the cart button
-        document.getElementById('cart-count').textContent = cartItems.length;
-    }
-
-    // Function to add an item to the cart
-    function addItemToCart(item) {
-        // Check if the product already exists in the cart
-        const existingItem = cartItems.find(cartItem => cartItem.title === item.title);
-        if (existingItem) {
-            showNotification('The product you are trying to add is already in the cart. Please check it out.');
-            return;
-        }
-
-        // If the item doesn't exist, add it to the cart
-        item.quantity = item.quantity || 1; // Set default quantity to 1
-        cartItems.push(item);
-        updateCartDisplay(); // Update cart display and cart count
-        showNotification('Product added to the cart successfully!');
-        cartModal.classList.add('open');
-    }
-   
-    // Function to remove an item from the cart
-    window.removeItem = function (index) {
-        cartItems.splice(index, 1);
-        updateCartDisplay();
-    };
-
-    // Function to increment quantity
-    window.incrementQuantity = function (index) {
-        if (cartItems[index].quantity < 100) { // Check if quantity is less than 100
-            cartItems[index].quantity++;
+            item.quantity = item.quantity || 1; 
+            cartItems.push(item);
             updateCartDisplay();
+            showNotification('Product added to the cart successfully!');
+            cartModal.classList.add('open');
         }
-    };
 
-    // Function to decrement quantity
-    window.decrementQuantity = function (index) {
-        if (cartItems[index].quantity > 1) { // Ensure quantity does not go below 1
-            cartItems[index].quantity--;
+        // Function to remove an item
+        window.removeItem = function (index) {
+            cartItems.splice(index, 1);
             updateCartDisplay();
-        }
-    };
+        };
 
-    // Open the cart modal
-    cartBtn.addEventListener('click', () => {
-        cartModal.classList.remove('close');
-        cartModal.classList.add('open');
-        updateCartDisplay();
-    });
+        // Function to increment quantity
+        window.incrementQuantity = function (index) {
+            if (cartItems[index].quantity < 100) {
+                cartItems[index].quantity++;
+                updateCartDisplay();
+            }
+        };
 
-    // Close the cart modal
-    cartClose.addEventListener('click', () => {
-        cartModal.classList.remove('open');
-        cartModal.classList.add('close');
-    });
+        // Function to decrement quantity
+        window.decrementQuantity = function (index) {
+            if (cartItems[index].quantity > 1) {
+                cartItems[index].quantity--;
+                updateCartDisplay();
+            }
+        };
 
-    // Handle "Add to Cart" button click
-    document.querySelectorAll('.aadd-to-cart').forEach(button => {
-        button.addEventListener('click', function () {
-            const productCard = this.closest('.aproduct-card');
-            const productTitle = productCard.querySelector('.aproduct-title').textContent;
-            const descriptionText = productCard.querySelector('.aproduct-description').innerHTML;
-            const productSizeMatch = descriptionText.match(/<span>(.*?)<\/span>/);
-            const productSize = productSizeMatch ? productSizeMatch[1] : "N/A";
-            const productDescription = descriptionText.split('<br>')[0].trim();
-            const descriptionHTML = productCard.querySelector('.aproduct-description').innerHTML;
-
-// Extract price without size
-            const cleanedDescription = descriptionHTML.replace(/<span>.*?<\/span>/, '').trim();
-            const productPrice = cleanedDescription.split('₹')[1].trim();
-            const productImage = productCard.querySelector('.aproduct-image').src;
-
-            addItemToCart({
-                title: productTitle,
-                description: productDescription,
-                price: productPrice,
-                image: productImage,
-                size: productSize
-});
-
+        // Open cart modal
+        cartBtn.addEventListener('click', () => {
+            cartModal.classList.remove('close');
+            cartModal.classList.add('open');
+            updateCartDisplay();
         });
+
+        // Close cart modal
+        cartClose.addEventListener('click', () => {
+            cartModal.classList.remove('open');
+            cartModal.classList.add('close');
+        });
+
+        // Handle "Add to Cart" button click
+        document.querySelectorAll('.aadd-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+                const productCard = this.closest('.aproduct-card');
+                const productTitle = productCard.querySelector('.aproduct-title').textContent;
+                const descriptionText = productCard.querySelector('.aproduct-description').innerHTML;
+                const productSizeMatch = descriptionText.match(/<b>Size:<\/b>\s*([\w\s]+)/);
+const productSize = productSizeMatch ? productSizeMatch[1] : "N/A";
+
+const weightMatch = descriptionText.match(/<b>Weight:<\/b>\s*(\d+)g/);
+const productWeight = weightMatch ? parseInt(weightMatch[1]) : 0;
+
+
+                const productDescription = descriptionText.split('<br>')[0].trim();
+                const descriptionHTML = productCard.querySelector('.aproduct-description').innerHTML;
+                
+                const cleanedDescription = descriptionHTML.replace(/<span>.*?<\/span>/, '').trim();
+                const productPrice = cleanedDescription.split('₹')[1].trim();
+                const productImage = productCard.querySelector('.aproduct-image').src;
+                
+               
+
+                addItemToCart({
+                    title: productTitle,
+                    description: productDescription,
+                    price: productPrice,
+                    image: productImage,
+                    size: productSize,
+                    weight: productWeight
+                });
+
+            });
+        });
+
+        // Load cart from localStorage
+        updateCartDisplay();
     });
-
-    // Load the cart from localStorage on page load
-    updateCartDisplay();
-});
-
 </script>
+
 
 
 <style>

@@ -2025,11 +2025,10 @@ document.addEventListener("DOMContentLoaded", function () {
                                             qty: cartItems.map(item => item.quantity).join(', '),
                                             size: cartItems.map(item => item.size).join(', '),
                                             weight: cartItems.map(item => (parseFloat(item.weight) * parseInt(item.quantity))).join(', ') + ',' + cartItems.reduce((total, item) => total + (parseFloat(item.weight) * parseInt(item.quantity)), 0),
-                                            price: cartItems.map(item => (parseFloat(item.price) * parseInt(item.quantity))).join(', ') + ',' + cartItems.reduce((total, item) => total + (parseFloat(item.price) * parseInt(item.quantity)), 0),
+                                            price: cartItems.map(item => (parseFloat(item.price) * parseInt(item.quantity))).join(', ') + ',' + (cartItems.reduce((total, item) => total + (parseFloat(item.price) * parseInt(item.quantity)), 0) + parseFloat(shippingChargeValue.textContent)),
                                             paymentstatus: 'success',
                                             orderdate: new Date().toISOString().slice(0, 19).replace('T', ' '),
                                         };
-
                                         $.ajax({
                                             url: 'save-customer.php',
                                             type: 'POST',
@@ -3201,13 +3200,13 @@ stateDistrictMap = {
             <nav class="aproduct-navs wow fadeInUp" data-wow-delay="0.2s">
                 <ul class="nav-tabss">
                     <li class="nav-items active" data-category="all">All</li>
-                    <li class="nav-items" data-category="Cotton Towels">Cotton Towels</li>
-                    <li class="nav-items" data-category="Cushion Covers">Cushion Covers</li>
-                    <li class="nav-items" data-category="Table Covers">Table Covers</li>
-                    <li class="nav-items" data-category="Cotton Bedsheets">Cotton Bedsheets</li>
+                    <li class="nav-items" data-category="Jablas">Jablas</li>
+                    <li class="nav-items" data-category="Napkins">Napkins & Wipes</li>
+                    <li class="nav-items" data-category="Swaddles">Towels/Swaddles</li>
+                    <!-- <li class="nav-items" data-category="Cotton Bedsheets">Cotton Bedsheets</li>
                     <li class="nav-items" data-category="Bed Quilts">Bed Quilts</li>
                     <li class="nav-items" data-category="Cosmetic Pouch">Cosmetic Pouch</li>
-                    <li class="nav-items" data-category="Travel Pouch">Travel Pouch</li>
+                    <li class="nav-items" data-category="Travel Pouch">Travel Pouch</li> -->
                 </ul>
             </nav>
         <div class="wow fadeInUp" data-wow-delay="0.3s">
@@ -3215,15 +3214,17 @@ stateDistrictMap = {
                 <div class="aproduct-grid" id="all-products">
                     <!-- All products will be appended here -->
                 </div>
-                <div class="aproduct-grid hidden" id="Cotton Towels">
-                    <div class="aproduct-card  ">
-                        <a href="product1.html" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" alt="Product 1" class="aproduct-image">
+                <div class="aproduct-grid hidden" id="Jablas">
+                    <div class="aproduct-card" id="baby1">
+                        <a href="products/baby/product1.php" class="product-link">
+                            <img src="productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels1</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches) <br>₹ 1/ Piece 
-                            <span><b>Weight:</b> 250g/peice</span></p>  
+                            <h3 class="aproduct-title">Organic Cotton Muslin Jabla</h3>
+                            <p class="aproduct-description">Pack of 5 sleeveless snap-button jablas with cute prints.<br>₹ 599/ Piece 
+                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Size:</b> 0 to 3 months</span></p>  
+                            
 
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
@@ -3231,130 +3232,240 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  " >
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" alt="Product 1" class="aproduct-image">
+                    <div class="aproduct-card  " id="baby2">
+                        <a href="products/baby/product2.php" class="product-link">
+                            <img src="productimgs/baby/jabla/p2/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels2</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 1/ Piece</p>                    
+                            <h3 class="aproduct-title">Organic Muslin Jabla Set</h3>
+                            <p class="aproduct-description">Soft, breathable jabla with boots & mittens for newborns.<br>₹ 299/ Piece 
+                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Size:</b> 0 to 3 months</span></p>  
+                            
+
                             <button class="aadd-to-cart">
                                 <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card " >
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels3</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="aproduct-card  " >
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels4</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="aproduct-card  " >
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels5</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="aproduct-card  ">
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels6</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                   
                 </div>
         
-                <div class="aproduct-grid hidden" id="cushion-cover">
+            <div class="aproduct-grid hidden" id="Napkins">
+                <div class="aproduct-card  " id="baby3">
+                        <a href="products/baby/product3.php" class="product-link">
+                            <img src="productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Organic Baby Washcloths – 6 Pack</h3>
+                            <p class="aproduct-description">Soft, reusable 16x16" napkins with cute prints.<br>₹ 299/ Piece 
+                            <span><b>Weight:</b> 250g-6 peice</span><br>
+                            <span><b>Size:</b>1 to 3 years</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby4">
+                        <a href="products/baby/product4.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p9/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Organic Muslin Baby Wipes – 12 Pack</h3>
+                            <p class="aproduct-description">Soft, absorbent, reusable 10x10" wipes.<br>₹ 249/ Set 
+                            <span><b>Weight:</b> 500g-12 peice</span><br>
+                            <span><b>Size:</b>0 to 3 years</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
                     <!-- Similar structure for Cushion Cover products -->
-                </div>
+            </div>
         
-                <div class="aproduct-grid hidden" id="table-runner">
-                    <!-- Similar structure for Table Runner products -->
+            <div class="aproduct-grid hidden" id="Swaddles">
+                <div class="aproduct-card  " id="baby5">
+                        <a href="products/baby/product5.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p3/main1.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Organic Muslin Swaddle</h3>
+                            <p class="aproduct-description">Ultra-soft sunflower print towel for all ages.<br>₹ 249/ Piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b>All age</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
                 </div>
-        
-                <div class="aproduct-grid hidden" id="bath-towels">
-                    <!-- Similar structure for Bath Towels products -->
+                <div class="aproduct-card  " id="baby6">
+                        <a href="products/baby/product6.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p1/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Cotton Muslin Swaddle–Pack of 2</h3>
+                            <p class="aproduct-description">Soft 120x100 cm swaddles with floral prints for babies.<br>₹ 499/ Set 
+                            <span><b>Weight:</b> 300g/peice</span><br>
+                            <span><b>Size:</b>0 to 2 years</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby7">
+                        <a href="products/baby/product7.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Organic Muslin Swaddle-120x100 cm </h3>
+                            <p class="aproduct-description">Ultra-soft brown floral towel for babies, toddlers & adults.<br>₹ 249/piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b>All ages</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby8">
+                        <a href="products/baby/product8.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p4/main1.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Organic Muslin Towel – Rainbow Print </h3>
+                            <p class="aproduct-description">Ultra-soft 120x100 cm towel for babies, toddlers & adults.<br>₹ 249/piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b>All ages</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby9">
+                        <a href="products/baby/product9.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p7/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Cotton Muslin Swaddle – 6 Pack </h3>
+                            <p class="aproduct-description">Ultra-soft solid blue swaddles for babies<br>₹ 399/set 
+                            <span><b>Weight:</b> 1000g/set</span><br>
+                            <span><b>Size:</b>0 to 18 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby10">
+                        <a href="products/baby/product10.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Printed Muslin Baby Swaddle – Pack of 6 </h3>
+                            <p class="aproduct-description">Soft 70x70 cm swaddles with cute animal & fruit prints<br>₹ 699/Set 
+                            <span><b>Weight:</b> 1000g/Set</span><br>
+                            <span><b>Size:</b>0 to 3 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby11">
+                        <a href="products/baby/product11.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Muslin Baby Swaddle/Towel – 3 Pack </h3>
+                            <p class="aproduct-description">Soft swaddles with floral, rainbow & sunflower prints<br>₹ 599/set 
+                            <span><b>Weight:</b> 1000g/set</span><br>
+                            <span><b>Size:</b>0 to 24 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby12">
+                        <a href="products/baby/product12.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p12/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Bamboo Cotton Muslin Swaddle</h3>
+                            <p class="aproduct-description">Ultra-soft, breathable mustard yellow swaddle<br>₹ 499/Piece 
+                            <span><b>Weight:</b> 300g/piece</span><br>
+                            <span><b>Size:</b>0 to 18 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby13">
+                        <a href="products/baby/product13.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p8/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Muslin Baby Swaddle – 2 Pack</h3>
+                            <p class="aproduct-description">Soft swaddles with rainbow & parachute prints.<br>₹ 499/Piece 
+                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Size:</b>0 to 18 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby14">
+                        <a href="products/baby/product14.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Muslin Swaddle – 2 Pack</h3>
+                            <p class="aproduct-description">Soft swaddles with brown floral & rainbow prints.<br>₹ 499/Piece 
+                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Size:</b>0 to 24 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
                 </div>
             </div>
-            <div class="aproduct-container" >
-                <div class="aproduct-grid hidden" id="Cushion Covers">
-                    <div class="aproduct-card" >
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="aproduct-card" >
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    
-                   
-                </div>
-        
-                <div class="aproduct-grid hidden" id="cushion-cover">
-                    <!-- Similar structure for Cushion Cover products -->
-                </div>
-        
-                <div class="aproduct-grid hidden" id="table-runner">
-                    <!-- Similar structure for Table Runner products -->
-                </div>
-        
-                <div class="aproduct-grid hidden" id="bath-towels">
-                    <!-- Similar structure for Bath Towels products -->
-                </div>
-            </div></div>
+
+            
+            </div>
+           
+        </div>
         </section>
 
         <img src="img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" style="object-fit: fill;" data-wow-delay="0.1s">
@@ -3370,15 +3481,17 @@ stateDistrictMap = {
                 </div>				
             </div>
             <div class="slider-container">
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                <div class="product-card aproduct-card wow fadeInUp" id="baby14" data-wow-delay="0.3s">
                     <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products/baby/product14.php" class="product-link">
+                        <img src="productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 1</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                        <h3 class="product-title aproduct-title">Muslin Swaddle – 2 Pack</h3>
+                        <p class="product-description aproduct-description">Swaddles-brown floral & rainbow prints.<br>₹ 499/Piece 
+                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Size:</b>0 to 24 months</span></p>  
                                              
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3390,15 +3503,18 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.5s">
+                
+                <div class="product-card aproduct-card wow fadeInUp" id="baby10" data-wow-delay="0.5s">
                     <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products/baby/product10.php" class="product-link">
+                        <img src="productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 2</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                        <h3 class="product-title aproduct-title">Printed Muslin Baby Swaddle – Pack(6) </h3>
+                        <p class="product-description aproduct-description">Soft swaddles with cute animal & fruit prints<br>₹ 699/Set 
+                            <span><b>Weight:</b> 1000g/Set</span><br>
+                            <span><b>Size:</b>0 to 3 months</span></p> 
                                              
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3410,15 +3526,17 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.7s">
+                <div class="product-card aproduct-card wow fadeInUp" id="baby1" data-wow-delay="0.7s">
                     <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products/baby/product1.php" class="product-link">
+                        <img src="productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 3</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                        <h3 class="product-title aproduct-title">Organic Cotton Muslin Jabla</h3>
+                        <p class="product-description aproduct-description">Pack of 5 sleeveless snap-button jablas.<br>₹ 599/ Piece 
+                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Size:</b> 0 to 3 months</span></p>
                                              
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3430,15 +3548,17 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.9s">
+                <div class="product-card aproduct-card wow fadeInUp" id="baby3" data-wow-delay="0.9s">
                     <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products/baby/product3.php" class="product-link">
+                        <img src="productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 4</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                        <h3 class="product-title aproduct-title">Organic Baby Washcloths</h3>
+                        <p class="product-description aproduct-description">Soft, reusable napkins with cute prints.<br>₹ 299/ Piece 
+                            <span><b>Weight:</b> 250g-6 peice</span><br>
+                            <span><b>Size:</b>1 to 3 years</span></p>
                                              
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3450,15 +3570,17 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                <div class="product-card aproduct-card wow fadeInUp" id="baby6" data-wow-delay="0.3s">
                     <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products/baby/product6.php" class="product-link">
+                        <img src="productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 5</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                        <h3 class="product-title aproduct-title"> Organic Muslin Swaddle</h3>
+                        <p class="product-description aproduct-description">Ultra-soft brown floral towel for all ages.<br>₹ 249/piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b>All ages</span></p>
                                              
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3470,15 +3592,17 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                <div class="product-card aproduct-card wow fadeInUp" id="baby11" data-wow-delay="0.3s">
                     <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products/baby/product11.php" class="product-link">
+                        <img src="productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 6</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                        <h3 class="product-title aproduct-title"> Muslin Baby Swaddle</h3>
+                        <p class="product-description aproduct-description">Swaddles- floral, rainbow & sunflower prints<br>₹ 599/set 
+                            <span><b>Weight:</b> 1000g/set</span><br>
+                            <span><b>Size:</b>0 to 24 months</span></p>  
                                              
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3502,7 +3626,7 @@ stateDistrictMap = {
             <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
                 <!-- News & Events Section Title -->
                 <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px; height:auto;">
-                    <h5 class="fw-bold text-primary text-uppercase">Best Sellers</h5>    
+                    <h5 class="fw-bold text-primary text-uppercase">New Arrivals</h5>    
                     <!-- Blue bar container -->
                     <div class="blue-bar">
                         <div class="moving-box"></div>  <!-- Small white rectangle -->
@@ -3510,15 +3634,17 @@ stateDistrictMap = {
                 </div>				
             </div>
             <div class="slider-container">
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                <div class="product-card aproduct-card wow fadeInUp" id="baby14" data-wow-delay="0.3s">
                     <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products/baby/product14.php" class="product-link">
+                        <img src="productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 1</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                        <h3 class="product-title aproduct-title">Muslin Swaddle – 2 Pack</h3>
+                        <p class="product-description aproduct-description">Swaddles-brown floral & rainbow prints.<br>₹ 499/Piece 
+                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Size:</b>0 to 24 months</span></p>  
                                              
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3530,15 +3656,18 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.5s">
+                
+                <div class="product-card aproduct-card wow fadeInUp" id="baby10" data-wow-delay="0.5s">
                     <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products/baby/product10.php" class="product-link">
+                        <img src="productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 2</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                        <h3 class="product-title aproduct-title">Printed Muslin Baby Swaddle – Pack(6) </h3>
+                        <p class="product-description aproduct-description">Soft swaddles with cute animal & fruit prints<br>₹ 699/Set 
+                            <span><b>Weight:</b> 1000g/Set</span><br>
+                            <span><b>Size:</b>0 to 3 months</span></p> 
                                              
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3550,15 +3679,17 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.7s">
+                <div class="product-card aproduct-card wow fadeInUp" id="baby1" data-wow-delay="0.7s">
                     <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products/baby/product1.php" class="product-link">
+                        <img src="productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 3</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                        <h3 class="product-title aproduct-title">Organic Cotton Muslin Jabla</h3>
+                        <p class="product-description aproduct-description">Pack of 5 sleeveless snap-button jablas.<br>₹ 599/ Piece 
+                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Size:</b> 0 to 3 months</span></p>
                                              
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3570,15 +3701,17 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.9s">
+                <div class="product-card aproduct-card wow fadeInUp" id="baby3" data-wow-delay="0.9s">
                     <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products/baby/product3.php" class="product-link">
+                        <img src="productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 4</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                        <h3 class="product-title aproduct-title">Organic Baby Washcloths</h3>
+                        <p class="product-description aproduct-description">Soft, reusable napkins with cute prints.<br>₹ 299/ Piece 
+                            <span><b>Weight:</b> 250g-6 peice</span><br>
+                            <span><b>Size:</b>1 to 3 years</span></p>
                                              
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3590,15 +3723,17 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                <div class="product-card aproduct-card wow fadeInUp" id="baby6" data-wow-delay="0.3s">
                     <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products/baby/product6.php" class="product-link">
+                        <img src="productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 5</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                        <h3 class="product-title aproduct-title"> Organic Muslin Swaddle</h3>
+                        <p class="product-description aproduct-description">Ultra-soft brown floral towel for all ages.<br>₹ 249/piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b>All ages</span></p>
                                              
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3610,15 +3745,17 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
+                <div class="product-card aproduct-card wow fadeInUp" id="baby11" data-wow-delay="0.3s">
                     <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products/baby/product11.php" class="product-link">
+                        <img src="productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 6</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
+                        <h3 class="product-title aproduct-title"> Muslin Baby Swaddle</h3>
+                        <p class="product-description aproduct-description">Swaddles- floral, rainbow & sunflower prints<br>₹ 599/set 
+                            <span><b>Weight:</b> 1000g/set</span><br>
+                            <span><b>Size:</b>0 to 24 months</span></p>  
                                              
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -4121,7 +4258,7 @@ stateDistrictMap = {
         const emptyCartMessage = document.getElementById('empty-cart-message');
         const checkoutButton = document.getElementById('proceed-to-checkout');
         const cartNotification = document.createElement('div');
-        
+
         // Add notification div
         cartNotification.classList.add('cart-notification');
         document.body.appendChild(cartNotification);
@@ -4148,25 +4285,24 @@ stateDistrictMap = {
                         <div class="col-3">
                             <img src="${item.image}" alt="${item.title}" class="cart-item-image img-fluid">
                         </div>
-
                         <div class="col-8">
                             <div class="cart-item-info">
-                                <h5 class="cart-item-title" style="text-align:left">${item.title}</h5>
-                                <p class="cart-item-description" style="text-align:left">${item.description}</p>
+                                <h5 class="cart-item-title">${item.title}</h5>
+                                <p class="cart-item-description">${item.description}</p>
                                 ${item.size && item.size !== "N/A" ? `<span class="cart-item-size"><strong>Size:</strong> ${item.size}</span>` : ""}
-                                <p><span class="cart-item-price" style="text-align:left">₹ ${item.price}</span>&nbsp&nbsp<span style="color:black;"><strong>Weight:</strong> ${item.weight * item.quantity}g</span>
+                                <p>
+                                    <span class="cart-item-price">₹ ${item.price}</span>
+                                    &nbsp&nbsp
+                                    <span><strong>Weight:</strong> ${item.weight * item.quantity}g</span>
                                 </p>
-                                
                             </div>
                         </div>
-
                         <div class="col-1">
                             <div class="position-absolute top-0 end-0 p-2">
                                 <button class="btn btn-danger" onclick="removeItem(${index})">
                                     <i class="fa fa-trash"></i>
                                 </button>
                             </div>
-
                             <div class="position-absolute bottom-0 end-0 p-2">
                                 <div class="input-group">
                                     <button class="btn btn-outline-secondary btn-decrement" onclick="decrementQuantity(${index})">-</button>
@@ -4186,13 +4322,13 @@ stateDistrictMap = {
 
         // Function to add an item to the cart
         function addItemToCart(item) {
-            const existingItem = cartItems.find(cartItem => cartItem.title === item.title);
+            const existingItem = cartItems.find(cartItem => cartItem.id === item.id);
             if (existingItem) {
                 showNotification('The product is already in the cart.');
                 return;
             }
 
-            item.quantity = item.quantity || 1; 
+            item.quantity = item.quantity || 1;
             cartItems.push(item);
             updateCartDisplay();
             showNotification('Product added to the cart successfully!');
@@ -4238,25 +4374,29 @@ stateDistrictMap = {
         document.querySelectorAll('.aadd-to-cart').forEach(button => {
             button.addEventListener('click', function () {
                 const productCard = this.closest('.aproduct-card');
+                const productId = productCard.id; // Unique product ID from card
                 const productTitle = productCard.querySelector('.aproduct-title').textContent;
                 const descriptionText = productCard.querySelector('.aproduct-description').innerHTML;
-                const productSizeMatch = descriptionText.match(/<b>Size:<\/b>\s*([\w\s]+)/);
-const productSize = productSizeMatch ? productSizeMatch[1] : "N/A";
+                
+                // Extract size correctly
+                const productSizeMatch = descriptionText.match(/<b>Size:<\/b>\s*([^<]+)/);
+                const productSize = productSizeMatch ? productSizeMatch[1].trim() : "N/A";
 
-const weightMatch = descriptionText.match(/<b>Weight:<\/b>\s*(\d+)g/);
-const productWeight = weightMatch ? parseInt(weightMatch[1]) : 0;
+                // Extract weight correctly
+                const weightMatch = descriptionText.match(/<b>Weight:<\/b>\s*(\d+)\s*g/);
+                const productWeight = weightMatch ? parseInt(weightMatch[1]) : 0;
 
-
+                // Extract price correctly
+                const priceMatch = descriptionText.match(/₹\s*([\d]+)/);
+                const productPrice = priceMatch ? priceMatch[1] : "0";
                 const productDescription = descriptionText.split('<br>')[0].trim();
                 const descriptionHTML = productCard.querySelector('.aproduct-description').innerHTML;
                 
                 const cleanedDescription = descriptionHTML.replace(/<span>.*?<\/span>/, '').trim();
-                const productPrice = cleanedDescription.split('₹')[1].trim();
                 const productImage = productCard.querySelector('.aproduct-image').src;
-                
-               
 
                 addItemToCart({
+                    id: productId, // Unique ID for each product
                     title: productTitle,
                     description: productDescription,
                     price: productPrice,
@@ -4264,7 +4404,6 @@ const productWeight = weightMatch ? parseInt(weightMatch[1]) : 0;
                     size: productSize,
                     weight: productWeight
                 });
-
             });
         });
 
@@ -4272,6 +4411,7 @@ const productWeight = weightMatch ? parseInt(weightMatch[1]) : 0;
         updateCartDisplay();
     });
 </script>
+
 
 
 <style>

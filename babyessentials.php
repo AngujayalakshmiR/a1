@@ -4287,8 +4287,8 @@ stateDistrictMap = {
                         </div>
                         <div class="col-8">
                             <div class="cart-item-info">
-                                <h5 class="cart-item-title">${item.title}</h5>
-                                <p class="cart-item-description">${item.description}</p>
+                                <h5 class="cart-item-title" style="text-align:left">${item.title}</h5>
+                                <p class="cart-item-description" style="text-align:left">${item.description}</p>
                                 ${item.size && item.size !== "N/A" ? `<span class="cart-item-size"><strong>Size:</strong> ${item.size}</span>` : ""}
                                 <p>
                                     <span class="cart-item-price">₹ ${item.price}</span>

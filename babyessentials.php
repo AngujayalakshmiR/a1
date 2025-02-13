@@ -3215,8 +3215,9 @@ stateDistrictMap = {
                     <!-- All products will be appended here -->
                 </div>
                 <div class="aproduct-grid hidden" id="Jablas">
-                    <div class="aproduct-card" id="baby1">
-                        <a href="./products/baby/product1.php" class="product-link">
+                    
+                    <div class="aproduct-card" id="baby_jablas_p1">
+                        <a href="./products/baby/jablas/p1.php" class="product-link">
                             <img src="productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3232,8 +3233,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  " id="baby2">
-                        <a href="product2.php" class="product-link">
+                    <div class="aproduct-card  " id="baby_jablas_p2">
+                        <a href="./products/baby/jablas/p2.php" class="product-link">
                             <img src="productimgs/baby/jabla/p2/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3252,8 +3253,8 @@ stateDistrictMap = {
                 </div>
         
             <div class="aproduct-grid hidden" id="Napkins">
-                <div class="aproduct-card  " id="baby3">
-                        <a href="products/baby/product3.php" class="product-link">
+                <div class="aproduct-card  " id="baby_napkins_p1">
+                        <a href="./products/baby/napkins/p1.php" class="product-link">
                             <img src="productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3269,46 +3270,13 @@ stateDistrictMap = {
                             </button>
                         </div>
                 </div>
-                <div class="aproduct-card  " id="baby4">
-                        <a href="products/baby/product4.php" class="product-link">
-                            <img src="productimgs/baby/swaddle/p9/main.jpg" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Organic Muslin Baby Wipes – 12 Pack</h3>
-                            <p class="aproduct-description">Soft, absorbent, reusable 10x10" wipes.<br>₹ 249/ Set 
-                            <span><b>Weight:</b> 500g-12 peice</span><br>
-                            <span><b>Size:</b>0 to 3 years</span></p>  
-                            
-
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                </div>
+               
                     <!-- Similar structure for Cushion Cover products -->
             </div>
         
             <div class="aproduct-grid hidden" id="Swaddles">
-                <div class="aproduct-card  " id="baby5">
-                        <a href="products/baby/product5.php" class="product-link">
-                            <img src="productimgs/baby/swaddle/p3/main1.jpg" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Organic Muslin Swaddle</h3>
-                            <p class="aproduct-description">Ultra-soft sunflower print towel for all ages.<br>₹ 249/ Piece 
-                            <span><b>Weight:</b> 250g/peice</span><br>
-                            <span><b>Size:</b>All age</span></p>  
-                            
-
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                </div>
-                <div class="aproduct-card  " id="baby6">
-                        <a href="products/baby/product6.php" class="product-link">
+                <div class="aproduct-card  " id="baby_swaddles_p1">
+                        <a href="./products/baby/swaddles/p1.php" class="product-link">
                             <img src="productimgs/baby/swaddle/p1/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3324,8 +3292,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                 </div>
-                <div class="aproduct-card  " id="baby7">
-                        <a href="products/baby/product7.php" class="product-link">
+                <div class="aproduct-card  " id="baby_swaddles_p2">
+                        <a href="./products/baby/swaddles/p2.php" class="product-link">
                             <img src="productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3341,8 +3309,27 @@ stateDistrictMap = {
                             </button>
                         </div>
                 </div>
-                <div class="aproduct-card  " id="baby8">
-                        <a href="products/baby/product8.php" class="product-link">
+                <div class="aproduct-card  " id="baby_swaddles_p3">
+                        <a href="./products/baby/swaddles/p3.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p3/main1.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Organic Muslin Swaddle</h3>
+                            <p class="aproduct-description">Ultra-soft sunflower print towel for all ages.<br>₹ 249/ Piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b>All age</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                
+                
+                <div class="aproduct-card  " id="baby_swaddles_p4">
+                        <a href="./products/baby/swaddles/p4.php" class="product-link">
                             <img src="productimgs/baby/swaddle/p4/main1.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3358,93 +3345,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                 </div>
-                <div class="aproduct-card  " id="baby9">
-                        <a href="products/baby/product9.php" class="product-link">
-                            <img src="productimgs/baby/swaddle/p7/main.jpg" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title"> Cotton Muslin Swaddle – 6 Pack </h3>
-                            <p class="aproduct-description">Ultra-soft solid blue swaddles for babies<br>₹ 399/set 
-                            <span><b>Weight:</b> 1000g/set</span><br>
-                            <span><b>Size:</b>0 to 18 months</span></p>  
-                            
-
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                </div>
-                <div class="aproduct-card  " id="baby10">
-                        <a href="products/baby/product10.php" class="product-link">
-                            <img src="productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title"> Printed Muslin Baby Swaddle – Pack of 6 </h3>
-                            <p class="aproduct-description">Soft 70x70 cm swaddles with cute animal & fruit prints<br>₹ 699/Set 
-                            <span><b>Weight:</b> 1000g/Set</span><br>
-                            <span><b>Size:</b>0 to 3 months</span></p>  
-                            
-
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                </div>
-                <div class="aproduct-card  " id="baby11">
-                        <a href="products/baby/product11.php" class="product-link">
-                            <img src="productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title"> Muslin Baby Swaddle/Towel – 3 Pack </h3>
-                            <p class="aproduct-description">Soft swaddles with floral, rainbow & sunflower prints<br>₹ 599/set 
-                            <span><b>Weight:</b> 1000g/set</span><br>
-                            <span><b>Size:</b>0 to 24 months</span></p>  
-                            
-
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                </div>
-                <div class="aproduct-card  " id="baby12">
-                        <a href="products/baby/product12.php" class="product-link">
-                            <img src="productimgs/baby/swaddle/p12/main.jpg" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title"> Bamboo Cotton Muslin Swaddle</h3>
-                            <p class="aproduct-description">Ultra-soft, breathable mustard yellow swaddle<br>₹ 499/Piece 
-                            <span><b>Weight:</b> 300g/piece</span><br>
-                            <span><b>Size:</b>0 to 18 months</span></p>  
-                            
-
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                </div>
-                <div class="aproduct-card  " id="baby13">
-                        <a href="products/baby/product13.php" class="product-link">
-                            <img src="productimgs/baby/swaddle/p8/main.jpg" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Muslin Baby Swaddle – 2 Pack</h3>
-                            <p class="aproduct-description">Soft swaddles with rainbow & parachute prints.<br>₹ 499/Piece 
-                            <span><b>Weight:</b> 1000g/piece</span><br>
-                            <span><b>Size:</b>0 to 18 months</span></p>  
-                            
-
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                </div>
-                <div class="aproduct-card  " id="baby14">
-                        <a href="products/baby/product14.php" class="product-link">
+                <div class="aproduct-card  " id="baby_swaddles_p5">
+                        <a href="./products/baby/swaddles/p5.php" class="product-link">
                             <img src="productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3460,6 +3362,111 @@ stateDistrictMap = {
                             </button>
                         </div>
                 </div>
+                <div class="aproduct-card  " id="baby_swaddles_p6">
+                        <a href="./products/baby/swaddles/p6.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Muslin Baby Swaddle/Towel – 3 Pack </h3>
+                            <p class="aproduct-description">Soft swaddles with floral, rainbow & sunflower prints<br>₹ 599/set 
+                            <span><b>Weight:</b> 1000g/set</span><br>
+                            <span><b>Size:</b>0 to 24 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby_swaddles_p7">
+                        <a href="./products/baby/swaddles/p7.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p7/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Cotton Muslin Swaddle – 6 Pack </h3>
+                            <p class="aproduct-description">Ultra-soft solid blue swaddles for babies<br>₹ 399/set 
+                            <span><b>Weight:</b> 1000g/set</span><br>
+                            <span><b>Size:</b>0 to 18 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby_swaddles_p8">
+                        <a href="./products/baby/swaddles/p8.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p8/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Muslin Baby Swaddle – 2 Pack</h3>
+                            <p class="aproduct-description">Soft swaddles with rainbow & parachute prints.<br>₹ 499/Piece 
+                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Size:</b>0 to 18 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby_swaddles_p9">
+                        <a href="./products/baby/swaddles/p9.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p9/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Organic Muslin Baby Wipes – 12 Pack</h3>
+                            <p class="aproduct-description">Soft, absorbent, reusable 10x10" wipes.<br>₹ 249/ Set 
+                            <span><b>Weight:</b> 500g-12 peice</span><br>
+                            <span><b>Size:</b>0 to 3 years</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby_swaddles_p10">
+                        <a href="./products/baby/swaddles/p10.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p10/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Printed Muslin Baby Swaddle – Pack of 6 </h3>
+                            <p class="aproduct-description">Soft 70x70 cm swaddles with cute animal & fruit prints<br>₹ 699/Set 
+                            <span><b>Weight:</b> 1000g/Set</span><br>
+                            <span><b>Size:</b>0 to 3 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+               
+                <div class="aproduct-card  " id="baby_swaddles_p11">
+                        <a href="./products/baby/swaddles/p11.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Bamboo Cotton Muslin Swaddle</h3>
+                            <p class="aproduct-description">Ultra-soft, breathable mustard yellow swaddle<br>₹ 499/Piece 
+                            <span><b>Weight:</b> 300g/piece</span><br>
+                            <span><b>Size:</b>0 to 18 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                
+               
             </div>
 
             
@@ -3481,10 +3488,10 @@ stateDistrictMap = {
                 </div>				
             </div>
             <div class="slider-container">
-                <div class="product-card aproduct-card wow fadeInUp" id="baby14" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p5" data-wow-delay="0.3s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product14.php" class="product-link">
+                    <a href="./products/baby/swaddles/p5.php" class="product-link">
                         <img src="productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -3504,14 +3511,14 @@ stateDistrictMap = {
                     </div>
                 </div>
                 
-                <div class="product-card aproduct-card wow fadeInUp" id="baby10" data-wow-delay="0.5s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p5" data-wow-delay="0.5s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product10.php" class="product-link">
+                    <a href="./products/baby/swaddles/p11.php" class="product-link">
                         <img src="productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Printed Muslin Baby Swaddle – Pack(6) </h3>
+                        <h3 class="product-title aproduct-title">Printed Muslin Baby Swaddle </h3>
                         <p class="product-description aproduct-description">Soft swaddles with cute animal & fruit prints<br>₹ 699/Set 
                             <span><b>Weight:</b> 1000g/Set</span><br>
                             <span><b>Size:</b>0 to 3 months</span></p> 
@@ -3526,10 +3533,10 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="baby1" data-wow-delay="0.7s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_jablas_p1" data-wow-delay="0.7s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product1.php" class="product-link">
+                    <a href="./products/baby/jablas/p1.php" class="product-link">
                         <img src="productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -3548,10 +3555,10 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="baby3" data-wow-delay="0.9s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_napkins_p1" data-wow-delay="0.9s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product3.php" class="product-link">
+                    <a href="./products/baby/napkins/p1.php" class="product-link">
                         <img src="productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -3570,10 +3577,10 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="baby6" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p2" data-wow-delay="0.3s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product6.php" class="product-link">
+                    <a href="./products/baby/swaddles/p2.php" class="product-link">
                         <img src="productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -3592,10 +3599,10 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="baby11" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p6" data-wow-delay="0.3s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product11.php" class="product-link">
+                    <a href="./products/baby/swaddles/p6.php" class="product-link">
                         <img src="productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -3634,10 +3641,10 @@ stateDistrictMap = {
                 </div>				
             </div>
             <div class="slider-container">
-                <div class="product-card aproduct-card wow fadeInUp" id="baby14" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p5" data-wow-delay="0.3s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product14.php" class="product-link">
+                    <a href="./products/baby/swaddles/p5.php" class="product-link">
                         <img src="productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -3657,14 +3664,14 @@ stateDistrictMap = {
                     </div>
                 </div>
                 
-                <div class="product-card aproduct-card wow fadeInUp" id="baby10" data-wow-delay="0.5s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p5" data-wow-delay="0.5s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product10.php" class="product-link">
+                    <a href="./products/baby/swaddles/p11.php" class="product-link">
                         <img src="productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Printed Muslin Baby Swaddle – Pack(6) </h3>
+                        <h3 class="product-title aproduct-title">Printed Muslin Baby Swaddle </h3>
                         <p class="product-description aproduct-description">Soft swaddles with cute animal & fruit prints<br>₹ 699/Set 
                             <span><b>Weight:</b> 1000g/Set</span><br>
                             <span><b>Size:</b>0 to 3 months</span></p> 
@@ -3679,10 +3686,10 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="baby1" data-wow-delay="0.7s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_jablas_p1" data-wow-delay="0.7s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product1.php" class="product-link">
+                    <a href="./products/baby/jablas/p1.php" class="product-link">
                         <img src="productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -3701,10 +3708,10 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="baby3" data-wow-delay="0.9s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_napkins_p1" data-wow-delay="0.9s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product3.php" class="product-link">
+                    <a href="./products/baby/napkins/p1.php" class="product-link">
                         <img src="productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -3723,10 +3730,10 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="baby6" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p2" data-wow-delay="0.3s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product6.php" class="product-link">
+                    <a href="./products/baby/swaddles/p2.php" class="product-link">
                         <img src="productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -3745,10 +3752,10 @@ stateDistrictMap = {
                         
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="baby11" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p6" data-wow-delay="0.3s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product11.php" class="product-link">
+                    <a href="./products/baby/swaddles/p6.php" class="product-link">
                         <img src="productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -3788,42 +3795,42 @@ stateDistrictMap = {
                   <!-- Video 1 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal1" autoplay loop muted>
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/baby/shortvedios/v1.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>    
                   </div>
                   <!-- Video 2 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal2" autoplay loop muted>
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/baby/shortvedios/v2.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 3 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal3" autoplay loop muted>
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/baby/shortvedios/v3.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 4 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal4" autoplay loop muted>
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/baby/shortvedios/v4.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 5 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal5" autoplay loop muted>
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/baby/shortvedios/v5.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 6 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal6" autoplay loop muted>
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/baby/shortvedios/v6.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
@@ -3839,12 +3846,12 @@ stateDistrictMap = {
                 <div class="modal-dialog modal-dialog-centered modal-sm">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel1">Video 1</h5>
+                      <h5 class="modal-title" id="videoModalLabel1"></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <video  controls autoplay loop muted class="w-100 video-height">
-                        <source src="img/videosample.mp4" type="video/mp4">
+                        <source src="productimgs/baby/shortvedios/v1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>
@@ -3859,12 +3866,12 @@ stateDistrictMap = {
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="videoModalLabel2">Video 2</h5>
+                    <h5 class="modal-title" id="videoModalLabel2"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <video controls autoplay loop muted class="w-100 video-height">
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/baby/shortvedios/v2.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
@@ -3875,12 +3882,12 @@ stateDistrictMap = {
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel3">Video 3</h5>
+                      <h5 class="modal-title" id="videoModalLabel3"></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <video controls autoplay loop muted class="w-100 video-height">
-                        <source src="img/videosample.mp4" type="video/mp4">
+                        <source src="productimgs/baby/shortvedios/v3.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>
@@ -3891,12 +3898,12 @@ stateDistrictMap = {
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel4">Video 4</h5>
+                      <h5 class="modal-title" id="videoModalLabel4"></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <video controls autoplay loop muted class="w-100 video-height">
-                        <source src="img/videosample.mp4" type="video/mp4">
+                        <source src="productimgs/baby/shortvedios/v4.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>
@@ -3907,12 +3914,12 @@ stateDistrictMap = {
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel5">Video 5</h5>
+                      <h5 class="modal-title" id="videoModalLabel5"></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <video controls autoplay loop muted class="w-100 video-height">
-                        <source src="img/videosample.mp4" type="video/mp4">
+                        <source src="productimgs/baby/shortvedios/v5.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>
@@ -3923,12 +3930,12 @@ stateDistrictMap = {
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel6">Video 6</h5>
+                      <h5 class="modal-title" id="videoModalLabel6"></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <video controls autoplay loop muted class="w-100 video-height">
-                        <source src="img/videosample.mp4" type="video/mp4">
+                        <source src="productimgs/baby/shortvedios/v6.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>

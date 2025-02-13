@@ -1,13 +1,7 @@
 <?php
 require_once 'tcpdf/tcpdf.php'; // Include the TCPDF library
 
-// Database connection
-$conn = new mysqli('localhost', 'root', '', 'bigmoon');
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'db.php';
 
 if (isset($_GET['orderid'])) {
     $orderId = intval($_GET['orderid']);

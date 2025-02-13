@@ -1,12 +1,6 @@
 .
 <?php
-// Database connection
-$conn = new mysqli('localhost', 'root', '', 'bigmoon');
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'db.php';
 
 // Fetch customer data from the query string
 $email = $_GET['email'] ?? ''; // Securely handle inputs

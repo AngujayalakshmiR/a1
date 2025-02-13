@@ -2,19 +2,7 @@
 // Include PHPExcel library
 require_once 'PHPExcel/Classes/PHPExcel.php';
 
-// Database connection
-$servername = "localhost"; // Your database server
-$username = "root";        // Your database username
-$password = "";            // Your database password
-$dbname = "bigmoon";       // Your database name
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'db.php';
 
 // Fetch data from the customer table
 $sql = "SELECT * FROM customer";

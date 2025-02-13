@@ -1,12 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-// Database connection
-$conn = new mysqli("localhost", "root", "", "bigmoon");
-
-if ($conn->connect_error) {
-    die(json_encode(["status" => "error", "message" => "Connection failed: " . $conn->connect_error]));
-}
+include 'db.php';
 
 // Generate new order ID
 $sql = "SELECT MAX(orderid) AS max_order_id FROM customer";

@@ -26,6 +26,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -797,12 +798,6 @@
     font-weight: bold;
 }
 
-
-
-
-
-
-
 /* Additional style for the close button and header */
 .cart-modal-header {
     padding: 20px;
@@ -1307,10 +1302,9 @@ video {
             text-align: center;
             font-size: 16px;
         }
-</style>
-<style>
 
 
+        
 .abutton {
   padding: 10px 20px;
   background-color: #555;
@@ -1588,7 +1582,6 @@ video {
 }
 </style>
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -3958,48 +3951,7 @@ stateDistrictMap = {
                 });
             });
         </script> -->
-        <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Function to populate "All" with all products
-    function populateAllProducts() {
-        const allProductsContainer = document.getElementById('all-products');
-        allProductsContainer.innerHTML = ''; // Clear previous content
         
-        // Collect all product grids
-        document.querySelectorAll('.aproduct-grid').forEach(grid => {
-            // Clone the grid's children (products)
-            grid.querySelectorAll('.aproduct-card').forEach(card => {
-                const clonedCard = card.cloneNode(true);
-                allProductsContainer.appendChild(clonedCard);
-            });
-        });
-    }
-
-    // Initialize the "All" products on page load
-    populateAllProducts();
-
-    // Add event listeners for navigation items
-    document.querySelectorAll('.nav-items').forEach(item => {
-        item.addEventListener('click', function() {
-            document.querySelectorAll('.nav-items').forEach(nav => nav.classList.remove('active'));
-            this.classList.add('active');
-
-            document.querySelectorAll('.aproduct-grid').forEach(grid => grid.classList.add('hidden'));
-
-            const category = this.dataset.category;
-
-            if (category === 'all') {
-                populateAllProducts();
-                document.getElementById('all-products').classList.remove('hidden');
-            } else {
-                document.getElementById(category).classList.remove('hidden');
-            }
-        });
-    });
-});
-
-
-    </script>        
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -4109,6 +4061,49 @@ stateDistrictMap = {
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
         <!-- JavaScript Libraries -->
+
+        <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to populate "All" with all products
+    function populateAllProducts() {
+        const allProductsContainer = document.getElementById('all-products');
+        allProductsContainer.innerHTML = ''; // Clear previous content
+        
+        // Collect all product grids
+        document.querySelectorAll('.aproduct-grid').forEach(grid => {
+            // Clone the grid's children (products)
+            grid.querySelectorAll('.aproduct-card').forEach(card => {
+                const clonedCard = card.cloneNode(true);
+                allProductsContainer.appendChild(clonedCard);
+            });
+        });
+    }
+
+    // Initialize the "All" products on page load
+    populateAllProducts();
+
+    // Add event listeners for navigation items
+    document.querySelectorAll('.nav-items').forEach(item => {
+        item.addEventListener('click', function() {
+            document.querySelectorAll('.nav-items').forEach(nav => nav.classList.remove('active'));
+            this.classList.add('active');
+
+            document.querySelectorAll('.aproduct-grid').forEach(grid => grid.classList.add('hidden'));
+
+            const category = this.dataset.category;
+
+            if (category === 'all') {
+                populateAllProducts();
+                document.getElementById('all-products').classList.remove('hidden');
+            } else {
+                document.getElementById(category).classList.remove('hidden');
+            }
+        });
+    });
+});
+
+
+    </script>       
     <script>
         // Get modal elements
         const modal = document.getElementById('modal');

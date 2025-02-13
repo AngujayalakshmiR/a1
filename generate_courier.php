@@ -6,11 +6,7 @@ require_once('tcpdf/tcpdf.php'); // Update the path to where you have installed 
 if (isset($_GET['orderid'])) {
     $orderid = $_GET['orderid'];
 
-    // Database connection
-    $conn = new mysqli('localhost', 'root', '', 'bigmoon'); // Update with your DB credentials
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include 'db.php';
 
     // Fetch customer details
     $sql = "SELECT * FROM customer WHERE orderid = ?";

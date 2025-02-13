@@ -1,12 +1,7 @@
 <?php
 
-// Connect to the database
-$conn = new mysqli('localhost', 'root', '', 'bigmoon');
+include 'db.php';
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Fetch the last order ID from the database
 $result = $conn->query("SELECT orderid FROM customer ORDER BY orderid DESC LIMIT 1");

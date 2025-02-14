@@ -24,11 +24,11 @@
 
     <!-- Libraries Stylesheet -->
     <link href="../../lib/animate/animate.min.css" rel="stylesheet">
-    <link href="../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/test.css" rel="stylesheet">
 <style>
     .row {
     margin-left: 0 !important;
@@ -1350,7 +1350,7 @@ video {
 }
 </style>
     <!-- Template Stylesheet -->
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -1373,7 +1373,7 @@ video {
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="index.php" class="navbar-brand d-flex align-items-center">
-                <img src="../../img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+                <img src="img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
                 <h1 class="m-0 text-primary">Bigmoon</h1>
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -1583,7 +1583,7 @@ video {
         <div class="col-md-6">
             <div>
                  <a href="/products/product-1" class="product-link">
-                 <img src="../../img/p1.webp"alt="Product Preview" id="bigImage" class="aproduct-image product-image-preview">
+                 <img src="img/p1.webp"alt="Product Preview" id="bigImage" class="aproduct-image product-image-preview">
                  </a>
             </div>
             <div class="mt-3 product-thumbnails  gap-2">
@@ -1660,7 +1660,7 @@ video {
     }
 </script>
 <!-- Carousel End -->
-<img src="../../img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" style="object-fit: fill;" data-wow-delay="0.1s">
+<img src="img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" style="object-fit: fill;" data-wow-delay="0.1s">
 <section class="product-slider" style="padding-top: 15px;padding-bottom: 15px;">
             <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
                 <!-- News & Events Section Title -->
@@ -1677,7 +1677,7 @@ video {
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="products/baby/product14.php" class="product-link">
-                        <img src="../../productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                        <img src="productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Muslin Swaddle – 2 Pack</h3>
@@ -1692,7 +1692,7 @@ video {
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="products/baby/product10.php" class="product-link">
-                        <img src="../../productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                        <img src="productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Printed Muslin Baby Swaddle – Pack(6) </h3>
@@ -1707,7 +1707,7 @@ video {
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="products/baby/product1.php" class="product-link">
-                        <img src="../../productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                        <img src="productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Organic Cotton Muslin Jabla</h3>
@@ -1721,7 +1721,7 @@ video {
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="products/baby/product3.php" class="product-link">
-                        <img src="../../productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                        <img src="productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Organic Baby Washcloths</h3>
@@ -1735,7 +1735,7 @@ video {
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="products/baby/product6.php" class="product-link">
-                        <img src="../../productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="product-image aproduct-image">
+                        <img src="productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title"> Organic Muslin Swaddle</h3>
@@ -1749,7 +1749,7 @@ video {
                     <div class="discount-badge">25% OFF</div>
 
                     <a href="products/baby/product11.php" class="product-link">
-                        <img src="../../productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                        <img src="productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title"> Muslin Baby Swaddle</h3>
@@ -1845,13 +1845,13 @@ video {
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../lib/wow/wow.min.js"></script>
-    <script src="../../lib/easing/easing.min.js"></script>
-    <script src="../../lib/waypoints/waypoints.min.js"></script>
-    <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="../../js/main.js"></script>
+    <script src="js/test.js"></script>
     
     <script>
         document.querySelectorAll('.product-slider').forEach((slider) => {
@@ -3371,7 +3371,7 @@ stateDistrictMap = {
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/test.js"></script>
         <!-- JavaScript Libraries -->
        
 

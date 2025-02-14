@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/test.css" rel="stylesheet">
 <style>
     .row {
     margin-left: 0 !important;
@@ -1851,7 +1851,7 @@ video {
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/test.js"></script>
     
     <script>
         document.querySelectorAll('.product-slider').forEach((slider) => {
@@ -3371,7 +3371,7 @@ stateDistrictMap = {
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/test.js"></script>
         <!-- JavaScript Libraries -->
        
 

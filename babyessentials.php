@@ -29,7 +29,7 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/test.css" rel="stylesheet">
 <style>
     .row {
     margin-left: 0 !important;
@@ -4059,7 +4059,7 @@ stateDistrictMap = {
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/test.js"></script>
         <!-- JavaScript Libraries -->
 
         <script>

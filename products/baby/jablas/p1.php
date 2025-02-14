@@ -3371,7 +3371,7 @@ stateDistrictMap = {
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/test.js"></script>
         <!-- JavaScript Libraries -->
        
 

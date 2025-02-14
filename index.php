@@ -4145,7 +4145,6 @@ stateDistrictMap = {
         <img src="img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" style="object-fit: fill;" data-wow-delay="0.1s">
         <section class="product-slider" style="padding-top: 15px;padding-bottom: 15px;">
             <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
-                <!-- News & Events Section Title -->
                 <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px; height:auto;">
                     <h5 class="fw-bold text-primary text-uppercase">Best Sellers</h5>    
                     <!-- Blue bar container -->
@@ -4224,14 +4223,50 @@ stateDistrictMap = {
                     </div>
                 </div>
 
-                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p5" data-wow-delay="0.4s">
+
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablecloth_p2" data-wow-delay="0.4s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="products\home\tablerunner\p5.php" class="product-link">
-                        <img src="productimgs/home/tablerunner/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products\home\tablecloth\p2.php" class="product-link">
+                        <img src="productimgs/home/tablecloth/p2/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Blue Blossom Cotton Table Runner</h3>
-                        <p class="product-description aproduct-description">Floral, nature-inspired, washable & durable.<br>₹ 299/ Piece 
+                        <h3 class="product-title aproduct-title">Red Checkered Cotton Tablecloth</h3>
+                        <p class="product-description aproduct-description">Lightweight, stylish, 6-seater table cover.<br>₹ 499/ Piece  
+                        <span><b>Weight:</b> 1000g/peice</span><br>
+                        <span><b>Size:</b> 60x90 inches</span></p>   
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablecloth_p4" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\tablecloth\p4.php" class="product-link">
+                        <img src="productimgs/home/tablecloth/p4/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    </a>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Blue Cotton Dining Tablecloth</h3>
+                        <p class="product-description aproduct-description">Lightweight, durable, 6-seater table cover.<br>₹ 599/ Piece 
+                        <span><b>Weight:</b> 1000g/peice</span><br>
+                        <span><b>Size:</b> 60x90 inches</span></p>   
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p2" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\tablerunner\p2.php" class="product-link">
+                        <img src="productimgs/home/tablerunner/p2/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    </a>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Beige Fused Stripe Luxe Table Runner</h3>
+                        <p class="product-description aproduct-description">Modern, elegant, washable dining decor.<br>₹ 229/ Piece  
                         <span><b>Weight:</b> 250g/peice</span><br>
                         <span><b>Size:</b> 72x14 inches</span></p>   
                         <button class="add-to-cart aadd-to-cart">
@@ -4240,48 +4275,16 @@ stateDistrictMap = {
                         </button>
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p5" data-wow-delay="0.4s">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p3" data-wow-delay="0.4s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="products\home\tablerunner\p5.php" class="product-link">
-                        <img src="productimgs/home/tablerunner/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products\home\tablerunner\p3.php" class="product-link">
+                        <img src="productimgs/home/tablerunner/p3/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Blue Blossom Cotton Table Runner</h3>
+                        <h3 class="product-title aproduct-title">Pink Blossom Cotton Table Runner</h3>
                         <p class="product-description aproduct-description">Floral, nature-inspired, washable & durable.<br>₹ 299/ Piece 
                         <span><b>Weight:</b> 250g/peice</span><br>
-                        <span><b>Size:</b> 72x14 inches</span></p>   
-                        <button class="add-to-cart aadd-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text abutton-text">Add to Cart</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p5" data-wow-delay="0.4s">
-                    <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="products\home\tablerunner\p5.php" class="product-link">
-                        <img src="productimgs/home/tablerunner/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
-                    </a>
-                    <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Blue Blossom Cotton Table Runner</h3>
-                        <p class="product-description aproduct-description">Floral, nature-inspired, washable & durable.<br>₹ 299/ Piece 
-                        <span><b>Weight:</b> 250g/peice</span><br>
-                        <span><b>Size:</b> 72x14 inches</span></p>   
-                        <button class="add-to-cart aadd-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text abutton-text">Add to Cart</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p5" data-wow-delay="0.4s">
-                    <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="products\home\tablerunner\p5.php" class="product-link">
-                        <img src="productimgs/home/tablerunner/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
-                    </a>
-                    <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Blue Blossom Cotton Table Runner</h3>
-                        <p class="product-description aproduct-description">Floral, nature-inspired, washable & durable.<br>₹ 299/ Piece 
-                        <span><b>Weight:</b> 250g/peice</span><br>
-                        <span><b>Size:</b> 72x14 inches</span></p>   
+                        <span><b>Size:</b> 70x13 inches</span></p>   
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
@@ -4308,42 +4311,42 @@ stateDistrictMap = {
                   <!-- Video 1 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal1" autoplay loop muted>
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/home/shortvideos/home3.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>    
                   </div>
                   <!-- Video 2 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal2" autoplay loop muted>
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/home/shortvideos/home4.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 3 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal3" autoplay loop muted>
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/home/shortvideos/home1.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 4 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal4" autoplay loop muted>
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/home/shortvideos/home2.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 5 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal5" autoplay loop muted>
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/home/shortvideos/home5.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <!-- Video 6 -->
                   <div class="col-6 col-sm-6 col-md-4 col-lg-2 video-container">
                     <video class="w-100 video-anim" data-bs-toggle="modal" data-bs-target="#videoModal6" autoplay loop muted>
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/home/shortvideos/home6.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
@@ -4359,12 +4362,12 @@ stateDistrictMap = {
                 <div class="modal-dialog modal-dialog-centered modal-sm">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel1">Video 1</h5>
+                      <h5 class="modal-title" id="videoModalLabel1"></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <video  controls autoplay loop muted class="w-100 video-height">
-                        <source src="img/videosample.mp4" type="video/mp4">
+                        <source src="productimgs/home/shortvideos/home3.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>
@@ -4379,12 +4382,12 @@ stateDistrictMap = {
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="videoModalLabel2">Video 2</h5>
+                    <h5 class="modal-title" id="videoModalLabel2"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <video controls autoplay loop muted class="w-100 video-height">
-                      <source src="img/videosample.mp4" type="video/mp4">
+                      <source src="productimgs/home/shortvideos/home4.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
@@ -4395,12 +4398,12 @@ stateDistrictMap = {
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel3">Video 3</h5>
+                      <h5 class="modal-title" id="videoModalLabel3"></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <video controls autoplay loop muted class="w-100 video-height">
-                        <source src="img/videosample.mp4" type="video/mp4">
+                        <source src="productimgs/home/shortvideos/home1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>
@@ -4411,12 +4414,12 @@ stateDistrictMap = {
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel4">Video 4</h5>
+                      <h5 class="modal-title" id="videoModalLabel4"></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <video controls autoplay loop muted class="w-100 video-height">
-                        <source src="img/videosample.mp4" type="video/mp4">
+                        <source src="productimgs/home/shortvideos/home2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>
@@ -4427,12 +4430,12 @@ stateDistrictMap = {
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel5">Video 5</h5>
+                      <h5 class="modal-title" id="videoModalLabel5"></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <video controls autoplay loop muted class="w-100 video-height">
-                        <source src="img/videosample.mp4" type="video/mp4">
+                        <source src="productimgs/home/shortvideos/home5.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>
@@ -4443,12 +4446,12 @@ stateDistrictMap = {
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="videoModalLabel6">Video 6</h5>
+                      <h5 class="modal-title" id="videoModalLabel6"></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <video controls autoplay loop muted class="w-100 video-height">
-                        <source src="img/videosample.mp4" type="video/mp4">
+                        <source src="productimgs/home/shortvideos/home6.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>

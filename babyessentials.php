@@ -3216,7 +3216,7 @@ stateDistrictMap = {
                 </div>
                 <div class="aproduct-grid hidden" id="Jablas">
                     <div class="aproduct-card" id="baby1">
-                        <a href="products/baby/product1.php" class="product-link">
+                        <a href="./products/baby/product1.php" class="product-link">
                             <img src="productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3233,7 +3233,7 @@ stateDistrictMap = {
                         </div>
                     </div>
                     <div class="aproduct-card  " id="baby2">
-                        <a href="products/baby/product2.php" class="product-link">
+                        <a href="product2.php" class="product-link">
                             <img src="productimgs/baby/jabla/p2/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">

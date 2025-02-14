@@ -3181,179 +3181,781 @@ stateDistrictMap = {
         </div>
     </div>
 </div>
-
 <!-- Carousel End -->
-
-
         <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 0px;">
-            <!-- News & Events Section Title -->
             <div class="section-title text-center position-relative pb-2 mb-3 mx-auto" style="max-width: 600px; height:auto;">
-                <h5 class="fw-bold text-primary text-uppercase">Products</h5>    
-                <!-- Blue bar container -->
+                <h5 class="fw-bold text-primary text-uppercase">Products</h5>   
                 <div class="blue-bar">
-                    <div class="moving-box"></div>  <!-- Small white rectangle -->
+                    <div class="moving-box"></div>  
                 </div>
             </div>				
         </div>
-        
         <section class="aproduct-section " style="padding: 15px;">
             <nav class="aproduct-navs wow fadeInUp" data-wow-delay="0.2s">
                 <ul class="nav-tabss">
                     <li class="nav-items active" data-category="all">All</li>
-                    <li class="nav-items" data-category="Cotton Towels">Cotton Towels</li>
-                    <li class="nav-items" data-category="Cushion Covers">Cushion Covers</li>
-                    <li class="nav-items" data-category="Table Covers">Table Covers</li>
-                    <li class="nav-items" data-category="Cotton Bedsheets">Cotton Bedsheets</li>
+                    <li class="nav-items" data-category="Aprons">Aprons</li>
                     <li class="nav-items" data-category="Bed Quilts">Bed Quilts</li>
-                    <li class="nav-items" data-category="Cosmetic Pouch">Cosmetic Pouch</li>
-                    <li class="nav-items" data-category="Travel Pouch">Travel Pouch</li>
+                    <li class="nav-items" data-category="Blankets">Blankets</li>
+                    <li class="nav-items" data-category="Cushion Covers">Cushion Covers</li>
+                    <li class="nav-items" data-category="Placemats">Placemats</li>
+                    <li class="nav-items" data-category="Table Clothes">Table Clothes</li>
+                    <li class="nav-items" data-category="Table Runners">Table Runners</li>
+                    <li class="nav-items" data-category="Travel Pouches">Travel Pouches</li>
                 </ul>
             </nav>
         <div class="wow fadeInUp" data-wow-delay="0.3s">
             <div class="aproduct-container" >
                 <div class="aproduct-grid" id="all-products">
-                    <!-- All products will be appended here -->
                 </div>
-                <div class="aproduct-grid hidden" id="Cotton Towels">
-                    <div class="aproduct-card  ">
-                        <a href="product1.html" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" alt="Product 1" class="aproduct-image">
+                <div class="aproduct-grid hidden" id="Aprons">
+                <div class="aproduct-card" id="home1">
+                        <a href="home_aprons_p1.php" class="product-link">
+                            <img src="productimgs\home\apron\p1\main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels1</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches) <br>₹ 1/ Piece 
-                            <span><b>Weight:</b> 250g/peice</span><br>
-                            <span><b>Size:</b> Upto 12 months</span></p>  
-                            
-
+                            <h3 class="aproduct-title">Durable unisex waterproof kitchen apron</h3>
+                            <p class="aproduct-description">Waterproof polycotton unisex apron with pocket.<br>₹ 199/ Piece 
+                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Size:</b> Free Size</span></p>  
                             <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  " >
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" alt="Product 1" class="aproduct-image">
+                </div>
+                <div class="aproduct-grid hidden" id="Bed Quilts">
+                <div class="aproduct-card" id="home1">
+                        <a href="home_bedquilts_p1.php" class="product-link">
+                            <img src="productimgs\home\bedquilt\p1\main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels2</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 1/ Piece</p>                    
+                            <h3 class="aproduct-title">Reversible Double Bed Quilt Comforter</h3>
+                            <p class="aproduct-description">Cozy, breathable, all-season cotton satin double bed quilt.<br>₹ 1599/ Piece 
+                            <span><b>Weight:</b> 4000g/peice</span><br>
+                            <span><b>Size:</b> 90x100 inches</span></p>  
                             <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card " >
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels3</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="aproduct-card  " >
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels4</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="aproduct-card  " >
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels5</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="aproduct-card  ">
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels6</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                   
                 </div>
         
-                <div class="aproduct-grid hidden" id="cushion-cover">
-                    <!-- Similar structure for Cushion Cover products -->
+                <div class="aproduct-grid hidden" id="Blankets">
+                <div class="aproduct-card  ">
+                        <a href="home_blankets_p1.php" class="product-link">
+                            <img src="productimgs\home\blankets\p1\main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Multicolour Striped Cotton Throw Blanket</h3>
+                            <p class="aproduct-description">Soft, breathable, reversible blanket with fringes. <br>₹ 799/ Piece 
+                            <span><b>Weight:</b> 1200g/peice</span><br>
+                            <span><b>Size:</b> 70x53 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-        
-                <div class="aproduct-grid hidden" id="table-runner">
-                    <!-- Similar structure for Table Runner products -->
-                </div>
-        
-                <div class="aproduct-grid hidden" id="bath-towels">
-                    <!-- Similar structure for Bath Towels products -->
-                </div>
-            </div>
-            <div class="aproduct-container" >
                 <div class="aproduct-grid hidden" id="Cushion Covers">
-                    <div class="aproduct-card" >
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
+                <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p1.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p1/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
+                            <h3 class="aproduct-title">Beige Striped Cotton Table Runner</h3>
+                            <p class="aproduct-description">Elegant, washable, durable dining decor.<br>₹ 229/Pack
+                            <span><b>Weight:</b> 250g/pack</span><br>
+                            <span><b>Size:</b> 72x12 inches</span></p>  
                             <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card" >
-                        <a href="/products/product-1" class="product-link">
-                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458430624/WF/XB/HA/145876533/grey-minimalist-interior-design-instagram-post-5-500x500.png" alt="Product 1" class="aproduct-image">
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p2.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p2/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Turkish Bath Towels</h3>
-                            <p class="aproduct-description">Turkish Towels (70 x 40 Inches)<br>₹ 125/ Piece</p>                    
+                            <h3 class="aproduct-title">Jute Texture Cushion Covers (Pack of 5)</h3>
+                            <p class="aproduct-description">Durable & decorative, ideal for sofa, bed, home & office.<br>₹ 499/Pack 
+                            <span><b>Weight:</b> 1125g/pack</span><br>
+                            <span><b>Size:</b> 20x20 inches</span></p>  
                             <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    
-                   
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p3.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p3/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Christmas Cotton Cushion Covers (Pack of 3)</h3>
+                            <p class="aproduct-description">Soft & festive, ideal for home, sofa & New Year decor.<br>₹ 349/ Pack 
+                            <span><b>Weight:</b> 675g/pack</span><br>
+                            <span><b>Size:</b> 20x20 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p4.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p4/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Classic Beige Embroidered Cushion Covers (Pack of 5)</h3>
+                            <p class="aproduct-description">Decorative & festive, ideal for sofa, bed & living spaces.<br>₹ 399/ Pack 
+                            <span><b>Weight:</b> 1125g/pack</span><br>
+                            <span><b>Size:</b> 15x15 inches inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p5.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p5/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Golden Quilted Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Super soft silk cotton with embroidery, hidden zipper closure.<br>₹ 249/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 15x15 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p6.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p6/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">  Christmas Decorative Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Festive-themed cotton throw pillow covers, perfect for sofa, bed & home decor.<br>₹ 299/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p7.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p7/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Classic Check Cotton Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Festive & cozy with pom-pom lace, perfect for home decor.<br>₹ 299/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p8.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p8/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Soft Silk Embroidered Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Quilted design with hidden zipper, perfect for home décor.<br>₹ 249/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 15x15 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p9.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p9/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Cotton Check Cushion Covers (Pack of 4)</h3>
+                            <p class="aproduct-description">Festive red & white design with pom-pom lace, hidden zipper. <br>₹ 449/ Pack 
+                            <span><b>Weight:</b> 900g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p10.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p10/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Cotton Check Cushion Covers (Pack of 4)</h3>
+                            <p class="aproduct-description">Festive red & white design with pom-pom lace, hidden zipper. <br>₹ 449/ Pack 
+                            <span><b>Weight:</b> 900g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p11.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p11/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Beige Striped Cotton Table Runner</h3>
+                            <p class="aproduct-description">Elegant, washable, durable dining decor.<br>₹ 229/Pack
+                            <span><b>Weight:</b> 250g/pack</span><br>
+                            <span><b>Size:</b> 72x12 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p12.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p12/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Jute Texture Cushion Covers (Pack of 5)</h3>
+                            <p class="aproduct-description">Durable & decorative, ideal for sofa, bed, home & office.<br>₹ 499/Pack 
+                            <span><b>Weight:</b> 1125g/pack</span><br>
+                            <span><b>Size:</b> 20x20 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p13.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p13/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Christmas Cotton Cushion Covers (Pack of 3)</h3>
+                            <p class="aproduct-description">Soft & festive, ideal for home, sofa & New Year decor.<br>₹ 349/ Pack 
+                            <span><b>Weight:</b> 675g/pack</span><br>
+                            <span><b>Size:</b> 20x20 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p14.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p14/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Classic Beige Embroidered Cushion Covers (Pack of 5)</h3>
+                            <p class="aproduct-description">Decorative & festive, ideal for sofa, bed & living spaces.<br>₹ 399/ Pack 
+                            <span><b>Weight:</b> 1125g/pack</span><br>
+                            <span><b>Size:</b> 15x15 inches inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p15.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p15/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Golden Quilted Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Super soft silk cotton with embroidery, hidden zipper closure.<br>₹ 249/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 15x15 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p16.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p16/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">  Christmas Decorative Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Festive-themed cotton throw pillow covers, perfect for sofa, bed & home decor.<br>₹ 299/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p17.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p17/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Classic Check Cotton Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Festive & cozy with pom-pom lace, perfect for home decor.<br>₹ 299/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p18.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p18/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Soft Silk Embroidered Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Quilted design with hidden zipper, perfect for home décor.<br>₹ 249/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 15x15 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p19.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p19/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Cotton Check Cushion Covers (Pack of 4)</h3>
+                            <p class="aproduct-description">Festive red & white design with pom-pom lace, hidden zipper. <br>₹ 449/ Pack 
+                            <span><b>Weight:</b> 900g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p20.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p20/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Cotton Check Cushion Covers (Pack of 4)</h3>
+                            <p class="aproduct-description">Festive red & white design with pom-pom lace, hidden zipper. <br>₹ 449/ Pack 
+                            <span><b>Weight:</b> 900g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p21.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p21/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Beige Striped Cotton Table Runner</h3>
+                            <p class="aproduct-description">Elegant, washable, durable dining decor.<br>₹ 229/Pack
+                            <span><b>Weight:</b> 250g/pack</span><br>
+                            <span><b>Size:</b> 72x12 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p22.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p22/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Jute Texture Cushion Covers (Pack of 5)</h3>
+                            <p class="aproduct-description">Durable & decorative, ideal for sofa, bed, home & office.<br>₹ 499/Pack 
+                            <span><b>Weight:</b> 1125g/pack</span><br>
+                            <span><b>Size:</b> 20x20 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p23.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p23/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Christmas Cotton Cushion Covers (Pack of 3)</h3>
+                            <p class="aproduct-description">Soft & festive, ideal for home, sofa & New Year decor.<br>₹ 349/ Pack 
+                            <span><b>Weight:</b> 675g/pack</span><br>
+                            <span><b>Size:</b> 20x20 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p24.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p24/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Classic Beige Embroidered Cushion Covers (Pack of 5)</h3>
+                            <p class="aproduct-description">Decorative & festive, ideal for sofa, bed & living spaces.<br>₹ 399/ Pack 
+                            <span><b>Weight:</b> 1125g/pack</span><br>
+                            <span><b>Size:</b> 15x15 inches inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p25.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p25/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Golden Quilted Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Super soft silk cotton with embroidery, hidden zipper closure.<br>₹ 249/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 15x15 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p26.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p26/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">  Christmas Decorative Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Festive-themed cotton throw pillow covers, perfect for sofa, bed & home decor.<br>₹ 299/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p27.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p27/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Classic Check Cotton Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Festive & cozy with pom-pom lace, perfect for home decor.<br>₹ 299/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p28.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p28/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Soft Silk Embroidered Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Quilted design with hidden zipper, perfect for home décor.<br>₹ 249/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 15x15 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_cushioncovers_p29.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p29/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Cotton Check Cushion Covers (Pack of 4)</h3>
+                            <p class="aproduct-description">Festive red & white design with pom-pom lace, hidden zipper. <br>₹ 449/ Pack 
+                            <span><b>Weight:</b> 900g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="aproduct-grid hidden" id="Placemats">
+                <div class="aproduct-card  ">
+                        <a href="home_placemats_p1.php" class="product-link">
+                            <img src="productimgs/home/placemat/p1/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Red Cotton Placemats</h3>
+                            <p class="aproduct-description">Soft, durable, machine-washable dining set(Set of 4).<br>₹ 199/ Piece 
+                            <span><b>Weight:</b> 1200g/peice</span><br>
+                            <span><b>Size:</b> 19x14 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_placemats_p2.php" class="product-link">
+                            <img src="productimgs/home/placemat/p2/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Dark Blue Cotton Placemats</h3>
+                            <p class="aproduct-description">Soft, durable, machine-washable dining set(Set of 4).<br>₹ 249/ Piece 
+                            <span><b>Weight:</b> 1200g/peice</span><br>
+                            <span><b>Size:</b> 19x13 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
         
-                <div class="aproduct-grid hidden" id="cushion-cover">
-                    <!-- Similar structure for Cushion Cover products -->
+                <div class="aproduct-grid hidden" id="Table Clothes">
+                    <div class="aproduct-card  ">
+                        <a href="home_tableclothes_p1.php" class="product-link">
+                            <img src="productimgs/home/tablecloth/p1/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Red Christmas Cotton Tablecloth</h3>
+                            <p class="aproduct-description">Festive, washable, 6-seater dining cover.<br>₹ 699/peice
+                            <span><b>Weight:</b> 1000g/peice</span><br>
+                            <span><b>Size:</b> 60x90 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tableclothes_p2.php" class="product-link">
+                            <img src="productimgs/home/tablecloth/p2/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Red Checkered Cotton Tablecloth</h3>
+                            <p class="aproduct-description">Lightweight, stylish, 6-seater table cover.<br>₹ 499/ Piece 
+                            <span><b>Weight:</b> 1000g/peice</span><br>
+                            <span><b>Size:</b> 60x90 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tableclothes_p3.php" class="product-link">
+                            <img src="productimgs/home/tablecloth/p3/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Christmas Floral Cotton Tablecloth</h3>
+                            <p class="aproduct-description">Festive, washable, 6-seater dining cover.<br>₹ 699/ Piece 
+                            <span><b>Weight:</b> 1000g/peice</span><br>
+                            <span><b>Size:</b> 60x90 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tableclothes_p4.php" class="product-link">
+                            <img src="productimgs/home/tablecloth/p4/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Blue Cotton Dining Tablecloth</h3>
+                            <p class="aproduct-description">Lightweight, durable, 6-seater table cover.<br>₹ 599/ Piece 
+                            <span><b>Weight:</b> 1000g/peice</span><br>
+                            <span><b>Size:</b> 60x90 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tableclothes_p5.php" class="product-link">
+                            <img src="productimgs/home/tablecloth/p5/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Yellow & Blue Cotton Tablecloth</h3>
+                            <p class="aproduct-description">Soft, durable, 6-seater rectangular cover.<br>₹ 599/ Piece 
+                            <span><b>Weight:</b> 1000g/peice</span><br>
+                            <span><b>Size:</b> 60x90 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tableclothes_p6.php" class="product-link">
+                            <img src="productimgs/home/tablecloth/p6/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Red & Black Checkered Tablecloth</h3>
+                            <p class="aproduct-description">Elegant, pure cotton 6-seater dining cover.<br>₹ 799/ Piece 
+                            <span><b>Weight:</b> 1000g/peice</span><br>
+                            <span><b>Size:</b> 60x90 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tableclothes_p7.php" class="product-link">
+                            <img src="productimgs/home/tablecloth/p7/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Grey Cotton Dining Tablecloth</h3>
+                            <p class="aproduct-description">Lightweight, durable, 6-seater table cover.<br>₹ 299/ Piece 
+                            <span><b>Weight:</b> 1000g/peice</span><br>
+                            <span><b>Size:</b> 60x90 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
         
-                <div class="aproduct-grid hidden" id="table-runner">
-                    <!-- Similar structure for Table Runner products -->
+                <div class="aproduct-grid hidden" id="Table Runners">
+                <div class="aproduct-card  ">
+                        <a href="home_tablerunners_p1.php" class="product-link">
+                            <img src="productimgs/home/tablerunner/p1/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Beige Striped Cotton Table Runner</h3>
+                            <p class="aproduct-description">Elegant, washable, durable dining decor.<br>₹ 229/peice
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b> 72x12 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tablerunners_p2.php" class="product-link">
+                            <img src="productimgs/home/tablerunner/p2/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Beige Fused Stripe Luxe Table Runner</h3>
+                            <p class="aproduct-description">Modern, elegant, washable dining decor.<br>₹ 229/ Piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b> 74x14 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tablerunners_p3.php" class="product-link">
+                            <img src="productimgs/home/tablerunner/p3/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Pink Blossom Cotton Table Runner</h3>
+                            <p class="aproduct-description">Floral, elegant, washable dining decor.<br>₹ 199/ Piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b> 70x13 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tablerunners_p4.php" class="product-link">
+                            <img src="productimgs/home/tablerunner/p4/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Beige Luxe Knitted Table Runner</h3>
+                            <p class="aproduct-description">Soft, thick, elegant with golden accents.<br>₹ 299/ Piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b> 90x15 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tablerunners_p5.php" class="product-link">
+                            <img src="productimgs/home/tablerunner/p5/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Blue Blossom Cotton Table Runner</h3>
+                            <p class="aproduct-description">Floral, nature-inspired, washable & durable.<br>₹ 299/ Piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b> 72x14 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tablerunners_p6.php" class="product-link">
+                            <img src="productimgs/home/tablerunner/p6/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Blue Striped Cotton Table Runner</h3>
+                            <p class="aproduct-description">Elegant, durable, and perfect for decor.<br>₹ 299/ Piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b> 74x14 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tablerunners_p7.php" class="product-link">
+                            <img src="productimgs/home/tablerunner/p7/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Peach Cotton Table Runner</h3>
+                            <p class="aproduct-description">Aesthetic & washable, perfect for dining & living spaces.<br>₹ 199/ Piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b> 59x16 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tablerunners_p8.php" class="product-link">
+                            <img src="productimgs/home/tablerunner/p8/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Misty Blue Cotton Table Runner</h3>
+                            <p class="aproduct-description">Washable & aesthetic, ideal for dining, living spaces & beds.<br>₹ 199/ Piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b> 60x16 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_tablerunners_p9.php" class="product-link">
+                            <img src="productimgs/home/tablerunner/p9/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Sun-Drenched Striped Cotton Table Runner</h3>
+                            <p class="aproduct-description">Vibrant multicolor design, perfect for dining, coffee & foyer tables. <br>₹ 249/ Piece 
+                            <span><b>Weight:</b> 250g/peice</span><br>
+                            <span><b>Size:</b> 72x13 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
         
-                <div class="aproduct-grid hidden" id="bath-towels">
-                    <!-- Similar structure for Bath Towels products -->
+                <div class="aproduct-grid hidden" id="Travel Pouches">
+                <div class="aproduct-card  ">
+                        <a href="home_travelpouches_p1.php" class="product-link">
+                            <img src="productimgs/home/travelpouch/p1/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Travel Cosmetic & Toiletry Pouch (Set of 2)</h3>
+                            <p class="aproduct-description">Portable grooming organizer for makeup, brushes & essentials.<br>₹ 249 / Piece 
+                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Size:</b> 11x6.5x7 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  ">
+                        <a href="home_travelpouches_p2.php" class="product-link">
+                            <img src="productimgs/home/travelpouch/p2/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Quilted Travel Pouch (Pack of 2)</h3>
+                            <p class="aproduct-description">Convenient organizer for sanitary napkins, chargers, cables, earphones & cosmetics. <br>₹ 199/ Piece 
+                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Size:</b> 8x7 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div></div>
         </section>

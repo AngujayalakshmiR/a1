@@ -3209,8 +3209,8 @@ stateDistrictMap = {
                 <div class="aproduct-grid" id="all-products">
                 </div>
                 <div class="aproduct-grid hidden" id="Aprons">
-                <div class="aproduct-card" id="home1">
-                        <a href="home_aprons_p1.php" class="product-link">
+                <div class="aproduct-card" id="home_apron_p1">
+                        <a href="products\home\apron\p1.php" class="product-link">
                             <img src="productimgs\home\apron\p1\main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3225,8 +3225,8 @@ stateDistrictMap = {
                     </div>
                 </div>
                 <div class="aproduct-grid hidden" id="Bed Quilts">
-                <div class="aproduct-card" id="home1">
-                        <a href="home_bedquilts_p1.php" class="product-link">
+                <div class="aproduct-card" id="home_bedquilt_p1">
+                        <a href="products\home\bedquilt\p1.php" class="product-link">
                             <img src="productimgs\home\bedquilt\p1\main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3242,8 +3242,8 @@ stateDistrictMap = {
                 </div>
         
                 <div class="aproduct-grid hidden" id="Blankets">
-                <div class="aproduct-card  ">
-                        <a href="home_blankets_p1.php" class="product-link">
+                <div class="aproduct-card  " id="home_blankets_p1">
+                        <a href="products\home\blankets\p1.php" class="product-link">
                             <img src="productimgs\home\blankets\p1\main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3258,22 +3258,22 @@ stateDistrictMap = {
                     </div>
                 </div>
                 <div class="aproduct-grid hidden" id="Cushion Covers">
-                <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p1.php" class="product-link">
-                            <img src="productimgs/home/cushioncover/p1/main.jpg" alt="Product 1" class="aproduct-image">
+                <div class="aproduct-card  " id="home_cushioncover_p1">
+                        <a href="products\home\cushioncover\p1.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p1/main1.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Beige Striped Cotton Table Runner</h3>
-                            <p class="aproduct-description">Elegant, washable, durable dining decor.<br>₹ 229/Pack
-                            <span><b>Weight:</b> 250g/pack</span><br>
-                            <span><b>Size:</b> 72x12 inches</span></p>  
+                            <h3 class="aproduct-title">Cotton Floral Cushion Covers (Set of 5)</h3>
+                            <p class="aproduct-description">Soft, durable & festive décor for home & living.<br>₹ 399/Pack
+                            <span><b>Weight:</b> 1125g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p2.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p2">
+                        <a href="products\home\cushioncover\p2.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p2/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3286,8 +3286,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p3.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p3">
+                        <a href="products\home\cushioncover\p3.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p3/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3300,8 +3300,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p4.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p4">
+                        <a href="products\home\cushioncover\p4.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p4/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3314,8 +3314,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p5.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p5">
+                        <a href="products\home\cushioncover\p5.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p5/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3328,8 +3328,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p6.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p6">
+                        <a href="products\home\cushioncover\p6.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p6/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3342,8 +3342,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p7.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p7">
+                        <a href="products\home\cushioncover\p7.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p7/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3356,8 +3356,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p8.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p8">
+                        <a href="products\home\cushioncover\p8.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p8/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3370,8 +3370,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p9.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p9">
+                        <a href="products\home\cushioncover\p9.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p9/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3384,140 +3384,140 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p10.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p10">
+                        <a href="products\home\cushioncover\p10.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p10/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title"> Cotton Check Cushion Covers (Pack of 4)</h3>
-                            <p class="aproduct-description">Festive red & white design with pom-pom lace, hidden zipper. <br>₹ 449/ Pack 
-                            <span><b>Weight:</b> 900g/pack</span><br>
+                            <h3 class="aproduct-title"> Cotton Bird Print Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Elegant design with hidden zipper, perfect for home decor.<br>₹ 269/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
                             <span><b>Size:</b> 18x18 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p11.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p11">
+                        <a href="products\home\cushioncover\p11.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p11/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Beige Striped Cotton Table Runner</h3>
-                            <p class="aproduct-description">Elegant, washable, durable dining decor.<br>₹ 229/Pack
-                            <span><b>Weight:</b> 250g/pack</span><br>
-                            <span><b>Size:</b> 72x12 inches</span></p>  
+                            <h3 class="aproduct-title">Cotton Waffle Textured Cushion Covers (Pack of 5)</h3>
+                            <p class="aproduct-description">Soft & durable, ideal for sofa, couch & bedroom.<br>₹ 1,499/Pack
+                            <span><b>Weight:</b> 1125g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p12.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p12">
+                        <a href="products\home\cushioncover\p12.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p12/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Jute Texture Cushion Covers (Pack of 5)</h3>
-                            <p class="aproduct-description">Durable & decorative, ideal for sofa, bed, home & office.<br>₹ 499/Pack 
-                            <span><b>Weight:</b> 1125g/pack</span><br>
-                            <span><b>Size:</b> 20x20 inches</span></p>  
+                            <h3 class="aproduct-title">Cotton Christmas Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Festive Xmas-themed pillow covers with pom-pom lace.<br>₹ 299/Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p13.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p13">
+                        <a href="products\home\cushioncover\p13.php.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p13/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Christmas Cotton Cushion Covers (Pack of 3)</h3>
-                            <p class="aproduct-description">Soft & festive, ideal for home, sofa & New Year decor.<br>₹ 349/ Pack 
-                            <span><b>Weight:</b> 675g/pack</span><br>
+                            <h3 class="aproduct-title">Festive Xmas Cotton Cushion Covers (Pack of 2)</h3>
+                            <p class="aproduct-description">Christmas-themed decorative pillow covers with pom-pom lace.<br>₹ 299/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  " id="home_cushioncover_p14">
+                        <a href="products\home\cushioncover\p14.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p14/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Xmas Elements Cotton Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Festive decorative pillow covers with pom-pom lace.<br>₹ 299/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  " id="home_cushioncover_p15">
+                        <a href="products\home\cushioncover\p15.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p15/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Xmas Tree Cotton Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Festive decorative throw pillows with green pom-pom lace.<br>₹ 299/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 18x18  inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  " id="home_cushioncover_p16">
+                        <a href="products\home\cushioncover\p16.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p16/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">  Snowflake Cotton Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Festive red & white throw pillows with pom-pom lace.<br>₹ 299/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
                             <span><b>Size:</b> 20x20 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p14.php" class="product-link">
-                            <img src="productimgs/home/cushioncover/p14/main.jpg" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Classic Beige Embroidered Cushion Covers (Pack of 5)</h3>
-                            <p class="aproduct-description">Decorative & festive, ideal for sofa, bed & living spaces.<br>₹ 399/ Pack 
-                            <span><b>Weight:</b> 1125g/pack</span><br>
-                            <span><b>Size:</b> 15x15 inches inches</span></p>  
-                            <button class="aadd-to-cart">
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p15.php" class="product-link">
-                            <img src="productimgs/home/cushioncover/p15/main.jpg" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Golden Quilted Cushion Covers (Pack of 2)</h3>
-                            <p class="aproduct-description">Super soft silk cotton with embroidery, hidden zipper closure.<br>₹ 249/ Pack 
-                            <span><b>Weight:</b> 450g/pack</span><br>
-                            <span><b>Size:</b> 15x15 inches</span></p>  
-                            <button class="aadd-to-cart">
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p16.php" class="product-link">
-                            <img src="productimgs/home/cushioncover/p16/main.jpg" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">  Christmas Decorative Cushion Covers (Pack of 2)</h3>
-                            <p class="aproduct-description">Festive-themed cotton throw pillow covers, perfect for sofa, bed & home decor.<br>₹ 299/ Pack 
-                            <span><b>Weight:</b> 450g/pack</span><br>
-                            <span><b>Size:</b> 18x18 inches</span></p>  
-                            <button class="aadd-to-cart">
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p17.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p17">
+                        <a href="products\home\cushioncover\p17.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p17/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title"> Classic Check Cotton Cushion Covers (Pack of 2)</h3>
-                            <p class="aproduct-description">Festive & cozy with pom-pom lace, perfect for home decor.<br>₹ 299/ Pack 
-                            <span><b>Weight:</b> 450g/pack</span><br>
-                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <h3 class="aproduct-title"> Embroidered Poly Cotton Cushion Covers (Set of 5)</h3>
+                            <p class="aproduct-description">Classic pink festive throw pillows for home & living.<br>₹ 319/ Pack 
+                            <span><b>Weight:</b> 1125g/pack</span><br>
+                            <span><b>Size:</b> 15x15  inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p18.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p18">
+                        <a href="products\home\cushioncover\p18.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p18/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Soft Silk Embroidered Cushion Covers (Pack of 2)</h3>
-                            <p class="aproduct-description">Quilted design with hidden zipper, perfect for home décor.<br>₹ 249/ Pack 
-                            <span><b>Weight:</b> 450g/pack</span><br>
-                            <span><b>Size:</b> 15x15 inches</span></p>  
+                            <h3 class="aproduct-title">Embroidered Poly Cotton Cushion Covers (Set of 5)</h3>
+                            <p class="aproduct-description">Classic brown festive throw pillows for home & living.<br>₹ 399/ Pack 
+                            <span><b>Weight:</b> 1125g/pack</span><br>
+                            <span><b>Size:</b> 16x16  inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p19.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p19">
+                        <a href="products\home\cushioncover\p19.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p19/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title"> Cotton Check Cushion Covers (Pack of 4)</h3>
-                            <p class="aproduct-description">Festive red & white design with pom-pom lace, hidden zipper. <br>₹ 449/ Pack 
-                            <span><b>Weight:</b> 900g/pack</span><br>
+                            <h3 class="aproduct-title">Cotton Check Cushion Covers with Pom-Pom (Set of 2)</h3>
+                            <p class="aproduct-description">Festive red & white décor for home & living.<br>₹ 299/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
                             <span><b>Size:</b> 18x18 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
@@ -3525,111 +3525,111 @@ stateDistrictMap = {
                         </div>
                     </div>
 
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p20.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p20">
+                        <a href="products\home\cushioncover\p20.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p20/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title"> Cotton Check Cushion Covers (Pack of 4)</h3>
-                            <p class="aproduct-description">Festive red & white design with pom-pom lace, hidden zipper. <br>₹ 449/ Pack 
-                            <span><b>Weight:</b> 900g/pack</span><br>
+                            <h3 class="aproduct-title">Cotton Waffle Textured Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Soft & durable, ideal for home & office décor.<br>₹ 599/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
                             <span><b>Size:</b> 18x18 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p21.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p21">
+                        <a href="products\home\cushioncover\p21.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p21/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Beige Striped Cotton Table Runner</h3>
-                            <p class="aproduct-description">Elegant, washable, durable dining decor.<br>₹ 229/Pack
-                            <span><b>Weight:</b> 250g/pack</span><br>
-                            <span><b>Size:</b> 72x12 inches</span></p>  
+                            <h3 class="aproduct-title">Cotton Throw Pillow Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Super soft & stylish, ideal for home décor.<br>₹ 199/Pack
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 16x16 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p22.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p22"> 
+                        <a href="products\home\cushioncover\p22.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p22/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Jute Texture Cushion Covers (Pack of 5)</h3>
-                            <p class="aproduct-description">Durable & decorative, ideal for sofa, bed, home & office.<br>₹ 499/Pack 
-                            <span><b>Weight:</b> 1125g/pack</span><br>
-                            <span><b>Size:</b> 20x20 inches</span></p>  
+                            <h3 class="aproduct-title">Fluffy Heart Cushions (Set of 2)</h3>
+                            <p class="aproduct-description">Ultra-soft & cozy, perfect for home & car décor.<br>₹ 299/Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 14x10 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p23.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p23">
+                        <a href="products\home\cushioncover\p23.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p23/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Christmas Cotton Cushion Covers (Pack of 3)</h3>
-                            <p class="aproduct-description">Soft & festive, ideal for home, sofa & New Year decor.<br>₹ 349/ Pack 
-                            <span><b>Weight:</b> 675g/pack</span><br>
-                            <span><b>Size:</b> 20x20 inches</span></p>  
+                            <h3 class="aproduct-title">Rich Brown Quilted Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Super soft silk cotton with embroidered design & zipper.<br>₹ 249/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 15x15 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p24.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p24">
+                        <a href="products\home\cushioncover\p24.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p24/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Classic Beige Embroidered Cushion Covers (Pack of 5)</h3>
-                            <p class="aproduct-description">Decorative & festive, ideal for sofa, bed & living spaces.<br>₹ 399/ Pack 
-                            <span><b>Weight:</b> 1125g/pack</span><br>
+                            <h3 class="aproduct-title">Rich Orange Quilted Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Super soft silk cotton with embroidered design & zipper.<br>₹ 249/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
                             <span><b>Size:</b> 15x15 inches inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p25.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p25">
+                        <a href="products\home\cushioncover\p25.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p25/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Golden Quilted Cushion Covers (Pack of 2)</h3>
-                            <p class="aproduct-description">Super soft silk cotton with embroidery, hidden zipper closure.<br>₹ 249/ Pack 
-                            <span><b>Weight:</b> 450g/pack</span><br>
-                            <span><b>Size:</b> 15x15 inches</span></p>  
+                            <h3 class="aproduct-title"> Rich Pink Quilted Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Super soft silk cotton with embroidered design & zipper.<br>₹ 249/ Pack 
+                            <span><b>Weight:</b> 400g/pack</span><br>
+                            <span><b>Size:</b> 14x14  inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p26.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p26">
+                        <a href="products\home\cushioncover\p26.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p26/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">  Christmas Decorative Cushion Covers (Pack of 2)</h3>
-                            <p class="aproduct-description">Festive-themed cotton throw pillow covers, perfect for sofa, bed & home decor.<br>₹ 299/ Pack 
-                            <span><b>Weight:</b> 450g/pack</span><br>
-                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <h3 class="aproduct-title"> Beige Quilted Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Soft silk with embroidered design & hidden zipper.<br>₹ 249/ Pack 
+                            <span><b>Weight:</b> 400g/pack</span><br>
+                            <span><b>Size:</b> 14x14 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p27.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p27">
+                        <a href="products\home\cushioncover\p27.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p27/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title"> Classic Check Cotton Cushion Covers (Pack of 2)</h3>
-                            <p class="aproduct-description">Festive & cozy with pom-pom lace, perfect for home decor.<br>₹ 299/ Pack 
+                            <h3 class="aproduct-title">Yellow Waffle Cotton Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Soft, durable & stylish with zip closure.<br>₹ 349/ Pack 
                             <span><b>Weight:</b> 450g/pack</span><br>
                             <span><b>Size:</b> 18x18 inches</span></p>  
                             <button class="aadd-to-cart">
@@ -3637,28 +3637,56 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p28.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p28">
+                        <a href="products\home\cushioncover\p28.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p28/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Soft Silk Embroidered Cushion Covers (Pack of 2)</h3>
-                            <p class="aproduct-description">Quilted design with hidden zipper, perfect for home décor.<br>₹ 249/ Pack 
+                            <h3 class="aproduct-title"> Ivory Golden Floral Print Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Elegant, soft & durable with a premium finish.<br>₹ 349/ Pack 
                             <span><b>Weight:</b> 450g/pack</span><br>
-                            <span><b>Size:</b> 15x15 inches</span></p>  
+                            <span><b>Size:</b> 18x18 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_cushioncovers_p29.php" class="product-link">
+                    <div class="aproduct-card  " id="home_cushioncover_p29">
+                        <a href="products\home\cushioncover\p29.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p29/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title"> Cotton Check Cushion Covers (Pack of 4)</h3>
-                            <p class="aproduct-description">Festive red & white design with pom-pom lace, hidden zipper. <br>₹ 449/ Pack 
-                            <span><b>Weight:</b> 900g/pack</span><br>
+                            <h3 class="aproduct-title">Cotton Love Print Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Soft, stylish & durable with hidden zipper closure.<br>₹ 329/ Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
+                            <span><b>Size:</b> 17x17 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  " id="home_cushioncover_p30">
+                        <a href="products\home\cushioncover\p30.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p30/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title"> Multi-Color Cotton Floral Cushion Covers (Set of 5)</h3>
+                            <p class="aproduct-description">Soft, durable, and stylish pillow covers for home décor.<br>₹ 399/ Pack 
+                            <span><b>Weight:</b> 1125g/pack</span><br>
+                            <span><b>Size:</b> 18x18 inches</span></p>  
+                            <button class="aadd-to-cart">
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  " id="home_cushioncover_p31">
+                        <a href="products\home\cushioncover\p31.php" class="product-link">
+                            <img src="productimgs/home/cushioncover/p31/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Multicolor Geometric Cotton Cushion Covers (Set of 2)</h3>
+                            <p class="aproduct-description">Hidden zipper, stylish sofa décor.<br>₹ 199 / Pack 
+                            <span><b>Weight:</b> 450g/pack</span><br>
                             <span><b>Size:</b> 18x18 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
@@ -3667,8 +3695,8 @@ stateDistrictMap = {
                     </div>
                 </div>
                 <div class="aproduct-grid hidden" id="Placemats">
-                <div class="aproduct-card  ">
-                        <a href="home_placemats_p1.php" class="product-link">
+                <div class="aproduct-card  " id="home_placemat_p1">
+                        <a href="products\home\placemat\p1.php" class="product-link">
                             <img src="productimgs/home/placemat/p1/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3681,8 +3709,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_placemats_p2.php" class="product-link">
+                    <div class="aproduct-card  " id="home_placemat_p2">
+                        <a href="products\home\placemat\p2.php" class="product-link">
                             <img src="productimgs/home/placemat/p2/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3698,8 +3726,8 @@ stateDistrictMap = {
                 </div>
         
                 <div class="aproduct-grid hidden" id="Table Clothes">
-                    <div class="aproduct-card  ">
-                        <a href="home_tableclothes_p1.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablecloth_p1">
+                        <a href="products\home\tablecloth\p1.php" class="product-link">
                             <img src="productimgs/home/tablecloth/p1/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3712,8 +3740,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tableclothes_p2.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablecloth_p2">
+                        <a href="products\home\tablecloth\p2.php" class="product-link">
                             <img src="productimgs/home/tablecloth/p2/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3726,8 +3754,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tableclothes_p3.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablecloth_p3">
+                        <a href="products\home\tablecloth\p3.php" class="product-link">
                             <img src="productimgs/home/tablecloth/p3/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3740,8 +3768,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tableclothes_p4.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablecloth_p4">
+                        <a href="products\home\tablecloth\p4.php" class="product-link">
                             <img src="productimgs/home/tablecloth/p4/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3754,8 +3782,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tableclothes_p5.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablecloth_p5">
+                        <a href="products\home\tablecloth\p5.php" class="product-link">
                             <img src="productimgs/home/tablecloth/p5/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3768,8 +3796,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tableclothes_p6.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablecloth_p6">
+                        <a href="products\home\tablecloth\p6.php" class="product-link">
                             <img src="productimgs/home/tablecloth/p6/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3782,8 +3810,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tableclothes_p7.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablecloth_p7">
+                        <a href="products\home\tablecloth\p7.php" class="product-link">
                             <img src="productimgs/home/tablecloth/p7/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3799,8 +3827,8 @@ stateDistrictMap = {
                 </div>
         
                 <div class="aproduct-grid hidden" id="Table Runners">
-                <div class="aproduct-card  ">
-                        <a href="home_tablerunners_p1.php" class="product-link">
+                <div class="aproduct-card  " id="home_tablerunner_p1">
+                        <a href="products\home\tablerunner\p1.php" class="product-link">
                             <img src="productimgs/home/tablerunner/p1/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3813,8 +3841,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tablerunners_p2.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablerunner_p2">
+                        <a href="products\home\tablerunner\p2.php" class="product-link">
                             <img src="productimgs/home/tablerunner/p2/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3827,8 +3855,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tablerunners_p3.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablerunner_p3">
+                        <a href="products\home\tablerunner\p3.php" class="product-link">
                             <img src="productimgs/home/tablerunner/p3/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3841,8 +3869,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tablerunners_p4.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablerunner_p4">
+                        <a href="products\home\tablerunner\p4.php" class="product-link">
                             <img src="productimgs/home/tablerunner/p4/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3855,8 +3883,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tablerunners_p5.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablerunner_p5">
+                        <a href="products\home\tablerunner\p5.php" class="product-link">
                             <img src="productimgs/home/tablerunner/p5/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3869,8 +3897,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tablerunners_p6.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablerunner_p6">
+                        <a href="products\home\tablerunner\p6.php" class="product-link">
                             <img src="productimgs/home/tablerunner/p6/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3883,8 +3911,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tablerunners_p7.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablerunner_p7">
+                        <a href="products\home\tablerunner\p7.php" class="product-link">
                             <img src="productimgs/home/tablerunner/p7/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3897,8 +3925,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tablerunners_p8.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablerunner_p8">
+                        <a href="products\home\tablerunner\p8.php" class="product-link">
                             <img src="productimgs/home/tablerunner/p8/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3911,8 +3939,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_tablerunners_p9.php" class="product-link">
+                    <div class="aproduct-card  " id="home_tablerunner_p9">
+                        <a href="products\home\tablerunner\p9.php" class="product-link">
                             <img src="productimgs/home/tablerunner/p9/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3928,8 +3956,8 @@ stateDistrictMap = {
                 </div>
         
                 <div class="aproduct-grid hidden" id="Travel Pouches">
-                <div class="aproduct-card  ">
-                        <a href="home_travelpouches_p1.php" class="product-link">
+                <div class="aproduct-card  " id="home_travelpouch_p1">
+                        <a href="products\home\travelpouch\p1.php" class="product-link">
                             <img src="productimgs/home/travelpouch/p1/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3942,8 +3970,8 @@ stateDistrictMap = {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  ">
-                        <a href="home_travelpouches_p2.php" class="product-link">
+                    <div class="aproduct-card  " id="home_travelpouch_p2">
+                        <a href="products\home\travelpouch\p2.php" class="product-link">
                             <img src="productimgs/home/travelpouch/p2/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3973,127 +4001,141 @@ stateDistrictMap = {
                 </div>				
             </div>
             <div class="slider-container">
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p30" data-wow-delay="0.2s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <a href="products\home\cushioncover\p30.php" class="product-link">
+                        <img src="productimgs/home/cushioncover/p30/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 1</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
-                                             
+                        <h3 class="product-title aproduct-title">Cotton Floral Cushion Covers (Set of 5)</h3>
+                        <p class="product-description aproduct-description">Soft, durable, and stylish covers for home.<br>₹ 399/Pack 
+                            <span><b>Weight:</b> 1125g/piece</span><br>
+                            <span><b>Size:</b>18x18 inches</span></p>  
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="discount-badge">25% OFF</div>
+               
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p31" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+
+                    <a href="products\home\cushioncover\p31.php" class="product-link">
+                        <img src="productimgs/home/cushioncover/p31/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 2</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
-                                             
+                        <h3 class="product-title aproduct-title">Stylized Cotton Cushion Covers (Set of 2)</h3>
+                        <p class="product-description aproduct-description">Hidden zipper, stylish sofa décor.<br>₹ 199/Pack 
+                            <span><b>Weight:</b> 450g/piece</span><br>
+                            <span><b>Size:</b>18x18 inches</span></p>  
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="discount-badge">25% OFF</div>
-
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                    <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p1" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\cushioncover\p1.php" class="product-link">
+                        <img src="productimgs/home/cushioncover/p1/main1.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 3</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
-                                             
+                        <h3 class="product-title aproduct-title">Cotton Floral Cushion Covers (Set of 5)</h3>
+                        <p class="product-description aproduct-description">Soft, durable & festive décor for home & living.<br>₹ 399/Pack 
+                            <span><b>Weight:</b> 1125g/piece</span><br>
+                            <span><b>Size:</b>18x18 inches</span></p>  
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="discount-badge">25% OFF</div>
-
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_travelpouch_p1" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\travelpouch\p1.php" class="product-link">
+                        <img src="productimgs/home/travelpouch/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 4</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
-                                             
+                        <h3 class="product-title aproduct-title">Travel Cosmetic Pouch (Set of 2)</h3>
+                        <p class="product-description aproduct-description">Portable grooming organizer for makeup.<br>₹ 249/Pack 
+                            <span><b>Weight:</b> 200g/pack</span><br>
+                            <span><b>Size:</b>11x6.5x7 inches</span></p>  
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablecloth_p1" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\tablecloth\p1.php" class="product-link">
+                        <img src="productimgs/home/tablecloth/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 5</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
-                                             
+                        <h3 class="product-title aproduct-title">Red Christmas Cotton Tablecloth</h3>
+                        <p class="product-description aproduct-description">Festive, washable, 6-seater dining cover.<br>₹ 699/peice
+                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Size:</b>60x90 inches</span></p>  
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
-
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablecloth_p3" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\tablecloth\p3.php" class="product-link">
+                        <img src="productimgs/home/tablecloth/p3/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 6</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
-                                             
+                        <h3 class="product-title aproduct-title">Christmas Floral Cotton Tablecloth</h3>
+                        <p class="product-description aproduct-description">Festive, washable, 6-seater dining cover.<br>₹ 699/ Piece 
+                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Size:</b>60x90 inches</span></p>  
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
-                <!-- Repeat similar product-card divs for other products -->
+
+
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p1" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\tablerunner\p1.php" class="product-link">
+                        <img src="productimgs/home/tablerunner/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    </a>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Beige Striped Cotton Table Runner</h3>
+                        <p class="product-description aproduct-description">Elegant, washable, durable dining decor.<br>₹ 229/peice
+                        <span><b>Weight:</b> 250g/peice</span><br>
+                        <span><b>Size:</b> 72x12 inches</span></p> 
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p5" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\tablerunner\p5.php" class="product-link">
+                        <img src="productimgs/home/tablerunner/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    </a>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Blue Blossom Cotton Table Runner</h3>
+                        <p class="product-description aproduct-description">Floral, nature-inspired, washable & durable.<br>₹ 299/ Piece 
+                        <span><b>Weight:</b> 250g/peice</span><br>
+                        <span><b>Size:</b> 72x14 inches</span></p>   
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
             </div>
           
             <button class="slider-nav prev">&lt;</button>
@@ -4112,128 +4154,140 @@ stateDistrictMap = {
                     </div>
                 </div>				
             </div>
+
+            
             <div class="slider-container">
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
-
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+            <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p2" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\cushioncover\p2.php" class="product-link">
+                        <img src="productimgs/home/cushioncover/p2/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 1</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
-                                             
+                        <h3 class="product-title aproduct-title">Jute Texture Cushion Covers (Pack of 5)</h3>
+                        <p class="product-description aproduct-description">Durable & decorative, ideal for home & office.<br>₹ 499/ Pack 
+                        <span><b>Weight:</b> 1125g/peice</span><br>
+                        <span><b>Size:</b> 20x20 inches</span></p>   
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="discount-badge">25% OFF</div>
+                
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p4" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\cushioncover\p4.php" class="product-link">
+                        <img src="productimgs/home/cushioncover/p4/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 2</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
-                                             
+                        <h3 class="product-title aproduct-title">Classic Beige Cushion Covers (Pack of 5)</h3>
+                        <p class="product-description aproduct-description">Decorative & festive, ideal for living spaces.<br>₹ 399/ Pack 
+                        <span><b>Weight:</b> 1125g/peice</span><br>
+                        <span><b>Size:</b> 15x15 inches</span></p>   
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="discount-badge">25% OFF</div>
-
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p21" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\cushioncover\p21.php" class="product-link">
+                        <img src="productimgs/home/cushioncover/p21/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 3</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
-                                             
+                        <h3 class="product-title aproduct-title">Cotton Pillow Cushion Covers (Set of 2)</h3>
+                        <p class="product-description aproduct-description">Super soft & stylish, ideal for home décor.<br>₹ 199/Pack 
+                        <span><b>Weight:</b> 450g/peice</span><br>
+                        <span><b>Size:</b> 16x16 inches</span></p>   
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="discount-badge">25% OFF</div>
-
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_travelpouch_p2" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\travelpouch\p2.php" class="product-link">
+                        <img src="productimgs/home/travelpouch/p2/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 4</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
-                                             
+                        <h3 class="product-title aproduct-title">Quilted Travel Pouch (Pack of 2)</h3>
+                        <p class="product-description aproduct-description">Convenient organizer for cosmetics.<br>₹ 199/ Piece 
+                        <span><b>Weight:</b> 200g/peice</span><br>
+                        <span><b>Size:</b> 8x7 inches</span></p>   
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
 
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p5" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\tablerunner\p5.php" class="product-link">
+                        <img src="productimgs/home/tablerunner/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 5</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
-                                             
+                        <h3 class="product-title aproduct-title">Blue Blossom Cotton Table Runner</h3>
+                        <p class="product-description aproduct-description">Floral, nature-inspired, washable & durable.<br>₹ 299/ Piece 
+                        <span><b>Weight:</b> 250g/peice</span><br>
+                        <span><b>Size:</b> 72x14 inches</span></p>   
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
-
-                    <a href="/products/product-1" class="product-link">
-                        <img src="img/p1.webp" alt="Product 1" class="product-image aproduct-image">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p5" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\tablerunner\p5.php" class="product-link">
+                        <img src="productimgs/home/tablerunner/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Product 6</h3>
-                        <p class="product-description aproduct-description">Description of product 1<br>₹ 125/ Piece</p>
-                                             
+                        <h3 class="product-title aproduct-title">Blue Blossom Cotton Table Runner</h3>
+                        <p class="product-description aproduct-description">Floral, nature-inspired, washable & durable.<br>₹ 299/ Piece 
+                        <span><b>Weight:</b> 250g/peice</span><br>
+                        <span><b>Size:</b> 72x14 inches</span></p>   
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
-                        
-                        
-                        
-                        
                     </div>
                 </div>
-                <!-- Repeat similar product-card divs for other products -->
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p5" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\tablerunner\p5.php" class="product-link">
+                        <img src="productimgs/home/tablerunner/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    </a>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Blue Blossom Cotton Table Runner</h3>
+                        <p class="product-description aproduct-description">Floral, nature-inspired, washable & durable.<br>₹ 299/ Piece 
+                        <span><b>Weight:</b> 250g/peice</span><br>
+                        <span><b>Size:</b> 72x14 inches</span></p>   
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p5" data-wow-delay="0.4s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
+                    <a href="products\home\tablerunner\p5.php" class="product-link">
+                        <img src="productimgs/home/tablerunner/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    </a>
+                    <div class="product-info aproduct-info">
+                        <h3 class="product-title aproduct-title">Blue Blossom Cotton Table Runner</h3>
+                        <p class="product-description aproduct-description">Floral, nature-inspired, washable & durable.<br>₹ 299/ Piece 
+                        <span><b>Weight:</b> 250g/peice</span><br>
+                        <span><b>Size:</b> 72x14 inches</span></p>   
+                        <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
             </div>
           
             <button class="slider-nav prev">&lt;</button>

@@ -10,7 +10,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Favicon -->
-    <link href="img/bigmoon_logo_circle.png" rel="icon">
+    <link href="../../../img/bigmoon_logo_circle.png" rel="icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Google Web Fonts -->
@@ -23,12 +23,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="../../lib/animate/animate.min.css" rel="stylesheet">
-    <link href="../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../../../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../css/test.css" rel="stylesheet">
 <style>
     .row {
     margin-left: 0 !important;
@@ -1350,7 +1350,7 @@ video {
 }
 </style>
     <!-- Template Stylesheet -->
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../../css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -1372,8 +1372,8 @@ video {
           </div>
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-            <a href="index.php" class="navbar-brand d-flex align-items-center">
-                <img src="../../img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+            <a href="../../../index.php" class="navbar-brand d-flex align-items-center">
+                <img src="../../../img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
                 <h1 class="m-0 text-primary">Bigmoon</h1>
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -1383,12 +1383,12 @@ video {
                 <div class="navbar-nav mx-auto">
                       
         <div class="nav-item d-flex align-items-center ">
-                    <a href="index.php" class="btn abtn-light   me-2 ">
+                    <a href="../../../index.php" class="btn abtn-light   me-2 ">
                         Home Furnishings
                     </a>
                 </div>
                 <div class="nav-item d-flex align-items-center">
-                    <a href="babyessentials.php" class="btn abtn-light  me-2 ">
+                    <a href="../../../babyessentials.php" class="btn abtn-light  me-2 ">
                         Baby Essentials
                     </a>
                 </div>
@@ -1405,16 +1405,16 @@ video {
                         </div> -->
                     
                    
-                        <a href="ourstories.html" class="nav-link ">
+                        <a href="../../../ourstories.html" class="nav-link ">
                             Our Story
                         </a>
                         
-                    <a href="blogs.html" class="nav-item nav-link ">Blogs</a>
+                    <a href="../../../blogs.html" class="nav-item nav-link ">Blogs</a>
                    
-                        <a href="bigmoontestimonial.html" class="nav-link ">
+                        <a href="../../../bigmoontestimonial.html" class="nav-link ">
                             Testimonial
                         </a>
-                    <a href="getintouch.html" class="nav-item nav-link">Get in Touch</a>
+                    <a href="../../../getintouch.html" class="nav-item nav-link">Get in Touch</a>
                     <!--
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -1453,7 +1453,7 @@ video {
             <div class="cart-empty" id="empty-cart-message">
                 <h4>Your cart is empty!</h4>
                 <p>Add your favorite items to your cart.</p>
-                <p><a href="index.html">Shop Now</a></p>
+                <p><a href="../../../index.php">Shop Now</a></p>
             </div>
             <div id="cart-items-container"></div><!-- Cart items will be appended here -->
         </div>
@@ -1583,7 +1583,7 @@ video {
         <div class="col-md-6">
             <div>
                  <a href="/products/product-1" class="product-link">
-                 <img src="../../img/p1.webp"alt="Product Preview" id="bigImage" class="aproduct-image product-image-preview">
+                 <img src="../../../productimgs/baby/swaddle/p5/main.jpg"alt="Product Preview" id="bigImage" class="aproduct-image product-image-preview">
                  </a>
             </div>
             <div class="mt-3 product-thumbnails  gap-2">
@@ -1660,7 +1660,7 @@ video {
     }
 </script>
 <!-- Carousel End -->
-<img src="../../img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" style="object-fit: fill;" data-wow-delay="0.1s">
+<img src="../../../img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" style="object-fit: fill;" data-wow-delay="0.1s">
 <section class="product-slider" style="padding-top: 15px;padding-bottom: 15px;">
             <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
                 <!-- News & Events Section Title -->
@@ -1673,90 +1673,137 @@ video {
                 </div>				
             </div>
             <div class="slider-container">
-                <div class="product-card aproduct-card wow fadeInUp" id="baby14" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p5" data-wow-delay="0.3s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product14.php" class="product-link">
-                        <img src="../../productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="./products/baby/swaddles/p5.php" class="product-link">
+                        <img src="../../../productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Muslin Swaddle – 2 Pack</h3>
                         <p class="product-description aproduct-description">Swaddles-brown floral & rainbow prints.<br>₹ 499/Piece 
                             <span><b>Weight:</b> 1000g/piece</span><br>
                             <span><b>Size:</b>0 to 24 months</span></p>  
+                                             
+                        <!-- <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button> -->
+                        
+                        
+                        
                         
                     </div>
                 </div>
                 
-                <div class="product-card aproduct-card wow fadeInUp" id="baby10" data-wow-delay="0.5s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p5" data-wow-delay="0.5s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product10.php" class="product-link">
-                        <img src="../../productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="./products/baby/swaddles/p11.php" class="product-link">
+                        <img src="../../../productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Printed Muslin Baby Swaddle – Pack(6) </h3>
+                        <h3 class="product-title aproduct-title">Printed Muslin Baby Swaddle </h3>
                         <p class="product-description aproduct-description">Soft swaddles with cute animal & fruit prints<br>₹ 699/Set 
                             <span><b>Weight:</b> 1000g/Set</span><br>
                             <span><b>Size:</b>0 to 3 months</span></p> 
                                              
-                       
+                        <!-- <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button>
+                         -->
+                        
+                        
+                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="baby1" data-wow-delay="0.7s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_jablas_p1" data-wow-delay="0.7s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product1.php" class="product-link">
-                        <img src="../../productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="./products/baby/jablas/p1.php" class="product-link">
+                        <img src="../../../productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Organic Cotton Muslin Jabla</h3>
                         <p class="product-description aproduct-description">Pack of 5 sleeveless snap-button jablas.<br>₹ 599/ Piece 
                             <span><b>Weight:</b> 200g/peice</span><br>
                             <span><b>Size:</b> 0 to 3 months</span></p>
-                       
+                                             
+                        <!-- <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button> -->
+                        
+                        
+                        
+                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="baby3" data-wow-delay="0.9s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_napkins_p1" data-wow-delay="0.9s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product3.php" class="product-link">
-                        <img src="../../productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="./products/baby/napkins/p1.php" class="product-link">
+                        <img src="../../../productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Organic Baby Washcloths</h3>
                         <p class="product-description aproduct-description">Soft, reusable napkins with cute prints.<br>₹ 299/ Piece 
                             <span><b>Weight:</b> 250g-6 peice</span><br>
                             <span><b>Size:</b>1 to 3 years</span></p>
-                      
+                                             
+                        <!-- <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button> -->
+                        
+                        
+                        
+                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="baby6" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p2" data-wow-delay="0.3s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product6.php" class="product-link">
-                        <img src="../../productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="./products/baby/swaddles/p2.php" class="product-link">
+                        <img src="../../../productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title"> Organic Muslin Swaddle</h3>
                         <p class="product-description aproduct-description">Ultra-soft brown floral towel for all ages.<br>₹ 249/piece 
                             <span><b>Weight:</b> 250g/peice</span><br>
                             <span><b>Size:</b>All ages</span></p>
-                      
+                                             
+                        <!-- <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button> -->
+                        
+                        
+                        
+                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="baby11" data-wow-delay="0.3s">
-                    <div class="discount-badge">25% OFF</div>
+                <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p6" data-wow-delay="0.3s">
+                    <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="products/baby/product11.php" class="product-link">
-                        <img src="../../productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="./products/baby/swaddles/p6.php" class="product-link">
+                        <img src="../../../productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title"> Muslin Baby Swaddle</h3>
                         <p class="product-description aproduct-description">Swaddles- floral, rainbow & sunflower prints<br>₹ 599/set 
                             <span><b>Weight:</b> 1000g/set</span><br>
                             <span><b>Size:</b>0 to 24 months</span></p>  
-                       
+                                             
+                        <!-- <button class="add-to-cart aadd-to-cart">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="button-text abutton-text">Add to Cart</span>
+                        </button> -->
+                        
+                        
+                        
+                        
                     </div>
                 </div>
                 <!-- Repeat similar product-card divs for other products -->
@@ -1787,7 +1834,7 @@ video {
                                 <i class="fab fa-amazon"></i>
                             </a>
                             <a class="btn btn-outline-light btn-social" href="https://www.flipkart.com">
-                                <img src="img/flipkart.png" alt="Flipkart" style="width: 20px; height: 20px;">
+                                <img src="../../../img/flipkart.png" alt="Flipkart" style="width: 20px; height: 20px;">
                             </a>
                             
                             
@@ -1826,7 +1873,7 @@ video {
                 <div class="copyright">
                     <div class="row justify-content-center">
                         <div class="col-md-6 text-center mb-3 mb-md-0">
-                            <a class="border-bottom" href="index.html" style="text-decoration: none;">BigMoon Rknd</a>, Designed &
+                            <a class="border-bottom" href="../../../index.php" style="text-decoration: none;">BigMoon Rknd</a>, Designed &
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             All Rights Reserved by &copy; Jayalakshmi & Durga</a>
                         </div>
@@ -1845,13 +1892,13 @@ video {
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../lib/wow/wow.min.js"></script>
-    <script src="../../lib/easing/easing.min.js"></script>
-    <script src="../../lib/waypoints/waypoints.min.js"></script>
-    <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../../../lib/wow/wow.min.js"></script>
+    <script src="../../../lib/easing/easing.min.js"></script>
+    <script src="../../../lib/waypoints/waypoints.min.js"></script>
+    <script src="../../../lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="../../js/main.js"></script>
+    <script src="../../../js/test.js"></script>
     
     <script>
         document.querySelectorAll('.product-slider').forEach((slider) => {
@@ -2148,7 +2195,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         "description": "Order Payment",
                         "handler": function (response) {
                             $.ajax({
-                                url: 'ajax-payment.php',
+                                url: '../../../ajax-payment.php',
                                 type: 'POST',
                                 dataType: 'json',
                                 data: {
@@ -2175,12 +2222,12 @@ document.addEventListener("DOMContentLoaded", function () {
                                         };
 
                                         $.ajax({
-                                            url: 'save-customer.php',
+                                            url: '../../../save-customer.php',
                                             type: 'POST',
                                             data: customerData,
                                             success: function () {
                                                 Swal.fire('Success!', 'Payment successfully paid!', 'success').then(() => {
-                                                    window.location.href = 'index.php';
+                                                    window.location.href = '../../../index.php';
                                                 });
                                             },
                                             error: function () {
@@ -3298,7 +3345,7 @@ stateDistrictMap = {
         <div class="amodal-content">
             <span id="closeModalBtn" class="aclose">&times;</span>
             <div class="amodal-header">
-                <img src="img/orderhistory_banner.png" alt="Modal Header Image" class="amodal-image">
+                <img src="../../../img/orderhistory_banner.png" alt="Modal Header Image" class="amodal-image">
             </div>
             <div class="amodal-body" >
                 <form id="userDetailsForm">
@@ -3344,7 +3391,7 @@ stateDistrictMap = {
             const mobile = document.getElementById('mobile').value;
         
             // Send data via AJAX
-            fetch('validate_user.php', {
+            fetch('../../../validate_user.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, mobile }),
@@ -3353,7 +3400,7 @@ stateDistrictMap = {
                 .then((data) => {
                     if (data.success) {
                         // Redirect to order history page with fetched data
-                        window.location.href = 'orderhistory.php?email=' + encodeURIComponent(email) + '&mobile=' + encodeURIComponent(mobile);
+                        window.location.href = '../../../orderhistory.php?email=' + encodeURIComponent(email) + '&mobile=' + encodeURIComponent(mobile);
            
                     } else {
                         alert(data.message);
@@ -3365,13 +3412,13 @@ stateDistrictMap = {
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../../../lib/wow/wow.min.js"></script>
+    <script src="../../../lib/easing/easing.min.js"></script>
+    <script src="../../../lib/waypoints/waypoints.min.js"></script>
+    <script src="../../../lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/test.js"></script>
+    <script src="../../../js/test.js"></script>
         <!-- JavaScript Libraries -->
        
 

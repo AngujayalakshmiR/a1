@@ -3077,79 +3077,137 @@ stateDistrictMap = {
 
 </style>
 
-
 <div class="shopify-section explore-collection">
     <div class="scroll-container">
       <div class="image-with-text-wrapper">
-        <!-- Block 1 -->
-        <div class="block">
-          <a href="/collections/comforters">
-            <img src="img/product catagories front images-01.png" alt="Comforters" class="desktop-img">
-          </a>
-        </div>
-        <!-- Block 2 -->
-        <div class="block">
-          <a href="/collections/bedcover-set">
-            <img src="img/product catagories front images-02.png" alt="Bedcover Set" class="desktop-img">
-          </a>
-        </div>
-        <!-- Repeat for other blocks -->
-        <div class="block">
-          <a href="/collections/bedcover-set">
-            <img src="img/product catagories front images-03.png" alt="Bedcover Set" class="desktop-img">
-          </a>
-        </div>
-        <div class="block">
-            <a href="/collections/bedcover-set">
-              <img src="img/product catagories front images-04.png" alt="Bedcover Set" class="desktop-img">
-            </a>
+      <div class="block">
+    <a href="#" data-category="Blankets">
+        <img src="img/product catagories front images-01.png" alt="blankets" class="desktop-img">
+    </a>
+</div>
+<div class="block">
+    <a href="#" data-category="Cushion Covers">
+        <img src="img/product catagories front images-02.png" alt="cushioncover" class="desktop-img">
+    </a>
+</div>
+<div class="block">
+    <a href="#" data-category="Table Runners">
+        <img src="img/product catagories front images-03.png" alt="tablerunner" class="desktop-img">
+    </a>
+</div>
+
+        
+          <div class="block" data-category="Swaddles" >
+          <a href="#" data-category="Blankets">
+              <img src="img/product catagories front images-05.png" alt="swaddles" class="desktop-img"></a>
           </div>
-          <div class="block">
-            <a href="/collections/bedcover-set">
-              <img src="img/product catagories front images-05.png" alt="Bedcover Set" class="desktop-img">
-            </a>
+          <div class="block" data-category="Napkins">
+              <img src="img/product catagories front images-06.png" alt="napkins" class="desktop-img">
           </div>
-          <div class="block">
-            <a href="/collections/bedcover-set">
-              <img src="img/product catagories front images-06.png" alt="Bedcover Set" class="desktop-img">
-            </a>
+          <div class="block" data-category="Napkins">
+              <img src="img/product catagories front images-07.png" alt="wipes" class="desktop-img">
           </div>
-          <div class="block">
-            <a href="/collections/bedcover-set">
-              <img src="img/product catagories front images-07.png" alt="Bedcover Set" class="desktop-img">
-            </a>
+         
+          <div class="block" data-category="Jablas">
+              <img src="img/product catagories front images-11.png" alt="jablas" class="desktop-img">
           </div>
-          <div class="block">
-            <a href="/collections/bedcover-set">
-              <img src="img/product catagories front images-08.png" alt="Bedcover Set" class="desktop-img">
-            </a>
-          </div><div class="block">
-            <a href="/collections/bedcover-set">
-              <img src="img/product catagories front images-09.png" alt="Bedcover Set" class="desktop-img">
-            </a>
-          </div><div class="block">
-            <a href="/collections/bedcover-set">
-              <img src="img/product catagories front images-10.png" alt="Bedcover Set" class="desktop-img">
-            </a>
-          </div><div class="block">
-            <a href="/collections/bedcover-set">
-              <img src="img/product catagories front images-11.png" alt="Bedcover Set" class="desktop-img">
-            </a>
-          </div><div class="block">
-            <a href="/collections/bedcover-set">
-              <img src="img/product catagories front images-12.png" alt="Bedcover Set" class="desktop-img">
-            </a>
-          </div><div class="block">
-            <a href="/collections/bedcover-set">
-              <img src="img/product catagories front images-13.png" alt="Bedcover Set" class="desktop-img">
-            </a>
-          </div>
-        <!-- Add more blocks as needed -->
       </div>
     </div>
   </div>
           
-        
+     <script>
+document.addEventListener("DOMContentLoaded", function () {
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    const selectedCategory = getQueryParam("category"); // Get category from URL
+    const navTabs = document.querySelectorAll(".nav-items");
+    const productSections = document.querySelectorAll(".aproduct-grid");
+
+    if (selectedCategory) {
+        // Remove 'active' class from all nav items
+        navTabs.forEach(tab => tab.classList.remove("active"));
+
+        // Hide all product sections
+        productSections.forEach(section => section.classList.add("hidden"));
+
+        // Find and activate the correct nav tab
+        navTabs.forEach(tab => {
+            if (tab.getAttribute("data-category") === selectedCategory) {
+                tab.classList.add("active"); // Make it active
+            }
+        });
+
+        // Find the target section
+        const targetSection = document.getElementById(selectedCategory);
+        if (targetSection) {
+            targetSection.classList.remove("hidden"); // Show the selected category
+
+            // Scroll to the product section after ensuring it is visible
+            setTimeout(() => {
+                const navHeight = document.querySelector(".aproduct-navs").offsetHeight; // Get nav height
+                window.scrollTo({
+                    top: targetSection.offsetTop - navHeight - 50, // Scroll with offset
+                    behavior: "smooth"
+                });
+            }, 500); // Delay ensures elements are visible
+        }
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navTabs = document.querySelectorAll(".nav-items");
+    const productSections = document.querySelectorAll(".aproduct-grid");
+    const imageLinks = document.querySelectorAll(".shopify-section .block a");
+    const productSection = document.querySelector(".aproduct-section"); // Section to scroll to
+
+    imageLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default anchor action
+
+            const category = this.getAttribute("data-category");
+
+            // Remove 'active' class from all nav items
+            navTabs.forEach(tab => tab.classList.remove("active"));
+
+            // Hide all product sections
+            productSections.forEach(section => section.classList.add("hidden"));
+
+            // Find and activate the correct tab
+            navTabs.forEach(tab => {
+                if (tab.getAttribute("data-category") === category) {
+                    tab.classList.add("active");
+                }
+            });
+
+            // Show the corresponding product section
+            const targetSection = document.getElementById(category);
+            if (targetSection) {
+                targetSection.classList.remove("hidden");
+            }
+
+            // Smooth scroll to the product section
+            productSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const blocks = document.querySelectorAll(".block");
+
+    blocks.forEach(block => {
+        block.addEventListener("click", function () {
+            const category = this.getAttribute("data-category");
+            if (category) {
+                window.location.href = `index.php?category=${category}`;
+            }
+        });
+    });
+});
+
+     </script>   
           
 <!-- Carousel Start -->
 <div class="container-xxl container-fluid p-0 mb-5">

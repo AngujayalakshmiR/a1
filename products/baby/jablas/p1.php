@@ -2227,7 +2227,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                             data: customerData,
                                             success: function () {
                                                 Swal.fire('Success!', 'Payment successfully paid!', 'success').then(() => {
-                                                    window.location.href = 'index.php';
+                                                    window.location.href = '../../../index.php';
                                                 });
                                             },
                                             error: function () {

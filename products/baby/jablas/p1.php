@@ -2075,6 +2075,7 @@ video {
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const checkoutModal = document.getElementById("checkout-modal");
     const proceedToPayButton = document.getElementById("proceed-to-pay");
@@ -2152,7 +2153,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="item-details">
                             <span>${item.title}</span>
                             <span>${quantity} x ₹${price.toFixed(2)}</span>
-                            <p>Weight: ${itemWeight.toFixed(2)} kg</p>
+                            <p>Weight: ${itemWeight.toFixed(2)} g</p>
                             ${sizeDisplay}
                         </div>
                         <div class="item-total">
@@ -2216,18 +2217,17 @@ document.addEventListener("DOMContentLoaded", function () {
                                             qty: cartItems.map(item => item.quantity).join(', '),
                                             size: cartItems.map(item => item.size).join(', '),
                                             weight: cartItems.map(item => (parseFloat(item.weight) * parseInt(item.quantity))).join(', ') + ',' + cartItems.reduce((total, item) => total + (parseFloat(item.weight) * parseInt(item.quantity)), 0),
-                                            price: cartItems.map(item => (parseFloat(item.price) * parseInt(item.quantity))).join(', ') + ',' + cartItems.reduce((total, item) => total + (parseFloat(item.price) * parseInt(item.quantity)), 0),
+                                            price: cartItems.map(item => (parseFloat(item.price) * parseInt(item.quantity))).join(', ') + ',' + (cartItems.reduce((total, item) => total + (parseFloat(item.price) * parseInt(item.quantity)), 0) + parseFloat(shippingChargeValue.textContent)),
                                             paymentstatus: 'success',
                                             orderdate: new Date().toISOString().slice(0, 19).replace('T', ' '),
                                         };
-
                                         $.ajax({
                                             url: '../../../save-customer.php',
                                             type: 'POST',
                                             data: customerData,
                                             success: function () {
                                                 Swal.fire('Success!', 'Payment successfully paid!', 'success').then(() => {
-                                                    window.location.href = '../../../index.php';
+                                                    window.location.href = 'index.php';
                                                 });
                                             },
                                             error: function () {

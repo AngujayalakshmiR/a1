@@ -2116,18 +2116,19 @@ video {
     </a>
 </div>
 <div class="block">
-    <a href="#" data-category="Cushion Covers">
+    <a href="#" data-category="Cushion_Covers">
         <img src="img/product catagories front images-02.png" alt="cushioncover" class="desktop-img">
     </a>
 </div>
 <div class="block">
-    <a href="#" data-category="Table Runners">
+    <a href="#" data-category="Table_Runners">
         <img src="img/product catagories front images-03.png" alt="tablerunner" class="desktop-img">
     </a>
 </div>
 
         
           <div class="block" data-category="Swaddles" >
+            
               <img src="img/product catagories front images-05.png" alt="swaddles" class="desktop-img">
           </div>
           <div class="block" data-category="Napkins">
@@ -2208,18 +2209,17 @@ video {
         });
     });
 });
-document.addEventListener("DOMContentLoaded", function () {
-    const blocks = document.querySelectorAll(".block");
+const blocks = document.querySelectorAll(".shopify-section .block");
 
-    blocks.forEach(block => {
-        block.addEventListener("click", function () {
-            const category = this.getAttribute("data-category");
-            if (category) {
-                window.location.href = `babyessentials.php?category=${category}`;
-            }
-        });
+blocks.forEach(block => {
+    block.addEventListener("click", function () {
+        const category = this.getAttribute("data-category");
+        if (category) {
+            window.location.href = `babyessentials.php?category=${category}`;
+        }
     });
 });
+
 
 
           </script>
@@ -2260,13 +2260,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 <ul class="nav-tabss">
                     <li class="nav-items active" data-category="all">All</li>
                     <li class="nav-items" data-category="Aprons">Aprons</li>
-                    <li class="nav-items" data-category="Bed Quilts">Bed Quilts</li>
+                    <li class="nav-items" data-category="Bed_Quilts">Bed Quilts</li>
                     <li class="nav-items" data-category="Blankets">Blankets</li>
-                    <li class="nav-items" data-category="Cushion Covers">Cushion Covers</li>
+                    <li class="nav-items" data-category="Cushion_Covers">Cushion Covers</li>
                     <li class="nav-items" data-category="Placemats">Placemats</li>
-                    <li class="nav-items" data-category="Table Clothes">Table Clothes</li>
-                    <li class="nav-items" data-category="Table Runners">Table Runners</li>
-                    <li class="nav-items" data-category="Travel Pouches">Travel Pouches</li>
+                    <li class="nav-items" data-category="Table_Clothes">Table Clothes</li>
+                    <li class="nav-items" data-category="Table_Runners">Table Runners</li>
+                    <li class="nav-items" data-category="Travel_Pouches">Travel Pouches</li>
                 </ul>
             </nav>
         <div class="wow fadeInUp" data-wow-delay="0.3s">
@@ -2289,7 +2289,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                 </div>
-                <div class="aproduct-grid hidden" id="Bed Quilts">
+                <div class="aproduct-grid hidden" id="Bed_Quilts">
                 <div class="aproduct-card" id="home_bedquilt_p1">
                         <a href="products\home\bedquilt\p1.php" class="product-link">
                             <img src="productimgs\home\bedquilt\p1\main.jpg" alt="Product 1" class="aproduct-image">
@@ -2322,7 +2322,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                 </div>
-                <div class="aproduct-grid hidden" id="Cushion Covers">
+                <div class="aproduct-grid hidden" id="Cushion_Covers">
                 <div class="aproduct-card  " id="home_cushioncover_p1">
                         <a href="products\home\cushioncover\p1.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p1/main1.jpg" alt="Product 1" class="aproduct-image">
@@ -2790,7 +2790,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
         
-                <div class="aproduct-grid hidden" id="Table Clothes">
+                <div class="aproduct-grid hidden" id="Table_Clothes">
                     <div class="aproduct-card  " id="home_tablecloth_p1">
                         <a href="products\home\tablecloth\p1.php" class="product-link">
                             <img src="productimgs/home/tablecloth/p1/main.jpg" alt="Product 1" class="aproduct-image">
@@ -2891,7 +2891,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
         
-                <div class="aproduct-grid hidden" id="Table Runners">
+                <div class="aproduct-grid hidden" id="Table_Runners">
                 <div class="aproduct-card  " id="home_tablerunner_p1">
                         <a href="products\home\tablerunner\p1.php" class="product-link">
                             <img src="productimgs/home/tablerunner/p1/main.jpg" alt="Product 1" class="aproduct-image">
@@ -3020,7 +3020,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
         
-                <div class="aproduct-grid hidden" id="Travel Pouches">
+                <div class="aproduct-grid hidden" id="Travel_Pouches">
                 <div class="aproduct-card  " id="home_travelpouch_p1">
                         <a href="products\home\travelpouch\p1.php" class="product-link">
                             <img src="productimgs/home/travelpouch/p1/main.jpg" alt="Product 1" class="aproduct-image">

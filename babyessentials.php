@@ -2067,85 +2067,45 @@ video {
 <div class="shopify-section explore-collection">
     <div class="scroll-container">
       <div class="image-with-text-wrapper">
-      <div class="block">
-    <a href="#" data-category="Blankets">
-        <img src="img/product catagories front images-01.png" alt="blankets" class="desktop-img">
-    </a>
-</div>
-<div class="block">
-    <a href="#" data-category="Cushion Covers">
-        <img src="img/product catagories front images-02.png" alt="cushioncover" class="desktop-img">
-    </a>
-</div>
-<div class="block">
-    <a href="#" data-category="Table Runners">
-        <img src="img/product catagories front images-03.png" alt="tablerunner" class="desktop-img">
-    </a>
-</div>
+     
 
-        
-          <div class="block" data-category="Swaddles" >
-          <a href="#" data-category="Blankets">
-              <img src="img/product catagories front images-05.png" alt="swaddles" class="desktop-img"></a>
+
+
+<div class="block" data-category="Blankets" >
+              <img src="img/product catagories front images-01.png" alt="blankets" class="desktop-img">
           </div>
-          <div class="block" data-category="Napkins">
-              <img src="img/product catagories front images-06.png" alt="napkins" class="desktop-img">
+          <div class="block" data-category="Cushion Covers">
+              <img src="img/product catagories front images-02.png" alt="cushioncover" class="desktop-img">
           </div>
-          <div class="block" data-category="Napkins">
-              <img src="img/product catagories front images-07.png" alt="wipes" class="desktop-img">
+          <div class="block" data-category="Table Runners">
+              <img src="img/product catagories front images-03.png" alt="tablerunner" class="desktop-img">
           </div>
-         
-          <div class="block" data-category="Jablas">
-              <img src="img/product catagories front images-11.png" alt="jablas" class="desktop-img">
-          </div>
+<div class="block">
+    <a href="#" data-category="Swaddles">
+        <img src="img/product catagories front images-05.png" alt="swaddles" class="desktop-img">
+    </a>
+</div>
+<div class="block">
+    <a href="#" data-category="Napkins">
+        <img src="img/product catagories front images-06.png" alt="napkins" class="desktop-img">
+    </a>
+</div>
+<div class="block">
+    <a href="#" data-category="Napkins">
+        <img src="img/product catagories front images-07.png" alt="wipes" class="desktop-img">
+    </a>
+</div>
+<div class="block">
+    <a href="#" data-category="Jablas">
+        <img src="img/product catagories front images-11.png" alt="jablas" class="desktop-img">
+    </a>
+</div> 
       </div>
     </div>
   </div>
           
-     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    function getQueryParam(param) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
-    }
-
-    const selectedCategory = getQueryParam("category"); // Get category from URL
-    const navTabs = document.querySelectorAll(".nav-items");
-    const productSections = document.querySelectorAll(".aproduct-grid");
-
-    if (selectedCategory) {
-        // Remove 'active' class from all nav items
-        navTabs.forEach(tab => tab.classList.remove("active"));
-
-        // Hide all product sections
-        productSections.forEach(section => section.classList.add("hidden"));
-
-        // Find and activate the correct nav tab
-        navTabs.forEach(tab => {
-            if (tab.getAttribute("data-category") === selectedCategory) {
-                tab.classList.add("active"); // Make it active
-            }
-        });
-
-        // Find the target section
-        const targetSection = document.getElementById(selectedCategory);
-        if (targetSection) {
-            targetSection.classList.remove("hidden"); // Show the selected category
-
-            // Scroll to the product section after ensuring it is visible
-            setTimeout(() => {
-                const navHeight = document.querySelector(".aproduct-navs").offsetHeight; // Get nav height
-                window.scrollTo({
-                    top: targetSection.offsetTop - navHeight - 50, // Scroll with offset
-                    behavior: "smooth"
-                });
-            }, 500); // Delay ensures elements are visible
-        }
-    }
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
+  <script>
+ document.addEventListener("DOMContentLoaded", function () {
     const navTabs = document.querySelectorAll(".nav-items");
     const productSections = document.querySelectorAll(".aproduct-grid");
     const imageLinks = document.querySelectorAll(".shopify-section .block a");
@@ -2194,7 +2154,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-     </script>   
+
+          </script>
           
 <!-- Carousel Start -->
 <div class="container-xxl container-fluid p-0 mb-5">

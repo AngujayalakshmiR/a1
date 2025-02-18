@@ -1578,34 +1578,38 @@ video {
     }
 </style>
 <div class="container my-5">
-    <div class="row aproduct-card" id="baby1">
+    <div class="row aproduct-card" id="baby_jablas_p1">
         <!-- Left Side: Images -->
         <div class="col-md-6">
             <div>
-                 <a href="/products/product-1" class="product-link">
-                 <img src="../../../productimgs/baby/swaddle/p5/main.jpg"alt="Product Preview" id="bigImage" class="aproduct-image product-image-preview">
+                 <a href="p1.php" class="product-link">
+                 <img src="../../../productimgs/baby/jabla/p1/main.jpg"alt="Product Preview" id="bigImage" class="aproduct-image product-image-preview">
                  </a>
             </div>
             <div class="mt-3 product-thumbnails  gap-2">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" 
-                     alt="Thumbnail" onclick="changeImage(this)" class="active" style="width: 70px;height: 70px;">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458461121/MC/ZD/YY/145876533/grey-minimalist-interior-design-instagram-post-7-500x500.png" 
+            <img src="../../../productimgs/baby/jabla/p1/main.jpg" 
+            alt="Thumbnail" onclick="changeImage(this)" class="active" style="width: 70px;height: 70px;">
+                <img src="../../../productimgs/baby/jabla/p1/1.jpg" 
+                     alt="Thumbnail" onclick="changeImage(this)"  style="width: 70px;height: 70px;">
+                <img src="../../../productimgs/baby/jabla/p1/2.jpg" 
                      alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" 
+                <img src="../../../productimgs/baby/jabla/p1/3.jpg" 
                      alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/458453990/ES/MG/FL/145876533/grey-minimalist-interior-design-instagram-post-14-500x500.png" 
+                <img src="../../../productimgs/baby/jabla/p1/4.jpg" 
+                     alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
+                <img src="../../../productimgs/baby/jabla/p1/5.jpg" 
                      alt="Thumbnail" onclick="changeImage(this)" style="width: 70px;height: 70px;">
                      
             </div>
         </div>
         
         <!-- Right Side: Details -->
-        <div class="col-md-6 " id="baby1">
-            <h2 class="aproduct-title">Dobby Cotton Table Runner with Tassels</h2>
-            <p class="mt-3 aproduct-description">Washable 72x16" Multicolor Table Runner – Elegant & Durable. <br> 
-                <span class="text-danger" style="font-size: 24px;"><b>₹1</b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹499</del></span></span>  <br>
-                <span><b>Weight:</b> 250g/peice</span>
-                <span><b>Size:</b>3 to 6 months</span>
+        <div class="col-md-6 " >
+            <h2 class="aproduct-title">Organic Cotton Muslin Jabla</h2>
+            <p class="mt-3 aproduct-description">Pack of 5 sleeveless snap-button jablas with cute prints.<br> 
+                <span class="text-danger" style="font-size: 24px;"><b>₹ 599/ Piece</b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹999</del></span></span>  <br>
+                <span><b>Weight:</b> 200g/peice</span><br>
+                <span><b>Size:</b> 0 to 3 months</span></p>
             </p>
          
             
@@ -1620,22 +1624,23 @@ video {
             <button class="btn btn-primary mt-3 aadd-to-cart">Add to Cart</button>
             <br><br>
             <ul>
-                <li><b>Colour:</b>	Multi colour</li>
-                <li><b>Material:</b>	Cotton</li>
-                <li><b>Size:</b>	Medium</li>
-                <li><b>Brand:</b>	BIGMOON</li>
-                <li><b>Pattern:</b>	Striped</li>
+                <li><b>Closure Type:</b> Button</li>
+                <li><b>Care Instructions:</b> Machine Wash</li>
+                <li><b>Style:</b> Casual</li>
+                <li><b>Pattern:</b> Moon, owl, honey, planet, and leaf prints</li>
+                <li><b>Country of Origin:</b> India</li>
             </ul>
-        <div style="text-align:justify;">
-            <h4>About this item</h4>
-            <li><b>Premium Quality:</b> Made from 100% pure Dobby cotton for durability and a soft feel.</li>
-            <li><b>Ideal Size:</b> Large 72x16 inches, perfect for 6-seater dining tables.</li>
-            <li><b>Elegant Accents:</b> Features stylish tassels and vibrant multicolor patterns.</li>
-            <li><b>Easy Maintenance:</b> Fully washable for lasting freshness and vibrancy.</li>
-            <li><b>Versatile Décor:</b> Suitable for dining tables, buffets, side tables, and more.</li>
-            <li><b>Protective Design:</b> Safeguards surfaces from spills and scratches while adding style.</li>
-            <li><b>Perfect for All Occasions:</b> Ideal for everyday use and festive gatherings.</li>
-        </div>
+
+            <div style="text-align:justify;">
+                <h4>About this item</h4>
+                <li><b>100% Organic Cotton Muslin:</b> Crafted from soft, breathable muslin that’s gentle on your baby’s delicate skin, providing all-day comfort.</li>
+                <li><b>Adorable Prints:</b> Includes five charming designs—moon, owl, honey, planet, and leaf prints—that add a playful touch to your newborn’s wardrobe.</li>
+                <li><b>Perfect for Newborns:</b> Designed specifically for 0-3 month babies, offering a snug, comfortable fit for both boys and girls.</li>
+                <li><b>Sleeveless & Snap Button Design:</b> Easy-to-use snap buttons make dressing and changing hassle-free, allowing for quick and convenient outfit changes.</li>
+                <li><b>Durable & Easy Care:</b> High-quality construction ensures these Jablas stay soft and comfortable even after multiple washes, making them perfect for everyday wear.</li>
+                <li><b>Ideal Gift:</b> A thoughtful and practical gift for new parents, providing essential comfort and style for their little one’s first months.</li>
+            </div>
+
         </div>
     </div>
 </div>
@@ -1676,7 +1681,7 @@ video {
                 <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p5" data-wow-delay="0.3s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="./products/baby/swaddles/p5.php" class="product-link">
+                    <a href="../../../products/baby/swaddles/p5.php" class="product-link">
                         <img src="../../../productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -1699,7 +1704,7 @@ video {
                 <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p5" data-wow-delay="0.5s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="./products/baby/swaddles/p11.php" class="product-link">
+                    <a href="../../../products/baby/swaddles/p11.php" class="product-link">
                         <img src="../../../productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -1721,7 +1726,7 @@ video {
                 <div class="product-card aproduct-card wow fadeInUp" id="baby_jablas_p1" data-wow-delay="0.7s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="./products/baby/jablas/p1.php" class="product-link">
+                    <a href="../../../products/baby/jablas/p1.php" class="product-link">
                         <img src="../../../productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -1743,7 +1748,7 @@ video {
                 <div class="product-card aproduct-card wow fadeInUp" id="baby_napkins_p1" data-wow-delay="0.9s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="./products/baby/napkins/p1.php" class="product-link">
+                    <a href="../../../products/baby/napkins/p1.php" class="product-link">
                         <img src="../../../productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -1765,7 +1770,7 @@ video {
                 <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p2" data-wow-delay="0.3s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="./products/baby/swaddles/p2.php" class="product-link">
+                    <a href="../../../products/baby/swaddles/p2.php" class="product-link">
                         <img src="../../../productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
@@ -1787,7 +1792,7 @@ video {
                 <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p6" data-wow-delay="0.3s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="./products/baby/swaddles/p6.php" class="product-link">
+                    <a href="../../../products/baby/swaddles/p6.php" class="product-link">
                         <img src="../../../productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">

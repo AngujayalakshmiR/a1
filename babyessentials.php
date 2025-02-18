@@ -2332,7 +2332,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <img src="productimgs/baby/swaddle/p4/main1.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title"> Organic Muslin Towel – Rainbow Print </h3>
+                            <h3 class="aproduct-title">p4</h3>
                             <p class="aproduct-description">Ultra-soft 120x100 cm towel for babies, toddlers & adults.<br>₹ 249/piece 
                             <span><b>Weight:</b> 250g/peice</span><br>
                             <span><b>Size:</b>All ages</span></p>  

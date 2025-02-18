@@ -2119,7 +2119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function getShippingRate(state) {
-        if (state === "Tamil Nadu") return 40;
+        if (state === "Tamil Nadu") return 1;
         if (["Kerala", "Karnataka", "Andhra Pradesh", "Telangana"].includes(state)) return 60;
         if (state === "Pondicherry") return 90;
         return 70;

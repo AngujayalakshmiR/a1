@@ -969,7 +969,6 @@ video {
 
 /* Product Title */
 .product-title {
-    font-size: 18px;
     color: #333; /* Dark gray */
     margin-bottom: 10px;
 }
@@ -1093,7 +1092,6 @@ video {
     }
 
     .product-title {
-        font-size: 16px;
     }
 
     .product-description {
@@ -2337,7 +2335,7 @@ blocks.forEach(block => {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  " id="home_cushioncover_p2">
+                    <!-- <div class="aproduct-card  " id="home_cushioncover_p2">
                         <a href="products\home\cushioncover\p2.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p2/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
@@ -2350,7 +2348,7 @@ blocks.forEach(block => {
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="aproduct-card  " id="home_cushioncover_p3">
                         <a href="products\home\cushioncover\p3.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p3/main.jpg" alt="Product 1" class="aproduct-image">
@@ -2469,7 +2467,7 @@ blocks.forEach(block => {
                         </a>
                         <div class="aproduct-info">
                             <h3 class="aproduct-title">Cotton Waffle Textured Cushion Covers (Pack of 5)</h3>
-                            <p class="aproduct-description">Soft & durable, ideal for sofa, couch & bedroom.<br>₹ 1,499/Pack
+                            <p class="aproduct-description">Soft & durable, ideal for sofa, couch & bedroom.<br>₹ 1499/Pack
                             <span><b>Weight:</b> 1125g/pack</span><br>
                             <span><b>Size:</b> 18x18 inches</span></p>  
                             <button class="aadd-to-cart">
@@ -2492,7 +2490,7 @@ blocks.forEach(block => {
                         </div>
                     </div>
                     <div class="aproduct-card  " id="home_cushioncover_p13">
-                        <a href="products\home\cushioncover\p13.php.php" class="product-link">
+                        <a href="products\home\cushioncover\p13.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p13/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
@@ -3073,7 +3071,7 @@ blocks.forEach(block => {
                         <img src="productimgs/home/cushioncover/p30/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Cotton Floral Cushion Covers (Set of 5)</h3>
+                        <h3 class="product-title aproduct-title">Cute Floral Cushion Covers (Set of 5)</h3>
                         <p class="product-description aproduct-description">Soft, durable, and stylish covers for home.<br>₹ 399/Pack 
                             <span><b>Weight:</b> 1125g/piece</span><br>
                             <span><b>Size:</b>18x18 inches</span></p>  
@@ -3092,7 +3090,7 @@ blocks.forEach(block => {
                         <img src="productimgs/home/cushioncover/p31/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Stylized Cotton Cushion Covers (Set of 2)</h3>
+                        <h3 class="product-title aproduct-title">Stylized Cushion Covers (Set of 2)</h3>
                         <p class="product-description aproduct-description">Hidden zipper, stylish sofa décor.<br>₹ 199/Pack 
                             <span><b>Weight:</b> 450g/piece</span><br>
                             <span><b>Size:</b>18x18 inches</span></p>  
@@ -3108,7 +3106,7 @@ blocks.forEach(block => {
                         <img src="productimgs/home/cushioncover/p1/main1.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Cotton Floral Cushion Covers (Set of 5)</h3>
+                        <h3 class="product-title aproduct-title">Floral Cushion Covers (Set of 5)</h3>
                         <p class="product-description aproduct-description">Soft, durable & festive décor for home & living.<br>₹ 399/Pack 
                             <span><b>Weight:</b> 1125g/piece</span><br>
                             <span><b>Size:</b>18x18 inches</span></p>  
@@ -3221,22 +3219,6 @@ blocks.forEach(block => {
 
             
             <div class="slider-container">
-            <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p2" data-wow-delay="0.4s">
-                    <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="products\home\cushioncover\p2.php" class="product-link">
-                        <img src="productimgs/home/cushioncover/p2/main.jpg" alt="Product 1" class="product-image aproduct-image">
-                    </a>
-                    <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Jute Texture Cushion Covers (Pack of 5)</h3>
-                        <p class="product-description aproduct-description">Durable & decorative, ideal for home & office.<br>₹ 499/ Pack 
-                        <span><b>Weight:</b> 1125g/peice</span><br>
-                        <span><b>Size:</b> 20x20 inches</span></p>   
-                        <button class="add-to-cart aadd-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text abutton-text">Add to Cart</span>
-                        </button>
-                    </div>
-                </div>
                 
 
                 <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p4" data-wow-delay="0.4s">
@@ -3245,7 +3227,7 @@ blocks.forEach(block => {
                         <img src="productimgs/home/cushioncover/p4/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Classic Beige Cushion Covers (Pack of 5)</h3>
+                        <h3 class="product-title aproduct-title">Beige Cushion Covers (Pack of 5)</h3>
                         <p class="product-description aproduct-description">Decorative & festive, ideal for living spaces.<br>₹ 399/ Pack 
                         <span><b>Weight:</b> 1125g/peice</span><br>
                         <span><b>Size:</b> 15x15 inches</span></p>   
@@ -3261,7 +3243,7 @@ blocks.forEach(block => {
                         <img src="productimgs/home/cushioncover/p21/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Cotton Pillow Cushion Covers (Set of 2)</h3>
+                        <h3 class="product-title aproduct-title">Cotton Pillow Covers (Set of 2)</h3>
                         <p class="product-description aproduct-description">Super soft & stylish, ideal for home décor.<br>₹ 199/Pack 
                         <span><b>Weight:</b> 450g/peice</span><br>
                         <span><b>Size:</b> 16x16 inches</span></p>   

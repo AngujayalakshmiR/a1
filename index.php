@@ -3829,7 +3829,7 @@ blocks.forEach(block => {
         const emptyCartMessage = document.getElementById('empty-cart-message');
         const checkoutButton = document.getElementById('proceed-to-checkout');
         const cartNotification = document.createElement('div');
-        
+
         // Add notification div
         cartNotification.classList.add('cart-notification');
         document.body.appendChild(cartNotification);
@@ -3856,25 +3856,24 @@ blocks.forEach(block => {
                         <div class="col-3">
                             <img src="${item.image}" alt="${item.title}" class="cart-item-image img-fluid">
                         </div>
-
                         <div class="col-8">
                             <div class="cart-item-info">
                                 <h5 class="cart-item-title" style="text-align:left">${item.title}</h5>
                                 <p class="cart-item-description" style="text-align:left">${item.description}</p>
                                 ${item.size && item.size !== "N/A" ? `<span class="cart-item-size"><strong>Size:</strong> ${item.size}</span>` : ""}
-                                <p><span class="cart-item-price" style="text-align:left">₹ ${item.price}</span>&nbsp&nbsp<span style="color:black;"><strong>Weight:</strong> ${item.weight * item.quantity}g</span>
+                                <p>
+                                    <span class="cart-item-price">₹ ${item.price}</span>
+                                    &nbsp&nbsp
+                                    <span><strong>Weight:</strong> ${item.weight * item.quantity}g</span>
                                 </p>
-                                
                             </div>
                         </div>
-
                         <div class="col-1">
                             <div class="position-absolute top-0 end-0 p-2">
                                 <button class="btn btn-danger" onclick="removeItem(${index})">
                                     <i class="fa fa-trash"></i>
                                 </button>
                             </div>
-
                             <div class="position-absolute bottom-0 end-0 p-2">
                                 <div class="input-group">
                                     <button class="btn btn-outline-secondary btn-decrement" onclick="decrementQuantity(${index})">-</button>
@@ -3894,13 +3893,13 @@ blocks.forEach(block => {
 
         // Function to add an item to the cart
         function addItemToCart(item) {
-            const existingItem = cartItems.find(cartItem => cartItem.title === item.title);
+            const existingItem = cartItems.find(cartItem => cartItem.id === item.id);
             if (existingItem) {
                 showNotification('The product is already in the cart.');
                 return;
             }
 
-            item.quantity = item.quantity || 1; 
+            item.quantity = item.quantity || 1;
             cartItems.push(item);
             updateCartDisplay();
             showNotification('Product added to the cart successfully!');
@@ -3946,9 +3945,11 @@ blocks.forEach(block => {
         document.querySelectorAll('.aadd-to-cart').forEach(button => {
             button.addEventListener('click', function () {
                 const productCard = this.closest('.aproduct-card');
+                const productId = productCard.id; // Unique product ID from card
                 const productTitle = productCard.querySelector('.aproduct-title').textContent;
                 const descriptionText = productCard.querySelector('.aproduct-description').innerHTML;
-                 // Extract size correctly
+                
+                // Extract size correctly
                 const productSizeMatch = descriptionText.match(/<b>Size:<\/b>\s*([^<]+)/);
                 const productSize = productSizeMatch ? productSizeMatch[1].trim() : "N/A";
 
@@ -3964,10 +3965,9 @@ blocks.forEach(block => {
                 
                 const cleanedDescription = descriptionHTML.replace(/<span>.*?<\/span>/, '').trim();
                 const productImage = productCard.querySelector('.aproduct-image').src;
-                
-               
 
                 addItemToCart({
+                    id: productId, // Unique ID for each product
                     title: productTitle,
                     description: productDescription,
                     price: productPrice,
@@ -3975,7 +3975,6 @@ blocks.forEach(block => {
                     size: productSize,
                     weight: productWeight
                 });
-
             });
         });
 
@@ -3983,6 +3982,7 @@ blocks.forEach(block => {
         updateCartDisplay();
     });
 </script>
+
 
 <script>
 stateDistrictMap = {

@@ -2335,7 +2335,7 @@ blocks.forEach(block => {
                             </button>
                         </div>
                     </div> -->
-                    <div class="aproduct-card  " id="home_cushioncover_p2">
+                    <!-- <div class="aproduct-card  " id="home_cushioncover_p2">
                         <a href="products\home\cushioncover\p2.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p2/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
@@ -2348,7 +2348,7 @@ blocks.forEach(block => {
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="aproduct-card  " id="home_cushioncover_p3">
                         <a href="products\home\cushioncover\p3.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p3/main.jpg" alt="Product 1" class="aproduct-image">
@@ -2728,7 +2728,7 @@ blocks.forEach(block => {
                             </button>
                         </div>
                     </div>
-                    <div class="aproduct-card  " id="home_cushioncover_p30">
+                    <!-- <div class="aproduct-card  " id="home_cushioncover_p30">
                         <a href="products\home\cushioncover\p30.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p30/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
@@ -2741,8 +2741,8 @@ blocks.forEach(block => {
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
-                    </div>
-                    <div class="aproduct-card  " id="home_cushioncover_p31">
+                    </div> -->
+                    <!-- <div class="aproduct-card  " id="home_cushioncover_p31">
                         <a href="products\home\cushioncover\p31.php" class="product-link">
                             <img src="productimgs/home/cushioncover/p31/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
@@ -2755,7 +2755,7 @@ blocks.forEach(block => {
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="aproduct-grid hidden" id="Placemats">
                 <div class="aproduct-card  " id="home_placemat_p1">

@@ -1403,18 +1403,6 @@ video {
                         Baby Essentials
                     </a>
                 </div>
-                    <!-- Baby Products Dropdown 
-                    <div class="nav-item dropdown">
-                        <a href="babyessentials.html" class="nav-link ">
-                            Baby Essentials
-                        </a>
-                         
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="baby-blankets.html" class="dropdown-item">Baby Blankets</a>
-                            <a href="baby-pillows.html" class="dropdown-item">Baby Pillows</a>
-                            <a href="baby-towels.html" class="dropdown-item">Baby Towels</a>
-                        </div> -->
-                    
                    
                         <a href="../../../ourstories.html" class="nav-link ">
                             Our Story
@@ -1426,18 +1414,6 @@ video {
                             Testimonial
                         </a>
                     <a href="../../../getintouch.html" class="nav-item nav-link">Get in Touch</a>
-                    <!--
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">School Facilities</a>
-                            <a href="team.html" class="dropdown-item">Popular Teachers</a>
-                            <a href="call-to-action.html" class="dropdown-item">Become A Teachers</a>
-                            <a href="appointment.html" class="dropdown-item">Make Appointment</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
-                        </div>
-                    </div>-->
         
                     
                 </div>

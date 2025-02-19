@@ -2652,7 +2652,7 @@ blocks.forEach(block => {
                             <h3 class="aproduct-title">Rich Orange Quilted Cushion Covers (Set of 2)</h3>
                             <p class="aproduct-description">Super soft silk cotton with embroidered design & zipper.<br>₹ 249/ Pack 
                             <span><b>Weight:</b> 450g/pack</span><br>
-                            <span><b>Size:</b> 15x15 inches inches</span></p>  
+                            <span><b>Size:</b> 15x15 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
                             </button>
@@ -2665,7 +2665,7 @@ blocks.forEach(block => {
                         <div class="aproduct-info">
                             <h3 class="aproduct-title"> Rich Pink Quilted Cushion Covers (Set of 2)</h3>
                             <p class="aproduct-description">Super soft silk cotton with embroidered design & zipper.<br>₹ 249/ Pack 
-                            <span><b>Weight:</b> 400g/pack</span><br>
+                            <span><b>Weight:</b> 450g/pack</span><br>
                             <span><b>Size:</b> 14x14  inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>
@@ -2679,7 +2679,7 @@ blocks.forEach(block => {
                         <div class="aproduct-info">
                             <h3 class="aproduct-title"> Beige Quilted Cushion Covers (Set of 2)</h3>
                             <p class="aproduct-description">Soft silk with embroidered design & hidden zipper.<br>₹ 249/ Pack 
-                            <span><b>Weight:</b> 400g/pack</span><br>
+                            <span><b>Weight:</b> 450g/pack</span><br>
                             <span><b>Size:</b> 14x14 inches</span></p>  
                             <button class="aadd-to-cart">
                                 <span class="abutton-text">Add to Cart</span>

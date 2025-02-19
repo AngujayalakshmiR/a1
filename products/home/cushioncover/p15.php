@@ -1637,7 +1637,6 @@ video {
 <div style="text-align:justify;">
     <h4>About this item</h4>
     <ul>
-        <li><b>Brand:</b> Bigmoon</li>
         <li><b>Premium 100% Pure Cotton Fabric:</b> Soft, breathable, and durable cotton for long-lasting comfort and festive style.</li>
         <li><b>Charming Christmas Tree Print:</b> Beautiful holiday-inspired Christmas tree design for a festive home atmosphere.</li>
         <li><b>Vibrant Green Pom-Pom Border:</b> Adds elegance and a cozy festive touch to your living space.</li>

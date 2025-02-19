@@ -1705,47 +1705,30 @@ video {
                 </div>				
             </div>
             <div class="slider-container">
-                <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p30" data-wow-delay="0.2s">
+            <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p6" data-wow-delay="0.2s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="../../../products\home\cushioncover\p30.php" class="product-link">
-                        <img src="../../../productimgs/home/cushioncover/p30/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="../../../products\home\cushioncover\p6.php" class="product-link">
+                        <img src="../../../productimgs/home/cushioncover/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Cute Floral Cushion Covers (Set of 5)</h3>
-                        <p class="product-description aproduct-description">Soft, durable, and stylish covers for home.<br>₹ 399/Pack 
-                            <span><b>Weight:</b> 1125g/piece</span><br>
+                        <h3 class="product-title aproduct-title">Cute Christmas Covers(Pack of 2)</h3>
+                        <p class="product-description aproduct-description">Festive-themed cotton pillow covers.<br>₹ 299/Pack 
+                            <span><b>Weight:</b> 450g/piece</span><br>
                             <span><b>Size:</b>18x18 inches</span></p>  
-                       
                     </div>
                 </div>
                
-
-                <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p31" data-wow-delay="0.4s">
+                    <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p7" data-wow-delay="0.4s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
-
-                    <a href="../../../products\home\cushioncover\p31.php" class="product-link">
-                        <img src="../../../productimgs/home/cushioncover/p31/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="../../../products\home\cushioncover\p7.php" class="product-link">
+                        <img src="../../../productimgs/home/cushioncover/p7/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Stylized Cushion Covers (Set of 2)</h3>
-                        <p class="product-description aproduct-description">Hidden zipper, stylish sofa décor.<br>₹ 199/Pack 
+                        <h3 class="product-title aproduct-title">Checked Cotton Covers (Pack of 2)</h3>
+                        <p class="product-description aproduct-description">Festive & cozy with pom-pom lace.<br>₹ 299/Pack 
                             <span><b>Weight:</b> 450g/piece</span><br>
-                            <span><b>Size:</b>18x18 inches</span></p>  
-                        
-                    </div>
-                </div>
-                    <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p1" data-wow-delay="0.4s">
-                    <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="../../../products\home\cushioncover\p1.php" class="product-link">
-                        <img src="../../../productimgs/home/cushioncover/p1/main1.jpg" alt="Product 1" class="product-image aproduct-image">
-                    </a>
-                    <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Floral Cushion Covers (Set of 5)</h3>
-                        <p class="product-description aproduct-description">Soft, durable & festive décor for home & living.<br>₹ 399/Pack 
-                            <span><b>Weight:</b> 1125g/piece</span><br>
-                            <span><b>Size:</b>18x18 inches</span></p>  
-                        
+                            <span><b>Size:</b>18x18 inches</span></p> 
                     </div>
                 </div>
                 <div class="product-card aproduct-card wow fadeInUp" id="home_travelpouch_p1" data-wow-delay="0.4s">

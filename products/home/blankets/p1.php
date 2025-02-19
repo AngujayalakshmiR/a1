@@ -1677,150 +1677,108 @@ video {
 <img src="../../../img/headimg1.webp" alt="Responsive Image" class="responsive-image wow fadeInUp" style="object-fit: fill;" data-wow-delay="0.1s">
 <section class="product-slider" style="padding-top: 15px;padding-bottom: 15px;">
             <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+                <!-- News & Events Section Title -->
                 <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px; height:auto;">
-                    <h5 class="fw-bold text-primary text-uppercase">Best Sellers</h5>    
+                    <h5 class="fw-bold text-primary text-uppercase">New Arrivals</h5>    
                     <!-- Blue bar container -->
                     <div class="blue-bar">
                         <div class="moving-box"></div>  <!-- Small white rectangle -->
                     </div>
                 </div>				
             </div>
-
-            
             <div class="slider-container">
-            <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p2" data-wow-delay="0.4s">
+            <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p6" data-wow-delay="0.2s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="../../../products\home\cushioncover\p2.php" class="product-link">
-                        <img src="../../../productimgs/home/cushioncover/p2/main.jpg" alt="Product 1" class="product-image aproduct-image">
-                    </a>
-                    <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Jute Texture Cushion Covers (Pack of 5)</h3>
-                        <p class="product-description aproduct-description">Durable & decorative, ideal for home & office.<br>₹ 499/ Pack 
-                        <span><b>Weight:</b> 1125g/peice</span><br>
-                        <span><b>Size:</b> 20x20 inches</span></p>   
-                        <!-- <button class="add-to-cart aadd-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text abutton-text">Add to Cart</span>
-                        </button> -->
-                    </div>
-                </div>
-                
 
-                <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p4" data-wow-delay="0.4s">
-                    <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="../../../products\home\cushioncover\p4.php" class="product-link">
-                        <img src="../../../productimgs/home/cushioncover/p4/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="../../../products\home\cushioncover\p6.php" class="product-link">
+                        <img src="../../../productimgs/home/cushioncover/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Classic Beige Cushion Covers (Pack of 5)</h3>
-                        <p class="product-description aproduct-description">Decorative & festive, ideal for living spaces.<br>₹ 399/ Pack 
-                        <span><b>Weight:</b> 1125g/peice</span><br>
-                        <span><b>Size:</b> 15x15 inches</span></p>   
-                        <!-- <button class="add-to-cart aadd-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text abutton-text">Add to Cart</span>
-                        </button> -->
+                        <h3 class="product-title aproduct-title">Cute Christmas Covers(Pack of 2)</h3>
+                        <p class="product-description aproduct-description">Festive-themed cotton pillow covers.<br>₹ 299/Pack 
+                            <span><b>Weight:</b> 450g/piece</span><br>
+                            <span><b>Size:</b>18x18 inches</span></p>  
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p21" data-wow-delay="0.4s">
+               
+                    <div class="product-card aproduct-card wow fadeInUp" id="home_cushioncover_p7" data-wow-delay="0.4s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="../../../products\home\cushioncover\p21.php" class="product-link">
-                        <img src="../../../productimgs/home/cushioncover/p21/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="../../../products\home\cushioncover\p7.php" class="product-link">
+                        <img src="../../../productimgs/home/cushioncover/p7/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Cotton Pillow Cushion Covers (Set of 2)</h3>
-                        <p class="product-description aproduct-description">Super soft & stylish, ideal for home décor.<br>₹ 199/Pack 
-                        <span><b>Weight:</b> 450g/peice</span><br>
-                        <span><b>Size:</b> 16x16 inches</span></p>   
-                        <!-- <button class="add-to-cart aadd-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text abutton-text">Add to Cart</span>
-                        </button> -->
+                        <h3 class="product-title aproduct-title">Checked Cotton Covers (Pack of 2)</h3>
+                        <p class="product-description aproduct-description">Festive & cozy with pom-pom lace.<br>₹ 299/Pack 
+                            <span><b>Weight:</b> 450g/piece</span><br>
+                            <span><b>Size:</b>18x18 inches</span></p> 
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="home_travelpouch_p2" data-wow-delay="0.4s">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_travelpouch_p1" data-wow-delay="0.4s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="../../../products\home\travelpouch\p2.php" class="product-link">
-                        <img src="../../../productimgs/home/travelpouch/p2/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="../../../products\home\travelpouch\p1.php" class="product-link">
+                        <img src="../../../productimgs/home/travelpouch/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Quilted Travel Pouch (Pack of 2)</h3>
-                        <p class="product-description aproduct-description">Convenient organizer for cosmetics.<br>₹ 199/ Piece 
-                        <span><b>Weight:</b> 200g/peice</span><br>
-                        <span><b>Size:</b> 8x7 inches</span></p>   
-                        <!-- <button class="add-to-cart aadd-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text abutton-text">Add to Cart</span>
-                        </button> -->
+                        <h3 class="product-title aproduct-title">Travel Cosmetic Pouch (Set of 2)</h3>
+                        <p class="product-description aproduct-description">Portable grooming organizer for makeup.<br>₹ 249/Pack 
+                            <span><b>Weight:</b> 200g/pack</span><br>
+                            <span><b>Size:</b>11x6.5x7 inches</span></p>  
+                       
                     </div>
                 </div>
 
-
-                <div class="product-card aproduct-card wow fadeInUp" id="home_tablecloth_p2" data-wow-delay="0.4s">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablecloth_p1" data-wow-delay="0.4s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="../../../products\home\tablecloth\p2.php" class="product-link">
-                        <img src="../../../productimgs/home/tablecloth/p2/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="../../../products\home\tablecloth\p1.php" class="product-link">
+                        <img src="../../../productimgs/home/tablecloth/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Red Checkered Cotton Tablecloth</h3>
-                        <p class="product-description aproduct-description">Lightweight, stylish, 6-seater table cover.<br>₹ 499/ Piece  
-                        <span><b>Weight:</b> 1000g/peice</span><br>
-                        <span><b>Size:</b> 60x90 inches</span></p>   
-                        <!-- <button class="add-to-cart aadd-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text abutton-text">Add to Cart</span>
-                        </button> -->
+                        <h3 class="product-title aproduct-title">Red Christmas Cotton Tablecloth</h3>
+                        <p class="product-description aproduct-description">Festive, washable, 6-seater dining cover.<br>₹ 699/peice
+                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Size:</b>60x90 inches</span></p>  
+                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="home_tablecloth_p4" data-wow-delay="0.4s">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablecloth_p3" data-wow-delay="0.4s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="../../../products\home\tablecloth\p4.php" class="product-link">
-                        <img src="../../../productimgs/home/tablecloth/p4/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="../../../products\home\tablecloth\p3.php" class="product-link">
+                        <img src="../../../productimgs/home/tablecloth/p3/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Blue Cotton Dining Tablecloth</h3>
-                        <p class="product-description aproduct-description">Lightweight, durable, 6-seater table cover.<br>₹ 599/ Piece 
-                        <span><b>Weight:</b> 1000g/peice</span><br>
-                        <span><b>Size:</b> 60x90 inches</span></p>   
-                        <!-- <button class="add-to-cart aadd-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text abutton-text">Add to Cart</span>
-                        </button> -->
+                        <h3 class="product-title aproduct-title">Christmas Floral Cotton Tablecloth</h3>
+                        <p class="product-description aproduct-description">Festive, washable, 6-seater dining cover.<br>₹ 699/ Piece 
+                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Size:</b>60x90 inches</span></p>  
+                        
                     </div>
                 </div>
 
 
-
-                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p2" data-wow-delay="0.4s">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p1" data-wow-delay="0.4s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="../../../products\home\tablerunner\p2.php" class="product-link">
-                        <img src="../../../productimgs/home/tablerunner/p2/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="../../../products\home\tablerunner\p1.php" class="product-link">
+                        <img src="../../../productimgs/home/tablerunner/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Beige Fused Stripe Luxe Table Runner</h3>
-                        <p class="product-description aproduct-description">Modern, elegant, washable dining decor.<br>₹ 229/ Piece  
+                        <h3 class="product-title aproduct-title">Beige Striped Cotton Table Runner</h3>
+                        <p class="product-description aproduct-description">Elegant, washable, durable dining decor.<br>₹ 229/peice
                         <span><b>Weight:</b> 250g/peice</span><br>
-                        <span><b>Size:</b> 72x14 inches</span></p>   
-                        <!-- <button class="add-to-cart aadd-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text abutton-text">Add to Cart</span>
-                        </button> -->
+                        <span><b>Size:</b> 72x12 inches</span></p> 
+                        
                     </div>
                 </div>
-                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p3" data-wow-delay="0.4s">
+                <div class="product-card aproduct-card wow fadeInUp" id="home_tablerunner_p5" data-wow-delay="0.4s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
-                    <a href="../../../products\home\tablerunner\p3.php" class="product-link">
-                        <img src="../../../productimgs/home/tablerunner/p3/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="../../../products\home\tablerunner\p5.php" class="product-link">
+                        <img src="../../../productimgs/home/tablerunner/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
-                        <h3 class="product-title aproduct-title">Pink Blossom Cotton Table Runner</h3>
+                        <h3 class="product-title aproduct-title">Blue Blossom Cotton Table Runner</h3>
                         <p class="product-description aproduct-description">Floral, nature-inspired, washable & durable.<br>₹ 299/ Piece 
                         <span><b>Weight:</b> 250g/peice</span><br>
-                        <span><b>Size:</b> 70x13 inches</span></p>   
-                        <!-- <button class="add-to-cart aadd-to-cart">
-                            <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="button-text abutton-text">Add to Cart</span>
-                        </button> -->
+                        <span><b>Size:</b> 72x14 inches</span></p>   
+                        
                     </div>
                 </div>
             </div>

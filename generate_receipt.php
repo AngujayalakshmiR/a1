@@ -81,30 +81,25 @@ if (isset($_GET['orderid'])) {
     $pdf->SetFont('helvetica', '', 12);
     foreach ($productNames as $index => $productName) {
         if ($index == count($prices) - 1) continue; // Skip the last value which is the total cost
-
+    
         $quantity = isset($quantities[$index]) ? intval($quantities[$index]) : 0;
         $subtotal = isset($prices[$index]) ? floatval($prices[$index]) : 0.0;
         $pricePerItem = ($quantity > 0) ? round($subtotal / $quantity, 2) : 0.0;
-
-        // Get the starting Y position before writing cells
-        $startY = $pdf->GetY();
-
-        // Serial number column
-        $pdf->Cell(20, 10, $index + 1, 1, 0, 'C');
-
-        // Product Name Column using MultiCell
-        $pdf->MultiCell(70, 10, htmlspecialchars($productName), 1, 'C');
-
-        // Align the next cells to the correct row height
-        $currentY = $pdf->GetY();
-        $pdf->SetXY(105, $startY); // Move back in line with the first row
-
-        // Other columns
-        $pdf->Cell(30, 10, $quantity, 1, 0, 'C');
-        $pdf->Cell(30, 10, $pricePerItem, 1, 0, 'C');
-        $pdf->Cell(30, 10, $subtotal, 1, 1, 'C'); // Move to the next row
+    
+        // Calculate height dynamically based on product name
+        $cellHeight = $pdf->getStringHeight(70, $productName); // Get required height for Product Name column
+    
+        // Ensure minimum height of 10
+        $cellHeight = max($cellHeight, 10);
+    
+        // Use the same height for all columns
+        $pdf->MultiCell(20, $cellHeight, $index + 1, 1, 'C', false, 0);
+        $pdf->MultiCell(70, $cellHeight, htmlspecialchars($productName), 1, 'C', false, 0);
+        $pdf->MultiCell(30, $cellHeight, $quantity, 1, 'C', false, 0);
+        $pdf->MultiCell(30, $cellHeight, $pricePerItem, 1, 'C', false, 0);
+        $pdf->MultiCell(30, $cellHeight, $subtotal, 1, 'C', false, 1);
     }
-
+    
     // Add total weight row
     $pdf->SetFont('helvetica', 'B', 12);
     $pdf->Cell(150, 10, 'Total Weight', 1, 0, 'R');
@@ -118,28 +113,22 @@ if (isset($_GET['orderid'])) {
     $pdf->Cell(150, 10, 'Total Cost', 1, 0, 'R');
     $pdf->Cell(30, 10, $totalCost, 1, 1, 'C');
 
-    // Define receipt directory and file path
     $receiptDir = __DIR__ . "/receipts/";
     $receiptFileName = "receipt_order_{$orderId}.pdf";
     $receiptPath = $receiptDir . $receiptFileName;
 
-    // Ensure the directory exists
     if (!is_dir($receiptDir)) {
-        mkdir($receiptDir, 0777, true); // Create directory if it doesn’t exist
+        mkdir($receiptDir, 0777, true);
     }
 
-    // Save PDF to the folder
     $pdf->Output($receiptPath, 'F');
 
-    // Store file path in the database
     $updateQuery = "UPDATE customer SET receipt = ? WHERE orderid = ?";
     $stmt = $conn->prepare($updateQuery);
     $stmt->bind_param("si", $receiptFileName, $orderId);
     $stmt->execute();
 
-    // Output the receipt to the browser
     $pdf->Output($receiptPath, 'I');
-
 } else {
     die("Order ID not provided.");
 }

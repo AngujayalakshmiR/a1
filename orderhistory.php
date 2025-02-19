@@ -726,7 +726,7 @@ $conn->close();
         <!-- First Slide -->
         <div class="owl-carousel-item">
             <a href="#">
-                <img class="img-fluid"  src="img/c1.webp" alt="Image 1">
+                <img class="img-fluid"  src="img/websitebanner1.png" alt="Image 1">
             </a>
         </div>
        

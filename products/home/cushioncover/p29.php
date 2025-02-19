@@ -1582,7 +1582,7 @@ video {
         <!-- Left Side: Images -->
         <div class="col-md-6">
             <div>
-                 <a href="../../../productimgs/home/cushioncover/p29/main.jpg" class="product-link">
+                 <a href="p29.php" class="product-link">
                  <img src="../../../productimgs/home/cushioncover/p29/main.jpg"alt="Product Preview" id="bigImage" class="aproduct-image product-image-preview">
                  </a>
             </div>

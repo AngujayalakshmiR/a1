@@ -1635,74 +1635,54 @@ video {
           </div>
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-            <a href="index.php" class="navbar-brand d-flex align-items-center">
-                <img src="img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
-                <h1 class="m-0 text-primary" style="font-family: 'Brush Script MT', cursive;">Bigmoon</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto">
-                      
-        <div class="nav-item d-flex align-items-center ">
-                    <a href="index.php" class="btn abtn-light  active me-2 ">
-                        Home Furnishings
-                    </a>
-                </div>
-                <div class="nav-item d-flex align-items-center">
-                    <a href="babyessentials.php" class="btn abtn-light   me-2 ">
-                        Baby Essentials
-                    </a>
-                </div>
-                    <!-- Baby Products Dropdown 
-                    <div class="nav-item dropdown">
-                        <a href="babyessentials.html" class="nav-link ">
-                            Baby Essentials
-                        </a>
-                         
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="baby-blankets.html" class="dropdown-item">Baby Blankets</a>
-                            <a href="baby-pillows.html" class="dropdown-item">Baby Pillows</a>
-                            <a href="baby-towels.html" class="dropdown-item">Baby Towels</a>
-                        </div> -->
-                    
-                   
-                        <a href="ourstories.html" class="nav-link ">
-                            Our Story
-                        </a>
-                        
-                    <a href="blogs.html" class="nav-item nav-link ">Blogs</a>
-                   
-                        <a href="bigmoontestimonial.html" class="nav-link ">
-                            Testimonial
-                        </a>
-                    <a href="getintouch.html" class="nav-item nav-link">Get in Touch</a>
-                    <!--
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">School Facilities</a>
-                            <a href="team.html" class="dropdown-item">Popular Teachers</a>
-                            <a href="call-to-action.html" class="dropdown-item">Become A Teachers</a>
-                            <a href="appointment.html" class="dropdown-item">Make Appointment</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
-                        </div>
-                    </div>-->
-        
-                    
-                </div>
-                <div class="d-flex align-items-center">
-                    <a  class="btn btn-light rounded-pill me-2" id="openModalBtn">
-                        <i class="fa fa-history me-1"></i> Order History
-                    </a>
-                    <a href="#" class="btn btn-light rounded-pill" id="cart-btn">
-                        <i class="fa fa-shopping-cart me-1"></i> Cart <span id="cart-count">0</span>
-                    </a>
-                </div>    
+    <a href="index.php" class="navbar-brand d-flex align-items-center">
+        <img src="img/bigmoon_logo_circle.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+        <h1 class="m-0 text-primary" style="font-family: 'Brush Script MT', cursive;">Bigmoon</h1>
+    </a>
+
+    <!-- Icons for mobile and tablet view -->
+    <div class="d-flex align-items-center d-lg-none ms-auto ">
+        <a href="index.php" class="text-primary me-3 ">
+            <i class="fa fa-home fa-lg"></i>
+        </a>
+        <a href="babyessentials.php"  style="color:black;">
+            <i class="fa fa-baby-carriage fa-lg"></i>
+        </a>
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto">
+            <div class="nav-item d-flex align-items-center">
+                <a href="index.php" class="btn abtn-light active me-2">
+                    Home Furnishings
+                </a>
             </div>
-        </nav>
+            <div class="nav-item d-flex align-items-center">
+                <a href="babyessentials.php" class="btn abtn-light me-2">
+                    Baby Essentials
+                </a>
+            </div>
+            <a href="ourstories.html" class="nav-link">Our Story</a>
+            <a href="blogs.html" class="nav-item nav-link">Blogs</a>
+            <a href="bigmoontestimonial.html" class="nav-link">Testimonial</a>
+            <a href="getintouch.html" class="nav-item nav-link">Get in Touch</a>
+        </div>
+
+        <div class="d-flex align-items-center">
+            <a class="btn btn-light rounded-pill me-2" id="openModalBtn">
+                <i class="fa fa-history me-1"></i> Order History
+            </a>
+            <a href="#" class="btn btn-light rounded-pill" id="cart-btn">
+                <i class="fa fa-shopping-cart me-1"></i> Cart <span id="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
 
      <!-- Cart Modal -->
      <div class="cart-modal" id="cart-modal">

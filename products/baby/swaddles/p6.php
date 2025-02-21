@@ -1623,7 +1623,7 @@ video {
             <h2 class="aproduct-title">Muslin Baby Swaddle/Towel – 3 Pack</h2>
             <p class="mt-3 aproduct-description">Soft swaddles with floral, rainbow & sunflower prints<br> 
                 <span class="text-danger" style="font-size: 24px;"><b>₹ 599/ Set </b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹1299</del></span></span>  <br>
-                <span><b>Weight:</b> 1000g/set</span><br>
+                <span><b>Weight:</b> 600g/set</span><br>
                 <span><b>Size:</b>0 to 24 months</span>
             </p>
          
@@ -2134,7 +2134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function getShippingRate(state) {
-        if (state === "Tamil Nadu") return 1;
+        if (state === "Tamil Nadu") return 40;
         if (["Kerala", "Karnataka", "Andhra Pradesh", "Telangana"].includes(state)) return 60;
         if (state === "Pondicherry") return 90;
         return 70;

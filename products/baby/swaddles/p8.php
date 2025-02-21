@@ -1623,7 +1623,7 @@ video {
             <h2 class="aproduct-title">Muslin Baby Swaddle – 2 Pack</h2>
             <p class="mt-3 aproduct-description">Soft swaddles with rainbow & parachute prints.<br> 
                 <span class="text-danger" style="font-size: 24px;"><b>₹ 499/ Set </b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹899</del></span></span>  <br>
-                <span><b>Weight:</b> 1000g/piece</span><br>
+                <span><b>Weight:</b> 300g/piece</span><br>
                 <span><b>Size:</b>0 to 18 months</span>
             </p>
          
@@ -2134,7 +2134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function getShippingRate(state) {
-        if (state === "Tamil Nadu") return 1;
+        if (state === "Tamil Nadu") return 40;
         if (["Kerala", "Karnataka", "Andhra Pradesh", "Telangana"].includes(state)) return 60;
         if (state === "Pondicherry") return 90;
         return 70;

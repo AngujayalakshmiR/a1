@@ -1623,7 +1623,7 @@ video {
             <h2 class="aproduct-title">Organic Muslin Baby Wipes – 12 Pack</h2>
             <p class="mt-3 aproduct-description">Soft, absorbent, reusable 10x10" wipes.<br> 
                 <span class="text-danger" style="font-size: 24px;"><b>₹ 249/ Set </b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹499</del></span></span>  <br>
-                <span><b>Weight:</b> 500g-12 peice</span><br>
+                <span><b>Weight:</b> 500g/peice</span><br>
                 <span><b>Size:</b>0 to 3 years</span>
             </p>
          
@@ -2137,7 +2137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function getShippingRate(state) {
-        if (state === "Tamil Nadu") return 1;
+        if (state === "Tamil Nadu") return 40;
         if (["Kerala", "Karnataka", "Andhra Pradesh", "Telangana"].includes(state)) return 60;
         if (state === "Pondicherry") return 90;
         return 70;

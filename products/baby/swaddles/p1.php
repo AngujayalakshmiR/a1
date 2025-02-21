@@ -1622,7 +1622,7 @@ video {
             <h2 class="aproduct-title">Cotton Muslin Swaddle–Pack of 2</h2>
             <p class="mt-3 aproduct-description">Soft 120x100 cm swaddles with floral prints for babies.<br> 
                 <span class="text-danger" style="font-size: 24px;"><b>₹ 499/ Set </b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹1499</del></span></span>  <br>
-                <span><b>Weight:</b> 300g/peice</span><br>
+                <span><b>Weight:</b> 400g/peice</span><br>
                 <span><b>Size:</b>0 to 2 years</span>
             </p>
          
@@ -2131,7 +2131,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function getShippingRate(state) {
-        if (state === "Tamil Nadu") return 1;
+        if (state === "Tamil Nadu") return 40;
         if (["Kerala", "Karnataka", "Andhra Pradesh", "Telangana"].includes(state)) return 60;
         if (state === "Pondicherry") return 90;
         return 70;

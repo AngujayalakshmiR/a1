@@ -1624,8 +1624,8 @@ video {
         <div class="col-md-6 " >
             <h2 class="aproduct-title">Travel Cosmetic & Toiletry Pouch (Set of 2)</h2>
             <p class="mt-3 aproduct-description">Portable grooming organizer for makeup, brushes & essentials.<br> 
-                <span class="text-danger" style="font-size: 24px;"><b>₹ 249/ Piece </b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹599</del></span></span>  <br>
-                <span><b>Weight:</b> 200g/peice</span><br>
+                <span class="text-danger" style="font-size: 24px;"><b>₹ 249/ set </b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹599</del></span></span>  <br>
+                <span><b>Weight:</b> 400g/set</span><br>
                 <span><b>Size:</b> 11x6.5x7 inches</span>
             </p>
          

@@ -3517,30 +3517,35 @@ blocks.forEach(block => {
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4" style="font-family: 'Brush Script MT', cursive;">Home Furnishings</h3>
-                        <a class="btn btn-link text-white-50" href="#">Cotton Towels</a>
-                        <a class="btn btn-link text-white-50" href="#">Pillow Covers</a>
-                        <a class="btn btn-link text-white-50" href="#">Table Covers</a>
-                        <a class="btn btn-link text-white-50" href="#">Cotton Bedsheets</a>
-                        <a class="btn btn-link text-white-50" href="#">Bed Quilts</a>
-                        <a class="btn btn-link text-white-50" href="#">Cosmetic Pouch</a>
-                        <a class="btn btn-link text-white-50" href="#">Travel Pouch</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Aprons</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Bed Quilts</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Blankets</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Cushion Covers</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Placemats</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Table Clothes</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Table Runners</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Travel Pouch</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4" style="font-family: 'Brush Script MT', cursive;">Baby Essentials</h3>
-                        <a class="btn btn-link text-white-50" href="#">Baby Swadles</a>
-                        <a class="btn btn-link text-white-50" href="#">Baby Wipes</a>
-                        <a class="btn btn-link text-white-50" href="#">Baby Napkins</a>
-                        <a class="btn btn-link text-white-50" href="#">Baby Towels</a>
-                        <a class="btn btn-link text-white-50" href="#">Baby Blankets</a>
+                        <a class="btn btn-link text-white-50" href="babyessentials.php">Baby Jablas</a>
+                        <a class="btn btn-link text-white-50" href="babyessentials.php">Baby Wipes</a>
+                        <a class="btn btn-link text-white-50" href="babyessentials.php">Baby Napkins</a>
+                        <a class="btn btn-link text-white-50" href="babyessentials.php">Baby Swaddles</a>
+                        <a class="btn btn-link text-white-50" href="babyessentials.php">Baby Blankets</a>
+                        <a class="btn btn-link text-white-50" href="babyessentials.php">Baby Towels</a>
                     </div>
-                    <div class="col-lg-3 col-md-6" >
-                        <h3 class="text-white mb-4" style="font-family: 'Brush Script MT', cursive;">Newsletter</h3>
-                        <p>For all latest product updates, let us know your mail!</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Enter</button>
-                        </div>
-                    </div>
+                    <div class="col-lg-3 col-md-6">
+    <!-- Embedded Map with Border Radius -->
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.0492865403066!2d78.08362307480769!3d10.959649689200518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa2fb314b489b7%3A0x9fcf91adc3e201a5!2sRKND%20TRADERS!5e0!3m2!1sen!2sin!4v1740104964095!5m2!1sen!2sin" 
+        width="100%" 
+        height="250" 
+        style="border: 0; border-radius: 25px;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</div>
                 </div>
             </div>
             <!-- Footer bottom section -->

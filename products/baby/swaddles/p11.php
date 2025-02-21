@@ -1645,7 +1645,7 @@ video {
     <li><b>Towel Form Type:</b> Washcloth</li>
     <li><b>Age Range (Description):</b> Baby</li>
     <li><b>Product Dimensions:</b> 25.4L x 25.4W Centimeters, 70L x 70W Centimeters, 47L x 47W Centimeters</li>
-    <li><b>Number of Items:</b> 12, 1</li>
+    <li><b>Number of Items:</b> 1</li>
     <li><b>Special Feature:</b> Skin Friendly, Super Absorbent, Lightweight, Washable, Super Soft, Hypoallergenic, Durable, Breathable</li>
     <li><b>Product Care Instructions:</b> Machine Wash</li>
     <li><b>Shape:</b> Square</li>
@@ -2137,7 +2137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function getShippingRate(state) {
-        if (state === "Tamil Nadu") return 1;
+        if (state === "Tamil Nadu") return 40;
         if (["Kerala", "Karnataka", "Andhra Pradesh", "Telangana"].includes(state)) return 60;
         if (state === "Pondicherry") return 90;
         return 70;

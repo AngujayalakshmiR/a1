@@ -2203,9 +2203,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <nav class="aproduct-navs wow fadeInUp" data-wow-delay="0.2s">
                 <ul class="nav-tabss">
                     <li class="nav-items active" data-category="all">All</li>
+                    <li class="nav-items" data-category="Swaddles">Towels & Swaddles</li>
                     <li class="nav-items" data-category="Jablas">Jablas</li>
                     <li class="nav-items" data-category="Napkins">Napkins & Wipes</li>
-                    <li class="nav-items" data-category="Swaddles">Towels/Swaddles</li>
+                    
                     <!-- <li class="nav-items" data-category="Cotton Bedsheets">Cotton Bedsheets</li>
                     <li class="nav-items" data-category="Bed Quilts">Bed Quilts</li>
                     <li class="nav-items" data-category="Cosmetic Pouch">Cosmetic Pouch</li>
@@ -2217,54 +2218,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="aproduct-grid" id="all-products">
                     <!-- All products will be appended here -->
                 </div>
-                <div class="aproduct-grid hidden" id="Jablas">
-                    
-                    <div class="aproduct-card" id="baby_jablas_p1">
-                        <a href="./products/baby/jablas/p1.php" class="product-link">
-                            <img src="productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Organic Cotton Muslin Jabla</h3>
-                            <p class="aproduct-description">Pack of 5 sleeveless snap-button jablas with cute prints.<br>₹ 599/ Piece 
-                            <span><b>Weight:</b> 200g/peice</span><br>
-                            <span><b>Size:</b> 0 to 3 months</span></p>  
-                            
 
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="aproduct-card  " id="baby_jablas_p2">
-                        <a href="./products/baby/jablas/p2.php" class="product-link">
-                            <img src="productimgs/baby/jabla/p2/main.jpg" alt="Product 1" class="aproduct-image">
-                        </a>
-                        <div class="aproduct-info">
-                            <h3 class="aproduct-title">Organic Muslin Jabla Set</h3>
-                            <p class="aproduct-description">Soft, breathable jabla with boots & mittens for newborns.<br>₹ 299/ Piece 
-                            <span><b>Weight:</b> 200g/peice</span><br>
-                            <span><b>Size:</b> 0 to 3 months</span></p>  
-                            
 
-                            <button class="aadd-to-cart">
-                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                                <span class="abutton-text">Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-        
-            <div class="aproduct-grid hidden" id="Napkins">
-                <div class="aproduct-card  " id="baby_napkins_p1">
-                        <a href="./products/baby/napkins/p1.php" class="product-link">
-                            <img src="productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="aproduct-image">
+
+                <div class="aproduct-grid hidden" id="Swaddles">
+            <div class="aproduct-card  " id="baby_swaddles_p12">
+                        <a href="./products/baby/swaddles/p12.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p12/main.jpg" alt="Product 1" class="aproduct-image">
                         </a>
                         <div class="aproduct-info">
-                            <h3 class="aproduct-title">Organic Baby Washcloths – 6 Pack</h3>
-                            <p class="aproduct-description">Soft, reusable 16x16" napkins with cute prints.<br>₹ 299/ Piece 
-                            <span><b>Weight:</b> 250g-6 peice</span><br>
-                            <span><b>Size:</b>1 to 3 years</span></p>  
+                            <h3 class="aproduct-title">Animal Print Muslin Swaddle (Pack of 6)</h3>
+                            <p class="aproduct-description">Soft 70x70 cm swaddles with animal prints for babies.<br>₹ 699/ Set 
+                            <span><b>Weight:</b> 1000g/Set</span><br>
+                            <span><b>Size:</b>0 to 18+ months</span></p>  
                             
 
                             <button class="aadd-to-cart">
@@ -2273,11 +2239,170 @@ document.addEventListener("DOMContentLoaded", function () {
                             </button>
                         </div>
                 </div>
-               
-                    <!-- Similar structure for Cushion Cover products -->
-            </div>
-        
-            <div class="aproduct-grid hidden" id="Swaddles">
+                <div class="aproduct-card  " id="baby_swaddles_p13">
+                        <a href="./products/baby/swaddles/p13.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p13/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Animal Print Muslin Towel (Pack of 6)</h3>
+                            <p class="aproduct-description">Ultra-soft 70x70 cm towels with adorable prints.<br>₹ 699/ Set 
+                            <span><b>Weight:</b> 1000g/Set</span><br>
+                            <span><b>Size:</b>0 to 18+ months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+
+                <div class="aproduct-card  " id="baby_swaddles_p14">
+                        <a href="./products/baby/swaddles/p14.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p14/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Swaddle Set–Strawberry & Shark (Pack of 2)</h3>
+                            <p class="aproduct-description">Ultra-soft 100x100 cm swaddles with cute prints.<br>₹ 499/ Set 
+                            <span><b>Weight:</b> 300g/Set</span><br>
+                            <span><b>Size:</b>0 to 18+ months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby_swaddles_p15">
+                        <a href="./products/baby/swaddles/p15.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p15/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Swaddle Set–Deer & Elephant (Pack of 2)</h3>
+                            <p class="aproduct-description">Cozy 100x100 cm swaddles with Deer & Elephant prints.<br>₹ 499/ Set 
+                            <span><b>Weight:</b> 300g/Set</span><br>
+                            <span><b>Size:</b>0 to 18+ months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+
+                <div class="aproduct-card  " id="baby_swaddles_p16">
+                        <a href="./products/baby/swaddles/p16.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p16/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Towel Set–Strawberry & Shark (Pack of 2)</h3>
+                            <p class="aproduct-description">Ultra-soft 110x70 cm towel with cute prints.<br>₹ 299/ Set 
+                            <span><b>Weight:</b> 750g/Set</span><br>
+                            <span><b>Size:</b>0 to 18+ months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby_swaddles_p17">
+                        <a href="./products/baby/swaddles/p17.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p17/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Towel Set–Deer & Elephant (Pack of 2)</h3>
+                            <p class="aproduct-description">Cozy 110x70 cm towel with Deer & Elephant prints.<br>₹ 299/ Set 
+                            <span><b>Weight:</b> 750g/Set</span><br>
+                            <span><b>Size:</b>0 to 18+ months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+
+
+                <div class="aproduct-card  " id="baby_swaddles_p18">
+                        <a href="./products/baby/swaddles/p18.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p18/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Towel Set–Deer & Elephant (Pack of 2)</h3>
+                            <p class="aproduct-description">Cozy 75x140 cm towel with Deer & Elephant prints.<br>₹ 499/ Set 
+                            <span><b>Weight:</b> 1000g/Set</span><br>
+                            <span><b>Size:</b>0 to 18+ months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+                <div class="aproduct-card  " id="baby_swaddles_p19">
+                        <a href="./products/baby/swaddles/p19.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p19/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Towel Set–Strawberry & Shark (Pack of 2)</h3>
+                            <p class="aproduct-description">Ultra-soft 75x140 cm towel with Strawberry & Shark prints.<br>₹ 499/ Set 
+                            <span><b>Weight:</b> 1000g/Set</span><br>
+                            <span><b>Size:</b>0 to 18+ months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+
+
+
+                <div class="aproduct-card  " id="baby_swaddles_p20">
+                        <a href="./products/baby/swaddles/p20.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p20/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Combo- 1 Muslin Swaddle & 2 Face Towels</h3>
+                            <p class="aproduct-description">Soft 100x100 cm swaddle with 2 gentle 40x40 washcloths.<br>₹ 329/ Set 
+                            <span><b>Weight:</b> 1000g/Set</span><br>
+                            <span><b>Size:</b>0 to 18+ months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+
+
+                <div class="aproduct-card  " id="baby_swaddles_p21">
+                        <a href="./products/baby/swaddles/p21.php" class="product-link">
+                            <img src="productimgs/baby/swaddle/p21/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Muslin Swaddle–Penguin & Butterfly(Pack of 2)</h3>
+                            <p class="aproduct-description">Soft 100x100 cm fabric for swaddling or drying.<br>₹ 499/ Set 
+                            <span><b>Weight:</b> 300g/Set</span><br>
+                            <span><b>Size:</b>0 to 18+ months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+
+
                 <div class="aproduct-card  " id="baby_swaddles_p1">
                         <a href="./products/baby/swaddles/p1.php" class="product-link">
                             <img src="productimgs/baby/swaddle/p1/main.jpg" alt="Product 1" class="aproduct-image">
@@ -2471,6 +2596,67 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                
             </div>
+                <div class="aproduct-grid hidden" id="Jablas">
+                    
+                    <div class="aproduct-card" id="baby_jablas_p1">
+                        <a href="./products/baby/jablas/p1.php" class="product-link">
+                            <img src="productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Organic Cotton Muslin Jabla</h3>
+                            <p class="aproduct-description">Pack of 5 sleeveless snap-button jablas with cute prints.<br>₹ 599/ Piece 
+                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Size:</b> 0 to 3 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="aproduct-card  " id="baby_jablas_p2">
+                        <a href="./products/baby/jablas/p2.php" class="product-link">
+                            <img src="productimgs/baby/jabla/p2/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Organic Muslin Jabla Set</h3>
+                            <p class="aproduct-description">Soft, breathable jabla with boots & mittens for newborns.<br>₹ 299/ Piece 
+                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Size:</b> 0 to 3 months</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+            <div class="aproduct-grid hidden" id="Napkins">
+                <div class="aproduct-card  " id="baby_napkins_p1">
+                        <a href="./products/baby/napkins/p1.php" class="product-link">
+                            <img src="productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="aproduct-image">
+                        </a>
+                        <div class="aproduct-info">
+                            <h3 class="aproduct-title">Organic Baby Washcloths – 6 Pack</h3>
+                            <p class="aproduct-description">Soft, reusable 16x16" napkins with cute prints.<br>₹ 299/ Piece 
+                            <span><b>Weight:</b> 250g-6 peice</span><br>
+                            <span><b>Size:</b>1 to 3 years</span></p>  
+                            
+
+                            <button class="aadd-to-cart">
+                                <!-- <i class="fa-solid fa-cart-shopping acart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                                <span class="abutton-text">Add to Cart</span>
+                            </button>
+                        </div>
+                </div>
+               
+                    <!-- Similar structure for Cushion Cover products -->
+            </div>
+        
+
 
             
             </div>
@@ -2980,30 +3166,36 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4" style="font-family: 'Brush Script MT', cursive;">Home Furnishings</h3>
-                        <a class="btn btn-link text-white-50" href="#">Cotton Towels</a>
-                        <a class="btn btn-link text-white-50" href="#">Pillow Covers</a>
-                        <a class="btn btn-link text-white-50" href="#">Table Covers</a>
-                        <a class="btn btn-link text-white-50" href="#">Cotton Bedsheets</a>
-                        <a class="btn btn-link text-white-50" href="#">Bed Quilts</a>
-                        <a class="btn btn-link text-white-50" href="#">Cosmetic Pouch</a>
-                        <a class="btn btn-link text-white-50" href="#">Travel Pouch</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Aprons</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Bed Quilts</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Blankets</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Cushion Covers</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Placemats</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Table Clothes</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Table Runners</a>
+                        <a class="btn btn-link text-white-50" href="index.php">Travel Pouch</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4" style="font-family: 'Brush Script MT', cursive;">Baby Essentials</h3>
-                        <a class="btn btn-link text-white-50" href="#">Baby Swadles</a>
-                        <a class="btn btn-link text-white-50" href="#">Baby Wipes</a>
-                        <a class="btn btn-link text-white-50" href="#">Baby Napkins</a>
-                        <a class="btn btn-link text-white-50" href="#">Baby Towels</a>
-                        <a class="btn btn-link text-white-50" href="#">Baby Blankets</a>
+                        <a class="btn btn-link text-white-50" href="babyessentials.php">Baby Jablas</a>
+                        <a class="btn btn-link text-white-50" href="babyessentials.php">Baby Wipes</a>
+                        <a class="btn btn-link text-white-50" href="babyessentials.php">Baby Napkins</a>
+                        <a class="btn btn-link text-white-50" href="babyessentials.php">Baby Swaddles</a>
+                        <a class="btn btn-link text-white-50" href="babyessentials.php">Baby Blankets</a>
+                        <a class="btn btn-link text-white-50" href="babyessentials.php">Baby Towels</a>
                     </div>
-                    <div class="col-lg-3 col-md-6" >
-                        <h3 class="text-white mb-4" style="font-family: 'Brush Script MT', cursive;">Newsletter</h3>
-                        <p>For all latest product updates, let us know your mail!</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Enter</button>
-                        </div>
-                    </div>
+                    <div class="col-lg-3 col-md-6">
+    <!-- Embedded Map with Border Radius -->
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.0492865403066!2d78.08362307480769!3d10.959649689200518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa2fb314b489b7%3A0x9fcf91adc3e201a5!2sRKND%20TRADERS!5e0!3m2!1sen!2sin!4v1740104964095!5m2!1sen!2sin" 
+        width="100%" 
+        height="250" 
+        style="border: 0; border-radius: 25px;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</div>
+
                 </div>
             </div>
             <!-- Footer bottom section -->
@@ -3444,7 +3636,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function getShippingRate(state) {
-        if (state === "Tamil Nadu") return 1;
+        if (state === "Tamil Nadu") return 40;
         if (["Kerala", "Karnataka", "Andhra Pradesh", "Telangana"].includes(state)) return 60;
         if (state === "Pondicherry") return 90;
         return 70;

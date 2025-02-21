@@ -1595,7 +1595,7 @@ video {
             <h2 class="aproduct-title">Organic Cotton Muslin Jabla</h2>
             <p class="mt-3 aproduct-description">Pack of 5 sleeveless snap-button jablas with cute prints.<br> 
                 <span class="text-danger" style="font-size: 24px;"><b>₹ 599/ Piece</b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹999</del></span></span>  <br>
-                <span><b>Weight:</b> 200g/peice</span><br>
+                <span><b>Weight:</b> 1000g/peice</span><br>
                 <span><b>Size:</b> 0 to 3 months</span></p>
             </p>
          
@@ -2095,7 +2095,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function getShippingRate(state) {
-        if (state === "Tamil Nadu") return 1;
+        if (state === "Tamil Nadu") return 40;
         if (["Kerala", "Karnataka", "Andhra Pradesh", "Telangana"].includes(state)) return 60;
         if (state === "Pondicherry") return 90;
         return 70;

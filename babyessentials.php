@@ -2410,7 +2410,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="aproduct-info">
                             <h3 class="aproduct-title"> Cotton Muslin Swaddle–Pack of 2</h3>
                             <p class="aproduct-description">Soft 120x100 cm swaddles with floral prints for babies.<br>₹ 499/ Set 
-                            <span><b>Weight:</b> 300g/peice</span><br>
+                            <span><b>Weight:</b> 400g/peice</span><br>
                             <span><b>Size:</b>0 to 2 years</span></p>  
                             
 
@@ -2480,7 +2480,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="aproduct-info">
                             <h3 class="aproduct-title"> Muslin Swaddle – 2 Pack</h3>
                             <p class="aproduct-description">Soft swaddles with brown floral & rainbow prints.<br>₹ 499/Piece 
-                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Weight:</b> 400g/piece</span><br>
                             <span><b>Size:</b>0 to 24 months</span></p>  
                             
 
@@ -2497,7 +2497,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="aproduct-info">
                             <h3 class="aproduct-title"> Muslin Baby Swaddle/Towel – 3 Pack </h3>
                             <p class="aproduct-description">Soft swaddles with floral, rainbow & sunflower prints<br>₹ 599/set 
-                            <span><b>Weight:</b> 1000g/set</span><br>
+                            <span><b>Weight:</b> 600g/set</span><br>
                             <span><b>Size:</b>0 to 24 months</span></p>  
                             
 
@@ -2531,7 +2531,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="aproduct-info">
                             <h3 class="aproduct-title">Muslin Baby Swaddle – 2 Pack</h3>
                             <p class="aproduct-description">Soft swaddles with rainbow & parachute prints.<br>₹ 499/Piece 
-                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Weight:</b> 300g/piece</span><br>
                             <span><b>Size:</b>0 to 18 months</span></p>  
                             
 
@@ -2605,7 +2605,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="aproduct-info">
                             <h3 class="aproduct-title">Organic Cotton Muslin Jabla</h3>
                             <p class="aproduct-description">Pack of 5 sleeveless snap-button jablas with cute prints.<br>₹ 599/ Piece 
-                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Weight:</b> 1000g/peice</span><br>
                             <span><b>Size:</b> 0 to 3 months</span></p>  
                             
 
@@ -2686,7 +2686,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Muslin Swaddle – 2 Pack</h3>
                         <p class="product-description aproduct-description">Swaddles-brown floral & rainbow prints.<br>₹ 499/Piece 
-                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Weight:</b> 400g/piece</span><br>
                             <span><b>Size:</b>0 to 24 months</span></p>  
                                              
                         <button class="add-to-cart aadd-to-cart">
@@ -2708,7 +2708,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Printed Muslin Baby Swaddle </h3>
-                        <p class="product-description aproduct-description">Soft swaddles with cute animal & fruit prints<br>₹ 699/Set 
+                        <p class="product-description aproduct-description">Soft swaddles with cute animal & fruit prints<br>₹ 499/Set 
                             <span><b>Weight:</b> 1000g/Set</span><br>
                             <span><b>Size:</b>0 to 3 months</span></p> 
                                              
@@ -2731,7 +2731,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Organic Cotton Muslin Jabla</h3>
                         <p class="product-description aproduct-description">Pack of 5 sleeveless snap-button jablas.<br>₹ 599/ Piece 
-                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Weight:</b> 1000g/peice</span><br>
                             <span><b>Size:</b> 0 to 3 months</span></p>
                                              
                         <button class="add-to-cart aadd-to-cart">
@@ -2797,7 +2797,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title"> Muslin Baby Swaddle</h3>
                         <p class="product-description aproduct-description">Swaddles- floral, rainbow & sunflower prints<br>₹ 599/set 
-                            <span><b>Weight:</b> 1000g/set</span><br>
+                            <span><b>Weight:</b> 600g/set</span><br>
                             <span><b>Size:</b>0 to 24 months</span></p>  
                                              
                         <button class="add-to-cart aadd-to-cart">
@@ -2822,7 +2822,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
                 <!-- News & Events Section Title -->
                 <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px; height:auto;">
-                    <h5 class="fw-bold text-primary text-uppercase">New Arrivals</h5>    
+                    <h5 class="fw-bold text-primary text-uppercase">Best Sellers</h5>    
                     <!-- Blue bar container -->
                     <div class="blue-bar">
                         <div class="moving-box"></div>  <!-- Small white rectangle -->
@@ -2839,7 +2839,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Muslin Swaddle – 2 Pack</h3>
                         <p class="product-description aproduct-description">Swaddles-brown floral & rainbow prints.<br>₹ 499/Piece 
-                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Weight:</b> 400g/piece</span><br>
                             <span><b>Size:</b>0 to 24 months</span></p>  
                                              
                         <button class="add-to-cart aadd-to-cart">
@@ -2861,7 +2861,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Printed Muslin Baby Swaddle </h3>
-                        <p class="product-description aproduct-description">Soft swaddles with cute animal & fruit prints<br>₹ 699/Set 
+                        <p class="product-description aproduct-description">Soft swaddles with cute animal & fruit prints<br>₹ 499/Set 
                             <span><b>Weight:</b> 1000g/Set</span><br>
                             <span><b>Size:</b>0 to 3 months</span></p> 
                                              
@@ -2884,7 +2884,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Organic Cotton Muslin Jabla</h3>
                         <p class="product-description aproduct-description">Pack of 5 sleeveless snap-button jablas.<br>₹ 599/ Piece 
-                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Weight:</b> 1000g/peice</span><br>
                             <span><b>Size:</b> 0 to 3 months</span></p>
                                              
                         <button class="add-to-cart aadd-to-cart">
@@ -2950,7 +2950,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title"> Muslin Baby Swaddle</h3>
                         <p class="product-description aproduct-description">Swaddles- floral, rainbow & sunflower prints<br>₹ 599/set 
-                            <span><b>Weight:</b> 1000g/set</span><br>
+                            <span><b>Weight:</b> 600g/set</span><br>
                             <span><b>Size:</b>0 to 24 months</span></p>  
                                              
                         <button class="add-to-cart aadd-to-cart">

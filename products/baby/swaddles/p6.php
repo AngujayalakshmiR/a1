@@ -1707,20 +1707,20 @@ video {
                 <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p5" data-wow-delay="0.3s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="../../../products/baby/swaddles/p5.php" class="product-link">
-                        <img src="../../../productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="./products/baby/swaddles/p5.php" class="product-link">
+                        <img src="productimgs/baby/swaddle/p5/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Muslin Swaddle – 2 Pack</h3>
                         <p class="product-description aproduct-description">Swaddles-brown floral & rainbow prints.<br>₹ 499/Piece 
-                            <span><b>Weight:</b> 1000g/piece</span><br>
+                            <span><b>Weight:</b> 400g/piece</span><br>
                             <span><b>Size:</b>0 to 24 months</span></p>  
                                              
                         <!-- <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
-                        </button> -->
-                        
+                        </button>
+                         -->
                         
                         
                         
@@ -1730,16 +1730,16 @@ video {
                 <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p5" data-wow-delay="0.5s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="../../../products/baby/swaddles/p11.php" class="product-link">
-                        <img src="../../../productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="./products/baby/swaddles/p11.php" class="product-link">
+                        <img src="productimgs/baby/swaddle/p11/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Printed Muslin Baby Swaddle </h3>
-                        <p class="product-description aproduct-description">Soft swaddles with cute animal & fruit prints<br>₹ 699/Set 
+                        <p class="product-description aproduct-description">Soft swaddles with cute animal & fruit prints<br>₹ 499/Set 
                             <span><b>Weight:</b> 1000g/Set</span><br>
                             <span><b>Size:</b>0 to 3 months</span></p> 
-                                             
-                        <!-- <button class="add-to-cart aadd-to-cart">
+<!--                                              
+                        <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button>
@@ -1752,20 +1752,20 @@ video {
                 <div class="product-card aproduct-card wow fadeInUp" id="baby_jablas_p1" data-wow-delay="0.7s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="../../../products/baby/jablas/p1.php" class="product-link">
-                        <img src="../../../productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="./products/baby/jablas/p1.php" class="product-link">
+                        <img src="productimgs/baby/jabla/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Organic Cotton Muslin Jabla</h3>
                         <p class="product-description aproduct-description">Pack of 5 sleeveless snap-button jablas.<br>₹ 599/ Piece 
-                            <span><b>Weight:</b> 200g/peice</span><br>
+                            <span><b>Weight:</b> 1000g/peice</span><br>
                             <span><b>Size:</b> 0 to 3 months</span></p>
                                              
                         <!-- <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
-                        </button> -->
-                        
+                        </button>
+                         -->
                         
                         
                         
@@ -1774,16 +1774,16 @@ video {
                 <div class="product-card aproduct-card wow fadeInUp" id="baby_napkins_p1" data-wow-delay="0.9s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="../../../products/baby/napkins/p1.php" class="product-link">
-                        <img src="../../../productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="./products/baby/napkins/p1.php" class="product-link">
+                        <img src="productimgs/baby/napkin/p1/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title">Organic Baby Washcloths</h3>
                         <p class="product-description aproduct-description">Soft, reusable napkins with cute prints.<br>₹ 299/ Piece 
                             <span><b>Weight:</b> 250g-6 peice</span><br>
                             <span><b>Size:</b>1 to 3 years</span></p>
-                                             
-                        <!-- <button class="add-to-cart aadd-to-cart">
+<!--                                              
+                        <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
                         </button> -->
@@ -1796,8 +1796,8 @@ video {
                 <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p2" data-wow-delay="0.3s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="../../../products/baby/swaddles/p2.php" class="product-link">
-                        <img src="../../../productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="./products/baby/swaddles/p2.php" class="product-link">
+                        <img src="productimgs/baby/swaddle/p2/main1.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title"> Organic Muslin Swaddle</h3>
@@ -1818,13 +1818,13 @@ video {
                 <div class="product-card aproduct-card wow fadeInUp" id="baby_swaddles_p6" data-wow-delay="0.3s">
                     <!-- <div class="discount-badge">25% OFF</div> -->
 
-                    <a href="../../../products/baby/swaddles/p6.php" class="product-link">
-                        <img src="../../../productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
+                    <a href="./products/baby/swaddles/p6.php" class="product-link">
+                        <img src="productimgs/baby/swaddle/p6/main.jpg" alt="Product 1" class="product-image aproduct-image">
                     </a>
                     <div class="product-info aproduct-info">
                         <h3 class="product-title aproduct-title"> Muslin Baby Swaddle</h3>
                         <p class="product-description aproduct-description">Swaddles- floral, rainbow & sunflower prints<br>₹ 599/set 
-                            <span><b>Weight:</b> 1000g/set</span><br>
+                            <span><b>Weight:</b> 600g/set</span><br>
                             <span><b>Size:</b>0 to 24 months</span></p>  
                                              
                         <!-- <button class="add-to-cart aadd-to-cart">

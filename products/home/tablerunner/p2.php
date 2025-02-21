@@ -1623,7 +1623,7 @@ video {
             <p class="mt-3 aproduct-description">Modern, elegant, washable dining decor.<br> 
                 <span class="text-danger" style="font-size: 24px;"><b>₹ 229/ Peice</b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹599</del></span></span>  <br>
                 <span><b>Weight:</b> 250g/peice</span><br>
-                <span><b>Size:</b> 72x12 inches</span>
+                <span><b>Size:</b> 74x14 inches</span>
             </p>
          
             

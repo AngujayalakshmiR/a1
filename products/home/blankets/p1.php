@@ -1622,7 +1622,7 @@ video {
             <p class="mt-3 aproduct-description">Soft, breathable, reversible blanket with fringes. <br> 
                 <span class="text-danger" style="font-size: 24px;"><b>₹ 799/ Piece </b> <span class="ms-3" style="color:#0eb5d6;font-size: 18px;"><del>₹999</del></span></span>  <br>
                 <span><b>Weight:</b> 1200g/pack</span><br>
-                <span><b>Size:</b> 18x18 inches</span>
+                <span><b>Size:</b> 70x53 inches</span>
             </p>
          
             

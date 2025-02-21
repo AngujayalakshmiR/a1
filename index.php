@@ -3280,7 +3280,7 @@ blocks.forEach(block => {
                         <h3 class="product-title aproduct-title">Beige Fused Stripe Luxe Table Runner</h3>
                         <p class="product-description aproduct-description">Modern, elegant, washable dining decor.<br>₹ 229/ Piece  
                         <span><b>Weight:</b> 250g/peice</span><br>
-                        <span><b>Size:</b> 72x14 inches</span></p>   
+                        <span><b>Size:</b> 74x14 inches</span></p>   
                         <button class="add-to-cart aadd-to-cart">
                             <i class="fa-solid fa-cart-shopping cart-icon"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="button-text abutton-text">Add to Cart</span>
